@@ -1,37 +1,38 @@
 extends(src='layout.sgr')
   block(name='content')
     table.skills
+
       tr
-        th(scope='col') Category
-        th(scope='col') Skills
+        td(colspan='2')
+        hr
 
       tr
         td Environment
         td Linux, Tmux, Vim
 
       tr
-        td Architecture
-        td OOP, AOP, MVC, IoC, design patterns
-
-      tr
-        td Methodology
-        td Test driven &amp; agile development
-
-      tr
         td Languages
-        td ES6, Javascript/ECMAScript, Ruby, Python, Perl, Java, Shell, C
-
-      tr
-        td Markup &amp; XML
-        td HTML5, XHTML, XML, XSLT, XPath, XML Schemas, E4X
+        td ES6, Javascript, Ruby, Python, Perl, Java, Shell, C
 
       tr
         td Style
         td CSS3, PostCSS, Stylus, Sass, Less
 
       tr
+        td Markup &amp; XML
+        td HTML5, XHTML, XML, XSLT, XPath, XML Schemas, E4X
+
+      tr
+        td Development
+        td Babel, Webpack, Browserify, Gulp, Grunt, Maven, Ant
+
+      tr
         td Databases
         td Redis, CouchDB, MongoDB, SQL, MySQL, RDBMS
+
+      tr
+        td Documentation
+        td Markdown, Commonmark, LaTeX, Pandoc
 
       tr
         td Source Code Management
@@ -42,22 +43,31 @@ extends(src='layout.sgr')
         td Travis, Coveralls, Jenkins
 
       tr
+        td Architecture
+        td OOP, AOP, MVC, IoC &amp; Design Patterns
+
+      tr
+        td Methodology
+        td Document first, test driven &amp; agile development
+
+      tr
+        td(colspan='2')
+          hr
+
+      tr
         td Frameworks
         td Nodejs, D3, React, Zepto, JQuery, Bootstrap, Backbone, Spring, Grails, Rails
-
-      tr
-        td Development
-        td Webpack, Browserify, Gulp, Grunt, Maven, Ant
-
-      tr
-        td Documentation
-        td Markdown, Commonmark, LaTeX, Pandoc
 
       tr
         td Messaging
         td REST, SOAP, XML-RPC, Flash Remoting (AMF), Open Sound Control, MIDI
 
       tr
-        td Visual
-        td Flash, Photoshop, Inkscape, Quartz Composer, Processing, Box2D, Papervision
+        td(colspan='2')
+          hr
+
+
+      //-tr
+        //-td Visual
+        //-td Flash, Photoshop, Inkscape, Quartz Composer, Processing, Box2D, Papervision
 
