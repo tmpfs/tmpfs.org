@@ -1,3 +1,35 @@
 extends(src='layout.sgr')
   block(name='content')
-    p(md) Example of **work markdown**
+
+    h2 Recent
+    p Recent commercial projects.
+    h3
+      a(href='https://www.socialally.co') Social Ally
+
+    ul.tech-info 
+      li
+        a(href='https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5') HTML5
+      li
+        a(href='https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3') CSS3
+      li
+        a(href='https://nodejs.org') Nodejs
+      li
+        a(href='https://redis.io/') Redis
+      li
+        a(href='https://couchdb.apache.org/') Couchdb
+      li
+        a(href='https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API') Websockets
+      li
+        a(href='http://jadelang.net/') Jade
+      li
+        a(href='http://stylus-lang.com/') Stylus
+
+    h2 Open Source
+    //-p(md) The focus of my recent open-source work has been on [mkdoc](https://github.com/mkdoc/mkdoc) and [trucks](https://github.com/tmpfs/trucks).
+    h3
+      a(href='https://github.com/mkdoc/mkdoc') mkdoc
+    ul.tech-info
+      li
+        a(href='http://commonmark.org/') Commonmark
+      li
+        a(href='https://nodejs.org') Nodejs

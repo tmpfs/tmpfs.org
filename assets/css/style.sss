@@ -37,6 +37,11 @@ body
   text-align: center
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
 
+ul, li
+  margin: 0
+  padding: 0
+  list-style-type: none
+
 header
   text-align: left
   padding: 2rem 1.5rem
@@ -114,7 +119,11 @@ tr > td
 tr > td:first-child
   font-style: italic
 
-ul
-  margin: 0
-  padding: 0
-  list-style-type: none
+.tech-info ~ h3
+  margin-bottom: 0
+
+.tech-info li
+  display: inline-block
+
+.tech-info > li:not(:last-child) > a:after
+  content: ', '
