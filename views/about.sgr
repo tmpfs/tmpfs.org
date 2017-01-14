@@ -5,7 +5,7 @@ extends(src='layout.sgr')
         p
           img.avatar(src='https://avatars1.githubusercontent.com/u/238069?v=3&s={{avatarSize}}')
       div.column
-        h2(md) Muji (*tmpfs*)
+        h2 Muji
         ul
           li
             a(href='https://github.com/tmpfs') tmpfs@github
