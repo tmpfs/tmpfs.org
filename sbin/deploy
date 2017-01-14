@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+const deploy = require('s3-website').deploy;
+const config = require('./config');
+const AWS = require('aws-sdk');
+const s3 = new AWS.S3({ region: config.region })
+
+deploy(s3, config, (err, website) => {
+  if(err) {
+    throw err
+  }
+  console.log(website)
+})

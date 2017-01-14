@@ -1,18 +1,18 @@
 {
   "name": "tmpfs-org",
   "description": "Static tmpfs website",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "author": "tmpfs",
-  "ava": {
-    "verbose": "true"
-  },
-  "bugs": "https://github.com/tmpfs/tmpfs-org/issues",
+  "main": "app.js",
+  "homepage": "http://www.tmpfs.org",
+  "repository": "https://github.com/tmpfs/tmpfs.org",
+  "bugs": "https://github.com/tmpfs/tmpfs.org/issues",
   "dependencies": {
     "babel-preset-latest": "^6.16.0",
     "hard-source-webpack-plugin": "0.2.2",
     "image-webpack-loader": "^3.0.0",
-    "postcss-simple-vars": "~3.0.0",
+    "postcss-simple-vars": "^3.0.0",
     "reshape-standard": "^0.4.2",
     "spike-css-standards": "^0.1.3",
     "spike-page-id": "^0.1.0",
@@ -20,19 +20,23 @@
   },
   "devDependencies": {
     "ava": "^0.17.0",
+    "aws-sdk": "^2.7.21",
     "rimraf": "^2.5.4",
+    "s3-website": "^2.1.0",
     "snazzy": "^5.0.0",
     "spike-core": "^0.13.0",
     "standard": "^8.6.0"
   },
-  "homepage": "https://github.com/tmpfs/tmpfs-org",
-  "main": "app.js",
-  "private": true,
-  "repository": "https://github.com/tmpfs/tmpfs-org",
   "scripts": {
+    "create": "./sbin/create",
+    "compile": "spike compile --env production",
+    "deploy": "npm run compile && ./sbin/deploy",
     "lint": "standard | snazzy",
     "precommit": "npm run lint -s",
     "pretest": "npm run lint -s",
     "test": "NODE_ENV=test ava"
+  },
+  "ava": {
+    "verbose": "true"
   }
 }

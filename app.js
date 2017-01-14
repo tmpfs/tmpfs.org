@@ -20,9 +20,9 @@ module.exports = {
     })
   },
   postcss: (ctx) => {
-    const css = cssStandards({ webpack: ctx });
-    css.plugins.push(postCssSimpleVars());
-    return css;
+    const css = cssStandards({ webpack: ctx })
+    css.plugins.push(postCssSimpleVars())
+    return css
   },
   babel: { presets: [jsStandards] },
   plugins: [
