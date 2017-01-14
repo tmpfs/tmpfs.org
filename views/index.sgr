@@ -1,5 +1,7 @@
 extends(src='layout.sgr')
-  block(name='content')
+  block(name='banner')
     h1.banner Software Engineer & Consultant
+  block(name='content')
+    p(md) Example of **markdown** with lots of content  with lots of content  with lots of content  with lots of content  with lots of content  with lots of content  with lots of content  with lots of content  with lots of content  with lots of content  with lots of content  with lots of content  with lots of content 
 
-    p(md) Example of **markdown**
+    p(md) Example of **markdown** with lots of content  with lots of content  with lots of content  with lots of content  with lots of content  with lots of content  with lots of content  with lots of content  with lots of content  with lots of content  with lots of content  with lots of content  with lots of content 

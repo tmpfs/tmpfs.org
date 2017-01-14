@@ -15,16 +15,17 @@ html
       link(rel='stylesheet' href='css/style.css')
 
   body(role='document')
+    block(name='menu')
+      header
+        a.home(href="/")
+          img(src="img/logo.svg.png")
+        nav.main
+          a(href="/about") About
+          a(href="/skills") Skills
+          a(href="/tech") Tech
+          a(href="/work") Work
+    block(name='banner')
     main(role='main' id='{{ pageId }}')
-      block(name='menu')
-        header
-          a.home(href="/")
-            img(src="img/logo.svg.png")
-          nav.main
-            a(href="/about") About
-            a(href="/skills") Skills
-            a(href="/tech") Tech
-            a(href="/work") Work
       block(name='content')
 
     block(name='javascript')
