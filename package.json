@@ -2,6 +2,7 @@
   "name": "tmpfs-org",
   "description": "Static tmpfs website",
   "version": "0.0.1",
+  "private": true,
   "author": "tmpfs",
   "ava": {
     "verbose": "true"
