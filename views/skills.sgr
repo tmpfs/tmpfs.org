@@ -1,3 +1,63 @@
 extends(src='layout.sgr')
   block(name='content')
-    p(md) Example of **skills markdown**
+    table.skills
+      tr
+        th(scope='col') Category
+        th(scope='col') Skills
+
+      tr
+        td Environment
+        td Linux, Tmux, Vim
+
+      tr
+        td Architecture
+        td OOP, AOP, MVC, IoC, design patterns
+
+      tr
+        td Methodology
+        td Test driven &amp; agile development
+
+      tr
+        td Languages
+        td ES6, Javascript/ECMAScript, Ruby, Python, Perl, Java, Shell, C
+
+      tr
+        td Markup &amp; XML
+        td HTML5, XHTML, XML, XSLT, XPath, XML Schemas, E4X
+
+      tr
+        td Style
+        td CSS3, PostCSS, Stylus, Sass, Less
+
+      tr
+        td Databases
+        td Redis, CouchDB, MongoDB, SQL, MySQL, RDBMS
+
+      tr
+        td Source Code Management
+        td Git, Subversion, CVS
+
+      tr
+        td Continuous Integration
+        td Travis, Coveralls, Jenkins
+
+      tr
+        td Frameworks
+        td Nodejs, D3, React, Zepto, JQuery, Bootstrap, Backbone, Spring, Grails, Rails
+
+      tr
+        td Development
+        td Webpack, Browserify, Gulp, Grunt, Maven, Ant
+
+      tr
+        td Documentation
+        td Markdown, Commonmark, LaTeX, Pandoc
+
+      tr
+        td Messaging
+        td REST, SOAP, XML-RPC, Flash Remoting (AMF), Open Sound Control, MIDI
+
+      tr
+        td Visual
+        td Flash, Photoshop, Inkscape, Quartz Composer, Processing, Box2D, Papervision
+
