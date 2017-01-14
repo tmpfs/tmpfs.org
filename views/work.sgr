@@ -1,12 +1,9 @@
 extends(src='layout.sgr')
   block(name='content')
-
     h2 Recent
-    p Recent commercial projects.
     h3
       a(href='https://www.socialally.co') Social Ally
-
-    ul.tech-info 
+    ul.tech-info
       li
         a(href='https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5') HTML5
       li
@@ -25,7 +22,7 @@ extends(src='layout.sgr')
         a(href='http://stylus-lang.com/') Stylus
 
     h2 Open Source
-    //-p(md) The focus of my recent open-source work has been on [mkdoc](https://github.com/mkdoc/mkdoc) and [trucks](https://github.com/tmpfs/trucks).
+    p(md) The focus of my recent open-source work has been on [mkdoc](https://github.com/mkdoc/mkdoc) and [trucks](https://github.com/tmpfs/trucks).
     h3
       a(href='https://github.com/mkdoc/mkdoc') mkdoc
     ul.tech-info
@@ -33,3 +30,5 @@ extends(src='layout.sgr')
         a(href='http://commonmark.org/') Commonmark
       li
         a(href='https://nodejs.org') Nodejs
+    p Fast, versatile and modular toolkit for processing markdown documents as streams featuring a suite of command line interfaces and a programmatic API that includes bindings to many modules for common tasks.
+    p Use the toolkit to generate dynamic readme documents, simple static web pages or generate API documentation.
