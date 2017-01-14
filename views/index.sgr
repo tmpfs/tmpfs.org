@@ -1,0 +1,5 @@
+extends(src='layout.sgr')
+  block(name='content')
+    h1.banner Software Engineer & Consultant
+
+    p(md) Example of **markdown**

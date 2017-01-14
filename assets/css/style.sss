@@ -1,0 +1,73 @@
+$base03:    #002b36
+$base02:    #073642
+$base01:    #586e75
+$base00:    #657b83
+$base0:     #839496
+$base1:     #93a1a1
+$base2:     #eee8d5
+$base3:     #fdf6e3
+$yellow:    #b58900
+$orange:    #cb4b16
+$red:       #dc322f
+$magenta:   #d33682
+$violet:    #6c71c4
+$blue:      #268bd2
+$cyan:      #2aa198
+$green:     #859900
+
+html 
+  box-sizing: border-box
+  font-size: 62.5%
+
+*, *:after, *:before 
+  box-sizing: inherit
+
+html, body
+  width: 100%
+  height: 100%
+  margin: 0
+  padding: 0
+
+body
+  background: $base3
+  color: $base03
+  font-size: 1.6em
+  letter-spacing: 0.01em
+  line-height: 1.6
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+
+header
+  padding: 2rem 1.5rem
+  position: relative
+  vertical-align: middle
+  font-size: 1.5rem
+  line-height: 1.5rem
+
+a.home
+  display: inline-block
+  text-decoration: none
+  margin-right: 2rem
+
+a.home, a.home img
+  width: 32px
+  height: 32px
+
+nav.main
+  display: inline-block
+  position: absolute
+  margin-top: 8px
+
+nav.main a, nav.main a:visited, nav.main a:hover
+  color: $base03
+  text-decoration: none
+  text-transform: uppercase
+  border-bottom: 2px solid $base03
+  &:not(:last-child)
+    margin-right: 1rem
+
+.banner
+  background: $blue
+  margin: 0
+  text-align: center
+  min-height: 360px
+  line-height: 180px
