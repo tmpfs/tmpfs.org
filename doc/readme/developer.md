@@ -1,0 +1,44 @@
+## Developer
+
+### Scripts
+
+#### Watch
+
+To watch the sources and compile on change use the [spike][] executable:
+
+```
+spike watch
+```
+
+#### Compile
+
+To compile the static web site with the *production* environment run:
+
+```
+npm run compile
+```
+
+#### Lint
+
+Run the source tree through [standard][] and [snazzy][]:
+
+```
+npm run lint
+```
+
+#### Clean
+
+Remove generated files:
+
+```
+npm run clean
+```
+
+#### Readme
+
+To build the readme file from the partial definitions (requires [mkdoc][]):
+
+```
+npm run readme
+```
+

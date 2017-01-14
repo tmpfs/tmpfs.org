@@ -28,6 +28,7 @@
     "standard": "^8.6.0"
   },
   "scripts": {
+    "readme": "mk readme --force",
     "create": "./sbin/create",
     "compile": "spike compile --env production",
     "deploy": "npm run compile && ./sbin/deploy",
