@@ -21,10 +21,10 @@ html
         a.home(href='/')
           img(src='img/logo.svg.png')
         nav.main
-          a(href='/about') About
-          a(href='/skills') Skills
-          a(href='/tech') Tech
-          a(href='/work') Work
+          a(href='/about.html') About
+          a(href='/skills.html') Skills
+          a(href='/tech.html') Tech
+          a(href='/work.html') Work
     block(name='banner')
     main(role='main' id='{{ pageId }}')
       block(name='content')

@@ -29,6 +29,7 @@
     "standard": "^8.6.0"
   },
   "scripts": {
+    "clean": "rm -rf public",
     "readme": "mk readme --force",
     "create": "./sbin/create",
     "compile": "spike compile --env production",

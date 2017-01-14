@@ -12,7 +12,14 @@ module.exports = {
     html: '*(**/)*.sgr',
     css: '*(**/)*.sss'
   },
-  ignore: ['**/layout.sgr', '**/_*', '**/.*', '_cache/**', 'readme.md'],
+  ignore: [
+    '**/layout.sgr',
+    '**/_*',
+    '**/.*',
+    '_cache/**',
+    'doc/**',
+    'sbin/**',
+    'README.md'],
   reshape: (ctx) => {
     return htmlStandards({
       webpack: ctx,
