@@ -1,3 +1,15 @@
 extends(src='layout.sgr')
   block(name='content')
-    p(md) Example of **about markdown**
+    div.container
+      div.column
+        p
+          img.avatar(src='https://avatars1.githubusercontent.com/u/238069?v=3&s={{avatarSize}}')
+      div.column
+        h2(md) Muji (*tmpfs*)
+        ul
+          li
+            a(href='https://github.com/tmpfs') tmpfs@github
+          li
+            a(href='https://www.npmjs.com/~/muji') muji@npm
+
+        p(md) Example of **about markdown**

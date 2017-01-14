@@ -16,7 +16,7 @@ module.exports = {
   reshape: (ctx) => {
     return htmlStandards({
       webpack: ctx,
-      locals: { pageId: pageId(ctx) }
+      locals: { pageId: pageId(ctx), avatarSize: 266 }
     })
   },
   postcss: (ctx) => {

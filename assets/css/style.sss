@@ -72,12 +72,25 @@ nav.main a, nav.main a:visited, nav.main a:hover
   margin: 0
   text-align: center
   min-height: 360px
-  line-height: 180px
 
 main
-  max-width: 980px
+  /* 3 * 280 columns with 20px/2rem spacing and 20px/2rem horizontal padding */
+  max-width: 920px
   margin: 0 auto
   padding: 0 2rem
 
 main *
   text-align: left
+  p:first-child
+    padding-top: 0
+
+img.avatar
+  border: 2px solid $base03
+
+.container
+  display: flex
+  flex-wrap: wrap
+
+.column
+  width: 280px
+  /*display: inline-block*/

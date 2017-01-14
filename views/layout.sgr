@@ -6,7 +6,8 @@ html
       meta(http-equiv='X-UA-Compatible' content='IE=edge, chrome=1')
       meta(name='description' content='Software Engineer, Software Consultant, Web Developer, Full Stack, Javascript, ES6, Docker, Devops, AWS, Nodejs')
       meta(name='author' content='muji')
-      meta(name="viewport" content="width=device-width, initial-scale=1")
+      meta(name='viewport' content='width=device-width, initial-scale=1')
+      link(rel='icon', type='image/png', href='img/favicon.png?v=1')
 
     block(name='title')
       title tmpfs: Software Engineer &amp; Consultant
@@ -17,13 +18,13 @@ html
   body(role='document')
     block(name='menu')
       header
-        a.home(href="/")
-          img(src="img/logo.svg.png")
+        a.home(href='/')
+          img(src='img/logo.svg.png')
         nav.main
-          a(href="/about") About
-          a(href="/skills") Skills
-          a(href="/tech") Tech
-          a(href="/work") Work
+          a(href='/about') About
+          a(href='/skills') Skills
+          a(href='/tech') Tech
+          a(href='/work') Work
     block(name='banner')
     main(role='main' id='{{ pageId }}')
       block(name='content')
