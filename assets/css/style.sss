@@ -21,7 +21,7 @@ $body-background: $base3
   --percent: 100%
 
 $header-height: 7.5rem
-$footer-height: 12rem
+$footer-height: 8rem
 
 html 
   box-sizing: border-box
@@ -141,8 +141,14 @@ tr > td:first-child
 footer
   position: relative
   bottom: 0
-  /*margin-top: -$footer-height*/
   height: $footer-height
-  /*clear: both*/
-  /*padding: 4rem*/
-  background: linear-gradient( 0deg, blue, $body-background )
+  padding: 4rem 4rem 2rem 2rem
+  background: linear-gradient( 0deg, $base2, $body-background )
+
+footer > ul > li
+  display: inline-block
+  font-size: 1.4rem
+  color: $base1
+  &:not(:last-child)
+    &:after
+      content: '|'

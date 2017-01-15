@@ -38,4 +38,6 @@ html
           li
             span Copyright 2016+
           li
-            a(href='https://github.com/tmpfs') tmpfs@github.com
+            a(href='https://github.com/tmpfs') github.com/tmpfs
+          li
+            a(href='https://npmjs.com/~/tmpfs') npmjs.com/tmpfs
