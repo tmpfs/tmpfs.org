@@ -19,7 +19,7 @@ html
     block(name='menu')
       header
         a.home(href='/')
-          img(src='img/logo.svg.png')
+          img(src='img/logo.png')
         nav.main
           a(href='/about.html') About
           a(href='/skills.html') Skills

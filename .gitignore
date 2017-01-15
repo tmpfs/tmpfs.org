@@ -2,6 +2,7 @@
 node_modules
 public
 _cache
+ref
 .env
 *.bak
 *.log

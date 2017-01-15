@@ -36,3 +36,10 @@ extends(src='layout.sgr')
         a(href='https://nodejs.org') Nodejs
     p Fast, versatile and modular toolkit for processing markdown documents as streams featuring a suite of command line interfaces and a programmatic API that includes bindings to many modules for common tasks.
     p Use the toolkit to generate dynamic readme documents, simple static web pages or generate API documentation.
+
+    h2 Clients
+    p Over the years I have worked with some very well known brands.
+    .container
+      .column
+        img(src='img/orange.png')
+
