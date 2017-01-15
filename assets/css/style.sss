@@ -36,7 +36,7 @@ html, body
 
 body
   background: $body-background
-  color: $base03
+  color: $base00
   font-size: 1.6em
   letter-spacing: 0.01em
   line-height: 1.6
@@ -47,7 +47,10 @@ body > *
   text-align: left
 
 h2
-  border-bottom: 2px solid $base02
+  border-bottom: 2px solid $base00
+
+h2, h3, h4, h5, h6
+  color: $base01
 
 ul, li
   margin: 0
@@ -83,11 +86,15 @@ nav.main a, nav.main a:visited, nav.main a:hover
   &:not(:last-child)
     margin-right: 1rem
 
-nav.main a:hover, a.selected
+nav.main a:hover, nav.main a.selected
   border-bottom: 2px solid
   /* $base03 */
-  border-color: rgba(0, 43, 54, 1) !important
-  transition: border-color .5s ease-in-out
+  /*border-color: rgba(0, 43, 54, 1) !important*/
+  border-color: $base01 !important
+  transition: color, border-color .5s ease-in-out
+
+nav.main a.selected
+  color: $base01
 
 .banner
   background: $blue
