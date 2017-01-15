@@ -13,16 +13,19 @@ extends(src='layout.sgr')
             a(href='https://github.com/tmpfs') github.com/tmpfs
           li
             strong Packages:
-            a(href='https://www.npmjs.com/~/muji') npmjs.com/tmpfs
+            a(href='https://www.npmjs.com/~/muji') npmjs.com/muji
           li
             strong Origin:
-            span Born in London in 1977.
+            span Born in London in 1977
           li
             strong Natural Languages:
-            span Fluent in English and Indonesian; some French and Spanish.
+            span Fluent in English and Indonesian; some French and Spanish
           li
             strong Machine Languages:
             span ES6, Javascript, Ruby, Python, Perl, Java, Shell, C
+          li
+            strong Location:
+            span Bali, Indonesia (UTC+08:00)
 
     p Since creating my first web page in 1998 I have been studying programming and working in the digital industry.
     p Over the course of my career I have created many simple and complex web applications, desktop applications, e-commerce websites, implemented over the wire protocols, designed binary file formats and many esoteric projects including satellite phone SMS microblogging with GPS co-ordinate mapping.

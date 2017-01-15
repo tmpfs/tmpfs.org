@@ -39,4 +39,4 @@ html
           li
             a(href='https://github.com/tmpfs') github/tmpfs
           li
-            a(href='https://npmjs.com/~/tmpfs') npmjs/tmpfs
+            a(href='https://npmjs.com/~/muji') npmjs/muji
