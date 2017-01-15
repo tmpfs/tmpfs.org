@@ -154,9 +154,26 @@ tr > td:first-child
 .tech-info > li:not(:last-child) > a:after
   content: ', '
 
-.logotypes img
-  vertical-align: top
+.logotypes
+  /*clear: both*/
+  width: 100%
+  column-count: 2
+  column-gap: 1rem
+
+.logotypes li
+  display: inline-block
+  /*float: left*/
+  /*width: 120px*/
+  width: auto
+  /*column-break-inside: avoid*/
+  margin-bottom: 2rem
   margin-right: 2rem
+  background: $base2
+  padding: 1rem
+
+.logotypes img
+  width: 100px
+  vertical-align: top
 
 footer
   position: relative

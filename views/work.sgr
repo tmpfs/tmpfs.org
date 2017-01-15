@@ -39,10 +39,14 @@ extends(src='layout.sgr')
 
     h2 Clients
     p Over the years I have worked with some very well known brands.
-    div.logotypes
-      img(src='img/logo/orange.png')
-      img(src='img/logo/ft.png')
-      img(src='img/logo/bbc.png')
-      img(src='img/logo/vw.png')
-      img(src='img/logo/xbox.png')
-
+    ul.logotypes
+      li
+        img(src='img/logo/ft.png')
+      li
+        img(src='img/logo/orange.png')
+      li
+        img(src='img/logo/vw.png')
+      li
+        img(src='img/logo/xbox.png')
+      li
+        img(src='img/logo/bbc.png')
