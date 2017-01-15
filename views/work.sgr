@@ -1,8 +1,9 @@
 extends(src='layout.sgr')
   block(name='content')
-    h2 Recent
+    h2 Recent Projects
     h3
       a(href='https://www.socialally.co') Social Ally
+      em &nbsp;(2013 -- 2016)
     ul.tech-info
       li
         a(href='https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5') HTML5
@@ -20,6 +21,9 @@ extends(src='layout.sgr')
         a(href='http://jadelang.net/') Jade
       li
         a(href='http://stylus-lang.com/') Stylus
+    p Created a microservices platform for delivering realtime websocket applications including all client and server code. Work was done remotely from Indonesia for an Australian startup in the realtime content space, the platform was written from scratch to support up to 10,000 concurrent users and tools were developed to enable third-party developers to rapidly create rich realtime applications.
+
+    p(md) Much of the platform remains private but during the course of the project various components were released as open-source; you can view the source code at the [socially github profile](https://github.com/socialally).
 
     h2 Open Source
     p(md) The focus of my recent open-source work has been on [mkdoc](https://github.com/mkdoc/mkdoc) and [trucks](https://github.com/tmpfs/trucks); for more open-source projects see my [github profile](https://github.com/tmpfs).

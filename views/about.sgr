@@ -19,4 +19,5 @@ extends(src='layout.sgr')
           li
             strong Natural Languages:
             span Fluent in English and Indonesian; some French and Spanish.
-
+    p Since creating my first web page in 1998 I have been studying programming and working in the digital industry.
+    p Over the course of my career I have created many simple and complex web applications, desktop applications, e-commerce websites, implemented over the wire protocols, designed binary file formats and many esoteric projects including satellite phone SMS microblogging with GPS co-ordinate mapping.
