@@ -11,6 +11,10 @@ extends(src='layout.sgr')
         td Linux, Tmux, Vim
 
       tr
+        td Devops
+        td Docker, Vagrant, AWS
+
+      tr
         td Languages
         td ES6, Javascript, Ruby, Python, Perl, Java, Shell, C
 
