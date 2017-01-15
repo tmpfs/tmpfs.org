@@ -6,7 +6,7 @@ extends(src='layout.sgr')
       div.column
         p
           img.avatar(src='/img/avatar.jpg')
-      div.column.personal
+      div.column
         h3 Muji
         ul
           li
