@@ -21,9 +21,9 @@ html
         a.home(href='/')
           img(src='img/logo.png')
         nav.main
-          a.about(href='/about.html') About
-          a.skills(href='/skills.html') Skills
-          a.work(href='/work.html') Work
+          a.about(href='/about.html', title='About') About
+          a.skills(href='/skills.html', title='Skills') Skills
+          a.work(href='/work.html', title='Work') Work
     block(name='banner')
     main(role='main' id='{{ pageId }}')
       block(name='content')
