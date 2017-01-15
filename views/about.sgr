@@ -9,10 +9,10 @@ extends(src='layout.sgr')
         ul
           li
             strong Source Code:
-            a(href='https://github.com/tmpfs') tmpfs@github
+            a(href='https://github.com/tmpfs') github.com/tmpfs
           li
             strong Packages:
-            a(href='https://www.npmjs.com/~/muji') muji@npm
+            a(href='https://www.npmjs.com/~/muji') npmjs.com/tmpfs
           li
             strong Origin:
             span Born in London in 1977.

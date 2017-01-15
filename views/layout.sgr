@@ -36,8 +36,8 @@ html
       footer
         ul
           li
-            span Copyright 2016+
+            span &#169; 2016+
           li
-            a(href='https://github.com/tmpfs') github.com/tmpfs
+            a(href='https://github.com/tmpfs') github/tmpfs
           li
-            a(href='https://npmjs.com/~/tmpfs') npmjs.com/tmpfs
+            a(href='https://npmjs.com/~/tmpfs') npmjs/tmpfs
