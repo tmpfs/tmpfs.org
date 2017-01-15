@@ -1,7 +1,8 @@
 extends(src='layout.sgr')
   block(name='content')
-    h2 Recent Projects
-    h3
+    h2 Work
+    h3 Recent Projects
+    h4
       a(href='https://www.socialally.co') Social Ally
       em &nbsp;(2013 -- 2016)
     ul.tech-info
@@ -25,9 +26,9 @@ extends(src='layout.sgr')
 
     p(md) Much of the platform remains private but during the course of the project various components were released as open-source; you can view the source code at the [socially github profile](https://github.com/socialally).
 
-    h2 Open Source
+    h3 Open Source
     p(md) The focus of my recent open-source work has been on [mkdoc](https://github.com/mkdoc/mkdoc) and [trucks](https://github.com/tmpfs/trucks); for more open-source projects see my [github profile](https://github.com/tmpfs).
-    h3
+    h4
       a(href='https://github.com/mkdoc/mkdoc') mkdoc
     ul.tech-info
       li
@@ -38,7 +39,7 @@ extends(src='layout.sgr')
     p(md) Use the toolkit to generate dynamic readme documents, simple static web pages or generate API documentation. The [mkcli](https://github.com/mkdoc/mkcli) module is a particularly useful tool for defining command line interfaces as markdown and generating language-agnostic program definitions, help documents, man pages and zsh completion scripts.
 
 
-    h3
+    h4
       a(href='https://github.com/tmpfs/trucks') trucks
     ul.tech-info
       li
@@ -49,7 +50,7 @@ extends(src='layout.sgr')
         a(href='https://github.com/w3c/webcomponents') Web Components
     p(md) Framework agnostic, extensible web component compiler and package manager written in ES6; designed primarily for [skatejs](https://github.com/skatejs/skatejs) with support for [polymer](https://www.polymer-project.org/1.0/) and [react](https://facebook.github.io/react/) coming soon.
 
-    h2 Clients
+    h3 Clients
     p Over the years I have worked with some very well known brands.
     ul.logotypes
       li

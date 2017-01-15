@@ -1,11 +1,12 @@
 extends(src='layout.sgr')
   block(name='content')
+    h2 About
     div.container
       div.column
         p
           img.avatar(src='https://avatars1.githubusercontent.com/u/238069?v=3&s={{avatarSize}}')
       div.column
-        h2 Muji
+        h3 Muji
         ul
           li
             strong Source Code:

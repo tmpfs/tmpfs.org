@@ -1,10 +1,7 @@
 extends(src='layout.sgr')
   block(name='content')
+    h2 Skills
     table.skills
-
-      tr
-        td(colspan='2')
-        hr
 
       tr
         td Environment
@@ -55,10 +52,6 @@ extends(src='layout.sgr')
         td Document first, test driven &amp; agile development
 
       tr
-        td(colspan='2')
-          hr
-
-      tr
         td Frameworks
         td Nodejs, D3, React, Zepto, JQuery, Bootstrap, Backbone, Spring, Grails, Rails
 
@@ -66,9 +59,9 @@ extends(src='layout.sgr')
         td Messaging
         td REST, SOAP, XML-RPC, Open Sound Control (OSC)
 
-      tr
-        td(colspan='2')
-          hr
+      //-tr
+        //-td(colspan='2')
+          //-hr
 
 
       //-tr
