@@ -83,18 +83,19 @@ nav.main a, nav.main a:visited, nav.main a:hover
   text-decoration: none
   text-transform: uppercase
   border-color: rgba(0, 43, 54, 0)
+  transition: color, border-color .4s ease-in-out
   &:not(:last-child)
     margin-right: 1rem
 
 nav.main a:hover, nav.main a.selected
+  color: $magenta
   border-bottom: 2px solid
   /* $base03 */
   /*border-color: rgba(0, 43, 54, 1) !important*/
-  border-color: $base01 !important
-  transition: color, border-color .5s ease-in-out
+  border-color: $magenta !important
 
 nav.main a.selected
-  color: $base01
+  color: $magenta
 
 .banner
   background: $blue
