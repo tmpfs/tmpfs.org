@@ -18,16 +18,15 @@ extends(src='layout.sgr')
           li
             strong Packages:
             a(href='https://www.npmjs.com/~/muji') npmjs.com/muji
-
-          li
-            strong Origin:
-            span Born in London in 1977
           li
             strong Natural Languages:
             span Fluent in English and Indonesian; some French and Spanish
           li
             strong Machine Languages:
             span ES6, Javascript, Ruby, Python, Perl, Java, Shell, C
+          li
+            strong Origin:
+            span Born in London in 1977
           li
             strong Location:
             span Bali, Indonesia (UTC+08:00)
