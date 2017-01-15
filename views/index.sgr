@@ -6,12 +6,12 @@ extends(src='layout.sgr')
       div.column
         p
           img.avatar(src='/img/avatar.jpg')
-      div.column
+      div.column.personal
         h3 Muji
         ul
           li
             strong Occupation:
-            span Software Engineer &amp; Consultant
+            span Software Engineer
           li
             strong Source Code:
             a(href='https://github.com/tmpfs') github.com/tmpfs

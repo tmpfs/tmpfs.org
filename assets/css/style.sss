@@ -20,6 +20,16 @@ $body-background: $base3
 $header-height: 7.5rem
 $footer-height: 8rem
 
+// NOTE: the selection rules for blink/webkit and mozilla
+// NOTE: should not be combined otherwise some rules are not applied
+::selection
+  background: $magenta
+  color: $base2
+
+::-moz-selection
+  background: $magenta
+  color: $base2
+
 html 
   box-sizing: border-box
   font-size: 62.5%
@@ -48,7 +58,7 @@ body > *
 
 h2
   text-transform: uppercase
-  font-size: 2rem
+  font-size: 1.6rem
   line-height: 1.2
   border-bottom: 2px solid $base00
 
@@ -78,6 +88,11 @@ a.home
   display: inline-block
   text-decoration: none
   margin-right: 2rem
+  opacity: .75
+  transition: opacity .5s ease-in-out
+
+a.home:hover
+  opacity: 1
 
 a.home, a.home img
   width: 32px
@@ -139,9 +154,6 @@ main a:hover, footer a:hover
   color: $magenta
   border-color: rgba(211, 54, 130, 1)
 
-.column > h3:first-child
-  margin-top: 0
-
 img.avatar
   box-sizing: border-box
   display: inline-block
@@ -156,6 +168,13 @@ img.avatar
 .column
   min-width: 280px
   /*max-width: 320px*/
+
+.column > h3:first-child
+  margin-top: 0
+  margin-bottom: 0
+
+.column.personal
+  //padding: 0 1rem
 
 #about h4
   border-bottom: 1px solid $base00
