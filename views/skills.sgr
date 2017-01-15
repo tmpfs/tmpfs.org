@@ -60,7 +60,7 @@ extends(src='layout.sgr')
 
       tr
         td Messaging
-        td REST, SOAP, XML-RPC, Flash Remoting (AMF), Open Sound Control, MIDI
+        td REST, SOAP, XML-RPC, Open Sound Control (OSC)
 
       tr
         td(colspan='2')
