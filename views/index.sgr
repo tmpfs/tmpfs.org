@@ -1,18 +1,15 @@
 extends(src='layout.sgr')
   block(name='content')
     h2 Software Engineer &amp; Consultant
+    p I evangelize a document, test, code and iterate workflow to create robust and maintainable software.
     //-block(name='banner')
       //-h1.banner Software Engineer & Consultant
-    div.container
-      div.column
-        h3 Document
-        pi(md) Developers can encourage a document-first approach to writing maintainable software.
-        pi(md) Tools: [swagger](http://swagger.io/), [cucumber](https://cucumber.io/), [mkcli](https://github.com/mkdoc/mkcli)
-      div.column
-        h3 Test
-        p Testing software is an integral part of the process, as a software developer we can leverage test frameworks, code coverage and continuous integration to develop robust programs.
+    h3 Document
+    pi(md) Developers can encourage a document-first approach to writing maintainable software.
+    pi(md) Tools: [swagger](http://swagger.io/), [cucumber](https://cucumber.io/), [mkcli](https://github.com/mkdoc/mkcli)
+    h3 Test
+    p Testing software is an integral part of the process, as a software developer we can leverage test frameworks, code coverage and continuous integration to develop robust programs.
 
-        pi(md) Tools: [ava](https://github.com/avajs/ava), [mocha](http://mochajs.org/), [chai](http://chaijs.com/), [istanbul](https://github.com/gotwarlost/istanbul)
-      div.column
-        h3 Code
-        p Developers should optimize their environment and respect the DRY principle in order to increase efficiency.
+    pi(md) Tools: [ava](https://github.com/avajs/ava), [mocha](http://mochajs.org/), [chai](http://chaijs.com/), [istanbul](https://github.com/gotwarlost/istanbul)
+    h3 Code
+    p Developers should optimize their environment and respect the DRY principle in order to increase efficiency.
