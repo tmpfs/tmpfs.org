@@ -1,4 +1,4 @@
-extends(src='layout.sgr')
+extends(src='../layout.sgr')
   block(name='content')
     h2 Skills
     table.skills

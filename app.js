@@ -8,6 +8,7 @@ const postCssSimpleVars = require('postcss-simple-vars')
 
 module.exports = {
   devtool: 'source-map',
+  cleanUrls: false,
   matchers: {
     html: '*(**/)*.sgr',
     css: '*(**/)*.sss'

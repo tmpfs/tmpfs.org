@@ -7,29 +7,29 @@ html
       meta(name='description' content='Software Engineer, Software Consultant, Web Developer, Full Stack, Javascript, ES6, Docker, Devops, AWS, Nodejs')
       meta(name='author' content='muji')
       meta(name='viewport' content='width=device-width, initial-scale=1')
-      link(rel='icon', type='image/png', href='img/favicon.png?v=1')
+      link(rel='icon', type='image/png', href='/img/favicon.png?v=1')
 
     block(name='title')
       title tmpfs: Software Engineer &amp; Consultant
 
     block(name='stylesheets')
-      link(rel='stylesheet' href='css/style.css')
+      link(rel='stylesheet' href='/css/style.css')
 
   body(role='document')
     block(name='menu')
       header
         a.home(href='/')
-          img(src='img/logo.png')
+          img(src='/img/logo.png')
         nav.main
-          a.about(href='/about.html', title='About') About
-          a.skills(href='/skills.html', title='Skills') Skills
-          a.work(href='/work.html', title='Work') Work
+          a.about(href='/about', title='About') About
+          a.skills(href='/skills', title='Skills') Skills
+          a.work(href='/work', title='Work') Work
     block(name='banner')
     main(role='main' id='{{ pageId }}')
       block(name='content')
 
     block(name='javascript')
-      script(src='js/main.js' defer)
+      script(src='/js/main.js' defer)
 
     block(name='footer')
       footer
