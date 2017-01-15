@@ -2,6 +2,13 @@ extends(src='layout.sgr')
   //-block(name='banner')
     //-h1.banner Software Engineer & Consultant
   block(name='content')
-    p(md) Example of **markdown** with lots of content  with lots of content  with lots of content  with lots of content  with lots of content  with lots of content  with lots of content  with lots of content  with lots of content  with lots of content  with lots of content  with lots of content  with lots of content 
-
-    p(md) Example of **markdown** with lots of content  with lots of content  with lots of content  with lots of content  with lots of content  with lots of content  with lots of content  with lots of content  with lots of content  with lots of content  with lots of content  with lots of content  with lots of content 
+    div.container
+      div.column
+        h2 &lt;document&gt;
+        p Document-first ...
+      div.column
+        h2 &lt;test&gt;
+        p Test...
+      div.column
+        h2 &lt;code&gt;
+        p Code...

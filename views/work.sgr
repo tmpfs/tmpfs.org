@@ -22,7 +22,7 @@ extends(src='layout.sgr')
         a(href='http://stylus-lang.com/') Stylus
 
     h2 Open Source
-    p(md) The focus of my recent open-source work has been on [mkdoc](https://github.com/mkdoc/mkdoc) and [trucks](https://github.com/tmpfs/trucks).
+    p(md) The focus of my recent open-source work has been on [mkdoc](https://github.com/mkdoc/mkdoc) and [trucks](https://github.com/tmpfs/trucks); for more open-source projects see my [github profile](https://github.com/tmpfs).
     h3
       a(href='https://github.com/mkdoc/mkdoc') mkdoc
     ul.tech-info
