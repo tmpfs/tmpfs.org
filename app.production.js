@@ -1,7 +1,9 @@
 const htmlStandards = require('reshape-standard')
 const cssStandards = require('spike-css-standards')
 const pageId = require('spike-page-id')
-const {UglifyJsPlugin, DedupePlugin, OccurrenceOrderPlugin} = require('webpack').optimize
+const {UglifyJsPlugin, DedupePlugin, OccurrenceOrderPlugin} = 
+  require('webpack').optimize
+const postCssSimpleVars = require('postcss-simple-vars')
 
 module.exports = {
   // disable source maps
@@ -24,12 +26,16 @@ module.exports = {
       minify: true
     })
   },
+
   // adds css minification plugin
   postcss: (ctx) => {
-    return cssStandards({
-      webpack: ctx,
-      minify: true,
-      warnForDuplicates: false // cssnano includes autoprefixer
-    })
+    const css = cssStandards(
+      { 
+        webpack: ctx, 
+        minify: true, 
+        warnForDuplicates: false, 
+        features: {customProperties: false, calc: false} })
+    css.plugins.push(postCssSimpleVars())
+    return css
   }
 }

@@ -27,7 +27,8 @@ module.exports = {
     })
   },
   postcss: (ctx) => {
-    const css = cssStandards({ webpack: ctx })
+    const css = cssStandards(
+      { webpack: ctx, features: {customProperties: false, calc: false} })
     css.plugins.push(postCssSimpleVars())
     return css
   },

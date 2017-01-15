@@ -31,3 +31,11 @@ html
 
     block(name='javascript')
       script(src='js/main.js' defer)
+
+    block(name='footer')
+      footer
+        ul
+          li
+            span Copyright 2016+
+          li
+            a(href='https://github.com/tmpfs') tmpfs@github.com
