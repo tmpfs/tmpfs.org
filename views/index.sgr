@@ -18,6 +18,7 @@ extends(src='layout.sgr')
           li
             strong Packages:
             a(href='https://www.npmjs.com/~/muji') npmjs.com/muji
+
           li
             strong Origin:
             span Born in London in 1977
@@ -30,4 +31,6 @@ extends(src='layout.sgr')
           li
             strong Location:
             span Bali, Indonesia (UTC+08:00)
-
+          li
+            strong Contact:
+            span muji {at} tmpfs.org
