@@ -79,11 +79,15 @@ nav.main a, nav.main a:visited, nav.main a:hover
   color: $base03
   text-decoration: none
   text-transform: uppercase
+  border-color: rgba(0, 43, 54, 0)
   &:not(:last-child)
     margin-right: 1rem
 
-nav.main a:hover
-  border-bottom: 2px solid $base03
+nav.main a:hover, a.selected
+  border-bottom: 2px solid
+  /* $base03 */
+  border-color: rgba(0, 43, 54, 1)
+  transition: border-color .5s ease-in-out
 
 .banner
   background: $blue
