@@ -19,3 +19,11 @@ extends(src='../layout.sgr')
     pi(md) Tools: [ava](https://github.com/avajs/ava), [mocha](http://mochajs.org/), [chai](http://chaijs.com/), [istanbul](https://github.com/gotwarlost/istanbul)
     h4 Code
     p Developers should optimize their environment and respect the DRY principle in order to increase efficiency.
+
+    h3 History
+
+    p I guess I am a bit of an old-timer because I can wax lyrical about arcane and obsolete technology like Director, Dreamweaver and Flash. I could talk about creating drag and drop interfaces in Netscape 4 (DHTML!) or vector drawing applications in Flash 5.
+
+    p(md) I was creating database-driven web applications years before the term *full-stack* became mainstream and working remotely from around the globe before the words *digital nomad* had been uttered.
+
+    p I cut my teeth in several digital agencies before going it alone and working as a consultant in London for many years.

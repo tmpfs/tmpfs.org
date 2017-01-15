@@ -34,3 +34,6 @@ extends(src='layout.sgr')
           li
             strong Contact:
             span muji {at} tmpfs.org
+
+    hr
+
