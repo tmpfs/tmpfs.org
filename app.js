@@ -3,8 +3,8 @@ const HardSourcePlugin = require('hard-source-webpack-plugin')
 const htmlStandards = require('reshape-standard')
 const cssStandards = require('spike-css-standards')
 const jsStandards = require('babel-preset-latest')
-const pageId = require('spike-page-id')
 const postCssSimpleVars = require('postcss-simple-vars')
+const pageIdentifier = require('./page-identifier')
 
 module.exports = {
   devtool: 'source-map',
@@ -24,7 +24,7 @@ module.exports = {
   reshape: (ctx) => {
     return htmlStandards({
       webpack: ctx,
-      locals: { pageId: pageId(ctx), avatarSize: 266 }
+      locals: { pageId: pageIdentifier(ctx), avatarSize: 266 }
     })
   },
   postcss: (ctx) => {

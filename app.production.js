@@ -1,6 +1,6 @@
 const htmlStandards = require('reshape-standard')
 const cssStandards = require('spike-css-standards')
-const pageId = require('spike-page-id')
+const pageIdentifier = require('./page-identifier')
 const {UglifyJsPlugin, DedupePlugin, OccurrenceOrderPlugin} = 
   require('webpack').optimize
 const postCssSimpleVars = require('postcss-simple-vars')
@@ -22,7 +22,7 @@ module.exports = {
   reshape: (ctx) => {
     return htmlStandards({
       webpack: ctx,
-      locals: { pageId: pageId(ctx), avatarSize: 266 },
+      locals: { pageId: pageIdentifier(ctx), avatarSize: 266 },
       minify: true
     })
   },
