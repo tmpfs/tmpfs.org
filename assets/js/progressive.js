@@ -25,6 +25,9 @@ class Progressive {
           const main = html.querySelector('main');
           const current = document.querySelector('main');
           current.parentNode.replaceChild(main, current);
+
+          // reset scroll position
+          window.scrollTo(0, 0);
         })
       }else{
         //console.log('Network response was not ok.');
