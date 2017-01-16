@@ -2,10 +2,14 @@ extends(src='../layout.sgr')
   block(name='content')
     h2
       span About
+
     p Since creating my first web page in 1998 I have been studying programming and working in the digital industry.
-    p Over the course of my career I have created many simple and complex web applications, desktop applications, e-commerce websites, implemented over the wire protocols, designed binary file formats and many esoteric projects including satellite phone SMS microblogging with GPS co-ordinate mapping.
+
+    p Over the course of my career I have created many simple and complex web applications, desktop applications, e-commerce websites, implemented over the wire protocols and designed binary file formats.
 
     p I believe very strongly in using the right tool for the job and carefully evaluate the most appropriate technology stack for each project.
+
+    p Operating solo or leading small to medium-sized teams of engineers is a walk in the park. I have led teams of 12+ engineers on multi-million dollar projects and guided junior engineers in small agile teams.
 
     hr
 
@@ -15,17 +19,17 @@ extends(src='../layout.sgr')
     ul.workflow
       li
         h4 Document
-        p Developers can encourage a document-first approach to writing maintainable software.
+        p(md) Writing documentation first not only creates a welcoming atmosphere for other developers it *forces* a thorough analysis of the task or problem domain. The end result is higher quality software that is easier to maintain.
         p(md) Tools: [swagger](http://swagger.io/), [cucumber](https://cucumber.io/), [mkcli](https://github.com/mkdoc/mkcli)
 
       li
         h4 Test
-        p Testing software is an integral part of the process, as a software developer we can leverage test frameworks, code coverage and continuous integration to develop robust programs.
+        p Testing software is an integral part of the process, as a software developer we can leverage test frameworks, code coverage and continuous integration to develop robust programs. Software without a test suite is stumbling in the dark.
         p(md) Tools: [ava](https://github.com/avajs/ava), [mocha](http://mochajs.org/), [chai](http://chaijs.com/), [istanbul](https://github.com/gotwarlost/istanbul)
 
       li
         h4 Code
-        p Developers should optimize their environment and respect the DRY principle in order to increase efficiency.
+        p Optimize the environment and tools for maximum efficiency, respect the DRY principle 
 
     hr
 

@@ -22,8 +22,8 @@ module.exports = {
   reshape: (ctx) => {
     return htmlStandards({
       webpack: ctx,
-      locals: { pageId: pageIdentifier(ctx), avatarSize: 280 },
-      minify: true
+      locals: { pageId: pageIdentifier(ctx) },
+      //minify: true
     })
   },
 
@@ -32,9 +32,9 @@ module.exports = {
     const css = cssStandards(
       { 
         webpack: ctx, 
-        minify: true, 
+        //minify: true, 
         warnForDuplicates: false, 
-        features: {customProperties: false, calc: false} })
+        features: {customProperties: false, calc: false, minify: true} })
     css.plugins.push(postCssSimpleVars())
     return css
   }

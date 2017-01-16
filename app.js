@@ -29,7 +29,7 @@ module.exports = {
   reshape: (ctx) => {
     return htmlStandards({
       webpack: ctx,
-      locals: { pageId: pageIdentifier(ctx), avatarSize: 280 }
+      locals: { pageId: pageIdentifier(ctx) }
     })
   },
   postcss: (ctx) => {
