@@ -12,7 +12,7 @@ extends(src='../layout.sgr')
     ul.workflow
       li
         h4 Document
-        p(md) Developers can encourage a document-first approach to writing maintainable software.
+        p Developers can encourage a document-first approach to writing maintainable software.
         p(md) Tools: [swagger](http://swagger.io/), [cucumber](https://cucumber.io/), [mkcli](https://github.com/mkdoc/mkcli)
 
       li
