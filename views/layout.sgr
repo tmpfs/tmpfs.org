@@ -45,3 +45,8 @@ html
 
         a.contrast(href='#contrast', title='Toggle Contrast')
           img(src='/img/contrast-icon-dark.png')
+
+    block(name='noscript')
+      noscript
+        style.
+          .contrast {display: none !important};
