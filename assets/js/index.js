@@ -1,5 +1,10 @@
 const HOME_ID = 'index';
 
+import {Scroll} from './scroll'
+
+/**
+ *  Main application entry point.
+ */
 class Application {
 
   constructor() {
@@ -10,6 +15,8 @@ class Application {
 
     // page id
     this.page = this.main.getAttribute('id');
+
+    this.scroller = new Scroll();
 
     // TODO: redirect to unsupported browser on feature check
   }
@@ -43,6 +50,8 @@ class Application {
 
   start() {
     this.setSelectedLink();
+
+    this.scroller.start();
   }
 
 }
