@@ -81,11 +81,11 @@ ul, li
   list-style-type: none
 
 header
-  z-index: 2
+  z-index: 3
   background: $body-background
   height: $header-height
   padding: 2rem 1.5rem
-  position: relative
+  position: fixed
   left: 0
   right: 0
   top: 0
@@ -140,13 +140,19 @@ nav.main a.selected
 
 main
   position: relative
+  z-index: 2
+  left: 0
+  top: 0
+  //top: $header-height
+  //bottom: $footer-height
+  //padding-top: $header-height
   /*z-index: 1*/
   /* 3 * 280 columns with 20px/2rem spacing and 20px/2rem horizontal padding */
   max-width: 920px
   margin: 0 auto
-  min-height: calc( 100% - $footer-height - $header-height ) 
-  /*min-height: 100%*/
-  padding: 0 2rem 0 2rem
+  min-height: calc( 100% - $footer-height ) 
+  padding: 0 2rem
+  padding-top: $header-height
   overflow: auto
 
 main p:first-child
@@ -232,6 +238,7 @@ tr > td:first-child
 
 footer
   position: relative
+  z-index: 1
   bottom: 0
   height: $footer-height
   padding: 4rem 4rem 2rem 2rem
