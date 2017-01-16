@@ -29,7 +29,7 @@ html
       div.scroll-indicator
     block(name='menu')
       header
-        a.home(href='/')
+        a.index(href='/')
           img(src='/img/logo.png')
         nav.main
           a.work(href='/work', title='Work') Work
