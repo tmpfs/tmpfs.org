@@ -15,6 +15,15 @@ html
     block(name='stylesheets')
       link(rel='stylesheet' href='/css/style.css')
 
+    // prevent flash when using dark style
+    script.
+      if(localStorage && localStorage.getItem('contrast') === 'dark') {
+        var el = document.querySelector('html');
+        if(el.classList) {
+          el.classList.add('dark');
+        }
+      }
+
   body(role='document')
     block(name='indicator')
       div.scroll-indicator

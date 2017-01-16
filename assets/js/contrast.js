@@ -8,13 +8,13 @@ const KEY = 'contrast';
 class Contrast {
 
   constructor() {
-    this.body = document.querySelector('body');
+    this.html = document.querySelector('html');
     this.handler = document.querySelector('.contrast');
     this.click = this.onClick.bind(this);
   }
 
   getContrast() {
-    if(this.body.classList.contains(DARK)) {
+    if(this.html.classList.contains(DARK)) {
       return DARK;
     }
     return LIGHT;
@@ -23,10 +23,10 @@ class Contrast {
   setContrast(id) {
     //console.log(id);
 
-    this.body.classList.remove(DARK);
-    this.body.classList.remove(LIGHT);
+    this.html.classList.remove(DARK);
+    this.html.classList.remove(LIGHT);
 
-    this.body.classList.add(id);
+    this.html.classList.add(id);
 
     localStorage.setItem(KEY, id);
   }

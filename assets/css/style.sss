@@ -158,8 +158,8 @@ main a:hover, footer a:hover
 img.avatar
   box-sizing: border-box
   display: inline-block
-  border-bottom-right-radius: 1rem
-  box-shadow: 3px 3px 10px 2px #ccc
+  //border-bottom-right-radius: 1rem
+  box-shadow: 3px 3px 3px $base1
   margin-right: 2rem
 
 .container
@@ -247,6 +247,7 @@ footer > ul > li
 
 a.contrast, a.contrast:hover
   position: absolute
+  outline: none
   top: 4.6rem
   right: 2rem
   display: block
@@ -270,7 +271,13 @@ a.contrast > img
 .light .logotypes > li
   transition: background .5s ease-in-out
 
-.dark
+.light header
+  transition: border-color .5s ease-in-out
+
+.light img.avatar
+  transition: box-shadow .5s ease-in-out
+
+.dark body
   background: $base03
   transition: background .5s ease-in-out
 
@@ -302,4 +309,5 @@ a.contrast > img
   background: url('/img/contrast-icon-light.png') no-repeat
 
 .dark img.avatar
-  box-shadow: 3px 3px 10px 2px #ccc
+  box-shadow: 3px 3px 3px $base02
+  transition: box-shadow .5s ease-in-out
