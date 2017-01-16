@@ -55,7 +55,6 @@ class Progressive {
     const link = evt.currentTarget
         , pathname = document.location.pathname.replace(/\/$/, '');
 
-
     let href = link.getAttribute('href').replace(/\/$/, '');
 
     // attempt to navigate to current path

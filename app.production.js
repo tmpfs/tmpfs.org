@@ -23,7 +23,7 @@ module.exports = {
     return htmlStandards({
       webpack: ctx,
       locals: { pageId: pageIdentifier(ctx) },
-      //minify: true
+      minify: true
     })
   },
 
@@ -32,7 +32,6 @@ module.exports = {
     const css = cssStandards(
       { 
         webpack: ctx, 
-        //minify: true, 
         warnForDuplicates: false, 
         features: {customProperties: false, calc: false, minify: true} })
     css.plugins.push(postCssSimpleVars())
