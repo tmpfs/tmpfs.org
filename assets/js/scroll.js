@@ -35,9 +35,6 @@ class Scroll {
     window.addEventListener('scroll', this.handler);
   }
 
-  stop() {
-    window.removeEventListener('scroll', this.handler); 
-  }
 }
 
 export {Scroll}
