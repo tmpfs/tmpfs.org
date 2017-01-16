@@ -159,7 +159,7 @@ img.avatar
   box-sizing: border-box
   display: inline-block
   border-bottom-right-radius: 1rem
-  box-shadow: 3px 3px 10px 2px #ccc
+  //box-shadow: 3px 3px 3px 0px #fff
   margin-right: 2rem
 
 .container
@@ -265,7 +265,8 @@ a.contrast > img
 
 /* CONTRAST STYLES */
 
-.light, .light header, .light footer
+.light, .light header, .light footer, .light .scroll-indicator, 
+.light .logotypes > li
   transition: background .5s ease-in-out
 
 .dark
@@ -284,7 +285,14 @@ a.contrast > img
 
 .dark .scroll-indicator
   background: $base3
+  transition: background .5s ease-in-out
 
 .dark .logotypes > li
   background: $base02
+  transition: background .5s ease-in-out
 
+.dark nav.main a
+  color: $base01
+
+.dark nav.main a:hover, .dark nav.main a.selected
+  color: $magenta
