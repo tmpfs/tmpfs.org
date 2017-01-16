@@ -41,6 +41,12 @@ body
 body > *
   text-align: left
 
+hr
+  border: 0
+  height: 1px
+  width: 100%
+  background: $base00
+
 .scroll-indicator
   position: fixed
   z-index: 20
@@ -163,14 +169,21 @@ img.avatar
 
 .column
   min-width: 280px
-  /*max-width: 320px*/
 
 .column > h3:first-child
   margin-top: 0
   margin-bottom: 0
 
-#about h4
-  border-bottom: 1px solid $base00
+ul.workflow
+  text-align: center
+
+ul.workflow > li
+  text-align: left
+  display: inline-block
+  vertical-align: top
+  max-width: 280px
+  &:not(:last-child)
+    padding-right: 2rem
 
 table.skills, table.skills tbody, table.skills tr
   width: 100%
