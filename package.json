@@ -33,7 +33,7 @@
     "readme": "mk readme --force",
     "create": "./sbin/create",
     "compile": "spike compile --env production",
-    "deploy": "npm run compile && ./sbin/deploy",
+    "deploy": "npm run clean && npm run compile && ./sbin/deploy",
     "lint": "standard | snazzy",
     "precommit": "npm run lint -s",
     "pretest": "npm run lint -s",

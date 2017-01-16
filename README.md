@@ -4,11 +4,42 @@ Static [tmpfs][] website
 
 ---
 
+- [Deploy](#deploy)
+  - [Create](#create)
+  - [Deploy](#deploy-1)
 - [Developer](#developer)
   - [Scripts](#scripts)
 - [License](#license)
 
 ---
+
+## Deploy
+
+The website is deployed to [s3][]. To configure for your own domain you should modify the [configuration](/sbin/config.js) and add authentication credentials to a `.env` file, see [.env.example](/.env.example).
+
+### Create
+
+Then you can create the [s3][] bucket with:
+
+```
+./sbin/create
+```
+
+### Deploy
+
+And deploy the `public` folder with:
+
+```
+./sbin/deploy
+```
+
+For a `production` deployment you should run:
+
+```
+npm run deploy
+```
+
+Which will compile the website for a production environment and transfer the files to [s3][].
 
 ## Developer
 
@@ -60,9 +91,10 @@ MIT
 
 ---
 
-Created by [mkdoc](https://github.com/mkdoc/mkdoc) on January 14, 2017
+Created by [mkdoc](https://github.com/mkdoc/mkdoc) on January 17, 2017
 
 [tmpfs]: http://www.tmpfs.org
+[s3]: https://aws.amazon.com/s3/
 [node]: https://nodejs.org
 [spike]: https://github.com/static-dev/spike
 [standard]: https://github.com/feross/standard
