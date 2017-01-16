@@ -6,6 +6,8 @@ extends(src='../layout.sgr')
 
     p I believe very strongly in using the right tool for the job and carefully evaluate the most appropriate technology stack for each project.
 
+    hr
+
     h3 Workflow
     p I evangelize a document, test, code and iterate workflow to create robust and maintainable software.
 
@@ -23,6 +25,8 @@ extends(src='../layout.sgr')
       li
         h4 Code
         p Developers should optimize their environment and respect the DRY principle in order to increase efficiency.
+
+    hr
 
     h3 History
 
