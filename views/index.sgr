@@ -1,6 +1,5 @@
 extends(src='layout.sgr')
   block(name='content')
-    //-h2 Software Engineer &amp; Consultant
     h2 /dev/tmpfs
     div.container
       div.column
