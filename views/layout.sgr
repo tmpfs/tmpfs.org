@@ -42,3 +42,6 @@ html
             a(href='https://github.com/tmpfs') github/tmpfs
           li
             a(href='https://npmjs.com/~/muji') npmjs/muji
+
+        a.contrast(href='#contrast')
+          img(src='/img/contrast-icon-dark.png')

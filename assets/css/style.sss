@@ -1,19 +1,4 @@
-$base03:    #002b36
-$base02:    #073642
-$base01:    #586e75
-$base00:    #657b83
-$base0:     #839496
-$base1:     #93a1a1
-$base2:     #eee8d5
-$base3:     #fdf6e3
-$yellow:    #b58900
-$orange:    #cb4b16
-$red:       #dc322f
-$magenta:   #d33682
-$violet:    #6c71c4
-$blue:      #268bd2
-$cyan:      #2aa198
-$green:     #859900
+@import "_colors.sss"
 
 $body-background: $base3
 
@@ -125,8 +110,6 @@ nav.main a, nav.main a:visited, nav.main a:hover
 nav.main a:hover, nav.main a.selected
   color: $magenta
   border-bottom: 2px solid
-  /* $base03 */
-  /*border-color: rgba(0, 43, 54, 1) !important*/
   border-color: $magenta !important
 
 nav.main a.selected
@@ -143,10 +126,6 @@ main
   z-index: 2
   left: 0
   top: 0
-  //top: $header-height
-  //bottom: $footer-height
-  //padding-top: $header-height
-  /*z-index: 1*/
   /* 3 * 280 columns with 20px/2rem spacing and 20px/2rem horizontal padding */
   max-width: 920px
   margin: 0 auto
@@ -240,8 +219,9 @@ footer
   position: relative
   z-index: 1
   bottom: 0
+  clear: both
   height: $footer-height
-  padding: 4rem 4rem 2rem 2rem
+  padding: 4rem 2rem 2rem 2rem
   background: linear-gradient( 0deg, $base2, $body-background )
 
 footer > ul > li
@@ -251,3 +231,21 @@ footer > ul > li
   &:not(:last-child)
     &:after
       content: '|'
+
+a.contrast, a.contrast:hover
+  position: absolute
+  top: 4.6rem
+  right: 2rem
+  display: block
+  text-decoration: none
+  border: 0
+  width: 16px
+  height: 16px
+  opacity: .5
+  transition: opacity .5s ease-in-out
+
+a.contrast:hover
+  opacity: 1
+
+a.contrast > img
+  display: block
