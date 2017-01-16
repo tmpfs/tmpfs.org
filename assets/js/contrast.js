@@ -1,6 +1,7 @@
 const LIGHT = 'light';
 const DARK = 'dark';
 const KEY = 'contrast';
+const DURATION = 500;
 
 /**
  *  Switches page contrast.
@@ -39,7 +40,16 @@ class Contrast {
 
   onClick(evt) {
     evt.preventDefault();
-    this.toggleContrast(); 
+    this.toggleContrast();
+
+    // disable click for animation duration
+    this.handler.removeEventListener('click', this.click);
+    this.handler.style = 'cursor: default';
+    setTimeout(() => {
+      this.handler.addEventListener('click', this.click);
+      this.handler.style = 'cursor: auto';
+    }, DURATION);
+
     return false;
   }
 
