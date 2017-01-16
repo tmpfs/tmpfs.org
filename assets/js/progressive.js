@@ -17,9 +17,9 @@ class Progressive {
   }
 
   render(href) {
-    fetch(href).then(function(response) {
+    fetch(href).then((response) => {
       if(response.ok) {
-        response.text().then(function(doc) {
+        response.text().then((doc) => {
           const html = document.createElement('html');
           html.innerHTML = doc;
           const main = html.querySelector('main');
@@ -28,6 +28,10 @@ class Progressive {
 
           // reset scroll position
           window.scrollTo(0, 0);
+
+
+          this.selected.setSelected(this.getClassName(href));
+
         })
       }else{
         //console.log('Network response was not ok.');
@@ -40,6 +44,11 @@ class Progressive {
     });
   }
 
+  getClassName(href) {
+    // className is derived by convention from the href
+    return href.replace(/^\/+/, '');
+  }
+
   onClick(evt) {
     evt.preventDefault();
 
@@ -48,9 +57,6 @@ class Progressive {
 
 
     let href = link.getAttribute('href').replace(/\/$/, '');
-
-    // className is derived by convention from the href
-    const className = href.replace(/^\/+/, '');
 
     // attempt to navigate to current path
     if(href === pathname) {
@@ -63,7 +69,6 @@ class Progressive {
 
     history.pushState({href: href}, '', href);
     this.render(href);
-    this.selected.setSelected(className);
   }
 
   onPopState(evt) {
