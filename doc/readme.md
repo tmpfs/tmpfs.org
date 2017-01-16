@@ -1,16 +1,14 @@
 # tmpfs.org
 
-Static [tmpfs][] website
+Static [tmpfs][] website.
 
 ***
 <!-- @toc -->
 ***
 
-## Deploy
-
 The website is deployed to [s3][]. To configure for your own domain you should modify the [configuration](/sbin/config.js) and add authentication credentials to a `.env` file, see [.env.example](/.env.example).
 
-### Create
+## Create
 
 Then you can create the [s3][] bucket with:
 
@@ -18,7 +16,7 @@ Then you can create the [s3][] bucket with:
 ./sbin/create
 ```
 
-### Deploy
+## Deploy
 
 And deploy the `public` folder with:
 
