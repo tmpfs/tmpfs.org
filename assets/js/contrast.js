@@ -1,5 +1,6 @@
 const LIGHT = 'light';
 const DARK = 'dark';
+const KEY = 'contrast';
 
 /**
  *  Switches page contrast.
@@ -20,12 +21,14 @@ class Contrast {
   }
 
   setContrast(id) {
-    console.log(id);
+    //console.log(id);
 
     this.body.classList.remove(DARK);
     this.body.classList.remove(LIGHT);
 
     this.body.classList.add(id);
+
+    localStorage.setItem(KEY, id);
   }
 
   toggleContrast() {
@@ -41,7 +44,17 @@ class Contrast {
   }
 
   start() {
-    this.handler.addEventListener('click', this.click);
+    if(('localStorage' in window) && window.localStorage !== null) {
+
+      if(localStorage.getItem(KEY) === LIGHT
+        || localStorage.getItem(KEY) === DARK) {
+        this.setContrast(localStorage.getItem(KEY)); 
+      }
+
+      this.handler.addEventListener('click', this.click);
+    }else{
+      this.handler.style = 'display: none';
+    }
   }
 
 }
