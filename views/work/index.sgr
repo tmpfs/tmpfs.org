@@ -1,6 +1,7 @@
 extends(src='../layout.sgr')
   block(name='content')
-    h2 Work
+    h2
+      span Work
     h3 Recent Projects
     h4
       a(href='https://www.socialally.co') Social Ally

@@ -1,6 +1,7 @@
 extends(src='../layout.sgr')
   block(name='content')
-    h2 About
+    h2
+      span About
     p Since creating my first web page in 1998 I have been studying programming and working in the digital industry.
     p Over the course of my career I have created many simple and complex web applications, desktop applications, e-commerce websites, implemented over the wire protocols, designed binary file formats and many esoteric projects including satellite phone SMS microblogging with GPS co-ordinate mapping.
 
@@ -38,7 +39,13 @@ extends(src='../layout.sgr')
 
     hr
 
-    p.colophon.footnote Crafted rapidly with love using state of the art technology.
+    h3 Source Code
+
+    p(md) Like nearly all of my work this [website](https://github.com/tmpfs/tmpfs.org) is open-source, feel free to browse the code or fork the project but please make the style your own if you do! If you hit a bug [raise an issue](https://github.com/tmpfs/tmpfs.org/issues) so that I can continue to learn and improve.
+
+    hr
+
+    p.colophon.footnote Crafted rapidly with love using state of the art technology
     ul.tools
       li
         a(href='https://www.spike.cf/', title='Spike') spike
