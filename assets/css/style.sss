@@ -38,23 +38,6 @@ body
   text-align: center
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
 
-body.light
-  background: $body-background
-  transition: background .5s ease-in-out
-
-body.dark
-  background: $base03
-  transition: background .5s ease-in-out
-
-body.dark header
-  background: $base03
-  border-color: $base02
-  color: $base3
-  transition: background .5s ease-in-out
-
-body.dark .scroll-indicator
-  background: $base3
-
 body > *
   text-align: left
 
@@ -279,3 +262,29 @@ a.contrast:hover
 
 a.contrast > img
   display: block
+
+/* CONTRAST STYLES */
+
+.light, .light header, .light footer
+  transition: background .5s ease-in-out
+
+.dark
+  background: $base03
+  transition: background .5s ease-in-out
+
+.dark header
+  background: $base03
+  border-color: $base02
+  color: $base3
+  transition: background .5s ease-in-out
+
+.dark footer
+  background: linear-gradient( 0deg, $base02, $base03 )
+  transition: background .5s ease-in-out
+
+.dark .scroll-indicator
+  background: $base3
+
+.dark .logotypes > li
+  background: $base02
+
