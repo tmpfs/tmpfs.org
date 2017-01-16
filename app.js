@@ -7,6 +7,9 @@ const postCssSimpleVars = require('postcss-simple-vars')
 const pageIdentifier = require('./page-identifier')
 
 module.exports = {
+  server: {
+    ghostMode: false 
+  },
   devtool: 'source-map',
   cleanUrls: false,
   matchers: {

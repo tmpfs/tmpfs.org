@@ -12,6 +12,7 @@ class Contrast {
     this.html = document.querySelector('html');
     this.handler = document.querySelector('.contrast');
     this.click = this.onClick.bind(this);
+    this.change = this.onChange.bind(this);
   }
 
   getContrast() {
@@ -22,8 +23,6 @@ class Contrast {
   }
 
   setContrast(id) {
-    //console.log(id);
-
     this.html.classList.remove(DARK);
     this.html.classList.remove(LIGHT);
 
@@ -34,8 +33,16 @@ class Contrast {
 
   toggleContrast() {
     const contrast = this.getContrast()
-        , target = contrast === LIGHT ? DARK : LIGHT;
-    this.setContrast(target);
+        , id = contrast === LIGHT ? DARK : LIGHT;
+    this.setContrast(id);
+  }
+
+  onChange(evt) {
+    if(evt.key === KEY
+      && evt.oldValue !== evt.newValue
+      && evt.newValue !== this.getContrast()) {
+      this.setContrast(evt.newValue);   
+    }
   }
 
   onClick(evt) {
@@ -60,6 +67,8 @@ class Contrast {
         || localStorage.getItem(KEY) === DARK) {
         this.setContrast(localStorage.getItem(KEY)); 
       }
+
+      window.addEventListener('storage', this.change);
 
       this.handler.addEventListener('click', this.click);
     }else{
