@@ -44,7 +44,6 @@ html
             a(href='https://npmjs.com/~/muji', title='NPM Profile') npmjs/muji
 
         a.contrast(href='#contrast', title='Toggle Contrast')
-          img(src='/img/contrast-icon-dark.png')
 
     block(name='noscript')
       noscript

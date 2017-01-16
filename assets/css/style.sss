@@ -159,7 +159,7 @@ img.avatar
   box-sizing: border-box
   display: inline-block
   border-bottom-right-radius: 1rem
-  //box-shadow: 3px 3px 3px 0px #fff
+  box-shadow: 3px 3px 10px 2px #ccc
   margin-right: 2rem
 
 .container
@@ -256,6 +256,7 @@ a.contrast, a.contrast:hover
   height: 16px
   opacity: .5
   transition: opacity .5s ease-in-out
+  background: url('/img/contrast-icon-dark.png') no-repeat
 
 a.contrast:hover
   opacity: 1
@@ -296,3 +297,9 @@ a.contrast > img
 
 .dark nav.main a:hover, .dark nav.main a.selected
   color: $magenta
+
+.dark a.contrast
+  background: url('/img/contrast-icon-light.png') no-repeat
+
+.dark img.avatar
+  box-shadow: 3px 3px 10px 2px #ccc
