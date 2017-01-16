@@ -14,7 +14,7 @@ class Application {
     this.selected = new Selected();
     this.scroller = new Scroll();
     this.contrast = new Contrast();
-    this.progressive= new Progressive();
+    this.progressive = new Progressive(this.selected);
   }
 
   start() {
