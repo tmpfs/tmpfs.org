@@ -38,6 +38,22 @@ body
   text-align: center
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
 
+body.light
+  background: $body-background
+  transition: color .5s ease-in-out
+
+body.dark
+  background: $base03
+  transition: color .5s ease-in-out
+
+body.dark header
+  background: $base03
+  border-color: $base02
+  color: $base3
+
+body.dark .scroll-indicator
+  background: $base3
+
 body > *
   text-align: left
 

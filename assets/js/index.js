@@ -1,6 +1,7 @@
 const HOME_ID = 'index';
 
-import {Scroll} from './scroll'
+import {Scroll} from './scroll';
+import {Contrast} from './contrast';
 
 /**
  *  Main application entry point.
@@ -8,6 +9,8 @@ import {Scroll} from './scroll'
 class Application {
 
   constructor() {
+
+    // TODO: redirect to unsupported browser on feature check
 
     // main element
     this.main = document.querySelector('main');
@@ -17,8 +20,7 @@ class Application {
     this.page = this.main.getAttribute('id');
 
     this.scroller = new Scroll();
-
-    // TODO: redirect to unsupported browser on feature check
+    this.contrast = new Contrast();
   }
 
   /**
@@ -52,6 +54,7 @@ class Application {
     this.setSelectedLink();
 
     this.scroller.start();
+    this.contrast.start();
   }
 
 }
