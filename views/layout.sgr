@@ -38,9 +38,6 @@ html
     main(role='main' id='{{ pageId }}')
       block(name='content')
 
-    block(name='javascript')
-      script(src='/js/main.js' defer)
-
     block(name='footer')
       footer
         ul
@@ -57,3 +54,7 @@ html
       noscript
         style.
           .contrast {display: none !important};
+
+    block(name='javascript')
+      script(src='/js/main.js' defer)
+
