@@ -10,6 +10,60 @@ class Progressive {
     this.click = this.onClick.bind(this);
     this.popstate = this.onPopState.bind(this);
     this.pathname = document.location.pathname;
+    this.responded = false;
+  }
+
+  preloader(href) {
+    const now = Date.now();
+    // minimum wait time to prevent preloader flicker
+    const duration = 1000;
+
+    const body = document.querySelector('body');
+    
+    let el = document.querySelector('.preload')
+      , bg
+      , msg
+      , txt;
+
+    function remove() {
+      body.removeAttribute('style');
+      body.removeChild(el);
+    }
+
+    if(el) {
+      remove();
+    }
+
+    // removing existing preloader
+    if(href === null) {
+      return false; 
+    }
+
+    // disable scrolling during preload
+    body.style = 'overflow: hidden';
+
+    el = document.createElement('div');
+    el.setAttribute('class', 'preload');
+    bg = document.createElement('div');
+    bg.setAttribute('class', 'background');
+    msg = document.createElement('div');
+    msg.setAttribute('class', 'message');
+    txt = document.createElement('span');
+    txt.innerText = `Load: ${href}`;
+  
+    el.appendChild(bg);
+    msg.appendChild(txt);
+    el.appendChild(msg);
+    body.appendChild(el);
+
+    setTimeout(() => {el.style = 'opacity: 1'}, 5);
+
+    let interval = setInterval(() => {
+      if(this.responded && (Date.now() - now >= duration)) {
+        remove();
+        clearInterval(interval);
+      }
+    }, 250)
   }
 
   fallback(href) {
@@ -19,7 +73,14 @@ class Progressive {
   render(href) {
     const url = href.replace(/\/$/, '') + '/partial.html';
 
+    this.responded = false;
+    this.preloader(href);
+
     fetch(url).then((response) => {
+
+      // flag to remove preloader
+      this.responded = true;
+
       if(response.ok) {
         response.text().then((doc) => {
 

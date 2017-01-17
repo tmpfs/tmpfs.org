@@ -290,6 +290,44 @@ a.contrast:hover
 a.contrast > img
   display: block
 
+/* PRELOADER */
+
+.preload, .preload > *
+  width: 100%
+  height: 100%
+
+.preload
+  position: fixed
+  z-index: 10
+  left: 0
+  top: 0
+  display: table
+  opacity: 0
+  transition: opacity 0.5s ease-in-out
+
+.preload > .background
+  z-index: -1
+  pointer-events: none
+  position: absolute
+  left: 0
+  top: 0
+  bottom: 0
+  opacity: 1
+  background: $body-background
+
+.preload > .message
+  display: table-cell
+  text-align: center
+  vertical-align: middle
+
+.preload > .message > span
+  /* knockout text */
+  color: $body-background
+  background: $cyan
+  padding: .5rem
+  font-size: 1.2rem
+  text-transform: uppercase
+
 /* CONTRAST STYLES */
 
 .light body, .light header, .light footer, .light .scroll-indicator, 
@@ -336,3 +374,9 @@ a.contrast > img
 .dark img.avatar
   box-shadow: 3px 3px 3px $base02
   transition: box-shadow .5s ease-in-out
+
+.dark .preload > .background
+  background: $base03
+
+.dark .preload > .message > span
+  color: $base03
