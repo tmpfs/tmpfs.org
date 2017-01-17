@@ -19,7 +19,7 @@ class Progressive {
     this.doc = null;
   }
 
-  draw(href, doc) {
+  render(href, doc) {
     const html = document.createElement('html')
         , main = document.createElement('main');
 
@@ -91,7 +91,7 @@ class Progressive {
 
     let interval = setInterval(() => {
       if(this.doc && (Date.now() - now >= animation)) {
-        this.draw(this.href, this.doc);
+        this.render(this.href, this.doc);
 
         // do not attempt to redraw once rendered
         this.doc = null;
@@ -108,7 +108,7 @@ class Progressive {
     document.location.pathname = href;
   }
 
-  render(href) {
+  load(href) {
     const url = href.replace(/\/$/, '') + '/partial.html';
 
     this.href = href;
@@ -177,14 +177,14 @@ class Progressive {
     }
 
     history.pushState({href: href}, '', href);
-    this.render(href);
+    this.load(href);
   }
 
   onPopState(evt) {
     if(evt.state && evt.state.href) {
-      this.render(evt.state.href); 
+      this.load(evt.state.href); 
     }else{
-      this.render(this.pathname); 
+      this.load(this.pathname); 
     }
   }
 
