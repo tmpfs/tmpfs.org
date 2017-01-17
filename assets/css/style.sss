@@ -300,10 +300,6 @@ template
 
 /* PRELOADER */
 
-@keyframes sweep
-  100%
-    transform: rotate(360deg)
-
 .preload, .preload > *
   width: 100%
   height: 100%
@@ -342,6 +338,10 @@ template
   background: $cyan
   border-radius: 0.2rem
   padding: .8rem
+
+@keyframes sweep
+  100%
+    transform: rotate(360deg)
 
 .preload > .message > span > .spinner
   display: inline-block
@@ -412,5 +412,5 @@ template
 .dark .preload > .message
   color: $base03
 
-.preload > .message > span > .spinner
+.dark .preload > .message > span > .spinner
   border-color: $base03
