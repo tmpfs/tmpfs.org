@@ -22,12 +22,14 @@ ul.workflow
 
   li
     h4 Test
-    p Testing software is an integral part of the process, as a software developer we can leverage test frameworks, code coverage and continuous integration to develop robust programs. Software without a test suite is stumbling in the dark.
+    p Testing software is an integral part of the process, we can leverage test frameworks, code coverage, continuous integration and deployment to develop robust programs. Software without a test suite is stumbling in the dark.
     p(md) Tools: [ava](https://github.com/avajs/ava), [mocha](http://mochajs.org/), [chai](http://chaijs.com/), [istanbul](https://github.com/gotwarlost/istanbul)
 
   li
     h4 Code
-    p Optimize the environment and tools for maximum efficiency, respect the DRY principle 
+    p Lint code, leverage static analysis, optimize the development environment for maximum efficiency, respect the DRY principle and have an attitude of constantly learning. Look for the better solution even when the code seems close to perfect.
+
+    p(md) Tools: [tmux](https://tmux.github.io/), [vim](http://www.vim.org/), [jshint](http://jshint.com/), [eslint](http://eslint.org/)
 
 hr
 
