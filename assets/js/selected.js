@@ -15,6 +15,10 @@ class Selected{
     this.page = this.main.getAttribute('id');
   }
 
+  getDefault() {
+    return HOME_ID;
+  }
+
   /**
    *  Remove the *selected* class from all main navigation links.
    */

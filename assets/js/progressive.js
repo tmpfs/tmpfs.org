@@ -17,18 +17,26 @@ class Progressive {
   }
 
   render(href) {
-    fetch(href).then((response) => {
+    const url = href.replace(/\/$/, '') + '/partial.html';
+
+    fetch(url).then((response) => {
       if(response.ok) {
         response.text().then((doc) => {
-          const html = document.createElement('html');
-          html.innerHTML = doc;
-          const main = html.querySelector('main');
+
+          const html = document.createElement('html')
+              , main = document.createElement('main');
+
+          main.setAttribute('role', 'main');
+          main.setAttribute('id', this.getIdentifier(href));
+
+          html.appendChild(main);
+          main.innerHTML = doc;
+
           const current = document.querySelector('main');
           current.parentNode.replaceChild(main, current);
 
           // reset scroll position
           window.scrollTo(0, 0);
-
 
           this.selected.setSelected(this.getClassName(href));
 
@@ -39,9 +47,18 @@ class Progressive {
       }
     })
     .catch(function(error) {
-      console.log(`fetch error: ${error.message}`);
+      console.log(`fetch error: ${error.message} (url: ${url})`);
       this.fallback(href);
     });
+  }
+
+  getIdentifier(href) {
+    if(href === '/') {
+      return this.selected.getDefault(); 
+    }
+
+    // share with class name for the moment
+    return this.getClassName(href);
   }
 
   getClassName(href) {
