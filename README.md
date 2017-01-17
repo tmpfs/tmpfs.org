@@ -52,7 +52,7 @@ spike watch
 
 #### Compile
 
-To compile the static web site with the *production* environment run:
+To compile the static web site and minify assets with the *production* environment run:
 
 ```
 npm run compile
@@ -88,7 +88,7 @@ MIT
 
 ---
 
-Created by [mkdoc](https://github.com/mkdoc/mkdoc) on January 17, 2017
+Created by [mkdoc](https://github.com/mkdoc/mkdoc) on January 18, 2017
 
 [tmpfs]: http://www.tmpfs.org
 [s3]: https://aws.amazon.com/s3/

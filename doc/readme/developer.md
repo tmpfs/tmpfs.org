@@ -12,7 +12,7 @@ spike watch
 
 #### Compile
 
-To compile the static web site with the *production* environment run:
+To compile the static web site and minify assets with the *production* environment run:
 
 ```
 npm run compile
