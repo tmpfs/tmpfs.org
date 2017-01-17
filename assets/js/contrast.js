@@ -9,10 +9,12 @@ const DURATION = 500;
 class Contrast {
 
   constructor() {
+
     this.html = document.querySelector('html');
     this.handler = document.querySelector('.contrast');
     this.click = this.onClick.bind(this);
     this.change = this.onChange.bind(this);
+
   }
 
   getContrast() {
@@ -46,6 +48,7 @@ class Contrast {
   }
 
   onClick(evt) {
+
     evt.preventDefault();
     this.toggleContrast();
 
@@ -61,6 +64,7 @@ class Contrast {
   }
 
   start() {
+
     if(('localStorage' in window) && window.localStorage !== null) {
 
       if(localStorage.getItem(KEY) === LIGHT

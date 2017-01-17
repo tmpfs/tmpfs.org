@@ -38,10 +38,12 @@ class Selected{
     this.clearSelectedState();
 
     const link = this.header.querySelector('.' + className);
+
     if(!link) {
       throw new Error(
         `could not locate link for id '${className}', sync header class names?`);
     }
+
     link.classList.add('selected');
   }
 
