@@ -35,7 +35,6 @@ html
           a.work(href='/work', title='Work') Work
           a.skills(href='/skills', title='Skills') Skills
           a.about(href='/about', title='About') About
-    block(name='banner')
     main(role='main' id='{{ pageId }}')
       block(name='content')
 
