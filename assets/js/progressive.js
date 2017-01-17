@@ -11,10 +11,41 @@ class Progressive {
     this.popstate = this.onPopState.bind(this);
     this.pathname = document.location.pathname;
     this.responded = false;
+
+    // current href
+    this.href = null;
+
+    // current loaded document content (HTML)
+    this.doc = null;
+  }
+
+  draw(href, doc) {
+    const html = document.createElement('html')
+        , main = document.createElement('main');
+
+    main.setAttribute('role', 'main');
+    main.setAttribute('id', this.getIdentifier(href));
+
+    html.appendChild(main);
+    main.innerHTML = doc;
+
+    const current = document.querySelector('main');
+    current.parentNode.replaceChild(main, current);
+
+    // reset scroll position
+    window.scrollTo(0, 0);
+
+    this.selected.setSelected(this.getClassName(href));
+
   }
 
   preloader(href) {
     const now = Date.now();
+
+    // animation duration for preloader reveal
+    // do not draw the view until this time has elapsed
+    const animation = 500;
+
     // minimum wait time to prevent preloader flicker
     const duration = 1000;
 
@@ -59,6 +90,13 @@ class Progressive {
     setTimeout(() => {el.style = 'opacity: 1'}, 5);
 
     let interval = setInterval(() => {
+      if(this.doc && (Date.now() - now >= animation)) {
+        this.draw(this.href, this.doc);
+
+        // do not attempt to redraw once rendered
+        this.doc = null;
+      }
+
       if(this.responded && (Date.now() - now >= duration)) {
         remove();
         clearInterval(interval);
@@ -73,9 +111,13 @@ class Progressive {
   render(href) {
     const url = href.replace(/\/$/, '') + '/partial.html';
 
+    this.href = href;
     this.responded = false;
+
+    // show preloader
     this.preloader(href);
 
+    // load the HTML partial
     fetch(url).then((response) => {
 
       // flag to remove preloader
@@ -84,22 +126,12 @@ class Progressive {
       if(response.ok) {
         response.text().then((doc) => {
 
-          const html = document.createElement('html')
-              , main = document.createElement('main');
-
-          main.setAttribute('role', 'main');
-          main.setAttribute('id', this.getIdentifier(href));
-
-          html.appendChild(main);
-          main.innerHTML = doc;
-
-          const current = document.querySelector('main');
-          current.parentNode.replaceChild(main, current);
-
-          // reset scroll position
-          window.scrollTo(0, 0);
-
-          this.selected.setSelected(this.getClassName(href));
+          // keep reference so that the preloader
+          // can draw the document to the DOM
+          // this is done so that when the page loads very fast
+          // it is not rendered before the preloader has finished
+          // animating
+          this.doc = doc;
 
         })
       }else{
