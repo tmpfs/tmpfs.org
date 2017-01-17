@@ -51,18 +51,18 @@ class Progressive {
 
     const body = document.querySelector('body');
     
-    let el = document.querySelector('.preload')
-      , bg
-      , msg
-      , txt;
+    let el = document.querySelector('body > .preload');
+
+    if(el) {
+      remove();
+    }
+
+    el = document.querySelector('template')
+      .content.querySelector('.preload').cloneNode(true);
 
     function remove() {
       body.removeAttribute('style');
       body.removeChild(el);
-    }
-
-    if(el) {
-      remove();
     }
 
     // removing existing preloader
@@ -73,18 +73,9 @@ class Progressive {
     // disable scrolling during preload
     body.style = 'overflow: hidden';
 
-    el = document.createElement('div');
-    el.setAttribute('class', 'preload');
-    bg = document.createElement('div');
-    bg.setAttribute('class', 'background');
-    msg = document.createElement('div');
-    msg.setAttribute('class', 'message');
-    txt = document.createElement('span');
+    let txt = el.querySelector('span');
     txt.innerText = `Loading ${href}`;
   
-    el.appendChild(bg);
-    msg.appendChild(txt);
-    el.appendChild(msg);
     body.appendChild(el);
 
     setTimeout(() => {el.style = 'opacity: 1'}, 5);

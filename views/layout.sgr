@@ -58,3 +58,9 @@ html
     block(name='javascript')
       script(src='/js/main.js' defer)
 
+    template
+      .preload
+        .background
+        .message
+          span &nbsp;
+
