@@ -292,14 +292,9 @@ a.contrast > img
 
 /* PRELOADER */
 
-.spinner
-  width: 150px
-  height: 150px
-  -webkit-animation: sweep 1s infinite linear
-  border-radius:75px
-  border-bottom:5px solid blue
-
-@-webkit-keyframes sweep to -webkit-transform: rotate(360deg)
+@keyframes sweep
+  100%
+    transform: rotate(360deg)
 
 .preload, .preload > *
   width: 100%
@@ -326,17 +321,35 @@ a.contrast > img
 
 .preload > .message
   display: table-cell
+  position: relative
+  color: $body-background
+  font-size: 1.2rem
   user-select: none
   text-align: center
   vertical-align: middle
 
 .preload > .message > span
   /* knockout text */
-  color: $body-background
-  background: $cyan
-  padding: .5rem
-  font-size: 1.2rem
   text-transform: uppercase
+  background: $cyan
+  border-radius: 0.2rem
+  padding: .8rem
+
+.preload > .message > span > .spinner
+  display: inline-block
+  position: relative
+  left: 0
+  top: 3px
+  width: 1.6rem
+  height: 1.6rem
+  animation: sweep 1s infinite linear
+  border-radius: 0.8rem
+  border-bottom: 1px solid
+  border-color: $body-background
+
+.preload > .message > span > em
+  font-style: normal
+  margin-left: 0.5rem
 
 /* CONTRAST STYLES */
 
@@ -388,5 +401,8 @@ a.contrast > img
 .dark .preload > .background
   background: $base03
 
-.dark .preload > .message > span
+.dark .preload > .message
   color: $base03
+
+.preload > .message > span > .spinner
+  border-color: $base03

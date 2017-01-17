@@ -1,3 +1,5 @@
+const HOME = 'home';
+
 /**
  *  Progressive enhancement using the `fetch` API to dynamically load and render 
  *  the page without refreshing the entire page content.
@@ -39,6 +41,15 @@ class Progressive {
 
   }
 
+  getPreloadMessage(href) {
+    let msg = href;
+    if(msg === '/') {
+      msg = HOME; 
+    }
+    msg = msg.replace(/^\//, '')
+    return `Loading ${msg}`;
+  }
+
   preloader(href) {
     const now = Date.now();
 
@@ -57,6 +68,7 @@ class Progressive {
       remove();
     }
 
+    // get preloader template
     el = document.querySelector('template')
       .content.querySelector('.preload').cloneNode(true);
 
@@ -73,8 +85,9 @@ class Progressive {
     // disable scrolling during preload
     body.style = 'overflow: hidden';
 
-    let txt = el.querySelector('span');
-    txt.innerText = `Loading ${href}`;
+    let txt = el.querySelector('em');
+    let msg = this.getPreloadMessage(href);
+    txt.innerText = msg;
   
     body.appendChild(el);
 

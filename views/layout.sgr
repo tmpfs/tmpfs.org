@@ -62,5 +62,7 @@ html
       .preload
         .background
         .message
-          span &nbsp;
+            span
+              span.spinner
+              em &nbsp;
 
