@@ -10,7 +10,7 @@ html
       link(rel='icon', type='image/png', href='/img/favicon.png?v=1')
 
     block(name='title')
-      title tmpfs: Software Engineer &amp; Consultant
+      title tmpfs: digital nomad
 
     block(name='stylesheets')
       link(rel='stylesheet' href='/css/style.css')
