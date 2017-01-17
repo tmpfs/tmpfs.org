@@ -23,7 +23,7 @@ module.exports = {
     return htmlStandards({
       webpack: ctx,
       locals: { pageId: pageIdentifier(ctx) },
-      minify: true
+      //minify: true
     })
   },
 
