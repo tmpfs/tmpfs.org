@@ -143,7 +143,7 @@ class Progressive {
         this.fallback(href);
       }
     })
-    .catch(function(error) {
+    .catch((error) => {
       console.log(`fetch error: ${error.message} (url: ${url})`);
       this.fallback(href);
     });
