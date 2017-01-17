@@ -80,7 +80,7 @@ class Progressive {
     msg = document.createElement('div');
     msg.setAttribute('class', 'message');
     txt = document.createElement('span');
-    txt.innerText = `Load: ${href}`;
+    txt.innerText = `Loading ${href}`;
   
     el.appendChild(bg);
     msg.appendChild(txt);
