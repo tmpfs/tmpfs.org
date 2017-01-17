@@ -1,0 +1,71 @@
+h2
+  span Skills
+  sup *
+p(md) To get an idea of the various skills I have acquired over the years see the table below; I am currently keen to spend some time learning [Golang](https://golang.org/), [Rust](https://www.rust-lang.org/) and playing with [Lua](http://www.lua.org/)/[Kong](https://getkong.org/)/[OpenResty](https://openresty.org), [Elixir](http://elixir-lang.org/), [Nim](http://nim-lang.org/) and [Crystal](https://crystal-lang.org/).
+hr
+
+table.skills
+
+  tr
+    td Environment
+    td Linux, Tmux, Vim
+
+  tr
+    td Devops
+    td Docker, Vagrant, AWS
+
+  tr
+    td Languages
+    td ES6, Javascript, Ruby, Python, Perl, Java, Shell, C
+
+  tr
+    td Style
+    td CSS3, PostCSS, Stylus, Sass, Less
+
+  tr
+    td Markup &amp; XML
+    td HTML5, XHTML, XML, XSLT, XPath, XML Schemas, E4X
+
+  tr
+    td Development
+    td Nodejs, Babel, Webpack, Browserify, Gulp, Grunt
+
+  tr
+    td Databases
+    td Redis, CouchDB, MongoDB, SQL, MySQL, RDBMS
+
+  tr
+    td Documentation
+    td Markdown, Commonmark, LaTeX, Pandoc
+
+  tr
+    td Source Code Management
+    td Git, Subversion, CVS
+
+  tr
+    td Continuous Integration
+    td Travis, Coveralls, Jenkins
+
+  tr
+    td Architecture
+    td OOP, AOP, MVC, IoC &amp; Design Patterns
+
+  tr
+    td Methodology
+    td Document first, test driven &amp; agile development
+
+  tr
+    td Frameworks
+    td D3, React, Zepto, JQuery, Bootstrap, Backbone, Rails
+
+  tr
+    td Messaging
+    td REST, SOAP, XML-RPC, Open Sound Control (OSC)
+
+  tr
+    td(colspan='2')
+      hr
+
+p.footnote
+  sup *
+  span For brevity many skills learnt along my journey have been omitted; in the past I used Spring, Hibernate, Grails, Maven and Ant a lot but they are really only relevant when working on Java projects and nowadays I tend to focus on Nodejs and Golang. Many years ago I did a lot of work with PHP but you would have a very hard time getting me to go back to that language!
