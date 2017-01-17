@@ -16,7 +16,7 @@ class Application {
     this.contrast = new Contrast();
     this.selected = new Selected();
     this.scroller = new Scroll();
-    //this.progressive = new Progressive(this.selected);
+    this.progressive = new Progressive(this.selected);
   }
 
   start() {
@@ -24,13 +24,10 @@ class Application {
     this.contrast.start();
     this.selected.start();
     this.scroller.start();
-    //this.progressive.start();
+    this.progressive.start();
   }
 
 }
-
-//document.querySelector('main')
-  //.appendChild(document.createElement('localstorage: ' + window.localStorage));
 
 const app = new Application();
 app.start();
