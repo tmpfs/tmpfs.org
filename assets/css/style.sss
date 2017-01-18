@@ -47,6 +47,9 @@ header, footer
 body > *
   text-align: left
 
+p
+  margin: 1rem 0
+
 hr
   border: 0
   height: 1px
@@ -198,11 +201,19 @@ main a:hover, footer a:hover
   float: left
   width: calc(100% - 300px)
   min-width: 280px
+  /* NOTE: margin used when wrapped */
+  margin-bottom: 2rem
+
+.meta > .info > h3
+  margin-top: 0
+
+.meta + hr
+  margin-top: 0
 
 img.avatar
   display: block
   float: left
-  margin: 0 2rem 1rem 0
+  margin: 0 2rem 2rem 0
   box-shadow: 3px 3px 3px $base1
   opacity: .5
 

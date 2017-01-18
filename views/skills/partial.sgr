@@ -62,9 +62,7 @@ table.skills
     td Messaging
     td REST, SOAP, XML-RPC, Open Sound Control (OSC)
 
-  tr
-    td(colspan='2')
-      hr
+hr
 
 p.footnote
   sup *
