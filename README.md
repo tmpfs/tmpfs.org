@@ -33,7 +33,7 @@ The deploy logic performs some additional optimization of the assets so before d
 npm run compile
 ```
 
-And then serve the assets using [static-server][]:
+And then serve the assets using [static][]:
 
 ```
 static -p 1111 public
@@ -41,13 +41,7 @@ static -p 1111 public
 
 ## Deploy
 
-And deploy the `public` folder with:
-
-```
-./sbin/deploy
-```
-
-For a `production` deployment you should run:
+To deploy a `production` deployment you should run:
 
 ```
 npm run deploy
@@ -139,5 +133,5 @@ Created by [mkdoc](https://github.com/mkdoc/mkdoc) on January 18, 2017
 [snazzy]: https://github.com/feross/snazzy
 [mkdoc]: https://github.com/mkdoc/mkdoc
 [linkdown]: https://github.com/tmpfs/linkdown
-[static-server]: https://github.com/cloudhead/node-static
+[static]: https://github.com/cloudhead/node-static
 
