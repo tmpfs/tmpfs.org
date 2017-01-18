@@ -47,17 +47,16 @@ h3 Source Code
 
 p(mdi) Like nearly all of my work this [website](https://github.com/tmpfs/tmpfs.org) is open-source, feel free to browse the code or fork the project but please make the style your own if you do! If you hit a bug [raise an issue](https://github.com/tmpfs/tmpfs.org/issues) so that I can continue to learn and improve.
 
-hr
-
-p.colophon.footnote Crafted rapidly with love using state of the art technology
-ul.tools
-  li
-    a(href='https://www.spike.cf/' title='Spike') spike
-  li
-    a(href='https://babeljs.io/' title='Babel') babel
-  li
-    a(href='https://webpack.github.io/' title='Webpack') webpack
-  li
-    a(href='https://reshape.ml/' title='Reshape') reshape
-  li
-    a(href='http://postcss.org/' title='Postcss') postcss
+.colophon
+  p.footnote Crafted rapidly with love using state of the art technology
+  ul.tools
+    li
+      a(href='https://www.spike.cf/' title='Spike') spike
+    li
+      a(href='https://babeljs.io/' title='Babel') babel
+    li
+      a(href='https://webpack.github.io/' title='Webpack') webpack
+    li
+      a(href='https://reshape.ml/' title='Reshape') reshape
+    li
+      a(href='http://postcss.org/' title='Postcss') postcss
