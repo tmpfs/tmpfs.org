@@ -63,14 +63,17 @@ ul.logotypes
     img(src='/img/logo/ft.png' alt='Financial Times')
   li
     img(src='/img/logo/orange.png' alt='Orange')
+
+  li
+    img(src='/img/logo/bbc.png' alt='BBC')
+  li
+    img(src='/img/logo/ford.png' alt='Ford')
+  li
+    img(src='/img/logo/nokia.png' alt='Nokia')
   li
     img(src='/img/logo/vw.png' alt='Volkswagen')
   li
     img(src='/img/logo/xbox.png' alt='Xbox')
-  li
-    img(src='/img/logo/bbc.png' alt='BBC')
-  li
-    img(src='/img/logo/nokia.png' alt='Nokia')
   li
     img(src='/img/logo/yo-sushi.png' alt='Yo! Sushi')
   li
