@@ -6,6 +6,7 @@ Static [tmpfs][] website.
 
 - [Create](#create)
 - [Deploy](#deploy)
+- [Cache](#cache)
 - [Developer](#developer)
   - [Scripts](#scripts)
 - [License](#license)
@@ -37,6 +38,16 @@ npm run deploy
 ```
 
 Which will compile the website for a production environment and transfer the files to [s3][].
+
+## Cache
+
+To configure the cache control for the [s3][] bucket run:
+
+```
+./sbin/cache 86400
+```
+
+To set `Cache-Control: max-age 86400`. Note that the `Expires` header for HTTP 1.0 clients is always set far into the future.
 
 ## Developer
 
