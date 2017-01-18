@@ -1,8 +1,8 @@
 h2 /dev/tmpfs
-div.container
-  div.column
-    img.avatar(src='/img/avatar.jpg')
-  div.column
+
+.meta.clearfix
+  img.avatar(src='/img/avatar.jpg')
+  .info
     h3 Muji
     ul
       li
@@ -25,10 +25,14 @@ div.container
         span Born in London in 1977
       li
         strong Location:
-        span Bali, Indonesia (UTC+08:00)
+        span Bali, Indonesia
+      li
+        strong Timezone:
+        span Indonesia Central Time Zone UTC+08:00
       li
         strong Contact:
         span muji {at} tmpfs.org
+
 hr
 
 p Qualified as a sound engineer, divemaster and skydiver I tend nowadays to spend my time studying permaculture in the garden or creating magic in the kitchen. I can often be found practicing chi-kung, yoga, serving the finest grade teas or at the beach for sun and freediving.

@@ -52,6 +52,7 @@ hr
   height: 1px
   width: 100%
   background: $base00
+  margin: 1rem 0
 
 .scroll-indicator
   position: fixed
@@ -176,37 +177,26 @@ main a:hover, footer a:hover
   color: $magenta
   border-color: rgba(211, 54, 130, 1)
 
+.meta
+  padding-top: 1rem
+  margin: 0
+
+.meta::after
+  content: ""
+  display: block
+  clear: both
+
+.meta > .info
+  float: left
+  width: calc(100% - 300px)
+  min-width: 280px
+
 img.avatar
   display: block
+  float: left
+  margin: 0 2rem 1rem 0
   box-shadow: 3px 3px 3px $base1
   opacity: .5
-
-.container
-  clear: both
-  margin: 2rem 0 
-
-.container:after
-  visibility: hidden
-  display: block
-  font-size: 0
-  content: " "
-  clear: both
-  height: 0
-
-.column
-  float: left
-
-.container > .column:first-child
-  padding-right: 1rem
-
-.container > .column:last-child
-  float: right
-  display: inline-block
-  width: calc(100% - 300px)
-  min-width: 270px
-
-.container > .column:first-child > h3
-  margin-top: 0
 
 ul.workflow
   text-align: center
