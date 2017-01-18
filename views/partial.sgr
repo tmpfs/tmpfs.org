@@ -1,7 +1,7 @@
 h2 /dev/tmpfs
 
 .meta.clearfix
-  img.avatar(src='/img/avatar.jpg')
+  img.avatar(src='/img/avatar.jpg' alt="Avatar")
   .info
     h3 Muji
     ul

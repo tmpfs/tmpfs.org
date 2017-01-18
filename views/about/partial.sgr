@@ -52,12 +52,12 @@ hr
 p.colophon.footnote Crafted rapidly with love using state of the art technology
 ul.tools
   li
-    a(href='https://www.spike.cf/', title='Spike') spike
+    a(href='https://www.spike.cf/' title='Spike') spike
   li
-    a(href='https://babeljs.io/', title='Babel') babel
+    a(href='https://babeljs.io/' title='Babel') babel
   li
-    a(href='https://webpack.github.io/', title='Webpack') webpack
+    a(href='https://webpack.github.io/' title='Webpack') webpack
   li
-    a(href='https://reshape.ml/', title='Reshape') reshape
+    a(href='https://reshape.ml/' title='Reshape') reshape
   li
-    a(href='http://postcss.org/', title='Postcss') postcss
+    a(href='http://postcss.org/' title='Postcss') postcss

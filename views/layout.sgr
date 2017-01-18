@@ -3,12 +3,12 @@ html
   head
     block(name='meta')
       meta(charset='utf-8')
-      meta(http-equiv='X-UA-Compatible' content='IE=edge, chrome=1')
+      meta(http-equiv='X-UA-Compatible' content='IE=edge')
       meta(name='description' content='Digital Nomad, Software Engineer, Software Consultant, Web Developer, Full Stack, Javascript, ES6, Docker, Devops, AWS, Nodejs, Golang')
       meta(name='author' content='muji')
       meta(name='viewport' content='width=device-width, initial-scale=1')
-      link(rel='canonical', href='https://tmpfs.org')
-      link(rel='icon', type='image/png', href='/img/favicon.png?v=1')
+      link(rel='canonical' href='https://tmpfs.org')
+      link(rel='icon' type='image/png' href='/img/favicon.png?v=1')
 
     block(name='title')
       title tmpfs: digital nomad
@@ -25,18 +25,18 @@ html
         }
       }
 
-  body(role='document')
+  body
     block(name='indicator')
       div.scroll-indicator
     block(name='menu')
       header
-        a.index(href='/', data-id='index')
-          img(src='/img/logo.png')
+        a.index(href='/' data-id='index')
+          img(src='/img/logo.png' alt="Home")
         nav.main
-          a.work(href='/work/', title='Work') Work
-          a.skills(href='/skills/', title='Skills') Skills
-          a.about(href='/about/', title='About') About
-    main(role='main' id='{{ pageId }}')
+          a.work(href='/work/' title='Work') Work
+          a.skills(href='/skills/' title='Skills') Skills
+          a.about(href='/about/' title='About') About
+    main(id='{{ pageId }}')
       block(name='content')
 
     block(name='footer')
@@ -45,15 +45,15 @@ html
           li
             span &#169; 2016+
           li
-            a(href='https://github.com/tmpfs', title='Github Profile') github/tmpfs
+            a(href='https://github.com/tmpfs' title='Github Profile') github/tmpfs
           li
-            a(href='https://npmjs.com/~/muji', title='NPM Profile') npmjs/muji
+            a(href='https://npmjs.com/~/muji' title='NPM Profile') npmjs/muji
 
-        a.contrast(href='#contrast', title='Toggle Contrast')
+        a.contrast(href='#contrast' title='Toggle Contrast')
 
     block(name='noscript')
       noscript
-        style.
+        style(scoped).
           .contrast {display: none !important};
 
     block(name='javascript')
