@@ -1,4 +1,4 @@
 extends(src='layout.sgr')
   block(name='content')
     h2 {404} Page Not Found
-    p(md) Oops, the page you are looking for could not be found, start from the [home page](/) or use a link in the menu above.
+    p(mdi) Oops, the page you are looking for could not be found, start from the [home page](/) or use a link in the menu above.

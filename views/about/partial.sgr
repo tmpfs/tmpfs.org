@@ -17,19 +17,19 @@ p I evangelize a document, test, code and iterate workflow to create robust and 
 ul.workflow
   li
     h4 Document
-    p(md) Writing documentation first not only creates a welcoming atmosphere for other developers it *forces* a thorough analysis of the task or problem domain. The end result is higher quality software that is easier to maintain.
-    p(md) Tools: [swagger](http://swagger.io/), [cucumber](https://cucumber.io/), [mkcli](https://github.com/mkdoc/mkcli)
+    p(mdi) Writing documentation first not only creates a welcoming atmosphere for other developers it *forces* a thorough analysis of the task or problem domain. The end result is higher quality software that is easier to maintain.
+    p(mdi) Tools: [swagger](http://swagger.io/), [cucumber](https://cucumber.io/), [mkcli](https://github.com/mkdoc/mkcli)
 
   li
     h4 Test
     p Testing software is an integral part of the process, we can leverage test frameworks, code coverage, continuous integration and deployment to develop robust programs. Software without a test suite is stumbling in the dark.
-    p(md) Tools: [ava](https://github.com/avajs/ava), [mocha](http://mochajs.org/), [chai](http://chaijs.com/), [istanbul](https://github.com/gotwarlost/istanbul)
+    p(mdi) Tools: [ava](https://github.com/avajs/ava), [mocha](http://mochajs.org/), [chai](http://chaijs.com/), [istanbul](https://github.com/gotwarlost/istanbul)
 
   li
     h4 Code
     p Lint code, leverage static analysis, optimize the development environment for maximum efficiency, respect the DRY principle and have an attitude of constantly learning. Look for the better solution even when the code seems close to perfect.
 
-    p(md) Tools: [tmux](https://tmux.github.io/), [vim](http://www.vim.org/), [jshint](http://jshint.com/), [eslint](http://eslint.org/)
+    p(mdi) Tools: [tmux](https://tmux.github.io/), [vim](http://www.vim.org/), [jshint](http://jshint.com/), [eslint](http://eslint.org/)
 
 hr
 
@@ -37,15 +37,15 @@ h3 History
 
 p I guess I am a bit of an old-timer because I can wax lyrical about arcane and obsolete technology like Director, Dreamweaver and Flash. I could talk about creating drag and drop interfaces in Netscape 4 (DHTML!) or vector drawing applications in Flash 5.
 
-p(md) I was creating database-driven web applications years before the term *full-stack* became mainstream and working remotely from around the globe before the words *digital nomad* had been uttered.
+p(mdi) I was creating database-driven web applications years before the term *full-stack* became mainstream and working remotely from around the globe before the words *digital nomad* had been uttered.
 
-p(md) I cut my teeth in several digital agencies before going it alone and working as a consultant in London for many years before pioneering the digital nomad lifestyle and then finally settling in the *Island of the Gods* -- Bali, Indonesia.
+p(mdi) I cut my teeth in several digital agencies before going it alone and working as a consultant in London for many years before pioneering the digital nomad lifestyle and then finally settling in the *Island of the Gods* -- Bali, Indonesia.
 
 hr
 
 h3 Source Code
 
-p(md) Like nearly all of my work this [website](https://github.com/tmpfs/tmpfs.org) is open-source, feel free to browse the code or fork the project but please make the style your own if you do! If you hit a bug [raise an issue](https://github.com/tmpfs/tmpfs.org/issues) so that I can continue to learn and improve.
+p(mdi) Like nearly all of my work this [website](https://github.com/tmpfs/tmpfs.org) is open-source, feel free to browse the code or fork the project but please make the style your own if you do! If you hit a bug [raise an issue](https://github.com/tmpfs/tmpfs.org/issues) so that I can continue to learn and improve.
 
 hr
 
