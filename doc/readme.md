@@ -56,10 +56,6 @@ To configure the cache control for the [s3][] bucket run:
 
 To set `Cache-Control: max-age 86400`. Note that the `Expires` header for HTTP 1.0 clients is always set far into the future.
 
-<? @include {=readme} developer.md ?>
-
-<? @include {=readme} license.md links.md ?>
-
 ## HTML Validation
 
 Install [linkdown][] and start a production server:
@@ -73,3 +69,8 @@ Then you can validate the HTML of the entire site with:
 ```
 linkdown v http://localhost:1111 --bail
 ```
+
+<? @include {=readme} developer.md ?>
+
+<? @include {=readme} license.md links.md ?>
+

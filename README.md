@@ -8,10 +8,10 @@ Static [tmpfs][] website.
 - [Stage](#stage)
 - [Deploy](#deploy)
 - [Cache](#cache)
+- [HTML Validation](#html-validation)
 - [Developer](#developer)
   - [Scripts](#scripts)
 - [License](#license)
-- [HTML Validation](#html-validation)
 
 ---
 
@@ -65,6 +65,20 @@ To configure the cache control for the [s3][] bucket run:
 
 To set `Cache-Control: max-age 86400`. Note that the `Expires` header for HTTP 1.0 clients is always set far into the future.
 
+## HTML Validation
+
+Install [linkdown][] and start a production server:
+
+```
+spike watch --env production
+```
+
+Then you can validate the HTML of the entire site with:
+
+```
+linkdown v http://localhost:1111 --bail
+```
+
 ## Developer
 
 ### Scripts
@@ -112,20 +126,6 @@ npm run readme
 ## License
 
 MIT
-
-## HTML Validation
-
-Install [linkdown][] and start a production server:
-
-```
-spike watch --env production
-```
-
-Then you can validate the HTML of the entire site with:
-
-```
-linkdown v http://localhost:1111 --bail
-```
 
 ---
 
