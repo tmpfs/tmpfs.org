@@ -22,6 +22,7 @@ module.exports = {
     '**/.*',
     '**/*.bak',
     '_cache/**',
+    'graphics/**',
     'ref/**',
     'doc/**',
     'sbin/**',
