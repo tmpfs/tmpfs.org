@@ -27,7 +27,7 @@ npm run compile
 And then serve the assets using [static-server][]:
 
 ```
-static-server -p 1111 public
+static -p 1111 public
 ```
 
 ## Deploy

@@ -36,7 +36,7 @@ npm run compile
 And then serve the assets using [static-server][]:
 
 ```
-static-server -p 1111 public
+static -p 1111 public
 ```
 
 ## Deploy
@@ -139,5 +139,5 @@ Created by [mkdoc](https://github.com/mkdoc/mkdoc) on January 18, 2017
 [snazzy]: https://github.com/feross/snazzy
 [mkdoc]: https://github.com/mkdoc/mkdoc
 [linkdown]: https://github.com/tmpfs/linkdown
-[static-server]: https://github.com/nbluis/static-server
+[static-server]: https://github.com/cloudhead/node-static
 
