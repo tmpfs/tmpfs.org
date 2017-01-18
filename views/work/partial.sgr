@@ -56,8 +56,8 @@ p(mdi) Framework agnostic, extensible web component compiler and package manager
 
 hr
 
-h3 Clients
-p Over the years I have worked with some very well known brands.
+h3 Clients & Agencies
+p Over the years I have worked with some very well known brands and digital agencies.
 ul.logotypes
   li
     img(src='/img/logo/ft.png' alt='Financial Times')
@@ -71,3 +71,13 @@ ul.logotypes
     img(src='/img/logo/bbc.png' alt='BBC')
   li
     img(src='/img/logo/nokia.png' alt='Nokia')
+  li
+    img(src='/img/logo/yo-sushi.png' alt='Yo! Sushi')
+
+hr
+
+ul.logotypes
+  li
+    img(src='/img/logo/agency/digitas-lbi.png' alt='Digitas LBi')
+  li
+    img(src='/img/logo/agency/saatchi.png' alt='Saatchi &amp; Saatchi')
