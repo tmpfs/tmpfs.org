@@ -69,3 +69,5 @@ ul.logotypes
     img(src='/img/logo/xbox.png' alt='Xbox')
   li
     img(src='/img/logo/bbc.png' alt='BBC')
+  li
+    img(src='/img/logo/nokia.png' alt='Nokia')
