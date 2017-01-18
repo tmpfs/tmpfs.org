@@ -177,22 +177,33 @@ main a:hover, footer a:hover
   border-color: rgba(211, 54, 130, 1)
 
 img.avatar
-  box-sizing: border-box
   display: block
-  //border-bottom-right-radius: 1rem
   box-shadow: 3px 3px 3px $base1
   opacity: .5
 
 .container
   clear: both
+  margin: 2rem 0 
 
-.container > .column:first-child
-  padding-right: 2rem
-  padding-bottom: 2rem
+.container:after
+  visibility: hidden
+  display: block
+  font-size: 0
+  content: " "
+  clear: both
+  height: 0
 
 .column
   float: left
-  min-width: 280px
+
+.container > .column:first-child
+  padding-right: 1rem
+
+.container > .column:last-child
+  float: right
+  display: inline-block
+  width: calc(100% - 300px)
+  min-width: 270px
 
 .container > .column:first-child > h3
   margin-top: 0

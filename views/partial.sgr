@@ -1,6 +1,8 @@
 h2 /dev/tmpfs
 div.container
   div.column
+    img.avatar(src='/img/avatar.jpg')
+  div.column
     h3 Muji
     ul
       li
@@ -27,9 +29,6 @@ div.container
       li
         strong Contact:
         span muji {at} tmpfs.org
-  div.column
-    p
-      img.avatar(src='/img/avatar.jpg')
 hr
 
 p Qualified as a sound engineer, divemaster and skydiver I tend nowadays to spend my time studying permaculture in the garden or creating magic in the kitchen. I can often be found practicing chi-kung, yoga, serving the finest grade teas or at the beach for sun and freediving.
