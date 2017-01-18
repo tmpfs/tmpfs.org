@@ -15,6 +15,14 @@ class Selected{
     this.page = this.main.getAttribute('id');
   }
 
+  setEnabled(flag) {
+    this.header.classList.remove('disabled');
+
+   if(flag === false) {
+      this.header.classList.add('disabled');
+    }
+  }
+
   getDefault() {
     return HOME_ID;
   }

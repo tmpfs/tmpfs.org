@@ -37,8 +37,6 @@ class Progressive {
     // reset scroll position
     window.scrollTo(0, 0);
 
-    this.selected.setSelected(this.getClassName(href));
-
   }
 
   getPreloadMessage(href) {
@@ -50,7 +48,16 @@ class Progressive {
     return `Loading ${msg}`;
   }
 
+  remove() {
+    const body = document.querySelector('body');
+    const el = document.querySelector('body > .preload');
+    this.selected.setEnabled(true);
+    body.removeAttribute('style');
+    body.removeChild(el);
+  }
+
   preloader(href) {
+
     const now = Date.now();
 
     // animation duration for preloader reveal
@@ -65,17 +72,12 @@ class Progressive {
     let el = document.querySelector('body > .preload');
 
     if(el) {
-      remove();
+      this.remove();
     }
 
     // get preloader template
     el = document.querySelector('template')
       .content.querySelector('.preload').cloneNode(true);
-
-    function remove() {
-      body.removeAttribute('style');
-      body.removeChild(el);
-    }
 
     // removing existing preloader
     if(href === null) {
@@ -102,7 +104,7 @@ class Progressive {
       }
 
       if(this.responded && (Date.now() - now >= duration)) {
-        remove();
+        this.remove();
         clearInterval(interval);
       }
     }, 250)
@@ -120,6 +122,11 @@ class Progressive {
 
     // show preloader
     this.preloader(href);
+
+    this.selected.setEnabled(false);
+
+    // update navigation selected state
+    this.selected.setSelected(this.getClassName(href));
 
     // load the HTML partial
     fetch(url).then((response) => {
