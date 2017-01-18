@@ -5,4 +5,6 @@
 [standard]: https://github.com/feross/standard
 [snazzy]: https://github.com/feross/snazzy
 [mkdoc]: https://github.com/mkdoc/mkdoc
+[linkdown]: https://github.com/tmpfs/linkdown
+[static-server]: https://github.com/nbluis/static-server
 

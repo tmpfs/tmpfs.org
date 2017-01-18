@@ -16,6 +16,20 @@ Then you can create the [s3][] bucket with:
 ./sbin/create
 ```
 
+## Stage
+
+The deploy logic performs some additional optimization of the assets so before deploying to mimic a full production deployment you should compile using:
+
+```
+npm run compile
+```
+
+And then serve the assets using [static-server][]:
+
+```
+static-server -p 1111 public
+```
+
 ## Deploy
 
 And deploy the `public` folder with:
@@ -45,3 +59,17 @@ To set `Cache-Control: max-age 86400`. Note that the `Expires` header for HTTP 1
 <? @include {=readme} developer.md ?>
 
 <? @include {=readme} license.md links.md ?>
+
+## HTML Validation
+
+Install [linkdown][] and start a production server:
+
+```
+spike watch --env production
+```
+
+Then you can validate the HTML of the entire site with:
+
+```
+linkdown v http://localhost:1111 --bail
+```

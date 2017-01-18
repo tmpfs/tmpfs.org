@@ -5,11 +5,13 @@ Static [tmpfs][] website.
 ---
 
 - [Create](#create)
+- [Stage](#stage)
 - [Deploy](#deploy)
 - [Cache](#cache)
 - [Developer](#developer)
   - [Scripts](#scripts)
 - [License](#license)
+- [HTML Validation](#html-validation)
 
 ---
 
@@ -21,6 +23,20 @@ Then you can create the [s3][] bucket with:
 
 ```
 ./sbin/create
+```
+
+## Stage
+
+The deploy logic performs some additional optimization of the assets so before deploying to mimic a full production deployment you should compile using:
+
+```
+npm run compile
+```
+
+And then serve the assets using [static-server][]:
+
+```
+static-server -p 1111 public
 ```
 
 ## Deploy
@@ -97,6 +113,20 @@ npm run readme
 
 MIT
 
+## HTML Validation
+
+Install [linkdown][] and start a production server:
+
+```
+spike watch --env production
+```
+
+Then you can validate the HTML of the entire site with:
+
+```
+linkdown v http://localhost:1111 --bail
+```
+
 ---
 
 Created by [mkdoc](https://github.com/mkdoc/mkdoc) on January 18, 2017
@@ -108,4 +138,6 @@ Created by [mkdoc](https://github.com/mkdoc/mkdoc) on January 18, 2017
 [standard]: https://github.com/feross/standard
 [snazzy]: https://github.com/feross/snazzy
 [mkdoc]: https://github.com/mkdoc/mkdoc
+[linkdown]: https://github.com/tmpfs/linkdown
+[static-server]: https://github.com/nbluis/static-server
 
