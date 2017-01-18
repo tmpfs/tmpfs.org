@@ -60,9 +60,7 @@ class Selected{
    *  matches the page identifier.
    */
   setSelectedState() {
-    if(this.page !== HOME_ID) {
-      this.setSelected(this.page);
-    }
+    this.setSelected(this.page);
   }
 
   start() {

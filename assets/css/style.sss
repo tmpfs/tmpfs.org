@@ -126,9 +126,10 @@ a.index
   opacity: .75
   width: 32px
   height: 32px
-  background: url('/img/logo-dark.svg')
-  background-size: 32px 32px
+  background: url('/img/logo-dark.svg') no-repeat center/32px
   transition: opacity .5s ease-in-out
+  &.selected
+    background: url('/img/logo-selected.svg') no-repeat center/32px
 
 a.index:hover
   opacity: 1
@@ -462,6 +463,5 @@ template
 .dark .preload > .message > span > .spinner
   border-color: $base03
 
-.dark a.index
-  background: url('/img/logo-light.svg')
-  background-size: 32px 32px
+.dark a.index:not(.selected)
+  background: url('/img/logo-light.svg') no-repeat center/32px
