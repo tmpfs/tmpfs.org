@@ -45,9 +45,11 @@ html
           li
             span &#169; 2016+
           li
-            a(href='https://github.com/tmpfs' title='Github Profile') github/tmpfs
+            a(href='https://github.com/tmpfs' title='Github Profile') github
           li
-            a(href='https://npmjs.com/~/muji' title='NPM Profile') npmjs/muji
+            a(href='https://npmjs.com/~/muji' title='NPM Profile') npm
+          li
+            span 真 善 忍
 
         a.contrast(href='#contrast' title='Toggle Contrast')
 
