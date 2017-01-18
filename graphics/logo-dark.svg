@@ -16,9 +16,9 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="logo-dark.svg"
-   inkscape:export-filename="/home/muji/git/tmpfs.org/assets/img/favicon.png"
-   inkscape:export-xdpi="14.4"
-   inkscape:export-ydpi="14.4">
+   inkscape:export-filename="/home/muji/git/tmpfs.org/assets/img/logo-dark.png"
+   inkscape:export-xdpi="22.5"
+   inkscape:export-ydpi="22.5">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -66,21 +66,21 @@
      id="layer1"
      transform="translate(0,-924.3622)">
     <circle
-       style="fill:#073642;fill-opacity:1;stroke:#002b36;stroke-width:5.11999989;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#073642;fill-opacity:1;stroke:none;stroke-width:5.11999989;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path3340"
        cx="64"
        cy="988.36218"
-       r="61.439999" />
+       r="64" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70px;line-height:125%;font-family:PragmataPro;-inkscape-font-specification:'PragmataPro, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="27.786621"
-       y="1011.7582"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70px;line-height:125%;font-family:PragmataPro;-inkscape-font-specification:'PragmataPro, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#fdf6e3;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="27.633789"
+       y="1012.1503"
        id="text4142"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4144"
-         x="27.786621"
-         y="1011.7582">{}</tspan></text>
+         x="27.633789"
+         y="1012.1503">{}</tspan></text>
   </g>
 </svg>
