@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+seconds={$1:-3600};
+aws s3 sync public s3://tmpfs.org --cache-control max-age=${seconds}
