@@ -31,7 +31,6 @@ html
     block(name='menu')
       header
         a.index(href='/' data-id='index')
-          img(src='/img/logo-dark.png' alt="Home")
         nav.main
           a.work(href='/work/' title='Work') Work
           a.skills(href='/skills/' title='Skills') Skills

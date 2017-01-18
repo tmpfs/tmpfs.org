@@ -124,14 +124,14 @@ a.index
   text-decoration: none
   margin-right: 2rem
   opacity: .75
+  width: 32px
+  height: 32px
+  background: url('/img/logo-dark.svg')
+  background-size: 32px 32px
   transition: opacity .5s ease-in-out
 
 a.index:hover
   opacity: 1
-
-a.index, a.index img
-  width: 32px
-  height: 32px
 
 nav.main
   display: inline-block
@@ -154,6 +154,12 @@ nav.main a:hover, nav.main a.selected
 
 nav.main a.selected
   color: $magenta
+
+a.selected
+  cursor: default
+
+a.index.selected
+  opacity: 1
 
 .banner
   background: $blue
@@ -455,3 +461,7 @@ template
 
 .dark .preload > .message > span > .spinner
   border-color: $base03
+
+.dark a.index
+  background: url('/img/logo-light.svg')
+  background-size: 32px 32px
