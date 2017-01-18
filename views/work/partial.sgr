@@ -73,10 +73,6 @@ ul.logotypes
     img(src='/img/logo/nokia.png' alt='Nokia')
   li
     img(src='/img/logo/yo-sushi.png' alt='Yo! Sushi')
-
-hr
-
-ul.logotypes
   li
     img(src='/img/logo/agency/digitas-lbi.png' alt='Digitas LBi')
   li
