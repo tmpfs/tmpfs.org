@@ -13,31 +13,27 @@ header
 a.index
   display: inline-block
   text-decoration: none
-  margin-left: 2rem
+  margin-left: 1rem
   opacity: .75
   width: 32px
   height: 32px
   background: url('/img/logo-dark.svg') no-repeat center/32px
   background-size: contain
   transition: opacity .5s ease-in-out
+  &:hover,
   &.selected
-    background: url('/img/logo-selected.svg') no-repeat center/32px
-
-a.index:hover
-  opacity: 1
+    opacity: 1
 
 a.index.selected
-  opacity: 1
-
+  background: url('/img/logo-selected.svg') no-repeat center/32px
+  background-size: contain
 
 header a
   outline: none
 
 nav.main
   display: table
-  width: auto
   height: $header-height
-  /*background: red*/
 
 nav.main > span
   display: table-cell
@@ -51,8 +47,6 @@ nav.main a
   border-color: rgba(0, 43, 54, 0)
   &.selected
     cursor: default
-  &:not(:last-child)
-    margin-right: 1rem
 
 nav.main a:not(.index)
   &:hover,
