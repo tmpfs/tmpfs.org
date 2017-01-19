@@ -205,7 +205,8 @@ class Progressive {
   }
 
   start() {
-    if(window.fetch !== null) {
+    // NOTE: window.fetch is `undefined` in mobile safari
+    if(window.fetch) {
       this.links.forEach((link) => {
         link.addEventListener('click', this.click);
       })
