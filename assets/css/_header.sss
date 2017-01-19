@@ -6,8 +6,6 @@ header
   left: 0
   right: 0
   top: 0
-  font-size: 1.5rem
-  line-height: 1.5rem
   border-bottom: 1px solid $base2
 
 a.index
@@ -49,6 +47,9 @@ nav.main a
     cursor: default
 
 nav.main a:not(.index)
+  position: relative
+  top: -2px
+  font-size: 1.6rem
   &:hover,
   &.selected
     transition: color, border-color .4s ease-in-out
