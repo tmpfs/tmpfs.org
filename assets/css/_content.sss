@@ -43,11 +43,6 @@ main p:first-child
   padding-top: 1rem
   margin: 0
 
-.meta::after
-  content: ""
-  display: block
-  clear: both
-
 .meta > .info
   float: left
   width: calc(100% - 300px)
@@ -92,14 +87,26 @@ ul.workflow > li > p:last-child
   padding-bottom: 0
 
 .tech-info
-  margin-top: -0.5rem
+  font-size: 0
+
+.clearfix::after
+  content: ""
+  display: block
+  clear: both
 
 .tech-info li
-  display: inline-block
+  display: inline
+  float: left
   font-size: 1.4rem
 
-.tech-info > li:not(:last-child):after
+.tech-info > li:not(:last-child)::after
+  white-space: pre
   content: ', '
+
+.tech-info a
+  display: inline-block
+  border: none
+  padding: 0
 
 .logotypes
   column-count: 2

@@ -7,7 +7,7 @@ section(title='tmpfs: work')
     h4
       a(href='https://www.socialally.co') Social Ally
       span.muted 2013 -- 2016
-    ul.tech-info
+    ul.tech-info.clearfix
       li
         a(href='https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5') HTML5
       li
@@ -36,7 +36,7 @@ section(title='tmpfs: work')
 
     h4
       a(href='https://github.com/mkdoc/mkdoc') mkdoc
-    ul.tech-info
+    ul.tech-info.clearfix
       li
         a(href='http://commonmark.org/') Commonmark
       li
@@ -47,7 +47,7 @@ section(title='tmpfs: work')
 
     h4
       a(href='https://github.com/tmpfs/trucks') trucks
-    ul.tech-info
+    ul.tech-info.clearfix
       li
         a(href='https://babeljs.io/') ES6/Babel
       li
