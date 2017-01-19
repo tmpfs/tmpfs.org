@@ -55,12 +55,6 @@ main p:first-child
   /* NOTE: margin-bottom used when wrapped */
   margin: 0 2rem 2rem 0
 
-.meta > .info > h3
-  margin-top: 0
-
-.meta + hr
-  margin-top: 0
-
 img.avatar
   display: block
   float: left
@@ -91,12 +85,17 @@ tr > td:first-child
 
 #work h4
   margin-bottom: 0
+  padding-bottom: 0
+
+.tech-info
+  margin-top: -0.5rem
 
 .tech-info li
   display: inline-block
+  font-size: 1.4rem
+  line-height: 0.5em
 
-.tech-info > li:not(:last-child) > a:after
-  white-space: pre
+.tech-info > li:not(:last-child):after
   content: ', '
 
 .logotypes

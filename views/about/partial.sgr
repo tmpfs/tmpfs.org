@@ -10,8 +10,6 @@ section(title='tmpfs: about')
 
   p Operating solo or leading small to medium-sized teams of engineers is a walk in the park. I have led teams of 12+ engineers on multi-million dollar projects and guided junior engineers in small agile teams.
 
-  hr
-
   h3 Workflow
   p I evangelize a document, test, code and iterate workflow to create robust and maintainable software.
 
@@ -32,8 +30,6 @@ section(title='tmpfs: about')
 
       p(mdi) Tools: [tmux](https://tmux.github.io/), [vim](http://www.vim.org/), [jshint](http://jshint.com/), [eslint](http://eslint.org/)
 
-  hr
-
   h3 History
 
   p I guess I am a bit of an old-timer because I can wax lyrical about arcane and obsolete technology like Director, Dreamweaver and Flash. I could talk about creating drag and drop interfaces in Netscape 4 (DHTML!) or vector drawing applications in Flash 5.
@@ -41,8 +37,6 @@ section(title='tmpfs: about')
   p(mdi) I was creating database-driven web applications years before the term *full-stack* became mainstream and working remotely from around the globe before the words *digital nomad* had been uttered.
 
   p(mdi) I cut my teeth in several digital agencies before going it alone and working as a consultant in London for many years before pioneering the digital nomad lifestyle and then finally settling in the *Island of the Gods* -- Bali, Indonesia.
-
-  hr
 
   h3 Source Code
 
