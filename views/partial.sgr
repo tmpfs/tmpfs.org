@@ -1,47 +1,49 @@
-h2 /dev/tmpfs
+section(title='tmpfs: digital nomad')
 
-.meta.clearfix
-  .info
-    h3 Muji
-    ul
-      li
-        strong Occupation:
-        span Software Engineer
-      li
-        strong Source Code:
-        a(href='https://github.com/tmpfs') github.com/tmpfs
-      li
-        strong Packages:
-        a(href='https://www.npmjs.com/~/muji') npmjs.com/muji
-      li
-        strong Natural Languages:
-        span Fluent in English and Indonesian; some French and Spanish
-      li
-        strong Machine Languages:
-        span ES6, Javascript, Ruby, Python, Perl, Java, Shell, C
-      li
-        strong Origin:
-        span Born in London in 1977
-      li
-        strong Location:
-        span Bali, Indonesia
-      li
-        strong Timezone: 
-        span Indonesia
-        | &nbsp;
-        abbr(title='Central Time Zone') CTZ
-        | &nbsp;
-        abbr(title='Coordinated Universal Time') UTC
-        | +08:00
-      li
-        strong Contact:
-        span muji {at} tmpfs.org
-  img.avatar(src='/img/avatar.jpg' alt="Avatar")
+  h2 /dev/tmpfs
 
-hr
+  .meta.clearfix
+    .info
+      h3 Muji
+      ul
+        li
+          strong Occupation:
+          span Software Engineer
+        li
+          strong Source Code:
+          a(href='https://github.com/tmpfs') github.com/tmpfs
+        li
+          strong Packages:
+          a(href='https://www.npmjs.com/~/muji') npmjs.com/muji
+        li
+          strong Natural Languages:
+          span Fluent in English and Indonesian; some French and Spanish
+        li
+          strong Machine Languages:
+          span ES6, Javascript, Ruby, Python, Perl, Java, Shell, C
+        li
+          strong Origin:
+          span Born in London in 1977
+        li
+          strong Location:
+          span Bali, Indonesia
+        li
+          strong Timezone: 
+          span Indonesia
+          | &nbsp;
+          abbr(title='Central Time Zone') CTZ
+          | &nbsp;
+          abbr(title='Coordinated Universal Time') UTC
+          | +08:00
+        li
+          strong Contact:
+          span muji {at} tmpfs.org
+    img.avatar(src='/img/avatar.jpg' alt="Avatar")
 
-p Since adopting the digital nomad lifestyle I am constantly striving to find the perfect work/life balance that harmonizes creative and healthy activities with creating beautiful software.
+  hr
 
-p Qualified as a sound engineer, divemaster and skydiver I tend nowadays to spend my time studying permaculture in the garden or creating magic in the kitchen. I can often be found practicing chi-kung, yoga, serving the finest grade teas or at the beach for sun and freediving.
+  p Since adopting the digital nomad lifestyle I am constantly striving to find the perfect work/life balance that harmonizes creative and healthy activities with creating beautiful software.
 
-p A lifelong autodidact I enjoy traveling, exploring, kayaking, literature, philosophy, theology, etymology, nature, permaculture and many other activities.
+  p Qualified as a sound engineer, divemaster and skydiver I tend nowadays to spend my time studying permaculture in the garden or creating magic in the kitchen. I can often be found practicing chi-kung, yoga, serving the finest grade teas or at the beach for sun and freediving.
+
+  p A lifelong autodidact I enjoy traveling, exploring, kayaking, literature, philosophy, theology, etymology, nature, permaculture and many other activities.
