@@ -17,6 +17,14 @@ class Contrast {
 
   }
 
+  setEnabled(flag) {
+    this.handler.removeAttribute('style');
+
+    if(flag === false) {
+      this.handler.setAttribute('style', 'display: none');
+    } 
+  }
+
   getContrast() {
     if(this.html.classList.contains(DARK)) {
       return DARK;

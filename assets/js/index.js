@@ -19,9 +19,25 @@ class Application {
     this.progressive = new Progressive(this.selected);
   }
 
+  isIos() {
+    return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  }
+
+  isIos4() {
+    return !!window.history && ('pushState' in window.history);
+  }
+
+  isIos5() {
+    return !!window.matchMedia;
+  }
+
   start() {
 
-    this.contrast.start();
+    if(this.isIos() && (this.isIos5() || this.isIos4())) {
+      this.contrast.setEnabled(false); 
+    }else{
+      this.contrast.start();
+    }
     this.selected.start();
     this.scroller.start();
     this.progressive.start();
