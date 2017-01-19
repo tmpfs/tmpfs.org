@@ -263,19 +263,25 @@ tr > td:first-child
   column-count: 2
   column-gap: 1rem
 
-.logotypes li
+.logotypes > li
   display: inline-block
   width: 130px
+  font-size: 1.2rem
   text-align: center
   margin-bottom: 2rem
   margin-right: 2rem
   background: $base2
-  padding: 1.5rem
+  padding: 1.5rem 1.5rem 0.5rem 1.5rem
 
-.logotypes img
+.logotypes > li > img
   width: 100px
   vertical-align: top
   opacity: .5
+
+.logotypes > li > span
+  text-transform: uppercase
+  display: inline-block
+  margin-top: .5rem
 
 .footnote
   font-size: 1.4rem
