@@ -2,48 +2,53 @@ section(title='tmpfs: about')
   h2
     span About
 
-  p Since creating my first web page in 1998 I have been studying programming and working in the digital industry.
+  .section
 
-  p Over the course of my career I have created many simple and complex web applications, desktop applications, e-commerce websites, implemented over the wire protocols and designed binary file formats.
+    p Since creating my first web page in 1998 I have been studying programming and working in the digital industry.
 
-  p I believe very strongly in using the right tool for the job and carefully evaluate the most appropriate technology stack for each project.
+    p Over the course of my career I have created many simple and complex web applications, desktop applications, e-commerce websites, implemented over the wire protocols and designed binary file formats.
 
-  p Operating solo or leading small to medium-sized teams of engineers is a walk in the park. I have led teams of 12+ engineers on multi-million dollar projects and guided junior engineers in small agile teams.
+    p I believe very strongly in using the right tool for the job and carefully evaluate the most appropriate technology stack for each project.
 
-  h3 Workflow
-  p I evangelize a document, test, code and iterate workflow to create robust and maintainable software.
+    p Operating solo or leading small to medium-sized teams of engineers is a walk in the park. I have led teams of 12+ engineers on multi-million dollar projects and guided junior engineers in small agile teams.
 
-  ul.workflow
-    li
-      h4 Document
-      p(mdi) Writing documentation first not only creates a welcoming atmosphere for other developers it *forces* a thorough analysis of the task or problem domain. The end result is higher quality software that is easier to maintain.
-      p(mdi) Tools: [swagger](http://swagger.io/), [cucumber](https://cucumber.io/), [mkcli](https://github.com/mkdoc/mkcli)
+  .section
+    h3 Workflow
+    p I evangelize a document, test, code and iterate workflow to create robust and maintainable software.
 
-    li
-      h4 Test
-      p Testing software is an integral part of the process, we can leverage test frameworks, code coverage, continuous integration and deployment to develop robust programs. Software without a test suite is stumbling in the dark.
-      p(mdi) Tools: [ava](https://github.com/avajs/ava), [mocha](http://mochajs.org/), [chai](http://chaijs.com/), [istanbul](https://github.com/gotwarlost/istanbul)
+    ul.workflow
+      li
+        h4 Document
+        p(mdi) Writing documentation first not only creates a welcoming atmosphere for other developers it *forces* a thorough analysis of the task or problem domain. The end result is higher quality software that is easier to maintain.
+        p(mdi) Tools: [swagger](http://swagger.io/), [cucumber](https://cucumber.io/), [mkcli](https://github.com/mkdoc/mkcli)
 
-    li
-      h4 Code
-      p Lint code, leverage static analysis, optimize the development environment for maximum efficiency, respect the DRY principle and have an attitude of constantly learning. Look for the better solution even when the code seems close to perfect.
+      li
+        h4 Test
+        p Testing software is an integral part of the process, we can leverage test frameworks, code coverage, continuous integration and deployment to develop robust programs. Software without a test suite is stumbling in the dark.
+        p(mdi) Tools: [ava](https://github.com/avajs/ava), [mocha](http://mochajs.org/), [chai](http://chaijs.com/), [istanbul](https://github.com/gotwarlost/istanbul)
 
-      p(mdi) Tools: [tmux](https://tmux.github.io/), [vim](http://www.vim.org/), [jshint](http://jshint.com/), [eslint](http://eslint.org/)
+      li
+        h4 Code
+        p Lint code, leverage static analysis, optimize the development environment for maximum efficiency, respect the DRY principle and have an attitude of constantly learning. Look for the better solution even when the code seems close to perfect.
 
-  h3 History
+        p(mdi) Tools: [tmux](https://tmux.github.io/), [vim](http://www.vim.org/), [jshint](http://jshint.com/), [eslint](http://eslint.org/)
 
-  p I guess I am a bit of an old-timer because I can wax lyrical about arcane and obsolete technology like Director, Dreamweaver and Flash. I could talk about creating drag and drop interfaces in Netscape 4 (DHTML!) or vector drawing applications in Flash 5.
+  .section
+    h3 History
 
-  p(mdi) I was creating database-driven web applications years before the term *full-stack* became mainstream and working remotely from around the globe before the words *digital nomad* had been uttered.
+    p I guess I am a bit of an old-timer because I can wax lyrical about arcane and obsolete technology like Director, Dreamweaver and Flash. I could talk about creating drag and drop interfaces in Netscape 4 (DHTML!) or vector drawing applications in Flash 5.
 
-  p(mdi) I cut my teeth in several digital agencies before going it alone and working as a consultant in London for many years before pioneering the digital nomad lifestyle and then finally settling in the *Island of the Gods* -- Bali, Indonesia.
+    p(mdi) I was creating database-driven web applications years before the term *full-stack* became mainstream and working remotely from around the globe before the words *digital nomad* had been uttered.
 
-  h3 Source Code
+    p(mdi) I cut my teeth in several digital agencies before going it alone and working as a consultant in London for many years before pioneering the digital nomad lifestyle and then finally settling in the *Island of the Gods* -- Bali, Indonesia.
 
-  p(mdi) Like nearly all of my work this [website](https://github.com/tmpfs/tmpfs.org) is open-source, feel free to browse the code or fork the project but please make the style your own if you do! If you hit a bug [raise an issue](https://github.com/tmpfs/tmpfs.org/issues) so that I can continue to learn and improve.
+  .section
+    h3 Source Code
+
+    p(mdi) Like nearly all of my work this [website](https://github.com/tmpfs/tmpfs.org) is open-source, feel free to browse the code or fork the project but please make the style your own if you do! If you hit a bug [raise an issue](https://github.com/tmpfs/tmpfs.org/issues) so that I can continue to learn and improve.
 
   .colophon
-    p.footnote Crafted rapidly with love using state of the art technology
+    .footnote Crafted rapidly with love &amp; thanks
     ul.tools
       li
         a(href='https://www.spike.cf/' title='Spike') spike
