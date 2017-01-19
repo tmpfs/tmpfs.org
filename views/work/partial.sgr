@@ -61,11 +61,11 @@ h2
 
 .section
   h3 Clients & Agencies
-  p Over the years I have worked with some very well known brands and digital agencies.
+  p During my career I have worked with some very well known brands and digital agencies.
 
   hr
 
-  ul.logotypes
+  ul.logotypes.no-select
     li
       img(src='/img/logo/ft.png' alt='Financial Times')
       span Financial Times

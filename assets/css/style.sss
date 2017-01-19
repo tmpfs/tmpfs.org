@@ -38,7 +38,7 @@ body
   text-align: center
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
 
-header, footer, .preload > .message
+header, footer, .preload > .message, .no-select
   user-select: none
   -webkit-user-select: none
   -moz-user-select: none
@@ -275,11 +275,12 @@ tr > td:first-child
   border-radius: 0.4rem
   padding: 1.5rem 1.5rem 0.5rem 1.5rem
   opacity: .5
-  transition: opacity .5s ease-in-out
+  transition: background, opacity .5s ease-in-out
   &:hover
     opacity: 1
 
 .logotypes > li > img
+  display: block
   width: 100px
   vertical-align: top
 
@@ -431,9 +432,6 @@ template
 .light body, .light header, .light footer, .light .scroll-indicator
   transition: background .5s ease-in-out
 
-.light .logotypes > li
-  transition: background opacity .5s ease-in-out
-
 .light header
   transition: border-color .5s ease-in-out
 
@@ -451,7 +449,6 @@ template
   transition: background .5s ease-in-out
 
 .dark footer
-  //background: linear-gradient( 0deg, $base02, $base03 )
   transition: background .5s ease-in-out
 
 .dark .scroll-indicator
@@ -460,7 +457,6 @@ template
 
 .dark .logotypes > li
   background: $base02
-  transition: background opacity .5s ease-in-out
 
 .dark nav.main a
   color: $base01
