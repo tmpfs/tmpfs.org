@@ -131,9 +131,9 @@ MIT
 
 ---
 
-Created by [mkdoc](https://github.com/mkdoc/mkdoc) on January 19, 2017
+Created by [mkdoc](https://github.com/mkdoc/mkdoc) on January 20, 2017
 
-[tmpfs]: http://www.tmpfs.org
+[tmpfs]: https://tmpfs.org
 [s3]: https://aws.amazon.com/s3/
 [node]: https://nodejs.org
 [spike]: https://github.com/static-dev/spike
