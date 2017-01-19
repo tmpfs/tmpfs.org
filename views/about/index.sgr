@@ -1,3 +1,5 @@
 extends(src='../layout.sgr')
+  block(name='title')
+    title tmpfs: about
   block(name='content')
     include(src='partial.sgr')
