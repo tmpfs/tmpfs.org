@@ -4,39 +4,42 @@ section(title='tmpfs: digital nomad')
 
   .meta.clearfix
     .info
-      ul
-        li
-          strong Occupation:
-          span Software Engineer
-        li
-          strong Source Code:
+      dl
+        dt Occupation
+        dd Software Engineer
+
+        dt Source Code
+        dd
           a(href='https://github.com/tmpfs') github.com/tmpfs
-        li
-          strong Packages:
+        dt Packages
+        dd
           a(href='https://www.npmjs.com/~/muji') npmjs.com/muji
-        li
-          strong Natural Languages:
-          span Fluent in English and Indonesian; some French and Spanish
-        li
-          strong Machine Languages:
-          span ES6, Javascript, Ruby, Python, Perl, Java, Shell, C
-        li
-          strong Origin:
-          span Born in London in 1977
-        li
-          strong Location:
+
+        dt Natural Languages
+        dd Fluent in English and Indonesian; some French and Spanish
+
+        dt Machine Languages
+        dd ES6, Javascript, Ruby, Python, Perl, Java, Shell, C
+
+      dl
+        dt Origin
+        dd Born in London in 1977
+
+        dt Location
+        dd
           span Bali, Indonesia
-        li
-          strong Timezone: 
+        dt Timezone
+        dd
           span Indonesia
           | &nbsp;
           abbr(title='Central Time Zone') CTZ
           | &nbsp;
           abbr(title='Coordinated Universal Time') UTC
           | +08:00
-        li
-          strong Contact:
-          span muji {at} tmpfs.org
+
+        dt Contact
+        dd muji {at} tmpfs.org
+
     img.avatar(src='/img/avatar.jpg' alt="Avatar")
 
   h3 Digital Nomad
