@@ -1,0 +1,249 @@
+header, footer, .preload > .message, .no-select
+  user-select: none
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+
+body > *
+  text-align: left
+
+.scroll-indicator
+  position: fixed
+  z-index: 20
+  background: $base03
+  left: 0
+  top: 0
+  opacity: 0
+  width: 0%
+  height: 2px
+
+/* LAYOUT */
+
+.section
+  margin-bottom: 4rem
+
+main
+  position: relative
+  z-index: 2
+  left: 0
+  top: 0
+  /* 3 * 280 columns with 20px/2rem spacing and 20px/2rem horizontal padding */
+  max-width: 920px
+  margin: 0 auto
+  min-height: calc( 100% - $footer-height ) 
+  padding: 0 2rem
+  padding-top: $header-height
+  overflow: auto
+
+main p:first-child
+  margin-top: 0
+  padding-top: 0
+
+.meta
+  padding-top: 1rem
+  margin: 0
+
+.meta::after
+  content: ""
+  display: block
+  clear: both
+
+.meta > .info
+  float: left
+  width: calc(100% - 300px)
+  min-width: 280px
+  /* NOTE: margin-bottom used when wrapped */
+  margin: 0 2rem 2rem 0
+
+.meta > .info > h3
+  margin-top: 0
+
+.meta + hr
+  margin-top: 0
+
+img.avatar
+  display: block
+  float: left
+  margin: 0 0 2rem 0
+  box-shadow: 3px 3px 3px $base1
+  opacity: .5
+
+ul.workflow
+  text-align: center
+
+ul.workflow > li
+  text-align: left
+  display: inline-block
+  vertical-align: top
+  max-width: 280px
+  &:not(:last-child)
+    padding-right: 2rem
+
+table.skills, table.skills tbody, table.skills tr
+  width: 100%
+
+tr > td
+  vertical-align: top
+  width: 50%
+
+tr > td:first-child
+  font-style: italic
+
+#work h4
+  margin-bottom: 0
+
+.tech-info li
+  display: inline-block
+
+.tech-info > li:not(:last-child) > a:after
+  white-space: pre
+  content: ', '
+
+.logotypes
+  column-count: 2
+  column-gap: 1rem
+
+.logotypes > li
+  cursor: default
+  display: inline-block
+  width: 130px
+  font-size: 1rem
+  text-align: center
+  margin-bottom: 2rem
+  margin-right: 2rem
+  background: $base2
+  border-radius: 0.4rem
+  padding: 1.5rem 1.5rem 0.5rem 1.5rem
+  opacity: .5
+  transition: background, opacity .5s ease-in-out
+  &:hover
+    opacity: 1
+
+.logotypes > li > img
+  display: block
+  width: 100px
+  vertical-align: top
+
+.logotypes > li > span
+  text-transform: uppercase
+  display: inline-block
+  margin-top: .5rem
+
+.footnote
+  font-size: 1.4rem
+
+footer
+  position: relative
+  z-index: 1
+  bottom: 0
+  clear: both
+  height: $footer-height
+  padding: 4rem 2rem 2rem 2rem
+
+.colophon
+  text-align: center
+
+.colophon > p
+  display: inline-block
+  border-top: 1px solid $base00
+  margin-top: 2rem
+  padding-top: 1rem !important
+  font-size: 1.2rem
+  text-transform: uppercase
+  margin-bottom: 0
+
+.colophon, .tools
+  text-align: center
+
+footer > ul > li, .tools > li
+  display: inline-block
+  font-size: 1.4rem
+  color: $base1
+  &:not(:last-child)
+    &:after
+      white-space: pre
+      content: ' | '
+
+.tools > li
+  font-size: 1.3rem
+
+.disabled
+  pointer-events: none
+  cursor: default
+
+/* NOTE: super-important: otherwise no links work on mobile safari (iphone 4) */
+template
+  display: none
+
+/* PRELOADER */
+
+.preload, .preload > *
+  width: 100%
+  height: 100%
+
+.preload
+  cursor: default
+  position: fixed
+  z-index: 10
+  left: 0
+  top: $header-height
+  bottom: 0
+  display: table
+  opacity: 0
+  transition: opacity 0.5s ease-in-out
+
+.preload > .background
+  z-index: -1
+  pointer-events: none
+  position: absolute
+  left: 0
+  top: 0
+  bottom: 0
+  opacity: 1
+  background: $body-background
+
+.preload > .message
+  display: table-cell
+  position: relative
+  color: $body-background
+  font-size: 1.2rem
+  user-select: none
+  text-align: center
+  vertical-align: middle
+
+.preload > .message > span
+  display: inline-block
+  position: relative
+  /* knockout text */
+  background: $cyan
+  border-radius: 0.2rem
+  height: 3rem
+  top: -$header-height
+  left: 0
+  padding: .8rem
+  text-transform: uppercase
+
+@keyframes sweep
+  100%
+    transform: rotate(360deg)
+
+.preload > .message > span > .spinner
+  display: inline-block
+  position: relative
+  left: 0
+  top: 0
+  width: 1.6rem
+  height: 1.6rem
+  animation: sweep 1s infinite linear
+  border-radius: 0.8rem
+  border-bottom: 1px solid
+  border-color: $body-background
+
+.preload > .message > span > em
+  display: inline-block
+  position: relative
+  left: 0
+  top: -4px
+  font-style: normal
+  margin-left: 0.5rem
+

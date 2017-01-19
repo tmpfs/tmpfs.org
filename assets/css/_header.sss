@@ -10,6 +10,26 @@ header
   line-height: 1.5rem
   border-bottom: 1px solid $base2
 
+a.index
+  display: inline-block
+  text-decoration: none
+  margin-left: 2rem
+  opacity: .75
+  width: 32px
+  height: 32px
+  background: url('/img/logo-dark.svg') no-repeat center/32px
+  background-size: contain
+  transition: opacity .5s ease-in-out
+  &.selected
+    background: url('/img/logo-selected.svg') no-repeat center/32px
+
+a.index:hover
+  opacity: 1
+
+a.index.selected
+  opacity: 1
+
+
 header a
   outline: none
 
@@ -41,22 +61,4 @@ nav.main a:not(.index)
     color: $magenta
     border-bottom: 2px solid
     border-color: $magenta !important
-
-a.index
-  display: inline-block
-  text-decoration: none
-  margin-left: 2rem
-  opacity: .75
-  width: 32px
-  height: 32px
-  background: url('/img/logo-dark.svg') no-repeat center/32px
-  transition: opacity .5s ease-in-out
-  &.selected
-    background: url('/img/logo-selected.svg') no-repeat center/32px
-
-a.index:hover
-  opacity: 1
-
-a.index.selected
-  opacity: 1
 

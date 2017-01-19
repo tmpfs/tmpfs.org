@@ -1,0 +1,30 @@
+a
+  color: $blue
+  text-decoration: none
+  border-bottom: 1px solid transparent
+  transition: color, border-color .4s ease-in-out
+
+a:hover
+  color: $magenta
+  border-color: rgba(211, 54, 130, 1)
+
+a.contrast, a.contrast:hover
+  position: absolute
+  outline: none
+  top: 4.6rem
+  right: 2rem
+  display: block
+  text-decoration: none
+  border: 0
+  width: 16px
+  height: 16px
+  opacity: .5
+  transition: opacity .5s ease-in-out
+  background: url('/img/contrast-icon-dark.png') no-repeat
+
+a.contrast:hover
+  opacity: 1
+
+a.contrast > img
+  display: block
+

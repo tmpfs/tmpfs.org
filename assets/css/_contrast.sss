@@ -1,0 +1,53 @@
+.light body, .light header, .light footer, .light .scroll-indicator
+  transition: background .5s ease-in-out
+
+.light header
+  transition: border-color .5s ease-in-out
+
+.light img.avatar
+  transition: box-shadow .5s ease-in-out
+
+.dark body
+  background: $base03
+  transition: background .5s ease-in-out
+
+.dark header
+  background: $base03
+  border-color: $base02
+  color: $base3
+  transition: background .5s ease-in-out
+
+.dark footer
+  transition: background .5s ease-in-out
+
+.dark .scroll-indicator
+  background: $base3
+  transition: background .5s ease-in-out
+
+.dark .logotypes > li
+  background: $base02
+
+.dark nav.main a
+  color: $base01
+
+.dark nav.main a:hover, .dark nav.main a.selected
+  color: $magenta
+
+.dark a.contrast
+  background: url('/img/contrast-icon-light.png') no-repeat
+
+.dark img.avatar
+  box-shadow: 3px 3px 3px $base02
+  transition: box-shadow .5s ease-in-out
+
+.dark .preload > .background
+  background: $base03
+
+.dark .preload > .message
+  color: $base03
+
+.dark .preload > .message > span > .spinner
+  border-color: $base03
+
+.dark a.index:not(.selected)
+  background: url('/img/logo-light.svg') no-repeat center/32px
