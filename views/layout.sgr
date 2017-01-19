@@ -30,8 +30,8 @@ html
       div.scroll-indicator
     block(name='menu')
       header
-        a.index(href='/' data-id='index')
         nav.main
+          a.index(href='/' data-id='index')
           a.work(href='/work/' title='Work') Work
           a.skills(href='/skills/' title='Skills') Skills
           a.about(href='/about/' title='About') About
