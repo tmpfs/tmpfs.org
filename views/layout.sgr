@@ -31,10 +31,14 @@ html
     block(name='menu')
       header
         nav.main
-          a.index(href='/' data-id='index')
-          a.work(href='/work/' title='Work') Work
-          a.skills(href='/skills/' title='Skills') Skills
-          a.about(href='/about/' title='About') About
+          span
+            a.index(href='/' data-id='index')
+          span
+            a.work(href='/work/' title='Work') Work
+          span
+            a.skills(href='/skills/' title='Skills') Skills
+          span
+            a.about(href='/about/' title='About') About
     main(id='{{ pageId }}')
       block(name='content')
 

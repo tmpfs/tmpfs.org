@@ -1,0 +1,62 @@
+header
+  z-index: 3
+  background: $body-background
+  height: $header-height
+  position: fixed
+  left: 0
+  right: 0
+  top: 0
+  font-size: 1.5rem
+  line-height: 1.5rem
+  border-bottom: 1px solid $base2
+
+header a
+  outline: none
+
+nav.main
+  display: table
+  width: auto
+  height: $header-height
+  /*background: red*/
+
+nav.main > span
+  display: table-cell
+  vertical-align: middle
+  padding: 0 1rem
+
+nav.main a
+  color: $base03
+  text-decoration: none
+  text-transform: uppercase
+  border-color: rgba(0, 43, 54, 0)
+  &.selected
+    cursor: default
+  &:not(:last-child)
+    margin-right: 1rem
+
+nav.main a:not(.index)
+  &:hover,
+  &.selected
+    transition: color, border-color .4s ease-in-out
+    color: $magenta
+    border-bottom: 2px solid
+    border-color: $magenta !important
+
+a.index
+  display: inline-block
+  text-decoration: none
+  margin-left: 2rem
+  opacity: .75
+  width: 32px
+  height: 32px
+  background: url('/img/logo-dark.svg') no-repeat center/32px
+  transition: opacity .5s ease-in-out
+  &.selected
+    background: url('/img/logo-selected.svg') no-repeat center/32px
+
+a.index:hover
+  opacity: 1
+
+a.index.selected
+  opacity: 1
+

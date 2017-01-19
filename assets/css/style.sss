@@ -1,42 +1,9 @@
 @import "_colors.sss"
-
-$body-background: $base3
-
-$header-height: 7.5rem
-$footer-height: 8rem
-
-// NOTE: the selection rules for blink/webkit and mozilla
-// NOTE: should not be combined otherwise some rules are not applied
-::selection
-  background: $magenta
-  color: $base2
-
-::-moz-selection
-  background: $magenta
-  color: $base2
-
-html 
-  box-sizing: border-box
-  font-size: 62.5%
-
-*, *:after, *:before 
-  box-sizing: inherit
-
-html, body
-  width: 100%
-  height: 100%
-  min-height: 100%
-  margin: 0
-  padding: 0
-
-body
-  background: $body-background
-  color: $base00
-  font-size: 1.6em
-  letter-spacing: 0.01em
-  line-height: 1.6
-  text-align: center
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+@import "_variables.sss"
+@import "_document.sss"
+@import "_elements.sss"
+@import "_headings.sss"
+@import "_header.sss"
 
 header, footer, .preload > .message, .no-select
   user-select: none
@@ -46,16 +13,6 @@ header, footer, .preload > .message, .no-select
 
 body > *
   text-align: left
-
-p
-  margin: 1rem 0
-
-hr
-  border: 0
-  height: 1px
-  width: 100%
-  background: $base00
-  margin: 1rem 0
 
 .scroll-indicator
   position: fixed
@@ -67,106 +24,7 @@ hr
   width: 0%
   height: 2px
 
-h2, h3, h4, h5, h6
-  color: $base01
-  margin: 0 0 1rem 0
-
-h2
-  margin: 2rem 0 0 0
-  padding-bottom: 0.5rem
-  text-transform: uppercase
-  font-size: 1.6rem
-  line-height: 1.2
-  border-bottom: 1px solid $base00
-
-h3
-  font-size: 1.8rem
-  line-height: 1
-  margin: 1rem 0
-
-hr + h3
-  margin-top: 2rem
-
-h3 + p, h4 + p
-  margin-top: 0
-
-abbr
-  cursor: default
-  border-bottom: 1px dotted 
-
-ul, li
-  margin: 0
-  padding: 0
-  list-style-type: none
-
-header
-  z-index: 3
-  background: $body-background
-  height: $header-height
-  padding: 2rem 1.5rem
-  position: fixed
-  left: 0
-  right: 0
-  top: 0
-  vertical-align: middle
-  font-size: 1.5rem
-  line-height: 1.5rem
-  border-bottom: 1px solid $base2
-
-a
-  cursor: pointer
-
-header a
-  outline: none
-
-a.index
-  display: inline-block
-  text-decoration: none
-  margin-right: 2rem
-  opacity: .75
-  width: 32px
-  height: 32px
-  background: url('/img/logo-dark.svg') no-repeat center/32px
-  transition: opacity .5s ease-in-out
-  &.selected
-    background: url('/img/logo-selected.svg') no-repeat center/32px
-
-a.index:hover
-  opacity: 1
-
-nav.main
-  display: inline-block
-  position: absolute
-  margin-top: 10px
-
-nav.main a, nav.main a:visited, nav.main a:hover
-  color: $base03
-  text-decoration: none
-  text-transform: uppercase
-  border-color: rgba(0, 43, 54, 0)
-  transition: color, border-color .4s ease-in-out
-  &:not(:last-child)
-    margin-right: 1rem
-
-nav.main a:hover, nav.main a.selected
-  color: $magenta
-  border-bottom: 2px solid
-  border-color: $magenta !important
-
-nav.main a.selected
-  color: $magenta
-
-a.selected
-  cursor: default
-
-a.index.selected
-  opacity: 1
-
-.banner
-  background: $blue
-  margin: 0
-  text-align: center
-  min-height: 360px
+/* LAYOUT */
 
 .section
   margin-bottom: 4rem
@@ -188,14 +46,13 @@ main p:first-child
   margin-top: 0
   padding-top: 0
 
-main a, footer a
+a
   color: $blue
   text-decoration: none
-  border-bottom: 1px solid
-  border-color: rgba(211, 54, 130, 0)
+  border-bottom: 1px solid transparent
   transition: color, border-color .4s ease-in-out
 
-main a:hover, footer a:hover
+a:hover
   color: $magenta
   border-color: rgba(211, 54, 130, 1)
 
