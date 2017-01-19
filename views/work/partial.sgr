@@ -91,6 +91,9 @@ h2
       img(src='/img/logo/yo-sushi.png' alt='Yo! Sushi')
       span Yo! Sushi 
     li
+      img(src='/img/logo/lastminute.png' alt='Lastminute')
+      span Lastminute
+    li
       img(src='/img/logo/agency/digitas-lbi.png' alt='Digitas LBi')
       span LBi
     li
