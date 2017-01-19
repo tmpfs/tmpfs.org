@@ -6,62 +6,47 @@ section(title='tmpfs: skills')
 
   .section
 
-    table.skills
+    dl.skills
+      dt Environment
+      dd Linux, Tmux, Vim
 
-      tr
-        td Environment
-        td Linux, Tmux, Vim
+      dt Devops
+      dd Docker, Vagrant, AWS
 
-      tr
-        td Devops
-        td Docker, Vagrant, AWS
+      dt Languages
+      dd ES6, Javascript, Ruby, Python, Perl, Java, Shell, C
 
-      tr
-        td Languages
-        td ES6, Javascript, Ruby, Python, Perl, Java, Shell, C
+      dt Style
+      dd CSS3, PostCSS, Stylus, Sass, Less
 
-      tr
-        td Style
-        td CSS3, PostCSS, Stylus, Sass, Less
+      dt Markup &amp; XML
+      dd HTML5, XHTML, XML, XSLT, XPath, XML Schemas, E4X
 
-      tr
-        td Markup &amp; XML
-        td HTML5, XHTML, XML, XSLT, XPath, XML Schemas, E4X
+      dt Development
+      dd Nodejs, Babel, Webpack, Browserify, Gulp, Grunt
 
-      tr
-        td Development
-        td Nodejs, Babel, Webpack, Browserify, Gulp, Grunt
+      dt Databases
+      dd Redis, CouchDB, MongoDB, SQL, MySQL, RDBMS
 
-      tr
-        td Databases
-        td Redis, CouchDB, MongoDB, SQL, MySQL, RDBMS
+      dt Documentation
+      dd Markdown, Commonmark, LaTeX, Pandoc
 
-      tr
-        td Documentation
-        td Markdown, Commonmark, LaTeX, Pandoc
+      dt Source Code Management
+      dd Git, Subversion, CVS
 
-      tr
-        td Source Code Management
-        td Git, Subversion, CVS
+      dt Continuous Integration
+      dd Travis, Coveralls, Jenkins
 
-      tr
-        td Continuous Integration
-        td Travis, Coveralls, Jenkins
+      dt Architecture
+      dd OOP, AOP, MVC, IoC &amp; Design Patterns
 
-      tr
-        td Architecture
-        td OOP, AOP, MVC, IoC &amp; Design Patterns
+      dt Methodology
+      dd Document first, test driven &amp; agile development
 
-      tr
-        td Methodology
-        td Document first, test driven &amp; agile development
+      dt Frameworks
+      dd D3, React, Zepto, JQuery, Bootstrap, Backbone, Rails
 
-      tr
-        td Frameworks
-        td D3, React, Zepto, JQuery, Bootstrap, Backbone, Rails
+      dt Messaging
+      dd REST, SOAP, XML-RPC, Open Sound Control (OSC)
 
-      tr
-        td Messaging
-        td REST, SOAP, XML-RPC, Open Sound Control (OSC)
-
-  p.footnote For brevity many skills learnt along my journey have been omitted; in the past I used Spring, Hibernate, Grails, Maven and Ant a lot but they are really only relevant when working on Java projects and nowadays I tend to focus on Nodejs and Golang. Many years ago I did a lot of work with PHP but you would have a very hard time getting me to go back to that language!
+p.footnote For brevity many skills learnt along my journey have been omitted; in the past I used Spring, Hibernate, Grails, Maven and Ant a lot but they are really only relevant when working on Java projects and nowadays I tend to focus on Nodejs and Golang. Many years ago I did a lot of work with PHP but you would have a very hard time getting me to go back to that language!
