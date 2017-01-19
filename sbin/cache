@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 
-#Cache-Control: no-store, no-cache, must-revalidate
-
 seconds=${1:-3600};
+
+if [ "${seconds}" -eq "0" ]; then
+  aws s3 sync public s3://tmpfs.org \
+    --cache-control "no-store, no-cache, must-revalidate" && exit 0
+fi
 
 aws s3 sync public s3://tmpfs.org --cache-control max-age=${seconds} \
   --expires 2100-01-01T00:00:00Z

@@ -51,13 +51,21 @@ Which will compile the website for a production environment and transfer the fil
 
 ## Cache
 
-To configure the cache control for the [s3][] bucket run:
+To configure the cache control for the [s3][] bucket first compile the website:
+
+```
+npm run compile
+```
+
+Then run specifing the number of seconds for the `Cache-Control` header:
 
 ```
 ./sbin/cache 86400
 ```
 
 To set `Cache-Control: max-age 86400`. Note that the `Expires` header for HTTP 1.0 clients is always set far into the future.
+
+To bypass browser caching set seconds to zero; in which case the header is set to `no-store, no-cache, must-revalidate`.
 
 ## HTML Validation
 
@@ -123,7 +131,7 @@ MIT
 
 ---
 
-Created by [mkdoc](https://github.com/mkdoc/mkdoc) on January 18, 2017
+Created by [mkdoc](https://github.com/mkdoc/mkdoc) on January 19, 2017
 
 [tmpfs]: http://www.tmpfs.org
 [s3]: https://aws.amazon.com/s3/
