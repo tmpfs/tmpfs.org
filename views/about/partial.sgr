@@ -12,26 +12,29 @@ section(title='tmpfs: about')
 
     p Operating solo or leading small to medium-sized teams of engineers is a walk in the park. I have led teams of 12+ engineers on multi-million dollar projects and guided junior engineers in small agile teams.
 
-  .section
+  .section.workflow
     h3 Workflow
     p I evangelize a document, test, code and iterate workflow to create robust and maintainable software.
 
     ul.workflow
       li
         h4 Document
-        p(mdi) Writing documentation first not only creates a welcoming atmosphere for other developers it *forces* a thorough analysis of the task or problem domain. The end result is higher quality software that is easier to maintain.
-        p(mdi) Tools: [swagger](http://swagger.io/), [cucumber](https://cucumber.io/), [mkcli](https://github.com/mkdoc/mkcli)
+        .content
+          p(mdi) Writing documentation first not only creates a welcoming atmosphere for other developers it *forces* a thorough analysis of the task or problem domain. The end result is higher quality software that is easier to maintain.
+          p(mdi) Tools: [swagger](http://swagger.io/), [cucumber](https://cucumber.io/), [mkcli](https://github.com/mkdoc/mkcli)
 
       li
         h4 Test
-        p Testing software is an integral part of the process, we can leverage test frameworks, code coverage, continuous integration and deployment to develop robust programs. Software without a test suite is stumbling in the dark.
-        p(mdi) Tools: [ava](https://github.com/avajs/ava), [mocha](http://mochajs.org/), [chai](http://chaijs.com/), [istanbul](https://github.com/gotwarlost/istanbul)
+        .content
+          p Testing software is an integral part of the process, we can leverage test frameworks, code coverage, continuous integration and deployment to develop robust programs. Software without a test suite is stumbling in the dark.
+          p(mdi) Tools: [ava](https://github.com/avajs/ava), [mocha](http://mochajs.org/), [chai](http://chaijs.com/), [istanbul](https://github.com/gotwarlost/istanbul)
 
       li
         h4 Code
-        p Lint code, leverage static analysis, optimize the development environment for maximum efficiency, respect the DRY principle and have an attitude of constantly learning. Look for the better solution even when the code seems close to perfect.
+        .content
+          p Lint code, leverage static analysis, optimize the development environment for maximum efficiency, respect the DRY principle and have an attitude of constantly learning. Look for the better solution even when the code seems close to perfect.
 
-        p(mdi) Tools: [tmux](https://tmux.github.io/), [vim](http://www.vim.org/), [jshint](http://jshint.com/), [eslint](http://eslint.org/)
+          p(mdi) Tools: [tmux](https://tmux.github.io/), [vim](http://www.vim.org/), [jshint](http://jshint.com/), [eslint](http://eslint.org/)
 
   .section
     h3 History

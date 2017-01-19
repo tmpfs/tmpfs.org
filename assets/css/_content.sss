@@ -22,6 +22,10 @@ body > *
 .section
   margin-bottom: 4rem
 
+/* NOTE: li items give half bottom margin for spacing when wrapped */
+.section.workflow
+  margin-bottom: 2rem
+
 main
   position: relative
   z-index: 2
@@ -66,23 +70,29 @@ img.avatar
 
 ul.workflow
   text-align: center
-  padding: 1rem 1rem 0 1rem
   margin: 1.5rem 0 0 0 
-  background-color: $highlight
+  display: flex
+  justify-content: space-between
+  flex-wrap: nowrap
+  flex-direction: row
 
 ul.workflow > li
+  flex: 1 1 auto
+  background-color: $highlight
   text-align: left
-  display: inline-block
   vertical-align: top
+  display: inline-block
   max-width: 280px
+  padding: 1rem 1rem 0 1rem
+  margin: 0 0 2rem 0
   &:not(:last-child)
-    padding-right: 2rem
-    
-ul.workflow > li > p:last-child
+    margin-right: 0rem
+
+ul.workflow > li p:last-child
   display: inline-block
   font-size: 1.4rem
-  margin-top: 0
   background: $body-background
+  max-height: 32px
   padding: 0.5rem
 
 #work h4
