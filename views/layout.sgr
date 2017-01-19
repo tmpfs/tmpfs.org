@@ -50,7 +50,7 @@ html
           li
             a(href='https://github.com/tmpfs' title='Github Profile') github
           li
-            a(href='https://npmjs.com/~/muji' title='NPM Profile') npm
+            a(href='https://npmjs.com/~/tmpfs' title='NPM Profile') npm
           li
             span 真 善 忍
 
