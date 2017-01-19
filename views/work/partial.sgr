@@ -62,6 +62,9 @@ h2
 .section
   h3 Clients & Agencies
   p Over the years I have worked with some very well known brands and digital agencies.
+
+  hr
+
   ul.logotypes
     li
       img(src='/img/logo/ft.png' alt='Financial Times')
@@ -80,6 +83,8 @@ h2
       img(src='/img/logo/xbox.png' alt='Xbox')
     li
       img(src='/img/logo/yo-sushi.png' alt='Yo! Sushi')
+
+  ul.logotypes
     li
       img(src='/img/logo/agency/digitas-lbi.png' alt='Digitas LBi')
     li
