@@ -26,10 +26,9 @@
   flex-direction: row
 
 .logotypes li
-  /* NOTE: this wraps the items on old iphones */
-  display: inline-block
   flex: 0 1 auto
   max-width: 130px
+  height: 140px
   cursor: default
   font-size: 1rem
   text-align: center
@@ -39,6 +38,12 @@
   padding: 1.5rem 1.5rem 0.5rem 1.5rem
   opacity: .5
   transition: background, opacity .5s ease-in-out
+
+  /* NOTE: wraps the items on old iphones */
+  display: inline-block
+  margin-right: 7px
+  vertical-align: top
+
   &:hover
     opacity: 1
 
