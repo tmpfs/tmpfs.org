@@ -83,12 +83,6 @@ article(title='tmpfs: work')
         img(src='/img/logo/square-enix.png' alt='Square Enix')
         span Square Enix
       li
-        img(src='/img/logo/agency/digitas-lbi.png' alt='Digitas LBi')
-        span LBi
-      li
-        img(src='/img/logo/agency/saatchi.png' alt='Saatchi &amp; Saatchi')
-        span Saatchi &amp; Saatchi
-      li
         img(src='/img/logo/bbc.png' alt='BBC')
         span BBC
       li
@@ -97,3 +91,13 @@ article(title='tmpfs: work')
       li
         img(src='/img/logo/nokia.png' alt='Nokia')
         span Nokia
+
+      li
+        img(src='/img/logo/agency/tribal-ddb.png' alt='Tribal DDB')
+        span Tribal DDB
+      li
+        img(src='/img/logo/agency/digitas-lbi.png' alt='Digitas LBi')
+        span LBi
+      li
+        img(src='/img/logo/agency/saatchi.png' alt='Saatchi &amp; Saatchi')
+        span Saatchi &amp; Saatchi
