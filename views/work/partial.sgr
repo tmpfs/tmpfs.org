@@ -101,3 +101,6 @@ article(title='tmpfs: work')
       li
         img(src='/img/logo/agency/saatchi.png' alt='Saatchi &amp; Saatchi')
         span Saatchi &amp; Saatchi
+      li
+        img(src='/img/logo/agency/start-design.png' alt='Start Design')
+        span Start Design
