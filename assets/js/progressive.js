@@ -35,7 +35,7 @@ class Progressive {
     current.parentNode.replaceChild(main, current);
 
     // update title based on loaded section partial
-    const title = document.querySelector('section[title]')
+    const title = document.querySelector('article[title]')
       .getAttribute('title');
     document.querySelector('head > title').innerText = title;
 
