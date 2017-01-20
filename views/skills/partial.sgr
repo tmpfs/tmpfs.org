@@ -2,10 +2,10 @@ article(title='tmpfs: skills')
 
   h2 Skills
 
-  .section
+  section
     p(mdi) To get an idea of the various skills I have acquired over the years see the table below; I am currently keen to spend some time learning [Golang](https://golang.org/), [Rust](https://www.rust-lang.org/) and playing with [Lua](http://www.lua.org/)/[Kong](https://getkong.org/)/[OpenResty](https://openresty.org), [Elixir](http://elixir-lang.org/), [Nim](http://nim-lang.org/) and [Crystal](https://crystal-lang.org/).
 
-  .section.skills-list
+  section.skills-list
     dl
       dt Environment
       dd Linux, Tmux, Vim

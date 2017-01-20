@@ -2,7 +2,7 @@ article(title='tmpfs: work')
 
   h2 Work
 
-  .section#projects
+  section#projects
     h3 Recent Projects
     h4
       a(href='https://www.socialally.co') Social Ally
@@ -28,7 +28,7 @@ article(title='tmpfs: work')
 
     p(mdi) Much of the platform remains private but during the course of the project various components were released as open-source; you can view the source code at the [socially github profile](https://github.com/socialally).
 
-  .section#open-source
+  section#open-source
     h3 Open Source
     p(mdi) As a believer in the benefits of open-source development I have contributed to many open-source projects including [commonmark](http://commonmark.org/), [source highlight](https://www.gnu.org/software/src-highlite/source-highlight.html) and [help2man](https://www.gnu.org/software/help2man/). Recently the focus of my own open-source projects has been on [mkdoc](https://github.com/mkdoc/mkdoc) and [trucks](https://github.com/tmpfs/trucks); for more open-source projects see my [github profile](https://github.com/tmpfs).
 
@@ -56,7 +56,7 @@ article(title='tmpfs: work')
         a(href='https://github.com/w3c/webcomponents') Web Components
     p(mdi) Framework agnostic, extensible web component compiler and package manager written in ES6; designed primarily for [skatejs](https://github.com/skatejs/skatejs) with support for [polymer](https://www.polymer-project.org/1.0/) and [react](https://facebook.github.io/react/) coming soon.
 
-  .section#clients
+  section#clients
     h3 Clients & Agencies
     p During my career I have worked with some very well known brands and digital agencies.
 

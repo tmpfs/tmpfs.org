@@ -2,7 +2,7 @@ article(title='tmpfs: digital nomad')
 
   h2 Muji
 
-  .meta.clearfix
+  section.meta.clearfix#meta
     .info
       dl
         dt Occupation
@@ -42,10 +42,11 @@ article(title='tmpfs: digital nomad')
 
     img.avatar(src='/img/avatar.jpg' alt="Avatar")
 
-  h3 Digital Nomad
+  section#digital-nomad
+    h3 Digital Nomad
 
-  p Since adopting the digital nomad lifestyle I am constantly striving to find the perfect work/life balance that harmonizes creative and healthy activities with creating beautiful software.
+    p Since adopting the digital nomad lifestyle I am constantly striving to find the perfect work/life balance that harmonizes creative and healthy activities with creating beautiful software.
 
-  p Qualified as a sound engineer, divemaster and skydiver I tend nowadays to spend my time studying permaculture in the garden or creating magic in the kitchen. I can often be found practicing chi-kung, yoga, serving the finest grade teas or at the beach for sun and freediving.
+    p Qualified as a sound engineer, divemaster and skydiver I tend nowadays to spend my time studying permaculture in the garden or creating magic in the kitchen. I can often be found practicing chi-kung, yoga, serving the finest grade teas or at the beach for sun and freediving.
 
-  p A lifelong autodidact I enjoy traveling, exploring, kayaking, literature, philosophy, theology, etymology, nature, permaculture and many other activities.
+    p A lifelong autodidact I enjoy traveling, exploring, kayaking, literature, philosophy, theology, etymology, nature, permaculture and many other activities.
