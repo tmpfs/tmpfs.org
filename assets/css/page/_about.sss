@@ -1,0 +1,45 @@
+/* NOTE: li items give half bottom margin for spacing when wrapped */
+section.workflow
+  margin-bottom: 2rem
+
+ul.workflow
+  text-align: center
+  margin: 1.5rem 0 0 0 
+  display: flex
+  justify-content: space-between
+  flex-wrap: nowrap
+  flex-direction: row
+
+ul.workflow > li
+  flex: 1 1 auto
+  background-color: $highlight
+  text-align: left
+  vertical-align: top
+  display: inline-block
+  max-width: 280px
+  padding: 1rem 1rem 0 1rem
+  margin: 0 0 2rem 0
+  &:not(:last-child)
+    margin-right: 0rem
+
+ul.workflow > li p:last-child
+  display: inline-block
+  font-size: 1.4rem
+  background: $body-background
+  padding: 0.5rem
+
+.colophon
+  text-align: center
+
+.colophon > .footnote
+  display: inline-block
+  border-top: 1px solid $base00
+  margin-top: 2rem
+  /*padding-top: 1rem !important*/
+  font-size: 1.2rem
+  text-transform: uppercase
+  margin-bottom: 0
+
+.colophon, .tools
+  text-align: center
+

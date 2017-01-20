@@ -30,5 +30,29 @@ body
   text-align: center
   font-family: ptserif-regular
 
+main
+  position: relative
+  z-index: 2
+  left: 0
+  top: 0
+  /* 3 * 280 columns with 20px/2rem spacing and 20px/2rem horizontal padding */
+  max-width: 920px
+  margin: 0 auto
+  min-height: calc( 100% - $footer-height ) 
+  padding: 0 2rem
+  padding-top: $header-height
+  overflow: auto
+
+main > article, header, footer
+  text-align: left
+
+main p:first-child
+  margin-top: 0
+  padding-top: 0
+
+section
+  margin-bottom: 4rem
+
 strong
   font-family: ptsans-bold
+
