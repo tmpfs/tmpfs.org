@@ -6,6 +6,7 @@
 class Scroll {
 
   constructor() {
+    this.header = document.querySelector('header');
     this.indicator = document.querySelector('.scroll-indicator');
     this.handler = this.onScroll.bind(this);
   }
@@ -19,6 +20,13 @@ class Scroll {
       document.documentElement.offsetHeight ) - window.innerHeight;
   }
 
+  show(flag) {
+    this.header.classList.remove('scrolling');
+    if(!flag) {
+      this.header.classList.add('scrolling');
+    }
+  }
+
   onScroll(/* evt */) {
     const pos = window.scrollY;
     const limit = this.getScrollLimit();
@@ -29,6 +37,12 @@ class Scroll {
     // inline style
     const style = `opacity: ${amount}; width: ${percent}%`;
     this.indicator.style = style;
+
+    if(pos === 0) {
+      this.show(true); 
+    }else{
+      this.show(false);
+    }
   }
 
   start() {

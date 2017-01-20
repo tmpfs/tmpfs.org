@@ -1,8 +1,8 @@
-.light body, .light header, .light footer, .light .scroll-indicator
+.light body, .light footer, .light .scroll-indicator
   transition: background .5s ease-in-out
 
-.light header
-  transition: border-color .5s ease-in-out
+.light header, .dark header
+  transition: all .8s, background .5s, border-color .5s, opacity .5s ease-in-out
 
 .light img.avatar
   transition: box-shadow .5s ease-in-out
@@ -23,7 +23,6 @@
   background: $base03
   border-color: $base02
   color: $base3
-  transition: background .5s ease-in-out
 
 .dark footer
   transition: background .5s ease-in-out
