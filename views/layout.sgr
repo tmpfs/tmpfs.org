@@ -4,11 +4,12 @@ html
     block(name='meta')
       meta(charset='utf-8')
       meta(http-equiv='X-UA-Compatible' content='IE=edge')
-      meta(name='description' content='Digital Nomad, Software Engineer, Software Consultant, Web Developer, Full Stack, Javascript, ES6, Docker, Devops, AWS, Nodejs, Golang')
       meta(name='author' content='muji')
       meta(name='viewport' content='width=device-width, initial-scale=1')
       link(rel='canonical' href='https://tmpfs.org')
       link(rel='icon' type='image/png' href='/img/favicon.png?v=1')
+    block(name='description')
+      meta(name='description' content='Digital Nomad, Software Engineer, Software Consultant, Web Developer, Full Stack, Javascript, ES6, Docker, Devops, AWS, Nodejs, Golang')
 
     block(name='title')
       title tmpfs: digital nomad

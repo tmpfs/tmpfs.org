@@ -1,4 +1,6 @@
 extends(src='../layout.sgr')
+  block(name='description')
+    meta(name='description' content='Recent projects, open-source and more')
   block(name='title')
     title tmpfs: work
   block(name='content')

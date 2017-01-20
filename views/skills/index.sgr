@@ -1,4 +1,6 @@
 extends(src='../layout.sgr')
+  block(name='description')
+    meta(name='description' content='Software developer skills')
   block(name='title')
     title tmpfs: skills
   block(name='content')
