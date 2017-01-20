@@ -91,6 +91,9 @@ article(title='tmpfs: work')
       li
         img(src='/img/logo/nokia.png' alt='Nokia')
         span Nokia
+      li
+        img(src='/img/logo/vidal-sassoon.png' alt='Vidal Sassoon')
+        span Vidal Sassoon
 
       li
         img(src='/img/logo/agency/tribal-ddb.png' alt='Tribal DDB')
