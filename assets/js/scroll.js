@@ -44,7 +44,9 @@ class Scroll {
 
     // inline style
     const style = `opacity: ${amount}; width: ${percent}%`;
-    this.indicator.style = style;
+
+    // NOTE: using the `style` property does not work on old iphone
+    this.indicator.setAttribute('style', style);
   }
 
   start() {

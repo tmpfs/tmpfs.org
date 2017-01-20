@@ -33,11 +33,14 @@ class Application {
 
   start() {
 
+    // animation redraw issues changing contrast on old iphone
+    // so disable the contrast toggle
     if(this.isIos() && (this.isIos5() || this.isIos4())) {
       this.contrast.setEnabled(false); 
     }else{
       this.contrast.start();
     }
+
     this.selected.start();
     this.scroller.start();
     this.progressive.start();
