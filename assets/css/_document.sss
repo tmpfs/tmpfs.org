@@ -34,13 +34,14 @@ main
   position: relative
   z-index: 2
   left: 0
-  top: 0
+  top: $header-height
+  //bottom: $footer-height
   /* 3 * 280 columns with 20px/2rem spacing and 20px/2rem horizontal padding */
   max-width: 920px
   margin: 0 auto
   min-height: calc( 100% - $footer-height ) 
   padding: 0 2rem
-  padding-top: $header-height
+  //padding-top: $header-height
   overflow: auto
 
 main > article, header, footer

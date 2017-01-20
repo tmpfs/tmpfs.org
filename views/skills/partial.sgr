@@ -49,4 +49,4 @@ article(title='tmpfs: skills')
       dt Messaging
       dd REST, SOAP, XML-RPC, Open Sound Control (OSC)
 
-p.footnote For brevity many skills learnt along my journey have been omitted; in the past I used Spring, Hibernate, Grails, Maven and Ant a lot but they are really only relevant when working on Java projects and nowadays I tend to focus on Nodejs and Golang. Many years ago I did a lot of work with PHP but you would have a very hard time getting me to go back to that language!
+  p.footnote For brevity many skills learnt along my journey have been omitted; in the past I used Spring, Hibernate, Grails, Maven and Ant a lot but they are really only relevant when working on Java projects and nowadays I tend to focus on Nodejs and Golang. Many years ago I did a lot of work with PHP but you would have a very hard time getting me to go back to that language!
