@@ -192,14 +192,28 @@ class Progressive {
       href = '/';
     }
 
+    //if(document.location.hash) {
+      //console.log('has hash symbol');
+      //href = href.replace(/#.*$/, '');
+      ////return this.fallback(href);
+    //}
+
     history.pushState({href: href}, '', href);
     this.load(href);
   }
 
   onPopState(evt) {
+
     if(evt.state && evt.state.href) {
       this.load(evt.state.href); 
     }else{
+
+      // allow hash changes to navigate to named anchors
+      // when there are no state items in the history
+      if(document.location.hash) {
+        return;
+      }
+
       this.load(this.pathname); 
     }
   }
