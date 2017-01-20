@@ -2,7 +2,7 @@ article(title='tmpfs: digital nomad')
 
   h2 Muji
 
-  section.meta.clearfix#meta
+  .meta.clearfix#meta
     .info
       dl
         dt Occupation

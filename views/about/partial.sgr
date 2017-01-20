@@ -2,15 +2,13 @@ article(title='tmpfs: about')
 
   h2 About
 
-  section
+  p Since creating my first web page in 1998 I have been studying programming and working in the digital industry.
 
-    p Since creating my first web page in 1998 I have been studying programming and working in the digital industry.
+  p Over the course of my career I have created many simple and complex web applications, desktop applications, e-commerce websites, implemented over the wire protocols and designed binary file formats.
 
-    p Over the course of my career I have created many simple and complex web applications, desktop applications, e-commerce websites, implemented over the wire protocols and designed binary file formats.
+  p I believe very strongly in using the right tool for the job and carefully evaluate the most appropriate technology stack for each project.
 
-    p I believe very strongly in using the right tool for the job and carefully evaluate the most appropriate technology stack for each project.
-
-    p Operating solo or leading small to medium-sized teams of engineers is a walk in the park. I have led teams of 12+ engineers on multi-million dollar projects and guided junior engineers in small agile teams.
+  p Operating solo or leading small to medium-sized teams of engineers is a walk in the park. I have led teams of 12+ engineers on multi-million dollar projects and guided junior engineers in small agile teams.
 
   section.workflow#workflow
     h3 Workflow
@@ -50,7 +48,7 @@ article(title='tmpfs: about')
 
     p(mdi) Like nearly all of my work this [website](https://github.com/tmpfs/tmpfs.org) is open-source, feel free to browse the code or fork the project but please make the style your own if you do! If you hit a bug [raise an issue](https://github.com/tmpfs/tmpfs.org/issues) so that I can continue to learn and improve.
 
-  section.colophon
+  .colophon
     .footnote Crafted rapidly with love &amp; thanks
     ul.tools
       li

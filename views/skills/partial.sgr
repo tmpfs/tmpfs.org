@@ -1,52 +1,49 @@
 article(title='tmpfs: skills')
-
   h2 Skills
 
-  section
-    p(mdi) To get an idea of the various skills I have acquired over the years see the table below; I am currently keen to spend some time learning [Golang](https://golang.org/), [Rust](https://www.rust-lang.org/) and playing with [Lua](http://www.lua.org/)/[Kong](https://getkong.org/)/[OpenResty](https://openresty.org), [Elixir](http://elixir-lang.org/), [Nim](http://nim-lang.org/) and [Crystal](https://crystal-lang.org/).
+  p(mdi) To get an idea of the various skills I have acquired over the years see the table below; I am currently keen to spend some time learning [Golang](https://golang.org/), [Rust](https://www.rust-lang.org/) and playing with [Lua](http://www.lua.org/)/[Kong](https://getkong.org/)/[OpenResty](https://openresty.org), [Elixir](http://elixir-lang.org/), [Nim](http://nim-lang.org/) and [Crystal](https://crystal-lang.org/).
 
-  section.skills-list
-    dl
-      dt Environment
-      dd Linux, Tmux, Vim
+  dl
+    dt Environment
+    dd Linux, Tmux, Vim
 
-      dt Devops
-      dd Docker, Vagrant, AWS
+    dt Devops
+    dd Docker, Vagrant, AWS
 
-      dt Languages
-      dd ES6, Javascript, Ruby, Python, Perl, Java, Shell, C
+    dt Languages
+    dd ES6, Javascript, Ruby, Python, Perl, Java, Shell, C
 
-      dt Style
-      dd CSS3, PostCSS, Stylus, Sass, Less
+    dt Style
+    dd CSS3, PostCSS, Stylus, Sass, Less
 
-      dt Markup &amp; XML
-      dd HTML5, XHTML, XML, XSLT, XPath, XML Schemas, E4X
+    dt Markup &amp; XML
+    dd HTML5, XHTML, XML, XSLT, XPath, XML Schemas, E4X
 
-      dt Development
-      dd Nodejs, Babel, Webpack, Browserify, Gulp, Grunt
+    dt Development
+    dd Nodejs, Babel, Webpack, Browserify, Gulp, Grunt
 
-      dt Databases
-      dd Redis, CouchDB, MongoDB, SQL, MySQL, RDBMS
+    dt Databases
+    dd Redis, CouchDB, MongoDB, SQL, MySQL, RDBMS
 
-      dt Documentation
-      dd Markdown, Commonmark, LaTeX, Pandoc
+    dt Documentation
+    dd Markdown, Commonmark, LaTeX, Pandoc
 
-      dt Source Code Management
-      dd Git, Subversion, CVS
+    dt Source Code Management
+    dd Git, Subversion, CVS
 
-      dt Continuous Integration
-      dd Travis, Coveralls, Jenkins
+    dt Continuous Integration
+    dd Travis, Coveralls, Jenkins
 
-      dt Architecture
-      dd OOP, AOP, MVC, IoC &amp; Design Patterns
+    dt Architecture
+    dd OOP, AOP, MVC, IoC &amp; Design Patterns
 
-      dt Methodology
-      dd Document first, test driven &amp; agile development
+    dt Methodology
+    dd Document first, test driven &amp; agile development
 
-      dt Frameworks
-      dd D3, React, Zepto, JQuery, Bootstrap, Backbone, Rails
+    dt Frameworks
+    dd D3, React, Zepto, JQuery, Bootstrap, Backbone, Rails
 
-      dt Messaging
-      dd REST, SOAP, XML-RPC, Open Sound Control (OSC)
+    dt Messaging
+    dd REST, SOAP, XML-RPC, Open Sound Control (OSC)
 
   p.footnote For brevity many skills learnt along my journey have been omitted; in the past I used Spring, Hibernate, Grails, Maven and Ant a lot but they are really only relevant when working on Java projects and nowadays I tend to focus on Nodejs and Golang. Many years ago I did a lot of work with PHP but you would have a very hard time getting me to go back to that language!
