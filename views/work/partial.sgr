@@ -1,7 +1,6 @@
 article(title='tmpfs: work')
 
   h2 Work
-  p(mdi) My work spans a couple of decades and links go stale so here I share some recent projects.
 
   section#projects
     h3 Recent Projects
