@@ -42,8 +42,6 @@ class Scroll {
     // percentage value
     const percent = amount * 100;
 
-    //window.alert('scrolled:' + this.header.classList)
-
     // inline style
     const style = `opacity: ${amount}; width: ${percent}%`;
     this.indicator.style = style;
