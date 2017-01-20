@@ -30,23 +30,27 @@ class Scroll {
   onScroll(/* evt */) {
     const pos = window.scrollY;
     const limit = this.getScrollLimit();
+
+    if(pos === 0) {
+      this.show(true); 
+    }else if(!this.header.classList.contains('scrolling')) {
+      this.show(false);
+    }
+
     // normalized value
     const amount = (pos / limit) * 1;
     // percentage value
     const percent = amount * 100;
+
+    //window.alert('scrolled:' + this.header.classList)
+
     // inline style
     const style = `opacity: ${amount}; width: ${percent}%`;
     this.indicator.style = style;
-
-    if(pos === 0) {
-      this.show(true); 
-    }else{
-      this.show(false);
-    }
   }
 
   start() {
-    window.addEventListener('scroll', this.handler);
+    document.addEventListener('scroll', this.handler);
   }
 
 }

@@ -9,6 +9,9 @@ header
   border-bottom: 1px solid $base2
   opacity: 1
 
+  /* NOTE: transition used by iphone without contrast capabilities */
+  transition: all .5s, background .5s, border-color .5s, opacity .5s ease-in-out
+
 header.scrolling
   opacity: 0
   top: -$header-height
