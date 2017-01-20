@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 
-seconds=${1:-3600};
+# Set to zero seconds for a never cache header
+
+# one hour
+#seconds=${1:-3600};
+
+# one year
+seconds=${1:-31536000};
 
 if [ "${seconds}" -eq "0" ]; then
   aws s3 sync public s3://tmpfs.org \

@@ -74,6 +74,9 @@ article(title='tmpfs: work')
         img(src='/img/logo/xbox.png' alt='Xbox')
         span Microsoft Xbox
       li
+        img(src='/img/logo/namco.png' alt='Namco')
+        span Namco
+      li
         img(src='/img/logo/yo-sushi.png' alt='Yo! Sushi')
         span Yo! Sushi 
       li
