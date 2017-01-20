@@ -96,6 +96,9 @@ article(title='tmpfs: work')
         span Vidal Sassoon
 
       li
+        img(src='/img/logo/agency/method.png' alt='Method')
+        span Method
+      li
         img(src='/img/logo/agency/tribal-ddb.png' alt='Tribal DDB')
         span Tribal DDB
       li
