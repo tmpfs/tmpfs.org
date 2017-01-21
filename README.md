@@ -7,11 +7,11 @@ Static [tmpfs][] website.
 - [Environments](#environments)
   - [Devel](#devel)
   - [Production](#production)
+- [HTML Validation](#html-validation)
 - [Devops](#devops)
   - [Create](#create)
   - [Deploy](#deploy)
   - [Cache](#cache)
-- [HTML Validation](#html-validation)
 - [Developer](#developer)
   - [Scripts](#scripts)
 - [License](#license)
@@ -40,6 +40,20 @@ And then serve the assets using [static][]:
 
 ```
 static -p 1111 public
+```
+
+## HTML Validation
+
+Install [linkdown][] and start a production server:
+
+```
+spike watch --env production
+```
+
+Then you can validate the HTML of the entire site with:
+
+```
+linkdown v http://localhost:1111 --bail
 ```
 
 ## Devops
@@ -81,20 +95,6 @@ Then run specifing the number of seconds for the `Cache-Control` header:
 To set `Cache-Control: max-age 86400`. Note that the `Expires` header for HTTP 1.0 clients is always set far into the future.
 
 To bypass browser caching set seconds to zero; in which case the header is set to `no-store, no-cache, must-revalidate`.
-
-## HTML Validation
-
-Install [linkdown][] and start a production server:
-
-```
-spike watch --env production
-```
-
-Then you can validate the HTML of the entire site with:
-
-```
-linkdown v http://localhost:1111 --bail
-```
 
 ## Developer
 
