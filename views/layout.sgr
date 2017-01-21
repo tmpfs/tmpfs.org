@@ -57,9 +57,8 @@ html
             a(href='https://npmjs.com/~/tmpfs' title='NPM Profile') npm
           li.symbols
             span 真 善 忍
-
         nav
-          a.top.hidden(href='#top' title='Top of the page') ∆ Top
+          a.top.hidden(href='#top' title='Top of the page') ∆ Top ∆
           a.contrast(href='#contrast' title='Toggle Contrast')
 
     block(name='noscript')
