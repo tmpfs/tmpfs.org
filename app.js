@@ -6,6 +6,8 @@ const jsStandards = require('babel-preset-latest')
 const postCssSimpleVars = require('postcss-simple-vars')
 const pageIdentifier = require('./page-identifier')
 
+const CssInject = require('./css-inject');
+
 module.exports = {
   server: {
     ghostMode: false 
@@ -28,10 +30,12 @@ module.exports = {
     'sbin/**',
     'README.md'],
   reshape: (ctx) => {
-    return htmlStandards({
+    const info = htmlStandards({
       webpack: ctx,
       locals: { pageId: pageIdentifier(ctx) }
     })
+    info.plugins.push(new CssInject())
+    return info
   },
   postcss: (ctx) => {
     const css = cssStandards(

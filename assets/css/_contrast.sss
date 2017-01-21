@@ -4,8 +4,8 @@
 .light header, .dark header
   transition: all .8s, background .5s, border-color .5s, opacity .5s ease-in-out
 
-.light img.avatar
-  transition: box-shadow .5s ease-in-out
+.light img.avatar, .dark img.avatar
+  transition: opacity, box-shadow .5s ease-in-out
 
 .dark body
   background: $base03
@@ -45,7 +45,6 @@
 
 .dark img.avatar
   box-shadow: 3px 3px 3px $base02
-  transition: box-shadow .5s ease-in-out
 
 .dark .preload > .background
   background: $base03

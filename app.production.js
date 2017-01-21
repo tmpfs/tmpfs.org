@@ -5,6 +5,8 @@ const {UglifyJsPlugin, DedupePlugin, OccurrenceOrderPlugin} =
   require('webpack').optimize
 const postCssSimpleVars = require('postcss-simple-vars')
 
+const CssInject = require('./css-inject')
+
 module.exports = {
   // disable source maps
   devtool: false,
@@ -20,11 +22,12 @@ module.exports = {
   },
   // adds html minification plugin
   reshape: (ctx) => {
-    return htmlStandards({
+    const info = htmlStandards({
       webpack: ctx,
-      locals: { pageId: pageIdentifier(ctx) },
-      //minify: true
+      locals: { pageId: pageIdentifier(ctx) }
     })
+    info.plugins.push(new CssInject())
+    return info
   },
 
   // adds css minification plugin
