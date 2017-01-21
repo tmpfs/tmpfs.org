@@ -6,9 +6,11 @@ footer
   padding: 0
   margin: 0
   font-size: 1.6rem
-  //padding-bottom: .8rem
   margin-top: calc($footer-height - .5rem)
-  //margin-top: -3rem
+
+footer a:not(.contrast)
+  text-transform: uppercase
+  font-size: 1.4rem
 
 footer > ul
   display: inline-block
@@ -49,13 +51,13 @@ a.top
 
 a.contrast, a.contrast:hover
   text-decoration: none
+  outline: none
   top: 3px
   border: 0
   width: 16px
   height: 16px
   opacity: .5
   margin-left: 1rem
-  padding-left: 1rem
   transition: opacity .5s ease-in-out
   background: url('/img/contrast-icon-dark.png') no-repeat
 
