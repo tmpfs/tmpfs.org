@@ -37,6 +37,9 @@ article(title='tmpfs: digital nomad')
           abbr(title='Coordinated Universal Time') UTC
           | +08:00
 
+        dt Freenode
+        dd muji
+
         dt Contact
         dd muji {at} tmpfs.org
 
