@@ -8,11 +8,9 @@ ul.workflow
   text-align: center
   margin: 4rem 0 0 0 
   display: flex
-  justify-content: space-around
-  align-items: space-between
-  align-content: space-between
-  flex-wrap: wrap
-  flex-direction: row
+  justify-content: center
+  flex-flow: column
+  align-items: stretch
 
 ul.workflow > li
   flex: 0 1 auto
@@ -20,12 +18,8 @@ ul.workflow > li
   display: inline-block
   background-color: $highlight
   text-align: left
-  vertical-align: top
-  max-width: 280px
   padding: 1rem 1rem 0 1rem
   margin: 0 0 2rem 0
-  &:not(:last-child)
-    margin-right: 2rem
 
 ul.workflow > li > .content
   height: 100%
@@ -56,14 +50,4 @@ ul.workflow > li p:last-child
 
 .colophon, .tools
   text-align: center
-
-@media(max-width: 600px)
-  ul.workflow > li
-    max-width: 260px
-    margin-right: 0 !important
-
-@media(max-width: 320px)
-  ul.workflow > li
-    max-width: 280px
-    margin-right: 0 !important
 

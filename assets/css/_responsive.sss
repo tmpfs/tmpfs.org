@@ -1,0 +1,16 @@
+@media(min-width: 320px)
+  .symbols
+    display: none
+
+@media(min-width: 641px)
+  ul.workflow
+    justify-content: center
+    flex-wrap: wrap
+    flex-direction: row
+    align-items: space-between
+
+  ul.workflow > li
+    max-width: 280px
+    &:not(:last-child)
+      margin-right: 2rem !important
+
