@@ -5,20 +5,52 @@ footer
   bottom: 0
   padding: 0
   margin: 0
-  padding-bottom: .8rem
+  //padding-bottom: .8rem
   margin-top: $footer-height
 
 footer > ul
+  display: inline-block
+  float: left
   margin-top: .2rem
   margin-left: 2rem
+  height: $footer-height
+
+footer > ul > li, .tools > li
+  display: inline-block
+  font-size: 1.4rem
+  color: $base1
+  vertical-align: top
+  &:not(:first-child)
+    &:before
+      white-space: pre
+      content: ' | '
+
+.tools > li
+  font-size: 1.3rem
+
+footer > nav
+  display: inline-block    
+  float: right
+  font-size: 1.4rem
+  margin-right: 2rem
+  padding-top: 2px
+
+footer > nav > a
+  display: inline-block
+  position: relative
+  &:not(:last-child)
+    margin-right: .5rem
+
+a.top
+  opacity: 1
+  transition: opacity .5s ease-in-out
+  &.hidden
+    opacity: 0
+    pointer-events: none
 
 a.contrast, a.contrast:hover
-  position: absolute
-  outline: none
-  top: .5rem
-  right: 2rem
-  display: block
   text-decoration: none
+  top: 4px
   border: 0
   width: 16px
   height: 16px
@@ -32,3 +64,6 @@ a.contrast:hover
 a.contrast > img
   display: block
 
+@media(min-width: 320px)
+  .symbols
+    display: none

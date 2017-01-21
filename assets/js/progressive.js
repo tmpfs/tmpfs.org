@@ -6,8 +6,9 @@ const HOME = 'home';
  */
 class Progressive {
 
-  constructor(selected) {
+  constructor(selected, scroller) {
     this.selected = selected;
+    this.scroller = scroller;
     this.links = Array.from(document.querySelectorAll('header a'));
     this.click = this.onClick.bind(this);
     this.popstate = this.onPopState.bind(this);
@@ -38,6 +39,8 @@ class Progressive {
     const title = document.querySelector('article[title]')
       .getAttribute('title');
     document.querySelector('head > title').innerText = title;
+
+    this.scroller.update();
 
     // reset scroll position
     window.scrollTo(0, 0);

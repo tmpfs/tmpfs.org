@@ -25,6 +25,11 @@ class Contrast {
     } 
   }
 
+  disable() {
+    //this.handler.removeAttribute('style');
+    this.handler.parentNode.removeChild(this.handler);
+  }
+
   getContrast() {
     if(this.html.classList.contains(DARK)) {
       return DARK;

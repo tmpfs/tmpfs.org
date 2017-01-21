@@ -16,7 +16,7 @@ class Application {
     this.contrast = new Contrast();
     this.selected = new Selected();
     this.scroller = new Scroll();
-    this.progressive = new Progressive(this.selected);
+    this.progressive = new Progressive(this.selected, this.scroller);
   }
 
   isIos() {
@@ -36,7 +36,7 @@ class Application {
     // animation redraw issues changing contrast on old iphone
     // so disable the contrast toggle
     if(this.isIos() && (this.isIos5() || this.isIos4())) {
-      this.contrast.setEnabled(false); 
+      this.contrast.disable();
     }else{
       this.contrast.start();
     }
