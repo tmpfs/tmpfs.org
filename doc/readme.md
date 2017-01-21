@@ -6,9 +6,9 @@ Static [tmpfs][] website.
 <!-- @toc -->
 ***
 
-The website is deployed to [s3][]. To configure for your own domain you should modify the [configuration](/sbin/config.js) and add authentication credentials to a `.env` file, see [.env.example](/.env.example).
+## Environments
 
-## Workflow
+### Devel
 
 If you run with `--env production` the css will not be updated as it is inlined as critical css in production so for development purposes run:
 
@@ -16,15 +16,7 @@ If you run with `--env production` the css will not be updated as it is inlined 
 spike watch
 ```
 
-## Create
-
-Then you can create the [s3][] bucket with:
-
-```
-./sbin/create
-```
-
-## Stage
+### Production
 
 The deploy logic performs some additional optimization of the assets so before deploying to mimic a full production deployment you should compile using:
 
@@ -38,7 +30,20 @@ And then serve the assets using [static][]:
 static -p 1111 public
 ```
 
-## Deploy
+## Devops
+
+### Create
+
+The website is deployed to [s3][]. To configure for your own domain you should modify the [configuration](/sbin/config.js) and add authentication credentials to a `.env` file, see [.env.example](/.env.example).
+
+
+Create the [s3][] bucket with:
+
+```
+./sbin/create
+```
+
+### Deploy
 
 To deploy a `production` deployment you should run:
 
@@ -48,7 +53,7 @@ npm run deploy
 
 Which will compile the website for a production environment and transfer the files to [s3][].
 
-## Cache
+### Cache
 
 To configure the cache control for the [s3][] bucket first compile the website:
 
