@@ -20,7 +20,7 @@ The website is deployed to [s3][]. To configure for your own domain you should m
 
 ## Workflow
 
-If you run with `--env production` the css will not be updated as it is inlined as critical css in production so for developement purposes run:
+If you run with `--env production` the css will not be updated as it is inlined as critical css in production so for development purposes run:
 
 ```
 spike watch
