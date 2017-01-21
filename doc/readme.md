@@ -8,6 +8,14 @@ Static [tmpfs][] website.
 
 The website is deployed to [s3][]. To configure for your own domain you should modify the [configuration](/sbin/config.js) and add authentication credentials to a `.env` file, see [.env.example](/.env.example).
 
+## Workflow
+
+If you run with `--env production` the css will not be updated as it is inlined as critical css in production so for developement purposes run:
+
+```
+spike watch
+```
+
 ## Create
 
 Then you can create the [s3][] bucket with:
