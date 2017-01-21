@@ -40,8 +40,7 @@ article(title='tmpfs: digital nomad')
         dt Contact
         dd muji {at} tmpfs.org
 
-    img.avatar
-    //- img.avatar(src='/img/avatar.jpg' alt="Avatar")
+    .avatar
 
   section#digital-nomad
     h3 Digital Nomad
