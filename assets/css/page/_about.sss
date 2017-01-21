@@ -2,26 +2,39 @@
 section.workflow
   margin-bottom: 2rem
 
+/* NOTE: this is carefully crafted so old iOS without support for flex-wrap wraps elements as inline-block at 320px */
+
 ul.workflow
   text-align: center
   margin: 1.5rem 0 0 0 
   display: flex
   justify-content: space-between
-  align-items: stretch
+  align-content: center
   flex-wrap: wrap
   flex-direction: row
 
 ul.workflow > li
-  flex: 1 1 auto
+  flex: 0 1 auto
+  position: relative
+  display: inline-block
   background-color: $highlight
   text-align: left
   vertical-align: top
-  display: inline-block
   max-width: 270px
   padding: 1rem 1rem 0 1rem
   margin: 0 0 2rem 0
   &:not(:last-child)
     margin-right: 0rem
+
+ul.workflow > li > .content
+  height: 100%
+  display: flex
+  flex-direction: column
+  flex-wrap: nowrap
+  align-items: stretch
+
+ul.workflow > li > .content > h4 + p
+  flex: 1 1 auto
 
 ul.workflow > li p:last-child
   display: inline-block
@@ -36,7 +49,6 @@ ul.workflow > li p:last-child
   display: inline-block
   border-top: 1px solid $base00
   margin-top: 2rem
-  /*padding-top: 1rem !important*/
   font-size: 1.2rem
   text-transform: uppercase
   margin-bottom: 0

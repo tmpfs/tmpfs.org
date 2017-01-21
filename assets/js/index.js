@@ -36,6 +36,8 @@ class Application {
     // animation redraw issues changing contrast on old iphone
     // so disable the contrast toggle
     if(this.isIos() && (this.isIos5() || this.isIos4())) {
+      document.querySelector('ul.workflow li')
+        .setAttribute('style', 'display: inline-block')
       this.contrast.disable();
     }else{
       this.contrast.start();
