@@ -35,8 +35,8 @@ module.exports = {
       { 
         webpack: ctx, 
         warnForDuplicates: false, 
-        features: {customProperties: false, calc: false},
-        minify: true
+        features: {customProperties: false, calc: false, minify: false}
+        //minify: true
     })
     css.plugins.push(postCssSimpleVars())
     return css

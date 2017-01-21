@@ -6,8 +6,6 @@ const jsStandards = require('babel-preset-latest')
 const postCssSimpleVars = require('postcss-simple-vars')
 const pageIdentifier = require('./page-identifier')
 
-const CssInject = require('./css-inject');
-
 module.exports = {
   server: {
     ghostMode: false 
@@ -34,7 +32,6 @@ module.exports = {
       webpack: ctx,
       locals: { pageId: pageIdentifier(ctx) }
     })
-    info.plugins.push(new CssInject())
     return info
   },
   postcss: (ctx) => {
