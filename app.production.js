@@ -29,14 +29,15 @@ module.exports = {
     info.plugins.push(new CssInject())
     return info
   },
-
   // adds css minification plugin
   postcss: (ctx) => {
     const css = cssStandards(
       { 
         webpack: ctx, 
         warnForDuplicates: false, 
-        features: {customProperties: false, calc: false, minify: true} })
+        features: {customProperties: false, calc: false},
+        minify: true
+    })
     css.plugins.push(postCssSimpleVars())
     return css
   }

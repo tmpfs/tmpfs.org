@@ -22,8 +22,14 @@ class CssInject {
             }, []);
 
             if(rel.length) {
-              const file = path.join('public', node.attrs.href[0].content)
-                  , contents = '' + fs.readFileSync(file);
+              const file = path.join('public', node.attrs.href[0].content);
+
+              if(!fs.existsSync(file)) {
+                console.warn(`css file ${file} does not exist`);
+                return true;
+              }
+
+              const contents = '' + fs.readFileSync(file);
               node.name = 'style';
               node.attrs = {};
               node.content = [
@@ -40,7 +46,6 @@ class CssInject {
       })
     } 
   }
-
 }
 
 module.exports = CssInject;
