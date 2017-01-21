@@ -34,27 +34,30 @@ article(title='tmpfs: work')
 
     p(mdi) Whilst working with [Nodejs](https://nodejs.org) I have contributed over 200 packages to the [npm registry](https://npmjs.com), you can view [all the packages](https://npmjs.com/~/muji).
 
-    h4
-      a(href='https://github.com/mkdoc/mkdoc') mkdoc
-    ul.tech-info.clearfix
-      li
-        a(href='http://commonmark.org/') Commonmark
-      li
-        a(href='https://nodejs.org') Nodejs
-    p Fast, versatile and modular toolkit for processing markdown documents as streams featuring a suite of command line interfaces and a programmatic API that includes bindings to many modules for common tasks.
-    p(mdi) Use the toolkit to generate dynamic readme documents, simple static web pages or generate API documentation. The [mkcli](https://github.com/mkdoc/mkcli) module is a particularly useful tool for defining command line interfaces as markdown and generating language-agnostic program definitions, help documents, man pages and zsh completion scripts.
+    div
+
+      h4
+        a(href='https://github.com/mkdoc/mkdoc') mkdoc
+      ul.tech-info.clearfix
+        li
+          a(href='http://commonmark.org/') Commonmark
+        li
+          a(href='https://nodejs.org') Nodejs
+      p Fast, versatile and modular toolkit for processing markdown documents as streams featuring a suite of command line interfaces and a programmatic API that includes bindings to many modules for common tasks.
+      p(mdi) Use the toolkit to generate dynamic readme documents, simple static web pages or generate API documentation. The [mkcli](https://github.com/mkdoc/mkcli) module is a particularly useful tool for defining command line interfaces as markdown and generating language-agnostic program definitions, help documents, man pages and zsh completion scripts.
 
 
-    h4
-      a(href='https://github.com/tmpfs/trucks') trucks
-    ul.tech-info.clearfix
-      li
-        a(href='https://babeljs.io/') ES6/Babel
-      li
-        a(href='https://nodejs.org') Nodejs
-      li
-        a(href='https://github.com/w3c/webcomponents') Web Components
-    p(mdi) Framework agnostic, extensible web component compiler and package manager written in ES6; designed primarily for [skatejs](https://github.com/skatejs/skatejs) with support for [polymer](https://www.polymer-project.org/1.0/) and [react](https://facebook.github.io/react/) coming soon.
+    div
+      h4
+        a(href='https://github.com/tmpfs/trucks') trucks
+      ul.tech-info.clearfix
+        li
+          a(href='https://babeljs.io/') ES6/Babel
+        li
+          a(href='https://nodejs.org') Nodejs
+        li
+          a(href='https://github.com/w3c/webcomponents') Web Components
+      p(mdi) Framework agnostic, extensible web component compiler and package manager written in ES6; designed primarily for [skatejs](https://github.com/skatejs/skatejs) with support for [polymer](https://www.polymer-project.org/1.0/) and [react](https://facebook.github.io/react/) coming soon.
 
   section#clients
     h3 Clients & Agencies
