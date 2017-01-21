@@ -36,7 +36,7 @@ html
       header.no-select
         nav.main
           span
-            a.index(href='/' data-id='index')
+            a.index(href='/' title='Home')
           span
             a.work(href='/work/' title='Work') Work
           span
