@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+const reshape = require('reshape')
+    , Critical = require('./critical-css-path');
+
+
+const html = ``;
+
+reshape({ plugins: [new Critical({minify: true, resolvePath: 'public'})] })
+    .process(html)
+    .then((result) => {
+        console.log(result.output())
+    })
+

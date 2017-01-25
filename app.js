@@ -6,9 +6,11 @@ const jsStandards = require('babel-preset-latest')
 const postCssSimpleVars = require('postcss-simple-vars')
 const pageIdentifier = require('./page-identifier')
 
+//const ExamplePlugin = require('./ref/example-webpack-plugin');
+
 module.exports = {
   server: {
-    ghostMode: false 
+    ghostMode: false
   },
   devtool: 'source-map',
   cleanUrls: false,
@@ -46,6 +48,7 @@ module.exports = {
       environmentPaths: { root: __dirname },
       recordsPath: path.join(__dirname, '_cache/records.json'),
       cacheDirectory: path.join(__dirname, '_cache/hard_source_cache')
-    })
+    }),
+    //new ExamplePlugin()
   ]
 }

@@ -3,7 +3,10 @@ const util = require('reshape-plugin-util')
     , fs = require('fs');
 
 class CssInject {
-  constructor(/*options = {}*/) {
+  constructor(options = {}) {
+
+    const resolvePath = options.resolvePath || process.cwd();
+
     return function cssPlugin(tree/*, ctx, opts*/) {
       return util.modifyNodes(tree, (node) => {
 
@@ -17,19 +20,26 @@ class CssInject {
             const rel = node.attrs.rel.reduce((m, v, k) => {
               if(v.content === 'stylesheet') {
                 m[k] = v;
-              } 
+              }
               return m;
             }, []);
 
             if(rel.length) {
-              const file = path.join('public', node.attrs.href[0].content);
+              const file = path.join(resolvePath, node.attrs.href[0].content);
 
               if(!fs.existsSync(file)) {
                 console.warn(`css file ${file} does not exist`);
                 return true;
               }
 
-              const contents = '' + fs.readFileSync(file);
+              let contents = '' + fs.readFileSync(file);
+
+              if(options.minify) {
+                const CleanCSS = require('clean-css');
+                contents = new CleanCSS(options.cleancss)
+                  .minify(contents).styles;
+              }
+
               node.name = 'style';
               node.attrs = {};
               node.content = [
@@ -42,9 +52,9 @@ class CssInject {
         }
         return true
       }, (node) => {
-        return node 
+        return node
       })
-    } 
+    }
   }
 }
 
