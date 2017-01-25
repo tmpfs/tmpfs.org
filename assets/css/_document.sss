@@ -8,11 +8,11 @@
   background: $magenta
   color: $base2
 
-html 
+html
   box-sizing: border-box
   font-size: 62.5%
 
-*, *:after, *:before 
+*, *:after, *:before
   box-sizing: inherit
 
 html, body
@@ -39,7 +39,8 @@ main
   /* 3 * 280 columns with 20px/2rem spacing and 20px/2rem horizontal padding */
   max-width: 920px
   margin: 0 auto
-  min-height: calc(100% - $footer-height)
+  /* NOTE: 3rem must match $footer-height, workaround a bug with postcss optimization and variables */
+  min-height: calc(100% - 3rem)
   padding: $header-height 2rem 0 2rem
   overflow: auto
 
