@@ -8,9 +8,11 @@ Static [tmpfs][] website.
 
 ## Environments
 
+Install [makestatic][] globally: `npm i -g makestatic`.
+
 ### Devel
 
-If you run with `--env production` the css will not be updated as it is inlined as critical css in production so for development purposes run:
+For the development environment run:
 
 ```
 makestatic -w
@@ -18,16 +20,10 @@ makestatic -w
 
 ### Production
 
-The deploy logic performs some additional optimization of the assets so before deploying to mimic a full production deployment you should compile using:
+For production use the `--env` option:
 
 ```
-npm run compile
-```
-
-And then serve the assets using [static][]:
-
-```
-static -p 1111 public
+makestatic -w --env production
 ```
 
 ## HTML Validation
