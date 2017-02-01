@@ -1,54 +1,30 @@
-const path = require('path')
-const HardSourcePlugin = require('hard-source-webpack-plugin')
-const htmlStandards = require('reshape-standard')
-const cssStandards = require('spike-css-standards')
-const jsStandards = require('babel-preset-latest')
-const postCssSimpleVars = require('postcss-simple-vars')
-const pageIdentifier = require('./page-identifier')
-
-//const ExamplePlugin = require('./ref/example-webpack-plugin');
+const id = require('makestatic-page-id')
+const css = require('makestatic-css-standard')
+const html = require('makestatic-html-standard')
 
 module.exports = {
+  input: 'src',
+  output: 'public',
+
   server: {
     ghostMode: false
   },
-  devtool: 'source-map',
-  cleanUrls: false,
-  matchers: {
-    html: '*(**/)*.sgr',
-    css: '*(**/)*.sss'
+
+  postcss: () => {
+    const conf = css();
+    conf.plugins.push(require('postcss-simple-vars')());
+    return conf;
   },
-  ignore: [
-    '**/layout.sgr',
-    '**/_*',
-    '**/.*',
-    '**/*.bak',
-    '_cache/**',
-    'graphics/**',
-    'ref/**',
-    'doc/**',
-    'sbin/**',
-    'README.md'],
-  reshape: (ctx) => {
-    const info = htmlStandards({
-      webpack: ctx,
-      locals: { pageId: pageIdentifier(ctx) }
-    })
-    return info
+
+  reshape: () => {
+    return html({locals: (ctx, options) => {
+      return {
+        pageId: id(ctx, options)
+      }
+    }})
   },
-  postcss: (ctx) => {
-    const css = cssStandards(
-      { webpack: ctx, features: {customProperties: false, calc: false} })
-    css.plugins.push(postCssSimpleVars())
-    return css
-  },
-  babel: { presets: [jsStandards] },
-  plugins: [
-    new HardSourcePlugin({
-      environmentPaths: { root: __dirname },
-      recordsPath: path.join(__dirname, '_cache/records.json'),
-      cacheDirectory: path.join(__dirname, '_cache/hard_source_cache')
-    }),
-    //new ExamplePlugin()
-  ]
+
+  babel: {
+    presets: ['babel-preset-latest']
+  }
 }

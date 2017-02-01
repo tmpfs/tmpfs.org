@@ -1,51 +1,29 @@
 {
-  "name": "tmpfs-org",
+  "name": "tmpfs.org",
   "description": "Static tmpfs website",
   "version": "1.2.11",
   "private": true,
-  "author": "tmpfs",
+  "author": "muji <noop@xpm.io>",
   "license": "MIT",
-  "main": "app.js",
   "homepage": "http://www.tmpfs.org",
   "repository": "https://github.com/tmpfs/tmpfs.org",
   "bugs": "https://github.com/tmpfs/tmpfs.org/issues",
-  "dependencies": {
-    "babel-preset-latest": "^6.16.0",
-    "hard-source-webpack-plugin": "0.2.2",
-    "image-webpack-loader": "^3.0.0",
-    "postcss-simple-vars": "^3.0.0",
-    "reshape-standard": "^0.5.0",
-    "spike-css-standards": "^0.1.3",
-    "spike-page-id": "^0.1.0",
-    "webpack": "^1.13.3"
-  },
   "devDependencies": {
-    "ava": "^0.17.0",
-    "aws-sdk": "^2.7.21",
-    "clean-css": "^3.4.23",
-    "html-minifier": "^3.2.3",
-    "posthtml-loader": "^0.11.0",
-    "rimraf": "^2.5.4",
-    "s3-website": "^2.1.0",
-    "snazzy": "^5.0.0",
-    "spike-core": "^0.13.0",
-    "standard": "^8.6.0"
+    "babel-core": "^6.22.1",
+    "babel-preset-latest": "^6.22.0",
+    "makestatic-css-standard": "^1.0.0",
+    "makestatic-html-standard": "^1.0.0",
+    "makestatic-page-id": "^1.0.0",
+    "makestatic-preset-optimize": "^1.0.0",
+    "postcss-simple-vars": "^3.0.0"
   },
   "scripts": {
     "clean": "rm -rf public",
     "readme": "mk readme --force",
     "create": "./sbin/create",
-    "compile": "spike compile --env production && npm run minify-html",
-    "minify-html": "html-minifier --input-dir public --output-dir public --file-ext html --collapse-whitespace",
-    "minify-css": "cleancss public/css/style.css -o public/css/style.min.css && mv -f public/css/style.min.css public/css/style.css",
-    "minify": "npm run minify-css && npm run minify-html",
-    "deploy": "npm run clean && npm run compile && npm run compile && ./sbin/deploy",
-    "lint": "standard | snazzy",
-    "precommit": "npm run lint -s",
-    "pretest": "npm run lint -s",
-    "test": "NODE_ENV=test ava"
-  },
-  "ava": {
-    "verbose": "true"
+    "compile": "makestatic --env production",
+    "deploy": "npm run clean && npm run compile && ./sbin/deploy",
+    "lint": "standard src/js",
+    "precommit": "npm run lint -s"
   }
 }

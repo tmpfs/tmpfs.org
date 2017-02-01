@@ -4,10 +4,10 @@
 
 #### Watch
 
-To watch the sources and compile on change use the [spike][] executable:
+To watch the sources and compile on change use the [makestatic][] executable:
 
 ```
-spike watch
+makestatic -w
 ```
 
 #### Compile

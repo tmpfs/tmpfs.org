@@ -25,7 +25,7 @@ Static [tmpfs][] website.
 If you run with `--env production` the css will not be updated as it is inlined as critical css in production so for development purposes run:
 
 ```
-spike watch
+makestatic -w
 ```
 
 ### Production
@@ -47,7 +47,7 @@ static -p 1111 public
 Install [linkdown][] and start a production server:
 
 ```
-spike watch --env production
+makestatic -w --env production
 ```
 
 Then you can validate the HTML of the entire site with:
@@ -102,10 +102,10 @@ To bypass browser caching set seconds to zero; in which case the header is set t
 
 #### Watch
 
-To watch the sources and compile on change use the [spike][] executable:
+To watch the sources and compile on change use the [makestatic][] executable:
 
 ```
-spike watch
+makestatic -w
 ```
 
 #### Compile
@@ -146,12 +146,12 @@ MIT
 
 ---
 
-Created by [mkdoc](https://github.com/mkdoc/mkdoc) on January 21, 2017
+Created by [mkdoc](https://github.com/mkdoc/mkdoc) on February 1, 2017
 
 [tmpfs]: https://tmpfs.org
 [s3]: https://aws.amazon.com/s3/
 [node]: https://nodejs.org
-[spike]: https://github.com/static-dev/spike
+[makestatic]: https://github.com/makestatic/compiler
 [standard]: https://github.com/feross/standard
 [snazzy]: https://github.com/feross/snazzy
 [mkdoc]: https://github.com/mkdoc/mkdoc

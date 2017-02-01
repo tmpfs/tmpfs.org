@@ -13,7 +13,7 @@ Static [tmpfs][] website.
 If you run with `--env production` the css will not be updated as it is inlined as critical css in production so for development purposes run:
 
 ```
-spike watch
+makestatic -w
 ```
 
 ### Production
@@ -35,7 +35,7 @@ static -p 1111 public
 Install [linkdown][] and start a production server:
 
 ```
-spike watch --env production
+makestatic -w --env production
 ```
 
 Then you can validate the HTML of the entire site with:

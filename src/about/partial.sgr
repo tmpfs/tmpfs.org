@@ -51,8 +51,8 @@ article(title='tmpfs: about')
   .colophon
     .footnote Crafted rapidly with love &amp; thanks
     ul.tools
-      li
-        a(href='https://www.spike.cf/' title='Spike') spike
+      //-li
+        //-a(href='https://makestatic.ws' title='Makestatic') makestatic
       li
         a(href='https://babeljs.io/' title='Babel') babel
       li
