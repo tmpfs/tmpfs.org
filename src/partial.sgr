@@ -10,10 +10,10 @@ article(title='tmpfs: digital nomad')
 
         dt Source Code
         dd
-          a(href='https://github.com/tmpfs') github.com/tmpfs
+          a(href='https://github.com/tmpfs' title='Source Code') github.com/tmpfs
         dt Packages
         dd
-          a(href='https://www.npmjs.com/~/tmpfs') npmjs.com/tmpfs
+          a(href='https://www.npmjs.com/~/tmpfs' title='Packages') npmjs.com/tmpfs
 
         dt Natural Languages
         dd Fluent English and Indonesian
