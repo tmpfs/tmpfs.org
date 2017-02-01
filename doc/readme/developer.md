@@ -20,7 +20,7 @@ npm run compile
 
 #### Lint
 
-Run the source tree through [standard][] and [snazzy][]:
+Run the source tree through [standard][]:
 
 ```
 npm run lint

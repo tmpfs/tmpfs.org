@@ -8,7 +8,7 @@ Static [tmpfs][] website.
 
 ## Environments
 
-Install [makestatic][] globally: `npm i -g makestatic`.
+Install [makestatic][] globally (`npm i -g makestatic`).
 
 ### Devel
 

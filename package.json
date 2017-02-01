@@ -15,7 +15,8 @@
     "makestatic-html-standard": "^1.0.0",
     "makestatic-page-id": "^1.0.0",
     "makestatic-preset-optimize": "^1.0.0",
-    "postcss-simple-vars": "^3.0.0"
+    "postcss-simple-vars": "^3.0.0",
+    "standard": "^8.6.0"
   },
   "scripts": {
     "clean": "rm -rf public",
