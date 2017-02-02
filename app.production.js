@@ -5,5 +5,12 @@ module.exports = {
   devtool: false,
 
   // configure optimization lifecycle
-  lifecycle: optimize()
+  lifecycle: optimize({
+    transform: [
+      {
+        test: '**/*.{html|sgr}',
+        plugin: require('makestatic-inline-css')
+      }
+    ]
+  })
 }
