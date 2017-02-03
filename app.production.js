@@ -6,11 +6,13 @@ module.exports = {
 
   // configure optimization lifecycle
   lifecycle: optimize({
-    transform: [
-      {
-        test: '**/*.{html|sgr}',
-        plugin: require('makestatic-inline-css')
-      }
-    ]
+    transform: {
+      html: [
+        {
+          test: /\.(html|sgr)$/,
+          plugin: require('makestatic-inline-css')
+        }
+      ]
+    }
   })
 }
