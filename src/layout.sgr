@@ -12,7 +12,7 @@ html(lang='en')
       meta(name='description' content='Digital Nomad, Software Engineer, Software Consultant, Web Developer, Full Stack, Javascript, ES6, Docker, Devops, AWS, Nodejs, Golang')
 
     block(name='keywords')
-      meta(name='description' content='Digital, Software, Consultant, Website, Web Developer, Full Stack, HTML, Javascript, CSS')
+      meta(name='keywords' content='Digital, Software, Consultant, Website, Web Developer, Full Stack, HTML, Javascript, CSS')
 
     block(name='title')
       title tmpfs: digital nomad

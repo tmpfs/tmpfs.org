@@ -25,6 +25,6 @@ module.exports = {
   },
 
   babel: {
-    presets: ['babel-preset-latest']
+    presets: ['latest']
   }
 }
