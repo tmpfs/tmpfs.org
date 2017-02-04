@@ -56,7 +56,7 @@ article(title='tmpfs: about')
       li
         a(href='https://babeljs.io/' title='Babel') babel
       li
-        a(href='https://webpack.github.io/' title='Webpack') webpack
+        a(href='https://webpack.js.org' title='Webpack') webpack
       li
         a(href='https://reshape.ml/' title='Reshape') reshape
       li
