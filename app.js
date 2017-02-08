@@ -10,13 +10,13 @@ module.exports = {
     ghostMode: false
   },
 
-  postcss: () => {
+  css: () => {
     const conf = css();
     conf.plugins.push(require('postcss-simple-vars')());
     return conf;
   },
 
-  reshape: () => {
+  html: () => {
     return html({locals: (ctx, options) => {
       return {
         pageId: id(ctx, options)
@@ -24,7 +24,7 @@ module.exports = {
     }})
   },
 
-  babel: {
+  js: {
     presets: ['latest']
   }
 }
