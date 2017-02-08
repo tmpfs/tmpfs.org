@@ -1,7 +1,3 @@
-const id = require('makestatic-page-id')
-const css = require('makestatic-css-standard')
-const html = require('makestatic-html-standard')
-
 module.exports = {
   input: 'src',
   output: 'public',
@@ -11,13 +7,16 @@ module.exports = {
   },
 
   css: () => {
-    const conf = css();
+    const std = require('makestatic-css-standard')
+    const conf = std();
     conf.plugins.push(require('postcss-simple-vars')());
     return conf;
   },
 
   html: () => {
-    return html({locals: (ctx, options) => {
+    const id = require('makestatic-page-id')
+    const std = require('makestatic-html-standard')
+    return std({locals: (ctx, options) => {
       return {
         pageId: id(ctx, options)
       }
