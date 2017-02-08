@@ -6,14 +6,14 @@ module.exports = {
     ghostMode: false
   },
 
-  css: () => {
+  styles: () => {
     const std = require('makestatic-css-standard')
     const conf = std();
     conf.plugins.push(require('postcss-simple-vars')());
     return conf;
   },
 
-  html: () => {
+  markup: () => {
     const id = require('makestatic-page-id')
     const std = require('makestatic-html-standard')
     return std({locals: (ctx, options) => {
@@ -23,7 +23,7 @@ module.exports = {
     }})
   },
 
-  js: {
+  script: {
     presets: ['latest']
   }
 }
