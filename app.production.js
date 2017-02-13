@@ -14,5 +14,22 @@ module.exports = {
         }
       ]
     }
-  })
+  }),
+
+  deploy: {
+    production: {
+      s3: {
+        domain: 'tmpfs.org',
+        credentials: {
+          profile: 'tmpfs'
+        },
+        region: 'ap-southeast-1',
+        error: '404.html',
+        redirects: [
+          'www.tmpfs.org'
+        ],
+        publish: true
+      }
+    }
+  }
 }
