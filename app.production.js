@@ -28,7 +28,7 @@ module.exports = {
         },
         prefix: 'production',
         region: 'ap-southeast-1',
-        error: '404.html',
+        error: 'production/404.html',
         redirects: [
           'www.tmpfs.org'
         ],

@@ -16,7 +16,7 @@ conf.deploy = {
         CacheControl: 'no-store, no-cache, must-revalidate'
       },
       region: 'ap-southeast-1',
-      error: '404.html',
+      error: 'stage/404.html',
       redirects: [
         'www.tmpfs.org'
       ],
