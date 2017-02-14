@@ -22,9 +22,8 @@
   "scripts": {
     "clean": "rm -rf public",
     "readme": "mk readme --force",
-    "create": "./sbin/create",
     "compile": "makestatic --env production",
-    "deploy": "npm run clean && npm run compile && ./sbin/deploy",
+    "deploy": "makestatic --env production --provider s3",
     "lint": "standard src/js",
     "precommit": "npm run lint -s"
   }
