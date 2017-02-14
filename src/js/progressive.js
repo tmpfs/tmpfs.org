@@ -1,7 +1,7 @@
 const HOME = 'home';
 
 /**
- *  Progressive enhancement using the `fetch` API to dynamically load and render 
+ *  Progressive enhancement using the `fetch` API to dynamically load and render
  *  the page without refreshing the entire page content.
  */
 class Progressive {
@@ -50,7 +50,7 @@ class Progressive {
   getPreloadMessage(href) {
     let msg = href;
     if(msg === '/') {
-      msg = HOME; 
+      msg = HOME;
     }
     msg = msg.replace(/^\//, '')
     return `Loading ${msg}`;
@@ -76,7 +76,7 @@ class Progressive {
     const duration = 1000;
 
     const body = document.querySelector('body');
-    
+
     let el = document.querySelector('body > .preload');
 
     if(el) {
@@ -89,7 +89,7 @@ class Progressive {
 
     // removing existing preloader
     if(href === null) {
-      return false; 
+      return false;
     }
 
     // disable scrolling during preload
@@ -98,7 +98,7 @@ class Progressive {
     let txt = el.querySelector('em');
     let msg = this.getPreloadMessage(href);
     txt.innerText = msg;
-  
+
     body.appendChild(el);
 
     setTimeout(() => {el.style = 'opacity: 1'}, 5);
@@ -166,7 +166,7 @@ class Progressive {
 
   getIdentifier(href) {
     if(href === '/') {
-      return this.selected.getDefault(); 
+      return this.selected.getDefault();
     }
 
     // share with class name for the moment
@@ -188,7 +188,7 @@ class Progressive {
 
     // attempt to navigate to current path
     if(href === pathname) {
-      return false; 
+      return false;
     }
 
     if(href === '') {
@@ -200,15 +200,23 @@ class Progressive {
       //href = href.replace(/#.*$/, '');
       ////return this.fallback(href);
     //}
+    //
+    var push = href;
 
-    history.pushState({href: href}, '', href);
+    // we actually want to show URLs with a trailing slash
+    // to prevent amazon redirect / location issues
+    if (href !== '/') {
+      push += '/'
+    }
+
+    history.pushState({href: href}, '', push);
     this.load(href);
   }
 
   onPopState(evt) {
 
     if(evt.state && evt.state.href) {
-      this.load(evt.state.href); 
+      this.load(evt.state.href);
     }else{
 
       // allow hash changes to navigate to named anchors
@@ -217,7 +225,7 @@ class Progressive {
         return;
       }
 
-      this.load(this.pathname); 
+      this.load(this.pathname);
     }
   }
 
