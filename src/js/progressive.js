@@ -66,6 +66,16 @@ class Progressive {
 
   preloader(href) {
 
+    if (this.timeout) {
+      clearTimeout(this.timeout)
+      this.timeout = null
+    }
+
+    if (this.interval) {
+      clearInterval(this.interval)
+      this.interval = null
+    }
+
     const now = Date.now();
 
     // animation duration for preloader reveal
@@ -101,9 +111,12 @@ class Progressive {
 
     body.appendChild(el);
 
-    setTimeout(() => {el.style = 'opacity: 1'}, 5);
+    this.timeout = setTimeout(() => {
+      el.style = 'opacity: 1';
+      this.timeout = null;
+    }, 5);
 
-    let interval = setInterval(() => {
+    this.interval = setInterval(() => {
       if(this.doc && (Date.now() - now >= animation)) {
         this.render(this.href, this.doc);
 
@@ -113,7 +126,8 @@ class Progressive {
 
       if(this.responded && (Date.now() - now >= duration)) {
         this.remove();
-        clearInterval(interval);
+        clearInterval(this.interval);
+        this.interval = null
       }
     }, 250)
   }
