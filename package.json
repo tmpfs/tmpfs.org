@@ -24,7 +24,6 @@
     "clean": "rm -rf public",
     "readme": "mk readme --force",
     "compile": "makestatic --env production",
-    "deploy": "makestatic --env production --provider s3",
     "lint": "standard src/js",
     "precommit": "npm run lint -s"
   }

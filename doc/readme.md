@@ -47,7 +47,7 @@ linkdown v http://localhost:1111 --bail
 The website is deployed to [s3][]. To configure for your own domain you should modify the [configuration](/app.production.js) and add authentication credentials to the `~/.aws/credentials` file (modify the credentials `profile` as needed), you will need to set the `deploy` configuration `publish` flag to `false` to create the buckets then you can run:
 
 ```
-npm run deploy
+makestatic --env production --provider s3
 ```
 
 After the buckets have been created set `publish` to `true` so that future deployments won't attempt to create and configure the buckets -- they will just sync local files with the s3 bucket.
@@ -57,10 +57,16 @@ After the buckets have been created set `publish` to `true` so that future deplo
 To deploy a `production` deployment you should run:
 
 ```
-npm run deploy
+makestatic --env production --provider s3
 ```
 
 Which will compile the website for a production environment and transfer the files to [s3][].
+
+Alternatively to deploy for the `stage` environment:
+
+```
+makestatic --env stage --provider s3
+```
 
 ### Cache
 
