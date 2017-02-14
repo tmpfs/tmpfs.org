@@ -10,7 +10,10 @@ module.exports = {
       html: [
         {
           test: /\.(html|sgr)$/,
-          plugin: require('makestatic-inline-css')
+          plugin: require('makestatic-inline-css'),
+          exclude: [
+            /about\//
+          ]
         }
       ]
     }
