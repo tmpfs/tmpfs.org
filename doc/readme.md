@@ -64,21 +64,7 @@ Which will compile the website for a production environment and transfer the fil
 
 ### Cache
 
-To configure the cache control for the [s3][] bucket first compile the website:
-
-```
-makestatic --env production
-```
-
-Then run specifing the number of seconds for the `Cache-Control` header:
-
-```
-./sbin/cache 86400
-```
-
-To set `Cache-Control: max-age 86400`. Note that the `Expires` header for HTTP 1.0 clients is always set far into the future.
-
-To bypass browser caching set seconds to zero; in which case the header is set to `no-store, no-cache, must-revalidate`.
+Cache control for `production` is set to one year for the `stage` environment the [s3][] objects are configured to never cache with `no-store, no-cache, must-revalidate`.
 
 <? @include {=readme} developer.md ?>
 

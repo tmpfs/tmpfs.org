@@ -8,11 +8,11 @@
   "homepage": "http://www.tmpfs.org",
   "repository": "https://github.com/tmpfs/tmpfs.org",
   "bugs": "https://github.com/tmpfs/tmpfs.org/issues",
-  "devDependencies": {
+  "dependencies": {
     "babel-core": "^6.22.1",
     "babel-preset-latest": "^6.22.0",
     "makestatic-css-standard": "^1.0.0",
-    "makestatic-deploy-s3": "^1.0.4",
+    "makestatic-deploy-s3": "^1.0.7",
     "makestatic-html-standard": "^1.0.0",
     "makestatic-inline-css": "^1.0.3",
     "makestatic-page-id": "^1.0.0",

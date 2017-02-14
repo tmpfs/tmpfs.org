@@ -23,6 +23,7 @@ module.exports = {
         credentials: {
           profile: 'tmpfs'
         },
+        prefix: 'production',
         region: 'ap-southeast-1',
         error: '404.html',
         redirects: [
