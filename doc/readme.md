@@ -67,7 +67,7 @@ Which will compile the website for a production environment and transfer the fil
 To configure the cache control for the [s3][] bucket first compile the website:
 
 ```
-npm run compile
+makestatic --env production
 ```
 
 Then run specifing the number of seconds for the `Cache-Control` header:

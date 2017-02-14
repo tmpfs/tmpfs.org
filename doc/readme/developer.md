@@ -15,7 +15,7 @@ makestatic -w
 To compile the static web site and minify assets with the *production* environment run:
 
 ```
-npm run compile
+makestatic --env production
 ```
 
 #### Lint
