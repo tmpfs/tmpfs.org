@@ -20,7 +20,11 @@ conf.deploy = {
       redirects: [
         'www.tmpfs.org'
       ],
-      publish: true
+      publish: true,
+      cloudfront: {
+        key: 'cloudfront_distribution_stage',
+        invalidate: true
+      }
     }
   }
 }

@@ -32,7 +32,11 @@ module.exports = {
         redirects: [
           'www.tmpfs.org'
         ],
-        publish: true
+        publish: true,
+        cloudfront: {
+          key: 'cloudfront_distribution_production',
+          invalidate: true
+        }
       }
     }
   }
