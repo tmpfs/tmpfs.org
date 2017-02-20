@@ -1,7 +1,7 @@
 {
   "name": "tmpfs.org",
   "description": "Static tmpfs website",
-  "version": "1.2.13",
+  "version": "1.2.14",
   "private": true,
   "author": "muji <noop@xpm.io>",
   "license": "MIT",
