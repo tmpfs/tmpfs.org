@@ -9,7 +9,7 @@ class Progressive {
   constructor(selected, scroller) {
     this.selected = selected;
     this.scroller = scroller;
-    this.links = Array.from(document.querySelectorAll('header a'));
+    this.links = Array.from(document.querySelectorAll('header a, a.internal'));
     this.click = this.onClick.bind(this);
     this.popstate = this.onPopState.bind(this);
     this.pathname = document.location.pathname;

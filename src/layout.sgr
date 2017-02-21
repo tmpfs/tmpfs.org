@@ -9,13 +9,13 @@ html(lang='en')
       link(rel='canonical' href='https://tmpfs.org')
       link(rel='icon' type='image/png' href='/img/favicon.png?v=1')
     block(name='description')
-      meta(name='description' content='Digital Nomad, Software Engineer, Software Consultant, Web Developer, Full Stack, Javascript, ES6, Docker, Devops, AWS, Nodejs, Golang')
+      meta(name='description' content='Digital Craftsman, Software Engineer, Software Consultant, Web Developer, Full Stack, Javascript, ES6, Docker, Devops, AWS, Nodejs, Golang')
 
     block(name='keywords')
       meta(name='keywords' content='Digital, Software, Consultant, Website, Web Developer, Full Stack, HTML, Javascript, CSS')
 
     block(name='title')
-      title tmpfs: digital nomad
+      title tmpfs: digital craftsman
 
     block(name='stylesheets')
       link(rel='stylesheet' href='/css/style.css')

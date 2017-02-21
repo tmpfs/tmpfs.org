@@ -1,4 +1,4 @@
-article(title='tmpfs: digital nomad')
+article(title='tmpfs: digital craftsman')
 
   h2 Muji
 
@@ -45,7 +45,7 @@ article(title='tmpfs: digital nomad')
 
     .avatar
 
-  section#digital-nomad
+  section#digital-craftsman
     h3 Digital Craftsman
 
     p Since pioneering the digital nomad lifestyle and then settling in a tropical paradise I aim for the perfect work/life balance that harmonizes creative and healthy activities with creating beautiful software.
@@ -54,4 +54,5 @@ article(title='tmpfs: digital nomad')
 
     p A lifelong autodidact I enjoy traveling, exploring, kayaking, literature, philosophy, theology, etymology, nature, permaculture and many other activities.
 
-    p(mdi) [Read more](/about/ "About")
+    p
+      a.internal(href="/about/" title="About") Read More
