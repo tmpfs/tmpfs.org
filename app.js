@@ -8,9 +8,9 @@ module.exports = {
 
   styles: () => {
     const std = require('makestatic-css-standard')
-    const conf = std();
-    conf.plugins.push(require('postcss-simple-vars')());
-    return conf;
+    const conf = std()
+    conf.plugins.push(require('postcss-simple-vars')())
+    return conf
   },
 
   markup: () => {

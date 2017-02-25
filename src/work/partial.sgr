@@ -6,7 +6,7 @@ article(title='tmpfs: work')
     h3 Recent Projects
     h4
       a(href='https://www.socialally.co') Social Ally
-      span.muted 2013 -- 2016
+      span.muted 2013 - 2016
     ul.tech-info.clearfix
       li
         a(href='https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5') HTML5

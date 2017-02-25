@@ -1,23 +1,21 @@
-const optimize = require('makestatic-preset-optimize');
+const parse = require('makestatic-preset-parse')
+const optimize = require('makestatic-preset-optimize')
 
 module.exports = {
   // disable source maps
   devtool: false,
 
   // configure optimization lifecycle
-  lifecycle: optimize({
-    transform: {
-      html: [
-        {
-          test: /\.(html|sgr)$/,
-          plugin: require('makestatic-inline-css'),
-          exclude: [
-            /about\//
-          ]
-        }
-      ]
-    }
-  }),
+  lifecycle: {
+    parse: parse({css: false, js: false}),
+    transform: [
+      {
+        test: /\.(html|sgr)$/,
+        plugin: require('makestatic-inline-css')
+      }
+    ],
+    optimize: optimize()
+  },
 
   deploy: {
     production: {
