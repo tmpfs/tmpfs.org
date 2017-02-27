@@ -18,17 +18,13 @@ acorn-jsx@^3.0.0:
   dependencies:
     acorn "^3.0.4"
 
-acorn@4.0.4:
+acorn@4.0.4, acorn@^4.0.4:
   version "4.0.4"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-4.0.4.tgz#17a8d6a7a6c4ef538b814ec9abac2779293bf30a"
 
 acorn@^3.0.4, acorn@^3.1.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-3.3.0.tgz#45e37fb39e8da3f25baee3ff5369e2bb5f22017a"
-
-acorn@^4.0.4:
-  version "4.0.11"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-4.0.11.tgz#edcda3bd937e7556410d42ed5860f67399c794c0"
 
 ajv-keywords@^1.0.0:
   version "1.5.1"
@@ -2646,25 +2642,25 @@ makestatic-html-standard@^1.0.0:
     retext-smartypants "^2.0.0"
     sugarml "^0.5.0"
 
-makestatic-inline-css@^1.0.3:
-  version "1.0.20"
-  resolved "https://registry.yarnpkg.com/makestatic-inline-css/-/makestatic-inline-css-1.0.20.tgz#2ba3bf4f99b0f2f43f02a9dd8d6c2d375f7e651e"
+makestatic-inline-css@^1.0.22:
+  version "1.0.22"
+  resolved "https://registry.yarnpkg.com/makestatic-inline-css/-/makestatic-inline-css-1.0.22.tgz#96dfa68434e71bfbd349ef1fc63e5525a43e6240"
 
-makestatic-optimize-css@^1.0.0:
-  version "1.0.16"
-  resolved "https://registry.yarnpkg.com/makestatic-optimize-css/-/makestatic-optimize-css-1.0.16.tgz#cb1a338b6b9eba7b35da96c0502d0389b90d7e65"
+makestatic-optimize-css@^1.0.18:
+  version "1.0.18"
+  resolved "https://registry.yarnpkg.com/makestatic-optimize-css/-/makestatic-optimize-css-1.0.18.tgz#1778e88c563af489f5dd0dd43981959a121b1a44"
   dependencies:
     clean-css "^4.0.3"
 
-makestatic-optimize-html@^1.0.0:
-  version "1.0.18"
-  resolved "https://registry.yarnpkg.com/makestatic-optimize-html/-/makestatic-optimize-html-1.0.18.tgz#e1ec91c832576195d1c75161cae002209e3811f8"
+makestatic-optimize-html@^1.0.21:
+  version "1.0.21"
+  resolved "https://registry.yarnpkg.com/makestatic-optimize-html/-/makestatic-optimize-html-1.0.21.tgz#ad8641a3f52acc8591579a0a96d8ed1d0098eda7"
   dependencies:
     html-minifier "^3.2.3"
 
-makestatic-optimize-image@^1.0.0:
-  version "1.0.19"
-  resolved "https://registry.yarnpkg.com/makestatic-optimize-image/-/makestatic-optimize-image-1.0.19.tgz#5e113e3c4629d278dbc2e27062d9755e4c6a0072"
+makestatic-optimize-image@^1.0.21:
+  version "1.0.21"
+  resolved "https://registry.yarnpkg.com/makestatic-optimize-image/-/makestatic-optimize-image-1.0.21.tgz#41a85b45e360bf2c593d1558e2351fcf8cf59334"
   dependencies:
     imagemin "^5.2.2"
     imagemin-gifsicle "^5.1.0"
@@ -2673,9 +2669,9 @@ makestatic-optimize-image@^1.0.0:
     imagemin-svgo "^5.2.0"
     when "^3.7.7"
 
-makestatic-optimize-js@^1.0.0:
-  version "1.0.18"
-  resolved "https://registry.yarnpkg.com/makestatic-optimize-js/-/makestatic-optimize-js-1.0.18.tgz#b63dee49a694a7b49f10eda190fca8f1635ba050"
+makestatic-optimize-js@^1.0.20:
+  version "1.0.20"
+  resolved "https://registry.yarnpkg.com/makestatic-optimize-js/-/makestatic-optimize-js-1.0.20.tgz#8994b98a8504a727069da5dabb4e687cfcc2da23"
   dependencies:
     uglify-js "^2.7.5"
 
@@ -2683,41 +2679,41 @@ makestatic-page-id@^1.0.0:
   version "1.0.15"
   resolved "https://registry.yarnpkg.com/makestatic-page-id/-/makestatic-page-id-1.0.15.tgz#91110ece2c4a921b94d082de7a9c21652d89b601"
 
-makestatic-parse-css@^1.0.4:
-  version "1.0.15"
-  resolved "https://registry.yarnpkg.com/makestatic-parse-css/-/makestatic-parse-css-1.0.15.tgz#a1940c5bc3afa270b8bfefb6c8e74d464fa76a81"
+makestatic-parse-css@^1.0.17:
+  version "1.0.17"
+  resolved "https://registry.yarnpkg.com/makestatic-parse-css/-/makestatic-parse-css-1.0.17.tgz#5683d840ba7aa946daca497518b5c4bec4f7abd0"
   dependencies:
     postcss "^5.2.11"
 
-makestatic-parse-html@^1.0.19:
-  version "1.0.19"
-  resolved "https://registry.yarnpkg.com/makestatic-parse-html/-/makestatic-parse-html-1.0.19.tgz#71a2087e1aad30bfcf4b8f3381fd55255e6d3e91"
+makestatic-parse-html@^1.0.21:
+  version "1.0.21"
+  resolved "https://registry.yarnpkg.com/makestatic-parse-html/-/makestatic-parse-html-1.0.21.tgz#4a65cd2adc8a79750a4b25999f32d876a3cfc88d"
   dependencies:
     parse5 "^3.0.1"
 
-makestatic-parse-js@^1.0.4:
-  version "1.0.15"
-  resolved "https://registry.yarnpkg.com/makestatic-parse-js/-/makestatic-parse-js-1.0.15.tgz#14ceee03d8d45f7d0f7ca656bf99c4adbf430cd1"
+makestatic-parse-js@^1.0.17:
+  version "1.0.17"
+  resolved "https://registry.yarnpkg.com/makestatic-parse-js/-/makestatic-parse-js-1.0.17.tgz#100248e70d851c35b64d88f245c9217d3d15be13"
   dependencies:
     acorn "^4.0.4"
     escodegen "^1.8.1"
 
-makestatic-preset-optimize@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/makestatic-preset-optimize/-/makestatic-preset-optimize-1.1.1.tgz#152f9adc20ed96529aa237a5ef4f0754eba75285"
+makestatic-preset-optimize@^1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/makestatic-preset-optimize/-/makestatic-preset-optimize-1.1.3.tgz#d894ad24d3954e9ffa2d6eeabed629544bbd0d04"
   dependencies:
-    makestatic-optimize-css "^1.0.0"
-    makestatic-optimize-html "^1.0.0"
-    makestatic-optimize-image "^1.0.0"
-    makestatic-optimize-js "^1.0.0"
+    makestatic-optimize-css "^1.0.18"
+    makestatic-optimize-html "^1.0.21"
+    makestatic-optimize-image "^1.0.21"
+    makestatic-optimize-js "^1.0.20"
 
-makestatic-preset-parse@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/makestatic-preset-parse/-/makestatic-preset-parse-1.0.0.tgz#6979eb5df1f3d541a58cc5a961074c07450837a8"
+makestatic-preset-parse@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/makestatic-preset-parse/-/makestatic-preset-parse-1.0.3.tgz#1cbce1f9b60a0eb90b72e83cd3409ddfaf0ea58c"
   dependencies:
-    makestatic-parse-css "^1.0.4"
-    makestatic-parse-html "^1.0.19"
-    makestatic-parse-js "^1.0.4"
+    makestatic-parse-css "^1.0.17"
+    makestatic-parse-html "^1.0.21"
+    makestatic-parse-js "^1.0.17"
 
 map-obj@^1.0.0, map-obj@^1.0.1:
   version "1.0.1"

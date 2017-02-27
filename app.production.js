@@ -9,10 +9,7 @@ module.exports = {
   lifecycle: {
     parse: parse({css: false, js: false}),
     transform: [
-      {
-        test: /\.(html|sgr)$/,
-        plugin: require('makestatic-inline-css')
-      }
+      require('makestatic-inline-css')
     ],
     optimize: optimize()
   },
