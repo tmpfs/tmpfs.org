@@ -23,7 +23,8 @@
     "postcss-simple-vars": "^3.0.0",
     "reshape-loader": "makestatic/reshape-loader#webpack2",
     "source-loader": "^0.2.0",
-    "standard": "^8.6.0"
+    "standard": "^8.6.0",
+    "webpack": "^2.2.1"
   },
   "scripts": {
     "clean": "rm -rf public",
