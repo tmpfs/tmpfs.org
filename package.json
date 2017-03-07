@@ -11,7 +11,7 @@
   "dependencies": {
     "babel-core": "^6.22.1",
     "babel-loader": "^6.3.2",
-    "babel-preset-latest": "^6.22.0",
+    "babel-preset-env": "^1.2.1",
     "makestatic-css-standard": "^1.0.0",
     "makestatic-deploy-s3": "^1.0.7",
     "makestatic-html-standard": "^1.0.0",
