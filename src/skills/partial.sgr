@@ -11,7 +11,7 @@ article(title='tmpfs: skills')
     dd Docker, Vagrant, AWS
 
     dt Languages
-    dd ES6, Javascript, Ruby, Python, Perl, Java, Shell, C
+    dd Go, Javascript, Ruby, Python, Java, Shell, C
 
     dt Style
     dd CSS3, PostCSS, Stylus, Sass, Less
