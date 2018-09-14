@@ -5,9 +5,6 @@ import {Scroll} from './scroll';
 import {Contrast} from './contrast';
 import {Progressive} from './progressive';
 
-/**
- *  Main application entry point.
- */
 class Application {
 
   constructor() {

@@ -1,10 +1,16 @@
-module.exports = {
-  input: 'src',
-  output: 'public',
+//const parse = require('makestatic-preset-parse')
 
-  server: {
-    ghostMode: false
+module.exports = {
+  input: __dirname + '/src',
+  output: __dirname + '/public',
+
+  entry: {
+    'js/main.js': ['./js/index.js']
   },
+
+  //server: {
+    //ghostMode: false
+  //},
 
   styles: () => {
     const std = require('makestatic-css-standard')
@@ -25,5 +31,20 @@ module.exports = {
 
   script: {
     presets: ['env']
-  }
+  },
+
+  //lifecycle: {
+    //build: [
+      //require('makestatic-build-version')
+    //],
+    //parse: parse({js: false}),
+    //graph: require('makestatic-graph-resources'),
+    //transform: [
+      //{
+        //plugin: require('makestatic-sitemap'),
+        //formats: ['html'],
+        //template: 'sitemap/index.html'
+      //}
+    //]
+  //}
 }
