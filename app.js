@@ -1,5 +1,3 @@
-//const parse = require('makestatic-preset-parse')
-
 module.exports = {
   input: __dirname + '/src',
   output: __dirname + '/public',
@@ -31,20 +29,5 @@ module.exports = {
 
   script: {
     presets: ['env']
-  },
-
-  //lifecycle: {
-    //build: [
-      //require('makestatic-build-version')
-    //],
-    //parse: parse({js: false}),
-    //graph: require('makestatic-graph-resources'),
-    //transform: [
-      //{
-        //plugin: require('makestatic-sitemap'),
-        //formats: ['html'],
-        //template: 'sitemap/index.html'
-      //}
-    //]
-  //}
+  }
 }
