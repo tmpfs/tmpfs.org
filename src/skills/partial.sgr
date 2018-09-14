@@ -1,7 +1,7 @@
 article(title='tmpfs: skills')
   h2 Skills
 
-  p(mdi) To get an idea of the various skills I have acquired over the years see the list below; I am currently keen to spend some time learning [Golang](https://golang.org/), [Rust](https://www.rust-lang.org/) and playing with [Lua](http://www.lua.org/)/[Kong](https://getkong.org/)/[OpenResty](https://openresty.org), [Elixir](http://elixir-lang.org/), [Nim](http://nim-lang.org/) and [Crystal](https://crystal-lang.org/).
+  p(mdi) To get an idea of the various skills I have acquired over the years see the list below; I am currently keen to spend some time learning [Rust](https://www.rust-lang.org/) and playing with [Lua](http://www.lua.org/)/[Kong](https://getkong.org/)/[OpenResty](https://openresty.org), [Elixir](http://elixir-lang.org/), [Nim](http://nim-lang.org/) and [Crystal](https://crystal-lang.org/).
 
   dl
     dt Environment
@@ -23,16 +23,16 @@ article(title='tmpfs: skills')
     dd Nodejs, Babel, Webpack, Browserify, Gulp, Grunt
 
     dt Databases
-    dd Redis, CouchDB, MongoDB, SQL, MySQL, RDBMS
+    dd Postgres, Redis, CouchDB, MongoDB, SQL, MySQL
+
+    dt Mobile
+    dd Android, React Native
 
     dt Documentation
     dd Markdown, Commonmark, LaTeX, Pandoc
 
-    dt Source Code Management
-    dd Git, Subversion, CVS
-
-    dt Continuous Integration
-    dd Travis, Coveralls, Jenkins
+    dt SCM & Continuous Integration
+    dd Git, Subversion, CVS, Travis, Coveralls, Jenkins
 
     dt Architecture
     dd OOP, AOP, MVC, IoC &amp; Design Patterns
@@ -41,7 +41,7 @@ article(title='tmpfs: skills')
     dd Document first, test driven &amp; agile development
 
     dt Frameworks
-    dd D3, React, Zepto, JQuery, Bootstrap, Backbone, Rails
+    dd React, Vuejs, Zepto, D3
 
     dt Messaging
     dd REST, SOAP, XML-RPC, Open Sound Control (OSC)
