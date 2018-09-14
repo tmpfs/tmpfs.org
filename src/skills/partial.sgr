@@ -17,7 +17,7 @@ article(title='tmpfs: skills')
     dd CSS3, PostCSS, Stylus, Sass, Less
 
     dt Markup &amp; XML
-    dd HTML5, XHTML, XML, XSLT, XPath, XML Schemas, E4X
+    dd HTML5, XHTML, XML, XSLT, XPath, E4X
 
     dt Development
     dd Nodejs, Babel, Webpack, Browserify, Gulp, Grunt
@@ -31,14 +31,17 @@ article(title='tmpfs: skills')
     dt Documentation
     dd Markdown, Commonmark, LaTeX, Pandoc
 
-    dt SCM & Continuous Integration
-    dd Git, Subversion, CVS, Travis, Coveralls, Jenkins
+    dt Source Code Management
+    dd Git, Subversion, CVS
+
+    dt Continuous Integration
+    dd Travis, Coveralls, Jenkins
 
     dt Architecture
     dd OOP, AOP, MVC, IoC &amp; Design Patterns
 
-    dt Methodology
-    dd Document first, test driven &amp; agile development
+    //-dt Methodology
+    //-dd Document first, test driven &amp; agile development
 
     dt Frameworks
     dd React, Vuejs, Zepto, D3
