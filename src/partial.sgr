@@ -19,7 +19,7 @@ article(title='tmpfs: digital craftsman')
         dd Fluent English and Indonesian
 
         dt Machine Languages
-        dd ES6, Javascript, Ruby, Python, Perl, Java, Shell, C
+        dd ES6/Javascript, Golang, Ruby, Python, Java, Shell, C
 
       dl
         dt Origin
