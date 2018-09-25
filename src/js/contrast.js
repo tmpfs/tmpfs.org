@@ -1,6 +1,7 @@
 const LIGHT = 'light';
 const DARK = 'dark';
 const KEY = 'contrast';
+const DEFAULT = 'dark'
 const DURATION = 500;
 
 /**
@@ -22,7 +23,7 @@ class Contrast {
 
     if(flag === false) {
       this.handler.setAttribute('style', 'display: none');
-    } 
+    }
   }
 
   disable() {
@@ -56,7 +57,7 @@ class Contrast {
     if(evt.key === KEY
       && evt.oldValue !== evt.newValue
       && evt.newValue !== this.getContrast()) {
-      this.setContrast(evt.newValue);   
+      this.setContrast(evt.newValue);
     }
   }
 
@@ -79,10 +80,11 @@ class Contrast {
   start() {
 
     if(('localStorage' in window) && window.localStorage !== null) {
-
-      if(localStorage.getItem(KEY) === LIGHT
+      if(!localStorage.getItem(KEY)) {
+        this.setContrast(DEFAULT);
+      } else if(localStorage.getItem(KEY) === LIGHT
         || localStorage.getItem(KEY) === DARK) {
-        this.setContrast(localStorage.getItem(KEY)); 
+        this.setContrast(localStorage.getItem(KEY));
       }
 
       window.addEventListener('storage', this.change);
