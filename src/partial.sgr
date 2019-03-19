@@ -13,7 +13,7 @@ article(title='tmpfs: digital craftsman')
           a(href='https://github.com/tmpfs' title='Source Code') github.com/tmpfs
         dt Packages
         dd
-          a(href='https://www.npmjs.com/~/tmpfs' title='Packages') npmjs.com/tmpfs
+          a(href='https://www.npmjs.com/~tmpfs' title='Packages') npmjs.com/tmpfs
 
         dt Natural Languages
         dd Fluent English and Indonesian
