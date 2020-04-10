@@ -39,8 +39,10 @@ class Selected{
 
   setSelected(className) {
 
+    className = className.replace(/\/$/, '')
+
     if(!className) {
-      className = HOME_ID; 
+      className = HOME_ID;
     }
 
     this.clearSelectedState();
@@ -56,7 +58,7 @@ class Selected{
   }
 
   /**
-   *  Add the *selected* class to a main navigation link with a class name that 
+   *  Add the *selected* class to a main navigation link with a class name that
    *  matches the page identifier.
    */
   setSelectedState() {

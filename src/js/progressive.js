@@ -48,7 +48,7 @@ class Progressive {
   }
 
   getPreloadMessage(href) {
-    let msg = href;
+    let msg = href.replace(/\/$/, '');
     if(msg === '/') {
       msg = HOME;
     }
