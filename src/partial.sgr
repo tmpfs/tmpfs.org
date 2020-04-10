@@ -2,7 +2,7 @@ article(title='tmpfs: digital craftsman')
 
   h2 Muji
 
-  .meta.clearfix#meta
+  .meta#meta
     .info
       dl
         dt Occupation
@@ -19,7 +19,7 @@ article(title='tmpfs: digital craftsman')
         dd Fluent English and Indonesian
 
         dt Machine Languages
-        dd ES6/Javascript, Go, Ruby, Python, Java, Shell, C
+        dd Java, Kotlin, Go, Javascript, Ruby, Python, Shell
 
       dl
         dt Origin
@@ -42,8 +42,6 @@ article(title='tmpfs: digital craftsman')
 
         dt Contact
         dd muji {at} tmpfs.org
-
-    .avatar
 
   section#digital-craftsman
     h3 Digital Craftsman
