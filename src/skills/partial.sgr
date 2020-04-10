@@ -23,7 +23,7 @@ article(title='tmpfs: skills')
     dd Nodejs, Babel, Webpack, Browserify, Gulp, Grunt
 
     dt Databases
-    dd Postgres, Redis, CouchDB, MongoDB, SQL, MySQL
+    dd Postgres, Redis, CouchDB, SQL, MySQL
 
     dt Mobile
     dd Android, React Native
