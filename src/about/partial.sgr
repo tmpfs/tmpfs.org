@@ -37,7 +37,7 @@ article(title='tmpfs: about')
   section#history
     h3 History
 
-    p I guess I am a bit of an old-timer because I can wax lyrical about arcane and obsolete technology like Director, Dreamweaver and Flash. I could talk about creating drag and drop interfaces in Netscape 4 (DHTML!) or vector drawing applications in Flash 5.
+    p I can wax lyrical about arcane and obsolete technology like Director, Dreamweaver and Flash. I could talk about creating drag and drop interfaces in Netscape 4 (DHTML!) or vector drawing applications in Flash 5.
 
     p(mdi) I was creating database-driven web applications years before the term *full-stack* became mainstream and working remotely from around the globe before the words *digital nomad* had been uttered.
 
