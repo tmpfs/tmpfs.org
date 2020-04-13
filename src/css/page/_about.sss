@@ -5,7 +5,6 @@ section.workflow
 /* NOTE: this is carefully crafted so old iOS without support for flex-wrap wraps elements as inline-block at 320px */
 
 ul.workflow
-  text-align: center
   margin: 0
   display: flex
   justify-content: center
@@ -14,27 +13,12 @@ ul.workflow
 
 ul.workflow > li
   flex: 0 1 auto
-  position: relative
   display: block
-  //display: inline-block
-  background-color: $highlight
-  text-align: left
-  padding: 1rem 1rem 0 1rem
-  margin: 0 0 2rem 0
 
-ul.workflow > li > .content
-  height: 100%
-  display: flex
-  flex-direction: column
-  flex-wrap: nowrap
-  align-items: stretch
-
-ul.workflow > li > .content > h4 + p
-  flex: 1 1 auto
-
-ul.workflow > li p:last-child
+ul.workflow > li > span:first-child
   display: inline-block
-  font-size: 1.4rem
-  background: $body-background
-  padding: 0.5rem
+  padding: 0.5rem 2rem
 
+ul.workflow > li > p
+  text-indent: 2rem
+  margin-top: 0

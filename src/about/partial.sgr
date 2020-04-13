@@ -18,23 +18,19 @@ article(data-title="About")
 
     ul.workflow
       li
-        .content
-          h4 Document
-          p(mdi) Writing documentation first not only creates a welcoming atmosphere for other developers it *forces* a thorough analysis of the task or problem domain. The end result is higher quality software that is easier to maintain.
-          p(mdi) Tools: [swagger](http://swagger.io/), [cucumber](https://cucumber.io/), [mkcli](https://github.com/mkdoc/mkcli)
+        span Document
+        p
+          | Writing documentation first not only creates a welcoming atmosphere for other developers it *forces* a thorough analysis of the task or problem domain. The end result is higher quality software that is easier to maintain.
 
       li
-        .content
-          h4 Test
-          p Testing software is an integral part of the process, we can leverage test frameworks, code coverage, continuous integration and deployment to develop robust programs. Software without a test suite is stumbling in the dark.
-          p(mdi) Tools: [ava](https://github.com/avajs/ava), [mocha](http://mochajs.org/), [chai](http://chaijs.com/), [istanbul](https://github.com/gotwarlost/istanbul)
+        span Test
+        p
+          | Testing software is an integral part of the process, we can leverage test frameworks, code coverage, continuous integration and deployment to develop robust programs. Software without a test suite is stumbling in the dark.
 
       li
-        .content
-          h4 Code
-          p Lint code, leverage static analysis, optimize the development environment for maximum efficiency, respect the DRY principle and have an attitude of constantly learning. Look for the better solution even when the code seems close to perfect.
-
-          p(mdi) Tools: [tmux](https://tmux.github.io/), [vim](http://www.vim.org/), [jshint](http://jshint.com/), [eslint](http://eslint.org/)
+        span Code
+        p
+          | Lint code, leverage static analysis, optimize the development environment for maximum efficiency, respect the DRY principle and have an attitude of constantly learning. Look for the better solution even when the code seems close to perfect.
 
   section#source-code
     h3 Source Code
