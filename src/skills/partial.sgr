@@ -1,5 +1,6 @@
 article(data-title="Skills")
-  h2 Skills
+
+  h3 Tech
 
   p(mdi) To get an idea of the various skills I have acquired over the years see the list below; I am keen to play with [Rust](https://www.rust-lang.org/), [Elixir](http://elixir-lang.org/), [Nim](http://nim-lang.org/) and [Crystal](https://crystal-lang.org/).
 

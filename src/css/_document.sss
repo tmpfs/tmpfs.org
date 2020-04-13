@@ -33,17 +33,12 @@ body
   overflow-y: scroll
 
 main
-  position: relative
-  z-index: 2
-  left: 0
-  top: 0
   /* 3 * 280 columns with 20px/2rem spacing and 20px/2rem horizontal padding */
   max-width: 920px
   margin: 0 auto
   /* NOTE: 3rem must match $footer-height, workaround a bug with postcss optimization and variables */
   min-height: calc(100% - 3rem)
-  padding: 2rem 2rem 0 2rem
-  overflow: auto
+  padding: 4rem 2rem 0 2rem
 
 main > article, header, footer
   text-align: left

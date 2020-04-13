@@ -1,7 +1,5 @@
 article(data-title="About")
 
-  h2 About
-
   p Since creating my first web page in the 90s I have been studying programming and working in the digital industry.
 
   p Over the course of my career I have created many simple and complex web applications, desktop applications, e-commerce websites, implemented over the wire protocols and designed binary file formats.
@@ -33,15 +31,6 @@ article(data-title="About")
           p Lint code, leverage static analysis, optimize the development environment for maximum efficiency, respect the DRY principle and have an attitude of constantly learning. Look for the better solution even when the code seems close to perfect.
 
           p(mdi) Tools: [tmux](https://tmux.github.io/), [vim](http://www.vim.org/), [jshint](http://jshint.com/), [eslint](http://eslint.org/)
-
-  section#history
-    h3 History
-
-    p I can wax lyrical about arcane and obsolete technology like Director, Dreamweaver and Flash. I could talk about creating drag and drop interfaces in Netscape 4 (DHTML!) or vector drawing applications in Flash 5.
-
-    p(mdi) I was creating database-driven web applications years before the term *full-stack* became mainstream and working remotely from around the globe before the words *digital nomad* had been uttered.
-
-    p(mdi) I cut my teeth in several digital agencies before going it alone and working as a consultant in London for many years before pioneering the digital nomad lifestyle and then settling in Bali, Indonesia.
 
   section#source-code
     h3 Source Code

@@ -1,7 +1,5 @@
 article(data-title="Work")
 
-  h2 Work
-
   section#projects
     h3 Recent Projects
     h4

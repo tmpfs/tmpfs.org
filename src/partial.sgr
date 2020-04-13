@@ -1,6 +1,6 @@
 article(data-title="Home")
 
-  h2 Muji
+  h3 Meta
 
   .meta#meta
     .info
