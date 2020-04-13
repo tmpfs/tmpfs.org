@@ -1,13 +1,10 @@
 footer
-  position: relative
-  z-index: 1
+  text-align: center
   height: $footer-height
-  bottom: 0
   padding: 0
   margin: 0
   color: $base1
   font-size: 1.6rem
-  margin-top: calc($footer-height - .5rem)
 
 footer a:not(.contrast)
   text-transform: uppercase
@@ -15,7 +12,6 @@ footer a:not(.contrast)
 
 footer > ul
   display: inline-block
-  float: left
   margin-top: .2rem
   margin-left: 2rem
   height: $footer-height
@@ -32,8 +28,7 @@ footer > ul > li, .tools > li
   font-size: 1.3rem
 
 footer > nav
-  display: inline-block    
-  float: right
+  display: inline-block
   margin-right: 2rem
   padding-top: 2px
 
@@ -51,6 +46,8 @@ a.top
     pointer-events: none
 
 a.contrast, a.contrast:hover
+  position: relative
+  display: inline-block
   text-decoration: none
   outline: none
   top: 3px
@@ -58,15 +55,8 @@ a.contrast, a.contrast:hover
   width: 16px
   height: 16px
   opacity: .5
-  margin-left: 1rem
   transition: opacity .5s ease-in-out
   background: url('/img/contrast-icon-dark.png') no-repeat
 
 a.contrast:hover
   opacity: 1
-
-a.contrast > img
-  display: block
-
-.symbols
-  font-size: 1.3rem
