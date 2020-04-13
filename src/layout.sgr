@@ -41,7 +41,7 @@ html(lang='en')
       block(name='content')
 
     block(name='footer')
-      footer.no-select.clearfix
+      footer.no-select
         ul
           li
             span &#169; 2016-2020
