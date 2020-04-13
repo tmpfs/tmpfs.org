@@ -22,7 +22,7 @@ article(data-title="Work")
         a(href='http://jadelang.net/') Jade
       li
         a(href='http://stylus-lang.com/') Stylus
-    p Created a microservices platform for delivering realtime websocket applications including all client and server code. The platform was created remotely from Indonesia for an Australian startup in the realtime content space, it was written from scratch to support up to 10,000 concurrent users and tools were developed to enable third-party developers to rapidly create rich realtime applications.
+    p Created a platform for delivering realtime websocket applications including all client and server code. The platform was created remotely from Indonesia for an Australian startup in the realtime content space, it was written from scratch to support up to 10,000 concurrent users and tools were developed to enable third-party developers to rapidly create rich realtime applications.
 
   section#open-source
     h3 Open Source
