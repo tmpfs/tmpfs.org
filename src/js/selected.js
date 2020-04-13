@@ -1,4 +1,4 @@
-const HOME_ID = 'index';
+const HOME_ID = 'home';
 
 /**
  *  Set selected state in main navigation.

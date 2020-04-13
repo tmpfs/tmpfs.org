@@ -35,7 +35,7 @@ html(lang='en')
     block(name='menu')
       header.no-select
         nav.main
-          a.index(href='/' title='Home') Home
+          a.home(href='/' title='Home') Home
           a.work(href='/work/' title='Work') Work
           a.skills(href='/skills/' title='Skills') Skills
           a.about(href='/about/' title='About') About
@@ -46,13 +46,9 @@ html(lang='en')
       footer.no-select.clearfix
         ul
           li
-            span &#169; 2016+
+            span &#169; 2016-2020
           li
             a(href='https://github.com/tmpfs' title='Github Profile') github
-          li
-            a(href='https://npmjs.com/~tmpfs' title='NPM Profile') npm
-          li.symbols
-            span 真 善 忍
         nav
           a.top.hidden(href='#top' title='Top of the page') ∆ Top ∆
           a.contrast(href='#contrast' title='Toggle Contrast')
