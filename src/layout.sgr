@@ -15,7 +15,7 @@ html(lang='en')
       meta(name='keywords' content='Digital, Software, Consultant, Website, Web Developer, Full Stack, HTML, Javascript, CSS')
 
     block(name='title')
-      title tmpfs: digital craftsman
+      title Home
 
     block(name='stylesheets')
       link(rel='stylesheet' href='/css/style.css')

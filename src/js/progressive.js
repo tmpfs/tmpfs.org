@@ -37,7 +37,7 @@ class Progressive {
 
     // update title based on loaded section partial
     const title = document.querySelector('article')
-      .getAttribute('title');
+      .getAttribute('data-title');
     document.querySelector('head > title').innerText = title;
 
     this.scroller.update();

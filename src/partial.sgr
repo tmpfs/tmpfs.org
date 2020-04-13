@@ -1,4 +1,4 @@
-article
+article(data-title="Home")
 
   h2 Muji
 
