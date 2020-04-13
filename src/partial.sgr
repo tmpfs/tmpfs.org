@@ -1,4 +1,4 @@
-article(title='tmpfs: digital craftsman')
+article
 
   h2 Muji
 
@@ -23,7 +23,7 @@ article(title='tmpfs: digital craftsman')
 
       dl
         dt Origin
-        dd Born in London in 1977
+        dd London, England
 
         dt Location
         dd
