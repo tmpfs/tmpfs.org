@@ -32,7 +32,7 @@ article(title='tmpfs: work')
     h3 Open Source
     p(mdi) As a believer in the benefits of open-source development I have contributed to many open-source projects including [commonmark](http://commonmark.org/), [source highlight](https://www.gnu.org/software/src-highlite/source-highlight.html) and [help2man](https://www.gnu.org/software/help2man/). Recently the focus of my own open-source projects has been on [mkdoc](https://github.com/mkdoc/mkdoc) and [trucks](https://github.com/tmpfs/trucks); for more open-source projects see my [github profile](https://github.com/tmpfs).
 
-    p(mdi) Whilst working with [Nodejs](https://nodejs.org) I have contributed over 200 packages to the [npm registry](https://npmjs.com), you can view [all the packages](https://npmjs.com/~/tmpfs).
+    p(mdi) Whilst working with [Nodejs](https://nodejs.org) I have contributed over 200 packages to the [npm registry](https://npmjs.com), you can view [all the packages](https://npmjs.com/~tmpfs).
 
     div
 
