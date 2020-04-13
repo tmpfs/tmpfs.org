@@ -62,7 +62,8 @@ class Selected{
    *  matches the page identifier.
    */
   setSelectedState() {
-    this.setSelected(this.page);
+    let id = this.page == "src" ? HOME_ID : this.page
+    this.setSelected(id);
   }
 
   start() {

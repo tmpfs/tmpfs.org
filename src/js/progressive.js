@@ -53,6 +53,9 @@ class Progressive {
       msg = HOME;
     }
     msg = msg.replace(/^\//, '')
+    if (msg == '') {
+      msg = 'Home'
+    }
     return `Loading ${msg}`;
   }
 
