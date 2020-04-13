@@ -35,14 +35,10 @@ html(lang='en')
     block(name='menu')
       header.no-select
         nav.main
-          span
-            a.index(href='/' title='Home')
-          span
-            a.work(href='/work/' title='Work') Work
-          span
-            a.skills(href='/skills/' title='Skills') Skills
-          span
-            a.about(href='/about/' title='About') About
+          a.index(href='/' title='Home') Home
+          a.work(href='/work/' title='Work') Work
+          a.skills(href='/skills/' title='Skills') Skills
+          a.about(href='/about/' title='About') About
     main(id='{{ pageId }}')
       block(name='content')
 

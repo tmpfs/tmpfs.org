@@ -16,45 +16,28 @@ header.scrolling
   opacity: 0
   top: -$header-height
 
-a.index
-  display: inline-block
-  text-decoration: none
-  margin-left: 1rem
-  opacity: .75
-  width: 32px
-  height: 32px
-  background: url('/img/logo-dark.svg') no-repeat center/32px
-  background-size: contain
-  transition: opacity .5s ease-in-out
-  &:hover,
-  &.selected
-    opacity: 1
-
-a.index.selected
-  background: url('/img/logo-selected.svg') no-repeat center/32px
-  background-size: contain
-
 header a
   outline: none
 
 nav.main
-  display: table
+  display: flex
+  justify-content: center
+  align-content: center
   height: $header-height
 
-nav.main > span
-  display: table-cell
-  vertical-align: middle
-  padding: 0 1rem
-
 nav.main a
+  display: inline-block
+  flex: 1 0
+  text-align: center
   color: inherit
+  padding: 1.5rem 1rem
   text-decoration: none
   text-transform: uppercase
   border-color: rgba(0, 43, 54, 0)
   &.selected
     cursor: default
 
-nav.main a:not(.index)
+nav.main a
   position: relative
   top: -2px
   font-size: 1.6rem
