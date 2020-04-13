@@ -3,7 +3,7 @@ article(data-title="Work")
   section#projects
     h3 Recent Projects
     h4
-      a(href='https://www.socialally.co') Social Ally
+      span Social Ally
       span.muted 2013 - 2016
     ul.tech-info
       li
@@ -23,8 +23,6 @@ article(data-title="Work")
       li
         a(href='http://stylus-lang.com/') Stylus
     p Created a microservices platform for delivering realtime websocket applications including all client and server code. The platform was created remotely from Indonesia for an Australian startup in the realtime content space, it was written from scratch to support up to 10,000 concurrent users and tools were developed to enable third-party developers to rapidly create rich realtime applications.
-
-    p(mdi) Much of the platform remains private but during the course of the project various components were released as open-source; you can view the source code at the [socialally github profile](https://github.com/socialally).
 
   section#open-source
     h3 Open Source
