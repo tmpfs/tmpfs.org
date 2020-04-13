@@ -1,9 +1,3 @@
-/**
- *  Animates the scroll indicator which gives the user an idea of how much of
- *  the page has been scrolled thereby indicating how much more content there is
- *  to read.
- */
-
 function easeOutQuad (iteration, start, diff, total) {
   return -diff * (iteration /= total) * (iteration - 2) + start
 }
@@ -12,7 +6,6 @@ class Scroll {
 
   constructor () {
     this.header = document.querySelector('header')
-    this.indicator = document.querySelector('.scroll-indicator')
     this.top = document.querySelector('[href="#top"]')
 
     this.handler = this.onScroll.bind(this)
@@ -101,17 +94,6 @@ class Scroll {
     } else if (!this.header.classList.contains('scrolling')) {
       this.show(false)
     }
-
-    // normalized value
-    const amount = (pos / limit) * 1
-    // percentage value
-    const percent = amount * 100
-
-    // inline style
-    const style = `opacity: ${amount}; width: ${percent}%`
-
-    // NOTE: using the `style` property does not work on old iphone
-    this.indicator.setAttribute('style', style)
   }
 
   update () {
