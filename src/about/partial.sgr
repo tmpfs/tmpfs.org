@@ -1,14 +1,16 @@
 article(data-title="About")
 
-  h3 History
+  section#history
 
-  p Since creating my first web page in the 90s I have been studying programming and working in the digital industry.
+    h3 History
 
-  p Over the course of my career I have created many simple and complex web applications, desktop applications, e-commerce websites, implemented over the wire protocols and designed binary file formats.
+    p Since creating my first web page in the 90s I have been studying programming and working in the digital industry.
 
-  p I believe very strongly in using the right tool for the job and carefully evaluate the most appropriate technology stack for each project.
+    p Over the course of my career I have created many simple and complex web applications, desktop applications, e-commerce websites, implemented over the wire protocols and designed binary file formats.
 
-  p Operating solo or leading small to medium-sized teams of engineers is a walk in the park. I have led teams of 12+ engineers on multi-million dollar projects and guided junior engineers in small agile teams.
+    p I believe very strongly in using the right tool for the job and carefully evaluate the most appropriate technology stack for each project.
+
+    p Operating solo or leading small to medium-sized teams of engineers is a walk in the park. I have led teams of 12+ engineers on multi-million dollar projects and guided junior engineers in small agile teams.
 
   section.workflow#workflow
     h3 Workflow

@@ -1,8 +1,8 @@
 article(data-title="Home")
 
-  h3 Meta
+  section.meta#meta
+    h3 Meta
 
-  .meta#meta
     .info
       dl
         dt Occupation

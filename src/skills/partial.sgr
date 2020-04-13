@@ -1,53 +1,54 @@
 article(data-title="Skills")
 
-  h3 Tech
+  section
+    h3 Tech
 
-  p(mdi) To get an idea of the various skills I have acquired over the years see the list below; I am keen to play with [Rust](https://www.rust-lang.org/), [Elixir](http://elixir-lang.org/), [Nim](http://nim-lang.org/) and [Crystal](https://crystal-lang.org/).
+    p(mdi) To get an idea of the various skills I have acquired over the years see the list below; I am keen to play with [Rust](https://www.rust-lang.org/), [Elixir](http://elixir-lang.org/), [Nim](http://nim-lang.org/) and [Crystal](https://crystal-lang.org/).
 
-  dl
-    dt Environment
-    dd Linux, Tmux, Vim
+    dl
+      dt Environment
+      dd Linux, Tmux, Vim
 
-    dt Devops
-    dd Docker, Packer, AWS
+      dt Devops
+      dd Docker, Packer, AWS
 
-    dt Languages
-    dd Java, Kotlin, Go, Javascript, Ruby, Python, Shell
+      dt Languages
+      dd Java, Kotlin, Go, Javascript, Ruby, Python, Shell
 
-    dt Style
-    dd CSS3, PostCSS, Stylus, Sass, Less
+      dt Style
+      dd CSS3, PostCSS, Stylus, Sass, Less
 
-    dt Markup &amp; XML
-    dd HTML5, XHTML, XML, XSLT, XPath, E4X
+      dt Markup &amp; XML
+      dd HTML5, XHTML, XML, XSLT, XPath, E4X
 
-    dt Development
-    dd Nodejs, Babel, Webpack, Browserify, Gulp, Grunt
+      dt Development
+      dd Nodejs, Babel, Webpack, Browserify, Gulp, Grunt
 
-    dt Databases
-    dd Postgres, Redis, CouchDB, SQL, MySQL
+      dt Databases
+      dd Postgres, Redis, CouchDB, SQL, MySQL
 
-    dt Mobile
-    dd Android, React Native
+      dt Mobile
+      dd Android, React Native
 
-    dt Documentation
-    dd Markdown, Commonmark, LaTeX, Pandoc
+      dt Documentation
+      dd Markdown, Commonmark, LaTeX, Pandoc
 
-    dt Source Code Management
-    dd Git, Subversion, CVS
+      dt Source Code Management
+      dd Git, Subversion, CVS
 
-    dt Continuous Integration
-    dd Travis, Coveralls, Jenkins
+      dt Continuous Integration
+      dd Travis, Coveralls, Jenkins
 
-    dt Architecture
-    dd OOP, AOP, MVC, IoC &amp; Design Patterns
+      dt Architecture
+      dd OOP, AOP, MVC, IoC &amp; Design Patterns
 
-    //-dt Methodology
-    //-dd Document first, test driven &amp; agile development
+      //-dt Methodology
+      //-dd Document first, test driven &amp; agile development
 
-    dt Frameworks
-    dd React, Vuejs, Zepto, D3
+      dt Frameworks
+      dd React, Vuejs, Zepto, D3
 
-    dt Messaging
-    dd REST, SOAP, XML-RPC, Open Sound Control (OSC)
+      dt Messaging
+      dd REST, SOAP, XML-RPC, Open Sound Control (OSC)
 
-  p.footnote For brevity many skills learnt along my journey have been omitted.
+    p.footnote For brevity many skills learnt along my journey have been omitted.
