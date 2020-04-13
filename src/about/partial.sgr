@@ -48,16 +48,3 @@ article
 
     p(mdi) Like nearly all of my work this [website](https://github.com/tmpfs/tmpfs.org) is open-source, feel free to browse the code or fork the project but please make the style your own if you do! If you hit a bug [raise an issue](https://github.com/tmpfs/tmpfs.org/issues) so that I can continue to learn and improve.
 
-  .colophon
-    .footnote Crafted rapidly with love &amp; thanks
-    ul.tools
-      //-li
-        //-a(href='https://makestatic.ws' title='Makestatic') makestatic
-      li
-        a(href='https://babeljs.io/' title='Babel') babel
-      li
-        a(href='https://webpack.js.org' title='Webpack') webpack
-      li
-        a(href='https://reshape.ml/' title='Reshape') reshape
-      li
-        a(href='http://postcss.org/' title='Postcss') postcss

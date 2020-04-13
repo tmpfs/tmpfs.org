@@ -11,9 +11,6 @@ article
         dt Source Code
         dd
           a(href='https://github.com/tmpfs' title='Source Code') github.com/tmpfs
-        dt Packages
-        dd
-          a(href='https://www.npmjs.com/~tmpfs' title='Packages') npmjs.com/tmpfs
 
         dt Natural Languages
         dd Fluent English and Indonesian
@@ -28,15 +25,11 @@ article
         dt Location
         dd
           span Bali, Indonesia
-        dt Timezone
-        dd
-          span Indonesia
-          | &nbsp;
+          | &nbsp;(
           abbr(title='Central Time Zone') CTZ
           | &nbsp;
           abbr(title='Coordinated Universal Time') UTC
-          | +08:00
-
+          | +08:00)
         dt Freenode
         dd tmpfs
 
