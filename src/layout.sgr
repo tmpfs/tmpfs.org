@@ -48,7 +48,7 @@ html(lang='en')
           li
             a(href='https://github.com/tmpfs' title='Github Profile') github
         nav
-          a.top.hidden(href='#top' title='Top of the page') ∆ Top ∆
+          a.top(href='#top' title='Top of the page') ∆ Top ∆
           a.contrast(href='#contrast' title='Toggle Contrast')
 
     block(name='noscript')

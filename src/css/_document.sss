@@ -30,6 +30,7 @@ body
   font-family: ptserif-regular
   padding-bottom: $footer-height
   transition: background .5s ease-in-out
+  overflow-y: scroll
 
 main
   position: relative
@@ -41,7 +42,7 @@ main
   margin: 0 auto
   /* NOTE: 3rem must match $footer-height, workaround a bug with postcss optimization and variables */
   min-height: calc(100% - 3rem)
-  padding: $header-height 2rem 0 2rem
+  padding: 2rem 2rem 0 2rem
   overflow: auto
 
 main > article, header, footer

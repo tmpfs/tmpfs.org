@@ -40,7 +40,7 @@ class Progressive {
       .getAttribute('data-title');
     document.querySelector('head > title').innerText = title;
 
-    this.scroller.update();
+    //this.scroller.update();
 
     // reset scroll position
     window.scrollTo(0, 0);
@@ -104,9 +104,6 @@ class Progressive {
     if(href === null) {
       return false;
     }
-
-    // disable scrolling during preload
-    body.style = 'overflow: hidden';
 
     let txt = el.querySelector('em');
     let msg = this.getPreloadMessage(href);

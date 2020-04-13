@@ -5,15 +5,8 @@ function easeOutQuad (iteration, start, diff, total) {
 class Scroll {
 
   constructor () {
-    this.header = document.querySelector('header')
-    this.top = document.querySelector('[href="#top"]')
-
-    this.handler = this.onScroll.bind(this)
-    this.resize = this.onResize.bind(this)
+    this.top = document.querySelector('.top')
     this.scrollTop = this.onScrollTop.bind(this)
-
-    // trigger resize handler on load
-    this.resize()
   }
 
   getScrollHeight () {
@@ -27,13 +20,6 @@ class Scroll {
 
   getScrollLimit () {
     return this.getScrollHeight() - window.innerHeight
-  }
-
-  show (flag) {
-    this.header.classList.remove('scrolling')
-    if (!flag) {
-      this.header.classList.add('scrolling')
-    }
   }
 
   onScrollTop (e) {
@@ -75,35 +61,8 @@ class Scroll {
     doScroll()
   }
 
-  onResize (/* evt */) {
-    // show back to top link
-    if (this.getScrollLimit() && this.top.classList.contains('hidden')) {
-      this.top.classList.remove('hidden')
-    // there is something to scroll
-    } else if (!this.getScrollLimit() && !this.top.classList.contains('hidden')) {
-      this.top.classList.add('hidden')
-    }
-  }
-
-  onScroll (/* evt */) {
-    const pos = window.scrollY
-    const limit = this.getScrollLimit()
-
-    if (pos === 0) {
-      this.show(true)
-    } else if (!this.header.classList.contains('scrolling')) {
-      this.show(false)
-    }
-  }
-
-  update () {
-    this.resize()
-  }
-
   start () {
     this.top.addEventListener('click', this.scrollTop)
-    document.addEventListener('scroll', this.handler)
-    window.addEventListener('resize', this.resize)
   }
 
 }
