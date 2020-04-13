@@ -3,8 +3,6 @@ article(data-title="Skills")
   section
     h3 Tech
 
-    p(mdi) To get an idea of the various skills I have acquired over the years see the list below; I am keen to play with [Rust](https://www.rust-lang.org/), [Elixir](http://elixir-lang.org/), [Nim](http://nim-lang.org/) and [Crystal](https://crystal-lang.org/).
-
     dl
       dt Environment
       dd Linux, Tmux, Vim
@@ -51,4 +49,4 @@ article(data-title="Skills")
       dt Messaging
       dd REST, SOAP, XML-RPC, Open Sound Control (OSC)
 
-    p.footnote For brevity many skills learnt along my journey have been omitted.
+    p.footnote(mdi) For brevity many skills learnt along my journey have been omitted, I am keen to play with [Rust](https://www.rust-lang.org/), [Elixir](http://elixir-lang.org/), [Nim](http://nim-lang.org/) and [Crystal](https://crystal-lang.org/).
