@@ -39,28 +39,6 @@ article(data-title="Work")
 
     p Created the infrastructure and a mobile VOIP application for a startup in the mental health space.
 
-    h4
-      span Social Ally
-      span.muted 2013 - 2016
-    ul.tech-info
-      li
-        a(href='https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5') HTML5
-      li
-        a(href='https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3') CSS3
-      li
-        a(href='https://nodejs.org') Nodejs
-      li
-        a(href='https://redis.io/') Redis
-      li
-        a(href='https://couchdb.apache.org/') Couchdb
-      li
-        a(href='https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API') Websockets
-      li
-        a(href='http://jadelang.net/') Jade
-      li
-        a(href='http://stylus-lang.com/') Stylus
-    p Created a platform for delivering realtime websocket applications including all client and server code. The platform was created remotely from Indonesia for an Australian startup in the realtime content space, it was written from scratch to support up to 10,000 concurrent users and tools were developed to enable third-party developers to rapidly create rich realtime applications.
-
   section#open-source
     h3 Open Source
     p(mdi) As a believer in the benefits of open-source development I have contributed to many open-source projects including [commonmark](http://commonmark.org/), [source highlight](https://www.gnu.org/software/src-highlite/source-highlight.html) and [help2man](https://www.gnu.org/software/help2man/).
