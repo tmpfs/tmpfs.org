@@ -11,7 +11,7 @@ article(data-title="Skills")
       dd Docker, Packer, AWS
 
       dt Languages
-      dd Java, Kotlin, Go, Javascript, Ruby, Python, Shell
+      dd Rust, Go, Java, Kotlin, Javascript, Ruby, Python, Shell
 
       dt Style
       dd CSS3, PostCSS, Stylus, Sass, Less
