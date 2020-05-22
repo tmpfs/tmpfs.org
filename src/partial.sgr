@@ -16,7 +16,7 @@ article(data-title="Home")
         dd Fluent English and Indonesian
 
         dt Machine Languages
-        dd Java, Kotlin, Go, Javascript, Ruby, Python, Shell
+        dd Rust, Go, Java, Kotlin, Javascript, Ruby, Python, Shell
 
       dl
         dt Origin
