@@ -1,5 +1,3 @@
-import './array-from.js'
-
 import {Selected} from './selected.js';
 import {Scroll} from './scroll.js';
 import {Contrast} from './contrast.js';
