@@ -229,7 +229,6 @@ nav.main {
   display: flex;
   justify-content: center;
   align-content: center;
-  height: var(--header-height);
 }
 
 nav.main a {
@@ -237,6 +236,8 @@ nav.main a {
   flex: 1 0;
   text-align: center;
   color: inherit;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
   padding: 1.5rem 1rem;
   text-decoration: none;
   text-transform: uppercase;
@@ -246,12 +247,6 @@ nav.main a {
 
 nav.main a.selected {
   cursor: default;
-}
-
-nav.main a {
-  position: relative;
-  top: -2px;
-  font-size: 1.6rem;
 }
 
 nav.main a:hover, nav.main a.selected {
@@ -394,7 +389,7 @@ footer {
   font-size: 1.6rem;
 }
 
-footer a:not(.contrast) {
+footer {
   text-transform: uppercase;
   font-size: 1.4rem;
 }
@@ -583,24 +578,6 @@ ul.workflow > li > p {
 
 /* CONTRAST */
 
-a.contrast, a.contrast:hover {
-  position: relative;
-  display: inline-block;
-  text-decoration: none;
-  outline: none;
-  top: 5px;
-  border: 0;
-  width: 16px;
-  height: 16px;
-  opacity: .5;
-  transition: opacity .5s ease-in-out;
-  background: url('./contrast-icon-dark.png') no-repeat;
-}
-
-a.contrast:hover {
-  opacity: 1;
-}
-
 .light footer {
   transition: background .5s ease-in-out;
 }
@@ -635,10 +612,6 @@ a.contrast:hover {
 
 .dark .logotypes > li {
   background: var(--base02);
-}
-
-.dark a.contrast {
-  background: url('./contrast-icon-light.png') no-repeat;
 }
 
 .dark .preload > .background {

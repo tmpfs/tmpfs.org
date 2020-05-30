@@ -135,7 +135,7 @@ class Progressive {
   }
 
   load(href) {
-    const url = href;
+    const url = href + `?r=${Math.random()}`;
 
     this.href = href;
     this.responded = false;
@@ -147,8 +147,6 @@ class Progressive {
 
     // update navigation selected state
     this.selected.setSelected(this.getClassName(href));
-
-    console.log("fetch url", url);
 
     // load the HTML partial
     fetch(url).then((response) => {
