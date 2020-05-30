@@ -74,6 +74,7 @@ html, body {
 
 body {
   background: var(--light-bg);
+  color: #121212;
   font-size: 1.8rem;
   text-align: center;
   font-family: ptserif-regular;
@@ -510,7 +511,7 @@ a.top.hidden {
   vertical-align: top;
 }
 
-.logotype li:hover {
+.logotypes li:hover {
   opacity: 1;
 }
 
@@ -576,48 +577,37 @@ ul.workflow > li > p {
   margin-top: 0;
 }
 
-/* CONTRAST */
+/* DARK */
 
-.light footer {
-  transition: background .5s ease-in-out;
-}
+@media (prefers-color-scheme: dark) {
+  body {
+    background: var(--base03);
+    color: #cdcdcd;
+  }
 
-.light header, .dark header {
-  transition: all .8s, background .5s, border-color .5s, opacity .5s ease-in-out;
-}
+  nav.main a {
+    border-bottom: 2px solid var(--base02);
+  }
 
-.light body {
-  background: var(--light-bg);
-  color: #121212;
-}
+  header {
+    background: var(--base03);
+    border-color: var(--base02);
+  }
 
-.dark body {
-  background: var(--base03);
-  color: #cdcdcd;
-}
+  footer {
+    transition: background .5s ease-in-out;
+    color: var(--base01) !important;
+  }
 
-.dark nav.main a {
-  border-bottom: 2px solid var(--base02);
-}
+  .logotypes > li {
+    background: var(--base02);
+  }
 
-.dark header {
-  background: var(--base03);
-  border-color: var(--base02);
-}
+  .preload > .background {
+    background: var(--base03);
+  }
 
-.dark footer {
-  transition: background .5s ease-in-out;
-  color: var(--base01) !important;
-}
-
-.dark .logotypes > li {
-  background: var(--base02);
-}
-
-.dark .preload > .background {
-  background: var(--base03);
-}
-
-.dark #open-source > div {
-  border-left: 4px solid var(--base02);
+  #open-source > div {
+    border-left: 4px solid var(--base02);
+  }
 }
