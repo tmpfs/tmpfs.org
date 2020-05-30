@@ -12,7 +12,7 @@ class Application {
     this.contrast = new Contrast();
     this.selected = new Selected();
     this.scroller = new Scroll();
-    this.progressive = new Progressive(this.selected, this.scroller);
+    this.progressive = new Progressive(this.selected);
   }
 
   isIos() {

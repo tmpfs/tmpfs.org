@@ -1,4 +1,4 @@
-const HOME_ID = 'home';
+const HOME_ID = 'index';
 
 /**
  *  Set selected state in main navigation.
@@ -39,7 +39,9 @@ class Selected{
 
   setSelected(className) {
 
-    className = className.replace(/\/$/, '')
+    className = className
+      .replace(/\/$/, '')
+      .replace(/^([.]+\/?)+/, '');
 
     if(!className) {
       className = HOME_ID;

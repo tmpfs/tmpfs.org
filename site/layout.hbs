@@ -11,10 +11,20 @@
     <link rel="canonical" href="https://tmpfs.org">
     <link rel="stylesheet" href="{{ link "/assets/style.css" }}">
     <link rel="icon" href="{{ link "/assets/favicon.png" }}">
+
+    <script>
+      if(localStorage && localStorage.getItem('contrast') === 'dark') {
+        var el = document.querySelector('html');
+        if(el.classList) {
+          el.classList.add('dark');
+        }
+      }
+    </script>
+
   </head>
   <body>
     {{> header}}
-    <main>{{{template}}}</main>
+    <main id="{{ context.name }}">{{{template}}}</main>
     {{> footer}}
 
     <noscript>
@@ -31,9 +41,8 @@
         <div class="background"></div>
         <div class="message no-select">
             <span>
-              <span class="spinner">
-                <em>&nbsp;</em>
-              </span>
+              <span class="spinner"></span>
+              <em>&nbsp;</em>
             </span>
         </div>
       </div>

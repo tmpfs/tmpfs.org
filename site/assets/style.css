@@ -377,8 +377,8 @@ template {
 
 .preload > .message > span > em {
   display: inline-block;
-  font-size: 1.4rem;
-  line-height: 1.4rem;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
   font-style: normal;
   margin-left: 0.5rem;
 }

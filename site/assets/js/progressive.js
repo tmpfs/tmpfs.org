@@ -6,9 +6,8 @@ const HOME = 'home';
  */
 class Progressive {
 
-  constructor(selected, scroller) {
+  constructor(selected) {
     this.selected = selected;
-    this.scroller = scroller;
     this.links = Array.from(document.querySelectorAll('header a, a.internal'));
     this.click = this.onClick.bind(this);
     this.popstate = this.onPopState.bind(this);
@@ -23,36 +22,33 @@ class Progressive {
   }
 
   render(href, doc) {
-    const html = document.createElement('html')
-        , main = document.createElement('main');
+    let main = document.querySelector("main");
+    let old = document.querySelector("article");
+    let article = doc.querySelector("article");
+    if (article) {
+      main.replaceChild(article, old);
 
-    main.setAttribute('role', 'main');
-    main.setAttribute('id', this.getIdentifier(href));
-
-    html.appendChild(main);
-    main.innerHTML = doc;
-
-    const current = document.querySelector('main');
-    current.parentNode.replaceChild(main, current);
-
-    // update title based on loaded section partial
-    const title = document.querySelector('article')
-      .getAttribute('data-title');
-    document.querySelector('head > title').innerText = title;
-
-    //this.scroller.update();
-
+      // update title based on loaded section partial
+      const title = document.querySelector('article')
+        .getAttribute('data-title');
+      document.querySelector('head > title').innerText = title;
+    }
     // reset scroll position
     window.scrollTo(0, 0);
+  }
 
+  getName(href) {
+    return href
+      .replace(/\/$/, '')
+      .replace(/^([.]+\/?)+/, '')
+      .replace(/\/$/, '');
   }
 
   getPreloadMessage(href) {
-    let msg = href.replace(/\/$/, '');
+    let msg = this.getName(href)
     if(msg === '/') {
       msg = HOME;
     }
-    msg = msg.replace(/^\//, '')
     if (msg == '') {
       msg = 'Home'
     }
@@ -91,7 +87,6 @@ class Progressive {
     const body = document.querySelector('body');
 
     let el = document.querySelector('body > .preload');
-
     if(el) {
       this.remove();
     }
@@ -133,11 +128,14 @@ class Progressive {
   }
 
   fallback(href) {
+    if (!/\/$/.test(href)) {
+      href += "/"
+    }
     document.location.pathname = href;
   }
 
   load(href) {
-    const url = href.replace(/\/$/, '') + '/partial.html';
+    const url = href;
 
     this.href = href;
     this.responded = false;
@@ -150,6 +148,8 @@ class Progressive {
     // update navigation selected state
     this.selected.setSelected(this.getClassName(href));
 
+    console.log("fetch url", url);
+
     // load the HTML partial
     fetch(url).then((response) => {
 
@@ -159,12 +159,15 @@ class Progressive {
       if(response.ok) {
         response.text().then((doc) => {
 
+          let parser = new DOMParser();
+          let dom = parser.parseFromString(doc, "text/html");
+
           // keep reference so that the preloader
           // can draw the document to the DOM
           // this is done so that when the page loads very fast
           // it is not rendered before the preloader has finished
           // animating
-          this.doc = doc;
+          this.doc = dom;
 
         })
       }else{
@@ -209,21 +212,20 @@ class Progressive {
       href = '/';
     }
 
-    //if(document.location.hash) {
-      //console.log('has hash symbol');
-      //href = href.replace(/#.*$/, '');
-      ////return this.fallback(href);
-    //}
-    //
     var push = href;
 
     // we actually want to show URLs with a trailing slash
     // to prevent amazon redirect / location issues
     if (href !== '/') {
+      if (!/^\//.test(href)) {
+        push = '/' + push;
+      }
       push += '/'
     }
 
-    history.pushState({href: href}, '', push);
+    //console.log("pushState", href, push)
+
+    history.pushState({href}, '', push);
     this.load(href);
   }
 
