@@ -409,10 +409,8 @@ footer > ul > li, .tools > li {
   display: inline-block
 }
 
-footer > ul > li:not(:first-child),
-.tools > li:not(:first-child),
 footer > ul > li:not(:first-child):before,
-.tools > li:not(:first-child):before,
+.tools > li:not(:first-child):before
 {
   white-space: pre;
   content: ' | ';
@@ -590,7 +588,7 @@ a.contrast, a.contrast:hover {
   display: inline-block;
   text-decoration: none;
   outline: none;
-  top: 3px;
+  top: 5px;
   border: 0;
   width: 16px;
   height: 16px;
