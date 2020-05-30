@@ -1,7 +1,0 @@
-extends(src='../layout.sgr')
-  block(name='description')
-    meta(name='description' content='Workflow and history')
-  block(name='title')
-    title About
-  block(name='content')
-    include(src='partial.sgr')

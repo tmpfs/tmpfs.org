@@ -1,7 +1,0 @@
-extends(src='../layout.sgr')
-  block(name='description')
-    meta(name='description' content='Software developer skills')
-  block(name='title')
-    title Skills
-  block(name='content')
-    include(src='partial.sgr')
