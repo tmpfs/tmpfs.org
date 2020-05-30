@@ -11,28 +11,11 @@
     <link rel="canonical" href="https://tmpfs.org">
     <link rel="stylesheet" href="{{ link "/assets/style.css" }}">
     <link rel="icon" href="{{ link "/assets/favicon.png" }}">
-
-    <script>
-      if(localStorage && localStorage.getItem('contrast') === 'dark') {
-        var el = document.querySelector('html');
-        if(el.classList) {
-          el.classList.add('dark');
-        }
-      }
-    </script>
-
   </head>
   <body>
     {{> header}}
     <main id="{{ context.name }}">{{{template}}}</main>
     {{> footer}}
-
-    <noscript>
-      <style scoped>
-          .contrast {display: none !important};
-      </style>
-    </noscript>
-
 
     <script src="{{ link "/assets/js/main.js" }}" type="module"></script>
 
