@@ -17,12 +17,28 @@
   --green:     #859900;
 
   --light-bg:  #ffffff;
-
+  --accent: var(--magenta);
+  --links: var(--blue);
+  --logotype-background: var(--base2);
+  --muted-text:;
 
   --body-background: var(--light-bg);
-  --highlight: var(--base2);
+  --alternative: var(--base2);
+  --text-color: #121212;
   --header-height: 6rem;
   --footer-height: 3rem;
+}
+
+/* DARK */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body-background: var(--base03);
+    --text-color: #cdcdcd;
+    --alternative: var(--base02);
+    --muted-text: var(--base01);
+    --logotype-background: var(--base02);
+  }
 }
 
 @font-face {
@@ -46,12 +62,12 @@
 // NOTE: the selection rules for blink/webkit and mozilla
 // NOTE: should not be combined otherwise some rules are not applied
 ::selection {
-  background: var(--magenta);
+  background: var(--accent);
   color: var(--base2);
 }
 
 ::-moz-selection {
-  background: var(--magenta);
+  background: var(--accent);
   color: var(--base2);
 }
 
@@ -73,13 +89,12 @@ html, body {
 }
 
 body {
-  background: var(--light-bg);
-  color: #121212;
+  background: var(--body-background);
+  color: var(--text-color);
   font-size: 1.8rem;
   text-align: center;
   font-family: ptserif-regular;
   padding-bottom: var(--footer-height);
-  transition: background .5s ease-in-out;
   overflow-y: scroll;
 }
 
@@ -104,10 +119,6 @@ main p:first-child {
 section {
   margin-bottom: 4rem;
 }
-
-/*strong {*/
-  /*font-family: ptsans-bold;*/
-/*}*/
 
 /* TYPOGRAPHY */
 
@@ -242,7 +253,7 @@ header nav a {
   padding: 1.5rem 1rem;
   text-decoration: none;
   text-transform: uppercase;
-  border-bottom: 2px solid var(--base2);
+  border-bottom: 2px solid var(--alternative);
 
 }
 
@@ -252,23 +263,23 @@ header nav a.selected {
 
 header nav a:hover, header nav a.selected {
   transition: color, border-color .4s ease-in-out;
-  color: var(--magenta);
+  color: var(--accent);
   border-bottom: 2px solid;
-  border-color: var(--magenta) !important;
+  border-color: var(--accent) !important;
 }
 
 /* LINKS */
 
 a {
-  color: var(--blue);
+  color: var(--links);
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: color, border-color .4s ease-in-out;
 }
 
 a:hover {
-  color: var(--magenta);
-  border-color: rgba(211, 54, 130, 1);
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
 /* CONTENT */
@@ -289,96 +300,6 @@ a:hover {
   -ms-user-select: none;
 }
 
-.disabled {
-  pointer-events: none;
-  cursor: default;
-}
-
-/* NOTE: super-important: otherwise no links work on mobile safari (iphone 4) */
-template {
-  display: none;
-}
-
-/* LAYOUT */
-
-/* PRELOADER */
-
-.preload, .preload > * {
-  width: 100%;
-  height: 100%;
-}
-
-.preload {
-  cursor: default;
-  position: fixed;
-  z-index: 10;
-  left: 0;
-  top: var(--header-height);
-  bottom: 0;
-  display: table;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.preload > .background {
-  z-index: -1;
-  pointer-events: none;
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  opacity: 1;
-  background: var(--body-background);
-}
-
-.preload > .message {
-  display: table-cell;
-  position: relative;
-  color: var(--body-background);
-  font-size: 1.4rem;
-  user-select: none;
-  text-align: center;
-  vertical-align: middle;
-}
-
-.preload > .message > span {
-  display: inline-block;
-  position: relative;
-  /* knockout text */
-  background: var(--magenta);
-  border-radius: 0.2rem;
-  top: -var(header-height);
-  left: 0;
-  padding: .8rem;
-  text-transform: uppercase;
-}
-
-@keyframes sweep {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.preload > .message > span > .spinner {
-  display: inline-block;
-  position: relative;
-  top: 3px;
-  width: 1.6rem;
-  height: 1.6rem;
-  animation: sweep 1s infinite linear;
-  border-radius: 0.8rem;
-  border-bottom: 1px solid;
-  border-color: var(--body-background);
-}
-
-.preload > .message > span > em {
-  display: inline-block;
-  font-size: 1.2rem;
-  line-height: 1.2rem;
-  font-style: normal;
-  margin-left: 0.5rem;
-}
-
 /* FOOTER */
 
 footer {
@@ -386,7 +307,7 @@ footer {
   height: var(--footer-height);
   padding: 0;
   margin: 0;
-  color: var(--base1);
+  color: var(--muted-text);
   font-size: 1.6rem;
 }
 
@@ -401,19 +322,13 @@ footer > ul {
   height: var(--footer-height);
 }
 
-footer > ul > li, .tools > li {
+footer > ul > li {
   display: inline-block
 }
 
-footer > ul > li:not(:first-child):before,
-.tools > li:not(:first-child):before
-{
+footer > ul > li:not(:first-child):before {
   white-space: pre;
   content: ' | ';
-}
-
-.tools > li {
-  font-size: 1.3rem;
 }
 
 footer > nav {
@@ -429,16 +344,6 @@ footer > nav > a {
 
 footer > nav > a:not(:last-child) {
   margin-right: .5rem;
-}
-
-a.top {
-  opacity: 1;
-  transition: opacity .5s ease-in-out;
-}
-
-a.top.hidden {
-  opacity: 0;
-  pointer-events: none;
 }
 
 /* HOME */
@@ -481,7 +386,6 @@ a.top.hidden {
 
 .tech-info a {
   display: inline-block;
-  border: none;
   padding: 0;
 }
 
@@ -494,13 +398,12 @@ a.top.hidden {
 
 .logotypes li {
   flex: 0 1 auto;
-  max-width: 130px;
   height: 150px;
   cursor: default;
   font-size: 1rem;
   text-align: center;
   margin-bottom: 2rem;
-  background: var(--base2);
+  background: var(--logotype-background);
   border-radius: 0.4rem;
   padding: 1.5rem 1.5rem 0.5rem 1.5rem;
   opacity: .5;
@@ -527,14 +430,13 @@ a.top.hidden {
 }
 
 h4 > .muted {
-  float: right;
   display: inline-block;
 }
 
 #open-source > div {
   padding-left: 2rem;
   margin: 3rem 0;
-  border-left: 4px solid var(--highlight);
+  border-left: 4px solid var(--alternative);
 }
 
 /* SKILLS */
@@ -577,37 +479,3 @@ ul.workflow > li > p {
   margin-top: 0;
 }
 
-/* DARK */
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background: var(--base03);
-    color: #cdcdcd;
-  }
-
-  nav.main a {
-    border-bottom: 2px solid var(--base02);
-  }
-
-  header {
-    background: var(--base03);
-    border-color: var(--base02);
-  }
-
-  footer {
-    transition: background .5s ease-in-out;
-    color: var(--base01) !important;
-  }
-
-  .logotypes > li {
-    background: var(--base02);
-  }
-
-  .preload > .background {
-    background: var(--base03);
-  }
-
-  #open-source > div {
-    border-left: 4px solid var(--base02);
-  }
-}
