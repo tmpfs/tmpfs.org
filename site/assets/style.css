@@ -1,0 +1,650 @@
+:root {
+  --base03:    #002b36;
+  --base02:    #073642;
+  --base01:    #586e75;
+  --base00:    #657b83;
+  --base0:     #839496;
+  --base1:     #93a1a1;
+  --base2:     #eee8d5;
+  --base3:     #fdf6e3;
+  --yellow:    #b58900;
+  --orange:    #cb4b16;
+  --red:       #dc322f;
+  --magenta:   #d33682;
+  --violet:    #6c71c4;
+  --blue:      #268bd2;
+  --cyan:      #2aa198;
+  --green:     #859900;
+
+  --light-bg:  #ffffff;
+
+
+  --body-background: var(--light-bg);
+  --highlight: var(--base2);
+  --header-height: 6rem;
+  --footer-height: 3rem;
+}
+
+@font-face {
+  font-family: 'ptsans-regular';
+  src:  url('./font/PTSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./font/PTSans-Regular.woff') format('woff'),
+        url('./font/PTSans-Regular.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ptserif-regular';
+  src:  url('./font/PTSerif-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./font/PTSerif-Regular.woff') format('woff'),
+        url('./font/PTSerif-Regular.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// NOTE: the selection rules for blink/webkit and mozilla
+// NOTE: should not be combined otherwise some rules are not applied
+::selection {
+  background: var(--magenta);
+  color: var(--base2);
+}
+
+::-moz-selection {
+  background: var(--magenta);
+  color: var(--base2);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 75%;
+}
+
+*, *:after, *:before {
+  box-sizing: inherit;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--light-bg);
+  font-size: 1.8rem;
+  text-align: center;
+  font-family: ptserif-regular;
+  padding-bottom: var(--footer-height);
+  transition: background .5s ease-in-out;
+  overflow-y: scroll;
+}
+
+main {
+  /* 3 * 280 columns with 20px/2rem spacing and 20px/2rem horizontal padding */
+  max-width: 920px;
+  margin: 0 auto;
+  /* NOTE: 3rem must match --footer-height, workaround a bug with postcss optimization and variables */
+  min-height: calc(100% - 3rem);
+  padding: 4rem 2rem 0 2rem;
+}
+
+main > article, header, footer {
+  text-align: left;
+}
+
+main p:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+section {
+  margin-bottom: 4rem;
+}
+
+/*strong {*/
+  /*font-family: ptsans-bold;*/
+/*}*/
+
+/* TYPOGRAPHY */
+
+body {
+  font-family: ptsans-regular;
+}
+
+header, footer, .tech-info {
+  font-family: ptsans-regular;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: ptsans-regular;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2.6rem;
+  line-height: 1.2;
+  letter-spacing: .2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+h4 {
+  font-size: 1.6rem;
+}
+
+h2::first-letter {
+  font-size: 2.8rem;
+}
+
+p {
+  font-family: ptserif-regular;
+}
+
+dt {
+  font-size: 1.6rem;
+}
+
+dd {
+  font-size: 1.7rem;
+  -webkit-margin-start: 3rem;
+}
+
+/* ELEMENTS */
+
+p {
+  margin: 1rem 0;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  width: 100%;
+  background: var(--base00);
+  margin: 1rem 0;
+}
+
+abbr {
+  cursor: default;
+  border-bottom: 1px dotted;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  cursor: pointer;
+}
+
+/* HEADINGS */
+
+h2, h3, h4, h5, h6 {
+  margin: 0 0 1rem 0;
+}
+
+h2 {
+  margin: 2rem 0 1rem 0;
+  padding-bottom: 0.6rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--base00);
+}
+
+h3 {
+  margin: 0 0 2rem 0;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--base00);
+}
+
+h3 + p, h4 + p {
+  margin-top: 0;
+}
+
+h3 {
+  display: inline-block;
+}
+
+/* HEADER */
+
+header {
+  background: var(--body-background);
+  height: var(--header-height);
+}
+
+header a {
+  outline: none;
+}
+
+nav.main {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: var(--header-height);
+}
+
+nav.main a {
+  display: inline-block;
+  flex: 1 0;
+  text-align: center;
+  color: inherit;
+  padding: 1.5rem 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--base2);
+
+}
+
+nav.main a.selected {
+  cursor: default;
+}
+
+nav.main a {
+  position: relative;
+  top: -2px;
+  font-size: 1.6rem;
+}
+
+nav.main a:hover, nav.main a.selected {
+  transition: color, border-color .4s ease-in-out;
+  color: var(--magenta);
+  border-bottom: 2px solid;
+  border-color: var(--magenta) !important;
+}
+
+/* LINKS */
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color, border-color .4s ease-in-out;
+}
+
+a:hover {
+  color: var(--magenta);
+  border-color: rgba(211, 54, 130, 1);
+}
+
+/* CONTENT */
+
+.footnote, .muted {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+}
+
+.muted {
+  color: var(--base1);
+}
+
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+/* NOTE: super-important: otherwise no links work on mobile safari (iphone 4) */
+template {
+  display: none;
+}
+
+/* LAYOUT */
+
+/* PRELOADER */
+
+.preload, .preload > * {
+  width: 100%;
+  height: 100%;
+}
+
+.preload {
+  cursor: default;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: var(--header-height);
+  bottom: 0;
+  display: table;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.preload > .background {
+  z-index: -1;
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 1;
+  background: var(--body-background);
+}
+
+.preload > .message {
+  display: table-cell;
+  position: relative;
+  color: var(--body-background);
+  font-size: 1.4rem;
+  user-select: none;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.preload > .message > span {
+  display: inline-block;
+  position: relative;
+  /* knockout text */
+  background: var(--magenta);
+  border-radius: 0.2rem;
+  top: -var(header-height);
+  left: 0;
+  padding: .8rem;
+  text-transform: uppercase;
+}
+
+@keyframes sweep {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.preload > .message > span > .spinner {
+  display: inline-block;
+  position: relative;
+  top: 3px;
+  width: 1.6rem;
+  height: 1.6rem;
+  animation: sweep 1s infinite linear;
+  border-radius: 0.8rem;
+  border-bottom: 1px solid;
+  border-color: var(--body-background);
+}
+
+.preload > .message > span > em {
+  display: inline-block;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  font-style: normal;
+  margin-left: 0.5rem;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  height: var(--footer-height);
+  padding: 0;
+  margin: 0;
+  color: var(--base1);
+  font-size: 1.6rem;
+}
+
+footer a:not(.contrast) {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+
+footer > ul {
+  display: inline-block;
+  margin-top: .2rem;
+  height: var(--footer-height);
+}
+
+footer > ul > li, .tools > li {
+  display: inline-block
+}
+
+footer > ul > li:not(:first-child),
+.tools > li:not(:first-child),
+footer > ul > li:not(:first-child):before,
+.tools > li:not(:first-child):before,
+{
+  white-space: pre;
+  content: ' | ';
+}
+
+.tools > li {
+  font-size: 1.3rem;
+}
+
+footer > nav {
+  display: inline-block;
+  margin-right: 2rem;
+  padding-top: 2px;
+}
+
+footer > nav > a {
+  display: inline-block;
+  position: relative;
+}
+
+footer > nav > a:not(:last-child) {
+  margin-right: .5rem;
+}
+
+a.top {
+  opacity: 1;
+  transition: opacity .5s ease-in-out;
+}
+
+a.top.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* HOME */
+
+.meta > .info {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 280px;
+  /* NOTE: margin-bottom used when wrapped */
+  margin: 0 0rem 2rem 0;
+}
+
+.info > dl {
+  flex: 1 0;
+  margin: 0;
+  padding-right: 1.5rem;
+  min-width: 280px;
+}
+
+/* WORK */
+
+#work h4 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.tech-info {
+  font-size: 0;
+}
+
+.tech-info li {
+  display: inline;
+  font-size: 1.4rem;
+}
+
+.tech-info > li:not(:last-child)::after {
+  white-space: pre;
+  content: ', ';
+}
+
+.tech-info a {
+  display: inline-block;
+  border: none;
+  padding: 0;
+}
+
+.logotypes {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.logotypes li {
+  flex: 0 1 auto;
+  max-width: 130px;
+  height: 150px;
+  cursor: default;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  background: var(--base2);
+  border-radius: 0.4rem;
+  padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+  opacity: .5;
+  transition: background, opacity .5s ease-in-out;
+  /* NOTE: wraps the items on old iphones */
+  display: inline-block;
+  margin-right: 7px;
+  vertical-align: top;
+}
+
+.logotype li:hover {
+  opacity: 1;
+}
+
+.logotypes > li > img {
+  display: block;
+  width: 100px;
+}
+
+.logotypes > li > span {
+  text-transform: uppercase;
+  display: inline-block;
+  margin: .5rem 0 1.5rem 0;
+}
+
+h4 > .muted {
+  float: right;
+  display: inline-block;
+}
+
+#open-source > div {
+  padding-left: 2rem;
+  margin: 3rem 0;
+  border-left: 4px solid var(--highlight);
+}
+
+/* SKILLS */
+
+#skills dl {
+  columns: 280px 2;
+  min-width: 280px;
+  margin: 0;
+}
+
+/* ABOUT */
+
+/* NOTE: li items give half bottom margin for spacing when wrapped */
+section.workflow {
+  margin-bottom: 2rem;
+}
+
+/* NOTE: this is carefully crafted so old iOS without support for flex-wrap wraps elements as inline-block at 320px */
+
+ul.workflow {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+ul.workflow > li {
+  flex: 0 1 auto;
+  display: block;
+}
+
+ul.workflow > li > span:first-child {
+  display: inline-block;
+  padding: 0.5rem 2rem;
+}
+
+ul.workflow > li > p {
+  text-indent: 2rem;
+  margin-top: 0;
+}
+
+/* CONTRAST */
+
+a.contrast, a.contrast:hover {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  outline: none;
+  top: 3px;
+  border: 0;
+  width: 16px;
+  height: 16px;
+  opacity: .5;
+  transition: opacity .5s ease-in-out;
+  background: url('./contrast-icon-dark.png') no-repeat;
+}
+
+a.contrast:hover {
+  opacity: 1;
+}
+
+.light footer {
+  transition: background .5s ease-in-out;
+}
+
+.light header, .dark header {
+  transition: all .8s, background .5s, border-color .5s, opacity .5s ease-in-out;
+}
+
+.light body {
+  background: var(--light-bg);
+  color: #121212;
+}
+
+.dark body {
+  background: var(--base03);
+  color: #cdcdcd;
+}
+
+.dark nav.main a {
+  border-bottom: 2px solid var(--base02);
+}
+
+.dark header {
+  background: var(--base03);
+  border-color: var(--base02);
+}
+
+.dark footer {
+  transition: background .5s ease-in-out;
+  color: var(--base01) !important;
+}
+
+.dark .logotypes > li {
+  background: var(--base02);
+}
+
+.dark a.contrast {
+  background: url('./contrast-icon-light.png') no-repeat;
+}
+
+.dark .preload > .background {
+  background: var(--base03);
+}
+
+.dark #open-source > div {
+  border-left: 4px solid var(--base02);
+}

@@ -14,7 +14,7 @@ article(data-title="About")
 
   section.workflow#workflow
     h3 Workflow
-    p I evangelize a document, test, code and iterate workflow to create robust and maintainable software.
+    p I evangelize a document, test, code and iterate workflow to create robust, maintainable software but am also able to be agile for startups that need to move fast.
 
     ul.workflow
       li
