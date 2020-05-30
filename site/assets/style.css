@@ -226,13 +226,13 @@ header a {
   outline: none;
 }
 
-nav.main {
+header nav {
   display: flex;
   justify-content: center;
   align-content: center;
 }
 
-nav.main a {
+header nav a {
   display: inline-block;
   flex: 1 0;
   text-align: center;
@@ -246,11 +246,11 @@ nav.main a {
 
 }
 
-nav.main a.selected {
+header nav a.selected {
   cursor: default;
 }
 
-nav.main a:hover, nav.main a.selected {
+header nav a:hover, header nav a.selected {
   transition: color, border-color .4s ease-in-out;
   color: var(--magenta);
   border-bottom: 2px solid;
@@ -539,7 +539,7 @@ h4 > .muted {
 
 /* SKILLS */
 
-#skills dl {
+dl.skills {
   columns: 280px 2;
   min-width: 280px;
   margin: 0;
