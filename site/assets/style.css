@@ -104,7 +104,7 @@ main {
   margin: 0 auto;
   /* NOTE: 3rem must match --footer-height, workaround a bug with postcss optimization and variables */
   min-height: calc(100% - 3rem);
-  padding: 4rem 2rem 0 2rem;
+  padding: 4rem 1.5rem 0 1.5rem;
 }
 
 main > article, header, footer {
@@ -163,8 +163,7 @@ dt {
 }
 
 dd {
-  font-size: 1.7rem;
-  -webkit-margin-start: 3rem;
+  margin-left: 2rem;
 }
 
 /* ELEMENTS */
@@ -284,9 +283,16 @@ a:hover {
 
 /* CONTENT */
 
-.footnote, .muted {
+.projects h4 {
+  margin-bottom: 0;
+}
+
+small {
+  font-size: 1.2rem;
+}
+
+.footnote {
   font-size: 1.4rem;
-  margin-top: 2rem;
 }
 
 .muted {
@@ -410,7 +416,6 @@ footer > nav > a:not(:last-child) {
   transition: background, opacity .5s ease-in-out;
   /* NOTE: wraps the items on old iphones */
   display: inline-block;
-  margin-right: 7px;
   vertical-align: top;
 }
 
@@ -433,7 +438,7 @@ h4 > .muted {
   display: inline-block;
 }
 
-#open-source > div {
+.open-source > div {
   padding-left: 2rem;
   margin: 3rem 0;
   border-left: 4px solid var(--alternative);
