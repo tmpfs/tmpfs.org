@@ -8,3 +8,4 @@ Run `ht` for a debug build and `ht --release` for a release build; during  devel
 
 MIT
 
+[tmpfs]: https://tmpfs.org
