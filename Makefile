@@ -1,4 +1,8 @@
+clean:
+	@rm -rf ./build
+
 release:
+	@rm -rf ./build/release
 	@ht --release
 
 stage: release
@@ -7,4 +11,4 @@ stage: release
 production: release
 	@aws s3 sync --profile=tmpfs build/release s3://tmpfs.org/production
 
-.PHONY: stage
+.PHONY: clean release stage production
