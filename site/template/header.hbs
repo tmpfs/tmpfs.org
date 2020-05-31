@@ -1,7 +1,7 @@
 <header>
   <nav>
-    <a class="index" href="/" title="Home">Home</a>
-    <a class="work" href="/work/" title="Work">Work</a>
-    <a class="about" href="/about/" title="About">About</a>
+    <a {{is_page "/" "class='selected'"}} href="{{ link "/" }}" title="Home">Home</a>
+    <a {{is_page "/work/" "class='selected'"}} href="{{ link "/work/" }}" title="Work">Work</a>
+    <a {{is_page "/about/" "class='selected'"}} href="{{ link "/about/" }}" title="About">About</a>
   </nav>
 </header>
