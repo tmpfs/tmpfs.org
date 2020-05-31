@@ -94,6 +94,7 @@ body {
   font-size: 1.8rem;
   font-family: ptserif-regular;
   padding-bottom: var(--footer-height);
+  font-family: ptsans-regular;
   overflow-y: scroll;
 }
 
@@ -123,19 +124,15 @@ main > nav:first-child > *::after {
   margin: 0 .5rem;
 }
 
+main > nav:last-child {
+  margin-top: 2rem;
+}
+
 section {
   margin-bottom: 4rem;
 }
 
 /* TYPOGRAPHY */
-
-body {
-  font-family: ptsans-regular;
-}
-
-header, footer, .tech-info {
-  font-family: ptsans-regular;
-}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: ptsans-regular;
@@ -264,11 +261,11 @@ header nav a {
 
 }
 
-header nav a.selected {
+a.selected {
   cursor: default;
 }
 
-header nav a:hover, header nav a.selected {
+header nav a:hover, a.selected {
   transition: color, border-color .4s ease-in-out;
   color: var(--accent);
   border-bottom: 2px solid;

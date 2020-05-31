@@ -1,7 +1,7 @@
 <header>
   <nav>
-    <a {{is_page "/" "class='selected'"}} href="{{ link "/" }}" title="Home">Home</a>
-    <a {{is_page "/work/" "class='selected'"}} href="{{ link "/work/" }}" title="Work">Work</a>
-    <a {{is_page "/about/" "class='selected'"}} href="{{ link "/about/" }}" title="About">About</a>
+    <a {{match "/" "class='selected'"}} href="{{ link "/" }}" title="Home">Home</a>
+    <a {{match "/work/" "class='selected'"}} href="{{ link "/work/" }}" title="Work">Work</a>
+    <a {{match "/about/" "class='selected'"}} href="{{ link "/about/" }}" title="About">About</a>
   </nav>
 </header>
