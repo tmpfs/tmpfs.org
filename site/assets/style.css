@@ -125,7 +125,7 @@ main > nav:first-child > *::after {
 }
 
 main > nav:last-child {
-  margin-top: 2rem;
+  margin: 2rem 0;
 }
 
 section {
@@ -191,11 +191,11 @@ abbr {
   border-bottom: 1px dotted;
 }
 
-ul, li {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
+/*ul, li {*/
+  /*margin: 0;*/
+  /*padding: 0;*/
+  /*list-style-type: none;*/
+/*}*/
 
 a {
   cursor: pointer;
@@ -381,8 +381,9 @@ footer > nav > a:not(:last-child) {
   padding-bottom: 0;
 }
 
-.tech-info {
-  font-size: 0;
+.tech-info, .logotypes, .workflow, footer ul {
+  margin: 0;
+  padding: 0;
 }
 
 .tech-info li {
