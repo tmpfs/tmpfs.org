@@ -92,7 +92,6 @@ body {
   background: var(--body-background);
   color: var(--text-color);
   font-size: 1.8rem;
-  text-align: center;
   font-family: ptserif-regular;
   padding-bottom: var(--footer-height);
   overflow-y: scroll;
@@ -107,13 +106,21 @@ main {
   padding: 4rem 1.5rem 0 1.5rem;
 }
 
-main > article, header, footer {
-  text-align: left;
-}
-
 main p:first-child {
   margin-top: 0;
   padding-top: 0;
+}
+
+main > nav:first-child > * {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+main > nav:first-child > *::after {
+  display: inline-block;
+  content: '»';
+  margin: 0 .5rem;
 }
 
 section {
@@ -150,9 +157,9 @@ h4 {
   font-size: 1.6rem;
 }
 
-h2::first-letter {
-  font-size: 2.8rem;
-}
+/*h2::first-letter {*/
+  /*font-size: 2.8rem;*/
+/*}*/
 
 p {
   font-family: ptserif-regular;
@@ -205,6 +212,7 @@ h2, h3, h4, h5, h6 {
 
 h2 {
   margin: 2rem 0 1rem 0;
+  display: inline-block;
   padding-bottom: 0.6rem;
   text-transform: uppercase;
   border-bottom: 1px solid var(--base00);
