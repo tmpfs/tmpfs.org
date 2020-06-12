@@ -1,0 +1,13 @@
+[site]
+description = "Experienced digital craftsman and teacher"
+keywords = "Digital, Software, Consultant, Rust, Kotlin, Java, Website, Server, Cloud, Web Developer, Full Stack, HTML, Javascript, CSS"
+author = "muji"
+author_url = "https://tmpfs.org"
+
+["/"]
+title = "Home"
+
+["404.html"]
+standalone = true
+clean = false
+

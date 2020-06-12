@@ -1,0 +1,5 @@
+host = "recipes.tmpfs.org"
+
+[build]
+source = "site"
+target = "build"

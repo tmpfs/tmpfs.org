@@ -8,7 +8,7 @@
     <meta name="author" content="{{author}} {{author_url}}">
     <meta name="description" content="{{description}}">
     <meta name="keywords" content="{{keywords}}">
-    <link rel="canonical" href="https://tmpfs.org">
+    <link rel="canonical" href="https://{{context.config.host}}">
     <link rel="stylesheet" href="{{ link "/assets/style.css" }}">
     <link rel="icon" href="{{ link "/assets/favicon.png" }}">
   </head>
@@ -20,17 +20,6 @@
       </article>
     </main>
     {{> footer}}
-    {{#if context.options.livereload}}
-      <script type="text/javascript">
-          var socket = new WebSocket("{{{context.options.livereload}}}");
-          socket.onmessage = (event) => {
-              if (event.data === "reload") {
-                  socket.close();
-                  location.reload();
-              }
-          };
-          window.onbeforeunload = () => socket.close();
-      </script>
-    {{/if}}
+    {{livereload}}
   </body>
 </html>
