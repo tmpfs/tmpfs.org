@@ -1,3 +1,4 @@
+lang = "en"
 host = "tmpfs.org"
 
 [build]
