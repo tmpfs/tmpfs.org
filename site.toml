@@ -1,5 +1,5 @@
 [workspace]
 members = [
-  "portfolio",
-  "kitchen"
+  "kitchen",
+  "portfolio"
 ]
