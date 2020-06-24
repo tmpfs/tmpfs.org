@@ -1,6 +1,14 @@
 lang = "en"
 host = "tmpfs.org"
 
+[publish.aws.stage]
+credentials-profile = "tmpfs"
+path = "stage"
+
+[publish.aws.production]
+credentials-profile = "tmpfs"
+path = "production"
+
 [build]
 source = "site"
 target = "build"
