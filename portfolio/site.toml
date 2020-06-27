@@ -13,5 +13,5 @@ author = { name = "muji", url = "https://tmpfs.org" }
 [publish.aws]
 region = "ap-southeast-1"
 credentials = "tmpfs"
-environments = {stage = "stage", production = "production"}
+environments = {stage = {prefix = "stage"}, production = {prefix = "production"}}
 
