@@ -1,14 +1,6 @@
 lang = "en"
 host = "tmpfs.org"
 
-[publish.aws.stage]
-credentials-profile = "tmpfs"
-path = "stage"
-
-[publish.aws.production]
-credentials-profile = "tmpfs"
-path = "production"
-
 [build]
 source = "site"
 target = "build"
@@ -17,4 +9,9 @@ target = "build"
 description = "Experienced digital craftsman and teacher"
 keywords = "Digital, Software, Consultant, Rust, Kotlin, Java, Website, Server, Cloud, Web Developer, Full Stack, HTML, Javascript, CSS"
 author = { name = "muji", url = "https://tmpfs.org" }
+
+[publish.aws]
+region = "ap-southeast-1"
+credentials = "tmpfs"
+environments = {stage = "stage", production = "production"}
 
