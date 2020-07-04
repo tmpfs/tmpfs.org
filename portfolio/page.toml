@@ -3,9 +3,9 @@ title = "Home"
 
 ["404.html"]
 standalone = true
-clean = false
+rewrite-index = false
 
 ["google17a6906a04e2c5e4.html"]
 standalone = true
-clean = false
+rewrite-index = false
 
