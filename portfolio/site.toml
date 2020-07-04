@@ -5,6 +5,11 @@ host = "tmpfs.org"
 source = "site"
 target = "build"
 
+[extension]
+render = ["md", "html"]
+map = {md = "html"}
+markdown = ["md"]
+
 [page]
 description = "Experienced digital craftsman and teacher"
 keywords = "Digital, Software, Consultant, Rust, Kotlin, Java, Website, Server, Cloud, Web Developer, Full Stack, HTML, Javascript, CSS"
