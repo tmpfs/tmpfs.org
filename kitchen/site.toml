@@ -2,8 +2,7 @@ lang = "en"
 host = "recipes.tmpfs.org"
 
 [build]
-source = "site"
-target = "build"
+rewrite-index = true
 
 [page]
 description = "Experienced digital craftsman and teacher"

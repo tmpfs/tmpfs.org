@@ -1,10 +1,6 @@
 lang = "en"
 host = "tmpfs.org"
 
-[build]
-source = "site"
-target = "build"
-
 [extension]
 render = ["md", "html"]
 map = {md = "html"}
