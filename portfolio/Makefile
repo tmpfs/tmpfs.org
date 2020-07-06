@@ -1,6 +1,3 @@
-clean:
-	@rm -rf ./build
-
 release:
 	@ht --release
 
@@ -10,4 +7,4 @@ stage:
 production:
 	@ht publish production
 
-.PHONY: clean release stage production
+.PHONY: release stage production
