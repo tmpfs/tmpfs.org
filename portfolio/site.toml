@@ -1,10 +1,9 @@
 lang = "en"
 host = "tmpfs.org"
 
-[extension]
-render = ["md", "html"]
-map = {md = "html"}
-markdown = ["md"]
+[build]
+rewrite-index = true
+render = ["html"]
 
 [page]
 description = "Experienced digital craftsman and teacher"
