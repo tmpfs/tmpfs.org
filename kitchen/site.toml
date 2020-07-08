@@ -7,5 +7,5 @@ rewrite-index = true
 [page]
 description = "Experienced digital craftsman and teacher"
 keywords = "Digital, Software, Consultant, Rust, Kotlin, Java, Website, Server, Cloud, Web Developer, Full Stack, HTML, Javascript, CSS"
-author = { name = "muji", url = "https://tmpfs.org" }
+authors = [{ name = "muji", url = "https://tmpfs.org" }]
 
