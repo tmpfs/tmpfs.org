@@ -3,7 +3,7 @@ host = "tmpfs.org"
 
 [build]
 rewrite-index = true
-render = ["html"]
+extend = ["html"]
 
 [page]
 description = "Experienced digital craftsman and teacher"
