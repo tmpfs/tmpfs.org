@@ -10,6 +10,17 @@ description = "Experienced digital craftsman and teacher"
 keywords = "Digital, Software, Consultant, Rust, Kotlin, Java, Website, Server, Cloud, Web Developer, Full Stack, HTML, Javascript, CSS"
 authors = [{ name = "muji", url = "https://tmpfs.org" }]
 
+[pages."index.html"]
+title = "Home"
+
+[pages."404.html"]
+standalone = true
+rewrite-index = false
+
+[pages."google17a6906a04e2c5e4.html"]
+standalone = true
+rewrite-index = false
+
 [publish.aws]
 region = "ap-southeast-1"
 credentials = "tmpfs"
