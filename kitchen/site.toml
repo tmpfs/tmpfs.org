@@ -7,7 +7,7 @@ rewrite-index = true
 [page]
 description = "Some recipes"
 keywords = "Kitchen, Food, Cooking"
-authors = [{ name = "muji", url = "https://tmpfs.org" }]
+authors = [{ name = "Muji", url = "https://tmpfs.org" }]
 
 [pages."index.md"]
 title = "Home"
