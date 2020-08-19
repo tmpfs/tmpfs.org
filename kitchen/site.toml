@@ -1,5 +1,8 @@
 lang = "en"
-host = "recipes.tmpfs.org"
+host = "kitchen.tmpfs.org"
+
+[styles]
+main = ["/assets/css/style.css"]
 
 [build]
 rewrite-index = true
