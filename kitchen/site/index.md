@@ -2,10 +2,10 @@
 
 Some recipes I want to remember.
 
-{{#children}}
-{{#unless self}}
+{{#menu}}
+{{#unless @self}}
 * [{{title}}]({{href}})
 {{/unless}}
-{{/children}}
+{{/menu}}
 
 {{> back}}

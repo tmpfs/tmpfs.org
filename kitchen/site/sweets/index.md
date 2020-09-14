@@ -2,10 +2,10 @@
 
 Desserts and sweet treats!
 
-{{#children}}
-{{#unless self}}
+{{#menu}}
+{{#unless @self}}
 * [{{title}}]({{href}})
 {{/unless}}
-{{/children}}
+{{/menu}}
 
 {{> back}}
