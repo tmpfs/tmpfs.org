@@ -1,4 +1,4 @@
-{{> components}}
+{{> crumbtrail}}
 
 Smooth, melt in the mouth, mint chocolate.
 

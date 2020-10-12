@@ -1,4 +1,4 @@
-{{> components}}
+{{> crumbtrail}}
 
 Refreshing zesty orange chocolate.
 

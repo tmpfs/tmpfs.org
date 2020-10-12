@@ -1,4 +1,4 @@
-{{> components}}
+{{> crumbtrail}}
 
 Delicious coconut chocolate treat.
 

@@ -1,4 +1,4 @@
-{{> components}}
+{{> crumbtrail}}
 
 Delicious subtle and fragrant cardamom chocolate.
 

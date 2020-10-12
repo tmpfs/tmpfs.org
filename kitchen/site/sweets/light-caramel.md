@@ -1,4 +1,4 @@
-{{> components}}
+{{> crumbtrail}}
 
 Silky smooth classic caramel.
 

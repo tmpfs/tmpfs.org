@@ -1,4 +1,4 @@
-{{> components}}
+{{> crumbtrail}}
 
 Dark caramel chocolate with a sea salt bite.
 

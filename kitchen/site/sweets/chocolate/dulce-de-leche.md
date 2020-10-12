@@ -1,4 +1,4 @@
-{{> components}}
+{{> crumbtrail}}
 
 Milky smooth sweet chocolate treat.
 

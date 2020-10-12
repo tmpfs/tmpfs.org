@@ -1,4 +1,4 @@
-{{> components}}
+{{> crumbtrail}}
 
 Desserts and sweet treats!
 

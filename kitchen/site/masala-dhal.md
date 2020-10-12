@@ -1,4 +1,4 @@
-{{> components}}
+{{> crumbtrail}}
 
 Delicious spicy masala dhal.
 

@@ -1,4 +1,4 @@
-{{> components}}
+{{> crumbtrail}}
 
 Some recipes I want to remember.
 

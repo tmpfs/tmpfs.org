@@ -1,4 +1,4 @@
-{{> components}}
+{{> crumbtrail}}
 
 Dark caramel with a rich slightly toasted flavour.
 

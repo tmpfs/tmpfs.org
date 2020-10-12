@@ -1,4 +1,4 @@
-{{> components}}
+{{> crumbtrail}}
 
 Creamy caramel chocolate.
 

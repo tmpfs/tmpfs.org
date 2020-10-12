@@ -1,4 +1,4 @@
-{{> components}}
+{{> crumbtrail}}
 
 # Vanilla & Cinnamon Chocolate
 

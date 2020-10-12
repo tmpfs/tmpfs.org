@@ -1,4 +1,4 @@
-{{> components}}
+{{> crumbtrail}}
 
 Spicy chai chocolate.
 

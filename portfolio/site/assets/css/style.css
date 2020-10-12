@@ -112,18 +112,6 @@ main p:first-child {
   padding-top: 0;
 }
 
-main > nav:first-child > * {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-}
-
-main > nav:first-child > *::after {
-  display: inline-block;
-  content: '»';
-  margin: 0 .5rem;
-}
-
 main > nav:last-child {
   margin: 2rem 0;
 }

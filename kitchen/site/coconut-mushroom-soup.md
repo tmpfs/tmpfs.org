@@ -1,4 +1,4 @@
-{{> components}}
+{{> crumbtrail}}
 
 Creamy and refreshing coconut soup with a rich mushroom base.
 

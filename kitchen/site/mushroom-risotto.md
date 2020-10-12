@@ -1,4 +1,4 @@
-{{> components}}
+{{> crumbtrail}}
 
 Delicious vegetarian creamy mushroom risotto.
 
