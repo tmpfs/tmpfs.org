@@ -19,10 +19,6 @@ authors = [{ name = "Muji", url = "https://tmpfs.org" }]
 [pages."index.html"]
 title = "Home"
 
-[pages."404.html"]
-standalone = true
-rewrite-index = false
-
 [pages."google17a6906a04e2c5e4.html"]
 standalone = true
 rewrite-index = false
