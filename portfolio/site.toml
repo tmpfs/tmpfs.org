@@ -11,10 +11,14 @@ main = ["/assets/css/style.css"]
 rewrite-index = true
 extend = ["html"]
 
+[authors.tmpfs]
+name = "Muji"
+url = "https://tmpfs.org"
+
 [page]
 description = "Experienced digital craftsman and teacher"
 keywords = "Digital, Software, Consultant, Rust, Kotlin, Java, Website, Server, Cloud, Web Developer, Full Stack, HTML, Javascript, CSS"
-authors = [{ name = "Muji", url = "https://tmpfs.org" }]
+authors = ["tmpfs"]
 
 [pages."index.html"]
 title = "Home"

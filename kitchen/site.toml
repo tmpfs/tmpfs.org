@@ -11,10 +11,14 @@ main = ["/assets/css/style.css"]
 [build]
 rewrite-index = true
 
+[authors.tmpfs]
+name = "Muji"
+url = "https://tmpfs.org"
+
 [page]
 description = "Some recipes"
 keywords = "Kitchen, Food, Cooking"
-authors = [{ name = "Muji", url = "https://tmpfs.org" }]
+authors = ["tmpfs"]
 
 [pages."index.md"]
 title = "Home"
