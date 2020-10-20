@@ -2,11 +2,8 @@ lang = "en"
 host = "kitchen.tmpfs.org"
 
 [dependencies]
-"std::core" = { version = "~1" }
+"std::core" = { version = "~2" }
 "std::crumbtrail" = { version = "~1", apply = { styles = [ "/**/**" ] } }
-
-[styles]
-main = ["/assets/css/style.css"]
 
 [build]
 rewrite-index = true
