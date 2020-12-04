@@ -4,4 +4,3 @@ ref
 .env
 *.bak
 *.log
-*.lock
