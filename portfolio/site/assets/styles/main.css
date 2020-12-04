@@ -99,6 +99,10 @@ body {
 }
 
 main {
+  height: 100%;
+}
+
+main > section {
   /* 3 * 280 columns with 20px/2rem spacing and 20px/2rem horizontal padding */
   max-width: 920px;
   margin: 0 auto;
