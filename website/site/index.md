@@ -1,3 +1,8 @@
++++
+title = "Home"
+description = "Muji, digital craftsman"
++++
+
 ### Hi,
 
 My friends call me Muji; amongst many things I am a programmer, software architect and digital craftsman.
@@ -8,4 +13,6 @@ Qualified as a sound engineer, divemaster and skydiver I tend nowadays to spend 
 
 A lifelong autodidact I enjoy traveling, exploring, kayaking, literature, philosophy, theology, etymology, nature, permaculture and many other activities.
 
-[[about|Read more]]
+Find out more about [[work|my work]], check out my [source code on github][github] or [[contact|get in touch]].
+
+[github]: https://github.com/tmpfs

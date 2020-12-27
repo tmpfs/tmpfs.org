@@ -7,29 +7,18 @@
   --base1:     #93a1a1;
   --base2:     #eee8d5;
   --base3:     #fdf6e3;
-  --yellow:    #b58900;
-  --orange:    #cb4b16;
-  --red:       #dc322f;
-  --magenta:   #d33682;
-  --violet:    #6c71c4;
-  --blue:      #268bd2;
-  --cyan:      #2aa198;
-  --green:     #859900;
 
-  --light-bg:  #ffffff;
-  --accent: var(--magenta);
-  --links: var(--blue);
+  --accent: #d33682;
+  --links: #268bd2;
   --logotype-background: var(--base2);
-  --muted-text:;
 
-  --body-background: var(--light-bg);
   --alternative: var(--base2);
-  --text-color: #121212;
   --header-height: 6rem;
   --footer-height: 3rem;
 
   --std-max-width: none;
-  --std-background: var(--light-bg);
+  --std-background: #fff;
+  --std-color: #121212;
 }
 
 /* DARK */
@@ -37,11 +26,9 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --std-background: var(--base03);
+    --std-color: #cdcdcd;
 
-    /*--body-background: var(--base03);*/
-    --text-color: #cdcdcd;
     --alternative: var(--base02);
-    --muted-text: var(--base01);
     --logotype-background: var(--base02);
   }
 }
@@ -87,6 +74,8 @@ html {
   box-sizing: inherit;
 }
 
+
+/*
 html, body {
   width: 100%;
   height: 100%;
@@ -94,35 +83,19 @@ html, body {
   margin: 0;
   padding: 0;
 }
+*/
 
 body {
-  color: var(--text-color);
+  margin: 0;
+  padding: 0;
   font-size: 1.8rem;
-  font-family: ptserif-regular;
-  padding-bottom: var(--footer-height);
   font-family: ptsans-regular;
-  overflow-y: scroll;
 }
 
 main > article {
-  height: 100%;
-  margin: 0 auto;
   max-width: 760px;
-  padding: 1em;
-}
-
-main > section {
-  /* 3 * 280 columns with 20px/2rem spacing and 20px/2rem horizontal padding */
-  max-width: 920px;
   margin: 0 auto;
-  /* NOTE: 3rem must match --footer-height, workaround a bug with postcss optimization and variables */
-  min-height: calc(100% - 3rem);
-  padding: 4rem 1.5rem 0 1.5rem;
-}
-
-main p:first-child {
-  margin-top: 0;
-  padding-top: 0;
+  padding: 1em;
 }
 
 main > nav:last-child {
@@ -134,11 +107,6 @@ section {
 }
 
 /* TYPOGRAPHY */
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: ptsans-regular;
-  text-transform: uppercase;
-}
 
 h2 {
   font-size: 2.6rem;
@@ -154,10 +122,6 @@ h3 {
 h4 {
   font-size: 1.6rem;
 }
-
-/*h2::first-letter {*/
-  /*font-size: 2.8rem;*/
-/*}*/
 
 p {
   font-family: ptserif-regular;
@@ -177,14 +141,6 @@ p {
   margin: 1rem 0;
 }
 
-hr {
-  border: 0;
-  height: 1px;
-  width: 100%;
-  background: var(--base00);
-  margin: 1rem 0;
-}
-
 abbr {
   outline: none;
   cursor: inherit;
@@ -192,35 +148,21 @@ abbr {
   border-bottom: 1px dotted;
 }
 
-/*ul, li {*/
-  /*margin: 0;*/
-  /*padding: 0;*/
-  /*list-style-type: none;*/
-/*}*/
-
-a {
-  cursor: pointer;
-}
-
 /* HEADINGS */
-
-h2, h3, h4, h5, h6 {
-  margin: 0 0 1rem 0;
-}
 
 h2 {
   margin: 2rem 0 1rem 0;
   display: inline-block;
   padding-bottom: 0.6rem;
   text-transform: uppercase;
-  border-bottom: 1px solid var(--base00);
+  border-bottom: 1px solid currentColor;
 }
 
 h3 {
   margin: 0 0 2rem 0;
   display: inline-block;
   padding-bottom: 0.3rem;
-  border-bottom: 1px solid var(--base00);
+  border-bottom: 1px solid currentColor;
 }
 
 h3 + p, h4 + p {
@@ -233,13 +175,11 @@ h3 {
 
 /* HEADER */
 
-header {
+main header {
+  /*position: sticky;*/
+  /*top: 0;*/
   background: var(--std-background);
   height: var(--header-height);
-}
-
-header a {
-  outline: none;
 }
 
 header nav {
@@ -297,10 +237,6 @@ small {
   font-size: 1.2rem;
 }
 
-.footnote {
-  font-size: 1.4rem;
-}
-
 .muted {
   color: var(--base1);
 }
@@ -319,7 +255,6 @@ footer {
   height: var(--footer-height);
   padding: 0;
   margin: 0;
-  color: var(--muted-text);
   font-size: 1.6rem;
 }
 
@@ -457,13 +392,6 @@ dl.skills {
   columns: 280px 2;
   min-width: 280px;
   margin: 0;
-}
-
-/* ABOUT */
-
-/* NOTE: li items give half bottom margin for spacing when wrapped */
-section.workflow {
-  margin-bottom: 2rem;
 }
 
 /* NOTE: this is carefully crafted so old iOS without support for flex-wrap wraps elements as inline-block at 320px */
