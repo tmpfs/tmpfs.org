@@ -27,13 +27,18 @@
   --text-color: #121212;
   --header-height: 6rem;
   --footer-height: 3rem;
+
+  --std-max-width: none;
+  --std-background: var(--light-bg);
 }
 
 /* DARK */
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --body-background: var(--base03);
+    --std-background: var(--base03);
+
+    /*--body-background: var(--base03);*/
     --text-color: #cdcdcd;
     --alternative: var(--base02);
     --muted-text: var(--base01);
@@ -59,8 +64,10 @@
   font-style: normal;
 }
 
-// NOTE: the selection rules for blink/webkit and mozilla
-// NOTE: should not be combined otherwise some rules are not applied
+/*
+NOTE: the selection rules for blink/webkit and mozilla
+NOTE: should not be combined otherwise some rules are not applied
+*/
 ::selection {
   background: var(--accent);
   color: var(--base2);
@@ -89,7 +96,6 @@ html, body {
 }
 
 body {
-  background: var(--body-background);
   color: var(--text-color);
   font-size: 1.8rem;
   font-family: ptserif-regular;
@@ -98,8 +104,11 @@ body {
   overflow-y: scroll;
 }
 
-main {
+main > article {
   height: 100%;
+  margin: 0 auto;
+  max-width: 760px;
+  padding: 1em;
 }
 
 main > section {
@@ -225,7 +234,7 @@ h3 {
 /* HEADER */
 
 header {
-  background: var(--body-background);
+  background: var(--std-background);
   height: var(--header-height);
 }
 
@@ -351,7 +360,7 @@ footer > nav > a:not(:last-child) {
 
 /* HOME */
 
-.meta > .info {
+.info {
   display: flex;
   flex-wrap: wrap;
   min-width: 280px;
