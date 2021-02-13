@@ -1,11 +1,11 @@
 [[package]]
-name = "std::crumbtrail"
-version = "1.0.1"
+name = "std::core"
+version = "5.0.1"
+checksum = "92a22b61d85fb9009026725fe1ec2f2438e9532c3e44aebf3243b9daafebb640"
 source = "https://s3-ap-southeast-1.amazonaws.com/registry.uwe.app"
-checksum = "e95f7c5c1508d7834848ad2c0ee8ab12efd5e41c78ba7d5143c2997a1a1daedb"
 
 [[package]]
-name = "std::core"
-version = "4.1.11"
+name = "std::crumbtrail"
+version = "1.0.3"
+checksum = "efb795c2ff054be4239c7ef3a7f3251b76f474df74e42fda0b043a4ed64bf27d"
 source = "https://s3-ap-southeast-1.amazonaws.com/registry.uwe.app"
-checksum = "9984aa8da54dd708d1c870818c3c8b9df4892fc3f2f23c0af3683000576851ae"

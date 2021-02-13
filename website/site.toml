@@ -2,7 +2,7 @@ lang = "en"
 host = "tmpfs.org"
 
 [dependencies]
-"std::core" = { version = "~4", apply = {styles = ["**"]} }
+"std::core" = { version = "^5", apply = {styles = ["**"]} }
 
 [build]
 rewrite-index = true
