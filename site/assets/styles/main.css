@@ -69,13 +69,7 @@ main > article {
 
 /* TYPOGRAPHY */
 
-h2 {
-  font-size: 2.6rem;
-  line-height: 1.2;
-  letter-spacing: .2rem;
-}
-
-h3 {
+h2, h3 {
   font-size: 1.8rem;
   line-height: 1;
 }
@@ -150,10 +144,6 @@ header nav a:hover, a.selected {
 }
 
 /* CONTENT */
-
-small {
-  font-size: 1.2rem;
-}
 
 .no-select {
   user-select: none;

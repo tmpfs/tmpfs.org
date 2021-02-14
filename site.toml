@@ -1,4 +1,114 @@
-[workspace]
-members = [
-  "website",
-]
+lang = "en"
+host = "tmpfs.org"
+
+[dependencies]
+"std::core" = { version = "^5.0.5", apply = { styles = ["**"] } }
+"std::crumbtrail" = { version = "^1", apply = { styles = [ "**" ] } }
+"std::author" = "^1"
+"std::feed" = "^2"
+"std::syntax" = "^1"
+
+[dependencies."std::blueprint::blog"]
+version = "1.0.7"
+
+[build]
+rewrite-index = true
+extend = ["html"]
+
+[authors.tmpfs]
+name = "Muji"
+url = "https://tmpfs.org"
+
+[feed.posts]
+title = "Muji's Blog"
+description = "Tech stuff"
+favicon = "/favicon.ico"
+target = "blog/posts"
+includes = ["/blog/posts/**"]
+excludes = ["/blog/posts/[0-9]*/", "/blog/posts/"]
+
+[feed.posts.alternate]
+includes = ["/", "/blog/posts/**/*.html"]
+
+[syntax]
+theme = "Solarized (light)"
+
+[transform.html]
+strip-comments = true
+toc = true
+words = true
+
+[page]
+description = "Experienced digital craftsman and teacher"
+keywords = "Digital, Software, Consultant, Rust, Kotlin, Java, Website, Server, Cloud, Web Developer, Full Stack, HTML, Javascript, CSS"
+authors = ["tmpfs"]
+
+[pages."index.html"]
+title = "Home"
+
+[pages."google17a6906a04e2c5e4.html"]
+standalone = true
+rewrite-index = false
+
+[db.load.posts]
+type = "toml"
+provider = "pages"
+from = "blog/posts"
+excludes = ["index.*"]
+
+[db.load.posts.on.all]
+key = "*"
+
+[db.load.posts.on.tags]
+key = "taxonomies.tags"
+
+[redirects]
+"/blog/posts/" = "/blog/posts/1/"
+
+[pages."blog/index.md".query]
+name = "posts"
+index = "all"
+include-docs = true
+sort = "created"
+desc = true
+limit = 2
+
+[pages."blog/posts/index.md".query]
+name = "posts"
+index = "all"
+include-docs = true
+sort = "created"
+desc = true
+page = { size = 2 }
+
+[pages."blog/tags/index.md".query]
+name = "posts"
+index = "tags"
+include-docs = true
+
+[pages."blog/tags/index.md".query.group]
+path = "taxonomies.tags"
+expand = true
+
+[pages."blog/tags/item.md"]
+title = "Tag"
+
+[pages."blog/tags/item.md".query]
+name = "posts"
+index = "tags"
+each = true
+include-docs = true
+
+[pages."blog/tags/item.md".query.group]
+path = "taxonomies.tags"
+expand = true
+
+[publish.aws]
+region = "ap-southeast-1"
+credentials = "tmpfs"
+
+[publish.aws.environments.stage]
+bucket = "stage.tmpfs.org"
+
+[publish.aws.environments.production]
+bucket = "tmpfs.org"

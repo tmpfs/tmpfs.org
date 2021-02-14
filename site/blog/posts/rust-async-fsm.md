@@ -15,9 +15,11 @@ See [this repository][source code] for the source code that accompanies this art
 
 ## Introduction
 
-I recently needed to model a Finite State Machine (FSM) in Rust so took a look around at how other people were writing the state machine pattern and came across [hoverbear's article][article] which was useful as I also thought that `enum` would be the right type to model a state machine but quickly realized it was not a good fit.
+I recently needed to model a Finite State Machine (FSM) in Rust so took a look around at how other people were writing the state machine pattern and came across [hoverbear's article][article] which was useful as I also thought that `enum` would be the right type to model a state machine but quickly realized it was not a good fit &ndash; at least not on it's own!
 
-The approach in the [article][] implementing `From` is elegant and gives good compile-time guarantees on which states may transition to other states but was not suitable for my requirements. I needed a more flexible implementation that could operate easily on sub sets of a list of states, skip states based on conditions and it needed to be `async` and use idiomatic error handling using the `Result` type and the `?` operator.
+The approach in [hoverbear's article][article] implementing `From` is elegant and gives good compile-time guarantees on which states may transition to other states but was not suitable for my requirements. I needed a more flexible implementation that could operate easily on sub sets of a list of states, skip states based on conditions and it needed to be `async` and use idiomatic error handling using the `Result` type and the `?` operator.
+
+To support `Result` we could use [TryFrom](https://doc.rust-lang.org/std/convert/trait.TryFrom.html) instead of `From` but we still need to support `async` and the ability to conditionally transition so I developed a solution that implements [Iterator](https://doc.rust-lang.org/std/iter/trait.Iterator.html) to yield a transition from a state.
 
 ## Components
 
