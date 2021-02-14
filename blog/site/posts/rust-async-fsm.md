@@ -9,11 +9,17 @@ tags = ["Rust", "Finite State Machines", "Async"]
 
 {{import "header"}}
 
-I recently needed to model a Finite State Machine (FSM) in Rust so took a look around at how other people were writing the state machine pattern and came across [hoverbear's article][article] which was useful as I also thought that `enum` would be the right type to model a state machine but quickly realized it was not a good fit.
-
+This article assumes you are familiar with [Rust][] and async programming using futures; if you landed here I imagine you know what a [state machine][] is &ndash; so we won't discuss the benefits or use cases for state machines. The article outlines a FSM with flexible runtime requirements and is concerned with how to implement the design pattern using [Rust][].
+ 
 See [this repository][source code] for the source code that accompanies this article; if you want to dive straight in see [main.rs][].
 
+## Introduction
+
+I recently needed to model a Finite State Machine (FSM) in Rust so took a look around at how other people were writing the state machine pattern and came across [hoverbear's article][article] which was useful as I also thought that `enum` would be the right type to model a state machine but quickly realized it was not a good fit.
+
 The approach in the [article][] implementing `From` is elegant and gives good compile-time guarantees on which states may transition to other states but was not suitable for my requirements. I needed a more flexible implementation that could operate easily on sub sets of a list of states, skip states based on conditions and it needed to be `async` and use idiomatic error handling using the `Result` type and the `?` operator.
+
+## Components
 
 The approach I took involves these components:
 
@@ -21,6 +27,8 @@ The approach I took involves these components:
 * A trait that defines the transition from one state to the next.
 * A state machine that iterates a slice of states and yields transitions.
 * The `Request` and `Response` types for sharing data between states.
+
+## Define the states
 
 The `State` enum defines available states but does not encapsulate any data or indicate how states can transition:
 
@@ -32,6 +40,8 @@ pub enum State {
     State3,
 }
 ```
+
+## Define the transition trait
 
 The `Transition` trait is much more interesting as it defines how a state should move into another state:
 
@@ -218,6 +228,8 @@ If any of the transitions return an `Error` then iteration is immediately halted
 
 {{import "footer"}}
 
+[Rust]: https://www.rust-lang.org/
+[state machine]:https://en.wikipedia.org/wiki/Finite-state_machine
 [source code]: https://github.com/tmpfs/async-fsm-model
 [main.rs]: https://github.com/tmpfs/async-fsm-model/blob/main/src/main.rs
 [article]: https://hoverbear.org/blog/rust-state-machine-pattern/

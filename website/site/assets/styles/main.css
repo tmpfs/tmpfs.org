@@ -1,38 +1,3 @@
-:root {
-  --base03:    #002b36;
-  --base02:    #073642;
-  --base01:    #586e75;
-  --base00:    #657b83;
-  --base0:     #839496;
-  --base1:     #93a1a1;
-  --base2:     #eee8d5;
-  --base3:     #fdf6e3;
-
-  --accent: #d33682;
-  --links: #268bd2;
-  --logotype-background: var(--base2);
-
-  --alternative: var(--base2);
-  --header-height: 6rem;
-  --footer-height: 3rem;
-
-  --std-max-width: none;
-  --std-background: #fff;
-  --std-color: #121212;
-}
-
-/* DARK */
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --std-background: var(--base03);
-    --std-color: #cdcdcd;
-
-    --alternative: var(--base02);
-    --logotype-background: var(--base02);
-  }
-}
-
 @font-face {
   font-family: 'ptsans-regular';
   src:  url('../font/PTSans-Regular.eot?#iefix') format('embedded-opentype'),
@@ -49,6 +14,45 @@
         url('../font/PTSerif-Regular.ttf')  format('truetype');
   font-weight: normal;
   font-style: normal;
+}
+
+:root {
+  --base03:    #002b36;
+  --base02:    #073642;
+  --base01:    #586e75;
+  --base00:    #657b83;
+  /*--base0:     #839496;*/
+  /*--base1:     #93a1a1;*/
+  --base2:     #eee8d5;
+  --base3:     #fdf6e3;
+
+  --accent: #d33682;
+  --links: #268bd2;
+  --header-height: 6rem;
+  --footer-height: 3rem;
+
+  --std-max-width: none;
+  --std-background: #fff;
+  --std-color: #121212;
+
+  --std-font-family: ptsans-regular;
+  --std-link-color: #268bd2;
+  --std-link-color-active: #d33682;
+
+  --alternative: var(--base2);
+  --logotype-background: var(--base2);
+}
+
+/* DARK */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --std-background: var(--base03);
+    --std-color: #cdcdcd;
+
+    --alternative: var(--base02);
+    --logotype-background: var(--base02);
+  }
 }
 
 /*
@@ -89,7 +93,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 1.8rem;
-  font-family: ptsans-regular;
+  /*font-family: ptsans-regular;*/
 }
 
 main > article {
@@ -123,23 +127,33 @@ h4 {
   font-size: 1.6rem;
 }
 
+h3 + h4 {
+  margin-top: 0;
+}
+
 p {
   font-family: ptserif-regular;
 }
 
+dl {
+  margin-bottom: 1em;
+}
+
 dt {
-  font-size: 1.6rem;
+  /*font-size: 1.6rem;*/
 }
 
 dd {
-  margin-left: 2rem;
+  /*margin-left: 2rem;*/
 }
 
 /* ELEMENTS */
 
+/*
 p {
   margin: 1rem 0;
 }
+*/
 
 abbr {
   outline: none;
@@ -175,13 +189,6 @@ h3 {
 
 /* HEADER */
 
-main header {
-  /*position: sticky;*/
-  /*top: 0;*/
-  background: var(--std-background);
-  height: var(--header-height);
-}
-
 header nav {
   display: flex;
   justify-content: center;
@@ -199,7 +206,6 @@ header nav a {
   text-decoration: none;
   text-transform: uppercase;
   border-bottom: 2px solid var(--alternative);
-
 }
 
 a.selected {
@@ -215,6 +221,7 @@ header nav a:hover, a.selected {
 
 /* LINKS */
 
+/*
 a {
   color: var(--links);
   text-decoration: none;
@@ -226,6 +233,7 @@ a:hover {
   color: var(--accent);
   border-color: var(--accent);
 }
+*/
 
 /* CONTENT */
 
@@ -317,24 +325,26 @@ footer > nav > a:not(:last-child) {
   padding-bottom: 0;
 }
 
-.tech-info, .logotypes, .workflow, footer ul {
+.tech-info, .logotypes, footer ul {
   margin: 0;
   padding: 0;
 }
 
-.tech-info li {
+section.projects ul, section.open-source ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+section.projects li, section.open-source li {
   display: inline;
   font-size: 1.4rem;
 }
 
-.tech-info > li:not(:last-child)::after {
+section.projects ul > li:not(:last-child)::after,
+section.open-source ul > li:not(:last-child)::after {
   white-space: pre;
   content: ', ';
-}
-
-.tech-info a {
-  display: inline-block;
-  padding: 0;
 }
 
 .logotypes {
@@ -376,10 +386,6 @@ footer > nav > a:not(:last-child) {
   margin: .5rem 0 1.5rem 0;
 }
 
-h4 > .muted {
-  display: inline-block;
-}
-
 .open-source > div {
   padding-left: 2rem;
   margin: 3rem 0;
@@ -391,11 +397,11 @@ h4 > .muted {
 dl.skills {
   columns: 280px 2;
   min-width: 280px;
-  margin: 0;
 }
 
 /* NOTE: this is carefully crafted so old iOS without support for flex-wrap wraps elements as inline-block at 320px */
 
+/*
 ul.workflow {
   margin: 0;
   display: flex;
@@ -419,3 +425,4 @@ ul.workflow > li > p {
   margin-top: 0;
 }
 
+*/

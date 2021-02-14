@@ -15,4 +15,4 @@ A lifelong autodidact I enjoy traveling, exploring, kayaking, literature, philos
 
 Find out more about [[work|my work]], check out my [source code on github][github] or [[contact|get in touch]].
 
-[github]: https://github.com/tmpfs
+[github]: https://github.com/tmpfs "Source Code"

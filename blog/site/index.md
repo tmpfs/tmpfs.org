@@ -2,8 +2,10 @@
 title = "Blog"
 +++
 
-Welcome to your new blog.
+Tech stuff, probably mainly [Rust][].
 
 ### Recent Posts
 
 {{>list}}
+
+[Rust]: https://www.rust-lang.org/
