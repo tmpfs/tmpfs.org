@@ -215,7 +215,6 @@ section.projects li, section.open-source li {
 
 section.projects ul > li:not(:last-child)::after,
 section.open-source ul > li:not(:last-child)::after {
-  white-space: pre;
   content: ', ';
 }
 
@@ -228,6 +227,7 @@ section.open-source ul > li:not(:last-child)::after {
 
 .logotypes li {
   flex: 0 1 auto;
+  width: 136px;
   height: 150px;
   cursor: default;
   font-size: 1rem;
