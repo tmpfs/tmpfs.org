@@ -3,3 +3,9 @@ name = "std::core"
 version = "5.0.5"
 checksum = "878f8cd4f1426e061d136ef865ecd0b9a2fccdedf48f0c7edcfa94b8025b345c"
 source = "https://s3-ap-southeast-1.amazonaws.com/registry.uwe.app"
+
+[[package]]
+name = "std::crumbtrail"
+version = "1.0.3"
+checksum = "efb795c2ff054be4239c7ef3a7f3251b76f474df74e42fda0b043a4ed64bf27d"
+source = "https://s3-ap-southeast-1.amazonaws.com/registry.uwe.app"

@@ -1,6 +1,8 @@
 .DS_Store
+template.md
 build
 ref
 .env
 *.bak
 *.log
+*.rtf
