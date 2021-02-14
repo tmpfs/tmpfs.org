@@ -1,12 +1,8 @@
 # tmpfs.org
 
-Static [tmpfs][] website; requires the [UWE][] tools.
+Static [tmpfs][] website; requires the [UWE][] tools. Run `uwe build` for a release build; during development use `uwe dev`.
 
-Run `uwe` for a debug build and `uwe --release` for a release build; during  development run `uwe --live`.
-
-## License
-
-MIT
+&copy; 2016-2021, all rights reserved.
 
 [UWE]: https://uwe.app
 [tmpfs]: https://tmpfs.org
