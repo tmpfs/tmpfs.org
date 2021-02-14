@@ -1,5 +1,5 @@
 [[package]]
 name = "std::core"
-version = "5.0.4"
-checksum = "a0c414233862df1fe3ff229eab7a75e10196b599d89606099776c1584549b74f"
+version = "5.0.5"
+checksum = "878f8cd4f1426e061d136ef865ecd0b9a2fccdedf48f0c7edcfa94b8025b345c"
 source = "https://s3-ap-southeast-1.amazonaws.com/registry.uwe.app"
