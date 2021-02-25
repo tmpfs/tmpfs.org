@@ -1,9 +1,11 @@
 use serde::{Serialize, Deserialize};
 
-pub(crate) const SOCKET_PATH: &str = "/tmp/example.sock";
-
 #[derive(Debug, thiserror::Error)]
 pub enum Error {
+
+    #[error("Failed to find worker with id {0}")]
+    WorkerNotFound(usize),
+
     #[error(transparent)]
     Rpc(#[from] json_rpc2::Error),
 
@@ -19,16 +21,23 @@ pub enum Error {
 
 pub type Result<T> = std::result::Result<T, Error>;
 
-#[cfg(feature = "child")]
-pub(crate) mod child;
+#[cfg(feature = "worker")]
+pub(crate) mod worker;
 
 #[cfg(feature = "supervisor")]
-pub(crate) mod server;
+pub(crate) mod supervisor;
 
+pub(crate) const SOCKET_PATH: &str = "/tmp/supervisor.sock";
 pub(crate) const CONNECTED: &str = "connected";
 
-#[derive(Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize)]
 pub struct ConnectParams {
     pub socket_path: String,
     pub id: usize,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+pub struct Connected {
+    pub id: usize,
+    pub pid: u32,
 }

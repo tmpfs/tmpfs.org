@@ -4,11 +4,12 @@ use futures::{
     io::{AsyncBufReadExt, AsyncWriteExt, BufReader},
 };
 use interprocess::nonblocking::local_socket::*;
-use serde_json::{Value, Number};
+//use serde_json::{Value, Number};
+use log::info;
 
 use json_rpc2::{Service, Server, Request, Response, from_str};
 
-use super::{Result, ConnectParams, CONNECTED};
+use super::{Result, ConnectParams, Connected, CONNECTED};
 
 pub(crate) const SHUTDOWN: &str = "shutdown";
 
@@ -23,10 +24,10 @@ impl Service for ChildService {
     fn handle(&self, req: &mut Request, ctx: &Self::Data) -> json_rpc2::Result<Option<Response>> {
         let mut response = None;
         if req.matches(CONNECTED) {
-            println!("Child service connected {}", ctx.id);
+            info!("Child service connected {}", ctx.id);
             response = Some(req.into());
         } else if req.matches(SHUTDOWN) {
-            println!("Child going down now.");
+            info!("Child going down now.");
             response = Some(req.into());
         }
         Ok(response)
@@ -48,7 +49,7 @@ pub(crate) fn read_stdin_connect() -> Result<Option<ConnectParams>> {
 }
 
 pub(crate) async fn start(info: ConnectParams) -> Result<()> {
-    println!("Starting client {} {}", info.id, &info.socket_path);
+    info!("Starting client {} {}", info.id, &info.socket_path);
     let client_service: Box<dyn Service<Data = ChildState>> = Box::new(ChildService {});
     let server = Server::new(vec![&client_service]);
 
@@ -56,18 +57,17 @@ pub(crate) async fn start(info: ConnectParams) -> Result<()> {
         .await
         .unwrap();
 
-    let req = Request::new_notification(CONNECTED, Some(Value::Number(Number::from(process::id()))));
+    let params = serde_json::to_value(Connected {id: info.id, pid: process::id()})?;
+    let req = Request::new_notification(CONNECTED, Some(params));
     conn.write_all(format!("{}\n", serde_json::to_string(&req)?).as_bytes()).await?;
-
-    //println!("Client connected {:?}", info.id);
 
     let mut conn = BufReader::new(conn);
     let mut buffer = String::new();
     conn.read_line(&mut buffer).await?;
-    println!("Server sent: {}", &buffer);
+    info!("Server sent: {}", &buffer);
     let mut req = from_str(&buffer)?;
     let res = server.serve(&mut req, &ChildState {id: info.id});
-    println!("Child send response {:?}", res);
+    info!("Child send response {:?}", res);
     conn.write_all(
         format!("{}\n", serde_json::to_string(&res)?).as_bytes()).await?;
 

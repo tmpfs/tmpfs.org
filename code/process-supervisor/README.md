@@ -1,8 +1,8 @@
 ```
 cargo check --features=supervisor --bin=supervisor
-cargo check --features=child --bin=child
+cargo check --features=worker --bin=worker
 ```
 
 ```
-cargo build --bin=child --features=child && cargo run --features=supervisor
+cargo build --bin=worker --features=worker && cargo run --features=supervisor
 ```
