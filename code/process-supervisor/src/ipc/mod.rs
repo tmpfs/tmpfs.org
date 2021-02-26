@@ -6,7 +6,7 @@ use serde::{Deserialize, Serialize};
 pub enum Error {
     #[cfg(feature = "supervisor")]
     #[error("Failed to find worker with id {0}")]
-    WorkerNotFound(usize),
+    WorkerNotFound(String),
 
     #[error(transparent)]
     Rpc(#[from] json_rpc2::Error),
@@ -49,13 +49,13 @@ pub enum Message {
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Launch {
     pub socket_path: PathBuf,
-    pub id: usize,
+    pub id: String,
 }
 
 /// Message sent to the supervisor when a worker
 /// is spawned and has connected to the IPC socket.
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Connected {
-    pub id: usize,
+    pub id: String,
     pub pid: u32,
 }

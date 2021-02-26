@@ -1,3 +1,5 @@
+use std::collections::hash_map::DefaultHasher;
+use std::hash::Hasher;
 use std::io::{self, Write};
 use std::path::{Path, PathBuf};
 use std::process::{Command, Stdio};
@@ -11,6 +13,7 @@ use tokio_util::codec::{FramedRead, LinesCodec};
 
 use futures::StreamExt;
 
+use rand::Rng;
 use async_trait::async_trait;
 use json_rpc2::{
     futures::{Server, Service},
@@ -18,7 +21,6 @@ use json_rpc2::{
 };
 use log::{debug, error, info, warn};
 use once_cell::sync::OnceCell;
-use serde::{Deserialize, Serialize};
 
 use super::{Connected, Error, Message, Launch, Result, CONNECTED};
 
@@ -80,7 +82,7 @@ impl Supervisor {
         let (tx, rx) = oneshot::channel::<()>();
 
         tokio::spawn(async move {
-            start(&socket_path, tx)
+            listen(&socket_path, tx)
                 .await
                 .expect("Unable to start ipc server");
         });
@@ -88,9 +90,8 @@ impl Supervisor {
         let _ = rx.await?;
         info!("Supervisor is listening {}", self.socket.display());
 
-        for (i, (cmd, args)) in self.commands.iter().enumerate() {
+        for (cmd, args) in self.commands.iter() {
             spawn_worker(
-                i,
                 cmd.to_string(),
                 args.clone(),
                 self.socket.clone());
@@ -105,7 +106,7 @@ pub struct SupervisorState {
 }
 
 impl SupervisorState {
-    fn find(&mut self, id: usize) -> Option<&mut Worker> {
+    fn find(&mut self, id: &str) -> Option<&mut Worker> {
         self.workers.iter_mut().find(|w| w.id == id)
     }
 
@@ -130,7 +131,7 @@ pub struct Worker {
     cmd: String,
     args: Vec<String>,
     handle: JoinHandle<std::io::Result<()>>,
-    id: usize,
+    id: String,
     socket_path: PathBuf,
     pid: Option<u32>,
     /// If we are shutting down this worker explicitly
@@ -162,7 +163,7 @@ impl Service for SupervisorService {
             let info: Connected = req.deserialize()?;
             info!("Worker connected {:?}", info);
             let mut state = ctx.lock().unwrap();
-            let worker = state.find(info.id);
+            let worker = state.find(&info.id);
             if let Some(worker) = worker {
                 worker.pid = Some(info.pid);
                 response = Some(req.into());
@@ -181,18 +182,25 @@ impl Service for SupervisorService {
 pub(crate) fn restart(worker: Worker) {
     info!("Restarting worker {}", worker.id);
     // TODO: retry on fail with backoff and retry limit
-    spawn_worker(worker.id, worker.cmd, worker.args, worker.socket_path)
+    spawn_worker(worker.cmd, worker.args, worker.socket_path)
 }
 
-pub(crate) fn spawn_worker(
-    id: usize,
+fn spawn_worker(
     cmd: String,
     args: Vec<String>,
     socket_path: PathBuf,
 ) {
-    let launch_socket_path = socket_path.clone();
+    // Generate an id for each worker
+    let mut rng = rand::thread_rng();
+    let mut hasher = DefaultHasher::new();
+    hasher.write_usize(rng.gen());
+    let id = format!("{:x}", hasher.finish());
+
+    let worker_socket = socket_path.clone();
     let worker_cmd = cmd.clone();
     let worker_args = args.clone();
+    let worker_id = id.clone();
+
     let handle = thread::spawn(move || {
         let mut child = Command::new(worker_cmd)
             .args(worker_args)
@@ -201,8 +209,8 @@ pub(crate) fn spawn_worker(
 
         let child_stdin = child.stdin.as_mut().unwrap();
         let connect_params = Launch {
-            socket_path: launch_socket_path,
-            id,
+            socket_path: worker_socket,
+            id: worker_id,
         };
         let req = Request::new_notification(
             "connect",
@@ -247,7 +255,7 @@ pub(crate) fn spawn_worker(
     state.workers.push(worker);
 }
 
-pub(crate) async fn start<P: AsRef<Path>>(socket: P, tx: Sender<()>) -> Result<()> {
+async fn listen<P: AsRef<Path>>(socket: P, tx: Sender<()>) -> Result<()> {
     let path = socket.as_ref();
 
     // If the socket file exists we must remove to prevent `EADDRINUSE`
