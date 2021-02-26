@@ -13,9 +13,6 @@ async fn main() -> ipc::Result<()> {
     if let Some(connect) = info.take() {
         info!("Worker stdin {:?}", connect);
         ipc::worker::start(connect).await?;
-        loop {
-            std::thread::sleep(std::time::Duration::from_secs(60))
-        }
     }
     Ok(())
 }

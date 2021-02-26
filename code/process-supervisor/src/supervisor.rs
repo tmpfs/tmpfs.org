@@ -1,11 +1,8 @@
 use tokio::sync::oneshot;
 
 mod ipc;
-use ipc::*;
 
 use log::info;
-
-const CMD: &str = "./target/debug/worker";
 
 #[tokio::main]
 async fn main() -> ipc::Result<()> {
@@ -14,20 +11,31 @@ async fn main() -> ipc::Result<()> {
     }
     pretty_env_logger::init();
 
-    info!("Start supervisor {}", SOCKET_PATH);
+    let worker_cmd = "./target/debug/worker";
+    let worker_args = vec![];
+
+    let socket_path = std::env::temp_dir().join("supervisor.sock");
+    let worker_socket_path = socket_path.clone();
+
+    info!("Start supervisor {}", socket_path.display());
 
     let (tx, rx) = oneshot::channel::<()>();
 
     tokio::spawn(async move {
-        ipc::supervisor::start(SOCKET_PATH, tx).await
+        ipc::supervisor::start(socket_path, tx)
+            .await
             .expect("Unable to start ipc server");
     });
 
     let _ = rx.await?;
-    info!("Server is listening {}", SOCKET_PATH);
+    info!("Server is listening {}", worker_socket_path.display());
 
-    for i in 0..2 {
-        ipc::supervisor::spawn_worker(i, CMD, vec![]);
+    for i in 0..1 {
+        ipc::supervisor::spawn_worker(
+            i,
+            worker_cmd,
+            worker_args.clone(),
+            worker_socket_path.to_string_lossy().into_owned());
     }
 
     loop {

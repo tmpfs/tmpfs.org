@@ -7,15 +7,16 @@ default-run = "supervisor"
 
 [dependencies]
 thiserror = "1"
-interprocess = "1.1"
 futures = "0.3"
 tokio = { version = "1", features = ["full"] }
-json-rpc2 = { version= "0.9", path = "/home/muji/git/json-rpc2" }
+json-rpc2 = { version= "0.9", path = "/home/muji/git/json-rpc2", features = ["async"] }
 serde_json = "1"
 serde = {version = "1", features = ["derive"]}
 log = "0.4"
 pretty_env_logger = "0.4"
 once_cell = "1.7"
+tokio-util = {version = "0.6", features = ["codec"]}
+async-trait = "0.1"
 
 [[bin]]
 name = "supervisor"
@@ -24,6 +25,10 @@ path = "src/supervisor.rs"
 [[bin]]
 name = "worker"
 path = "src/worker.rs"
+
+[[bin]]
+name = "cat"
+path = "src/cat-test.rs"
 
 [features]
 worker = []
