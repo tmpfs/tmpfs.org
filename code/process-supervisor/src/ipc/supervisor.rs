@@ -51,9 +51,15 @@ impl SupervisorState {
 
 #[derive(Debug)]
 pub struct Worker {
+    cmd: &'static str,
+    args: Vec<&'static str>,
     handle: JoinHandle<std::io::Result<()>>,
     id: usize,
     pid: Option<u32>,
+    /// If we are shutting down this worker explicitly 
+    /// this flag will be set to prevent the worker from 
+    /// being re-spawned.
+    reap: bool,
 }
 
 impl PartialEq for Worker {
@@ -65,7 +71,7 @@ impl PartialEq for Worker {
 impl Eq for Worker {}
 
 #[derive(Serialize, Deserialize)]
-pub struct ConnectParams {
+pub struct Launch {
     pub socket_path: String,
     pub id: usize,
 }
@@ -82,6 +88,7 @@ impl Service for SupervisorService {
             let mut state = ctx.lock().unwrap();
             let worker = state.find(info.id);
             if let Some(worker) = worker {
+                println!("Saving worker pid...");
                 worker.pid = Some(info.pid);
                 response = Some(req.into());
             } else {
@@ -93,16 +100,24 @@ impl Service for SupervisorService {
     }
 }
 
-pub(crate) fn spawn_worker(id: usize, cmd: &'static str) {
+/// Attempt to restart a worker that died.
+pub(crate) fn restart(worker: Worker) {
+    println!("Respawn the worker {:?}", worker);
+    // TODO: retry on fail with backoff and retry limit
+
+    spawn_worker(worker.id, worker.cmd, worker.args)
+}
+
+pub(crate) fn spawn_worker(id: usize, cmd: &'static str, args: Vec<&'static str>) {
+    let worker_args = args.clone();
     let handle = thread::spawn(move || {
         let mut child = Command::new(cmd)
-            //.args(vec!["run", "--bin=child"])
+            .args(worker_args)
             .stdin(Stdio::piped())
-            //.stdout(Stdio::piped())
             .spawn()?;
 
         let child_stdin = child.stdin.as_mut().unwrap();
-        let connect_params = ConnectParams {socket_path: SOCKET_PATH.to_string(), id};
+        let connect_params = Launch {socket_path: SOCKET_PATH.to_string(), id};
         let req = Request::new_notification("connect", serde_json::to_value(connect_params).ok());
         child_stdin.write_all(format!("{}\n", serde_json::to_string(&req).unwrap()).as_bytes())?;
 
@@ -114,10 +129,13 @@ pub(crate) fn spawn_worker(id: usize, cmd: &'static str) {
         warn!("Worker process shutdown: {}", pid);
 
         let mut state = STATE.lock().unwrap();
-
-        let stale = state.remove(pid);
-        if let Some(worker) = stale {
+        let worker = state.remove(pid);
+        drop(state);
+        if let Some(worker) = worker {
             info!("Removed child worker (id: {}, pid {})", worker.id, pid);
+            if !worker.reap {
+                restart(worker);
+            }
         } else {
             error!("Failed to remove stale worker for pid {}", pid);
         }
@@ -125,7 +143,7 @@ pub(crate) fn spawn_worker(id: usize, cmd: &'static str) {
         Ok::<(), io::Error>(())
     });
 
-    let worker = Worker { handle, id, pid: None };
+    let worker = Worker { cmd, args, handle, id, pid: None, reap: false };
     let mut state = STATE.lock().unwrap();
     state.workers.push(worker);
 }
@@ -157,12 +175,13 @@ pub(crate) async fn start(socket: &'static str, tx: Sender<()>) -> Result<()> {
             conn.read_line(&mut buffer).await?;
             let mut req = from_str(&buffer)
                 .expect("Failed to parse client message");
-            info!("Server got: {:?}", req);
+            info!("{:?}", req);
             let res = server.serve(&mut req, &state);
-            info!("Server response: {:?}", res);
+            info!("{:?}", res);
             Ok(())
         })
         .await
         .map_err(Error::from)?;
+
     Ok(())
 }

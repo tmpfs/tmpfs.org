@@ -27,8 +27,10 @@ async fn main() -> ipc::Result<()> {
     info!("Server is listening {}", SOCKET_PATH);
 
     for i in 0..2 {
-        ipc::supervisor::spawn_worker(i, CMD);
+        ipc::supervisor::spawn_worker(i, CMD, vec![]);
     }
 
-    loop {}
+    loop {
+        std::thread::sleep(std::time::Duration::from_secs(60))
+    }
 }

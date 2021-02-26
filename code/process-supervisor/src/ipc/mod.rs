@@ -30,12 +30,15 @@ pub(crate) mod supervisor;
 pub(crate) const SOCKET_PATH: &str = "/tmp/supervisor.sock";
 pub(crate) const CONNECTED: &str = "connected";
 
+/// Message sent over stdin when launching a worker.
 #[derive(Debug, Serialize, Deserialize)]
-pub struct ConnectParams {
+pub struct Launch {
     pub socket_path: String,
     pub id: usize,
 }
 
+/// Message sent to the supervisor when a worker 
+/// is spawned and has connected to the IPC socket.
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Connected {
     pub id: usize,

@@ -9,7 +9,7 @@ use log::info;
 
 use json_rpc2::{Service, Server, Request, Response, from_str};
 
-use super::{Result, ConnectParams, Connected, CONNECTED};
+use super::{Result, Launch, Connected, CONNECTED};
 
 pub(crate) const SHUTDOWN: &str = "shutdown";
 
@@ -34,7 +34,7 @@ impl Service for ChildService {
     }
 }
 
-pub(crate) fn read_stdin_connect() -> Result<Option<ConnectParams>> {
+pub(crate) fn read_stdin_connect() -> Result<Option<Launch>> {
     let stdin = io::stdin();
     let mut info = None;
     for line in stdin.lock().lines() {
@@ -44,11 +44,11 @@ pub(crate) fn read_stdin_connect() -> Result<Option<ConnectParams>> {
         }
     }
     Ok(if let Some(mut info) = info.take() {
-        Some(info.deserialize::<ConnectParams>().unwrap())
+        Some(info.deserialize::<Launch>().unwrap())
     } else { None })
 }
 
-pub(crate) async fn start(info: ConnectParams) -> Result<()> {
+pub(crate) async fn start(info: Launch) -> Result<()> {
     info!("Starting client {} {}", info.id, &info.socket_path);
     let client_service: Box<dyn Service<Data = ChildState>> = Box::new(ChildService {});
     let server = Server::new(vec![&client_service]);
