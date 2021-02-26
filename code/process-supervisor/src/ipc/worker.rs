@@ -3,7 +3,6 @@ use json_rpc2::{
     Request, Response,
 };
 use std::io::{self, BufRead};
-use std::process;
 use std::sync::{Arc, Mutex};
 
 use futures::StreamExt;
@@ -12,7 +11,7 @@ use tokio::net::UnixStream;
 use tokio_util::codec::{FramedRead, LinesCodec};
 
 use async_trait::async_trait;
-use log::{debug, info, error};
+use log::{debug, error, info};
 use once_cell::sync::OnceCell;
 
 use super::{Connected, Launch, Message, Result, CONNECTED};
@@ -87,10 +86,7 @@ pub(crate) async fn start(info: Launch) -> Result<()> {
 
     // Send a notification to the supervisor so that it knows
     // this worker is ready
-    let params = serde_json::to_value(Connected {
-        id: info.id,
-        pid: process::id(),
-    })?;
+    let params = serde_json::to_value(Connected {id: info.id})?;
     let req =
         Message::Request(Request::new_notification(CONNECTED, Some(params)));
     let msg = format!("{}\n", serde_json::to_string(&req)?);
@@ -122,7 +118,7 @@ pub(crate) async fn start(info: Launch) -> Result<()> {
                 // Currently not handling RPC replies so just log them
                 if let Some(err) = reply.error() {
                     error!("{:?}", err);
-                } else{
+                } else {
                     debug!("{:?}", reply);
                 }
             }

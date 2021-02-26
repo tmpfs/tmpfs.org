@@ -1,6 +1,6 @@
-use std::path::PathBuf;
 use json_rpc2::{Request, Response};
 use serde::{Deserialize, Serialize};
+use std::path::PathBuf;
 
 #[derive(Debug, thiserror::Error)]
 pub enum Error {
@@ -57,5 +57,4 @@ pub struct Launch {
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Connected {
     pub id: String,
-    pub pid: u32,
 }

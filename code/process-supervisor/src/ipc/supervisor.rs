@@ -4,7 +4,7 @@ use std::io::{self, Write};
 use std::path::{Path, PathBuf};
 use std::process::{Command, Stdio};
 use std::sync::{Arc, Mutex};
-use std::thread::{self, JoinHandle};
+use std::thread;
 
 use tokio::io::AsyncWriteExt;
 use tokio::net::UnixListener;
@@ -13,7 +13,6 @@ use tokio_util::codec::{FramedRead, LinesCodec};
 
 use futures::StreamExt;
 
-use rand::Rng;
 use async_trait::async_trait;
 use json_rpc2::{
     futures::{Server, Service},
@@ -21,8 +20,9 @@ use json_rpc2::{
 };
 use log::{debug, error, info, warn};
 use once_cell::sync::OnceCell;
+use rand::Rng;
 
-use super::{Connected, Error, Message, Launch, Result, CONNECTED};
+use super::{Connected, Error, Launch, Message, Result, CONNECTED};
 
 fn supervisor_state() -> &'static Arc<Mutex<SupervisorState>> {
     static INSTANCE: OnceCell<Arc<Mutex<SupervisorState>>> = OnceCell::new();
@@ -53,7 +53,7 @@ impl SupervisorBuilder {
     pub fn new(socket: PathBuf) -> Self {
         Self {
             socket,
-            commands: Vec::new()
+            commands: Vec::new(),
         }
     }
 
@@ -65,7 +65,7 @@ impl SupervisorBuilder {
     pub fn build(self) -> Supervisor {
         Supervisor {
             socket: self.socket,
-            commands: self.commands
+            commands: self.commands,
         }
     }
 }
@@ -84,17 +84,14 @@ impl Supervisor {
         tokio::spawn(async move {
             listen(&socket_path, tx)
                 .await
-                .expect("Unable to start ipc server");
+                .expect("Supervisor failed to bind to socket");
         });
 
         let _ = rx.await?;
         info!("Supervisor is listening {}", self.socket.display());
 
         for (cmd, args) in self.commands.iter() {
-            spawn_worker(
-                cmd.to_string(),
-                args.clone(),
-                self.socket.clone());
+            spawn_worker(cmd.to_string(), args.clone(), self.socket.clone());
         }
 
         Ok(())
@@ -112,7 +109,7 @@ impl SupervisorState {
 
     fn remove(&mut self, pid: u32) -> Option<Worker> {
         let res = self.workers.iter().enumerate().find_map(|(i, w)| {
-            if w.pid.is_some() && w.pid.unwrap() == pid {
+            if w.pid == pid {
                 Some(i)
             } else {
                 None
@@ -130,14 +127,15 @@ impl SupervisorState {
 pub struct Worker {
     cmd: String,
     args: Vec<String>,
-    handle: JoinHandle<std::io::Result<()>>,
     id: String,
     socket_path: PathBuf,
-    pid: Option<u32>,
+    pid: u32,
     /// If we are shutting down this worker explicitly
     /// this flag will be set to prevent the worker from
     /// being re-spawned.
     reap: bool,
+    // Flag set when a child sends the connected message
+    connected: bool,
 }
 
 impl PartialEq for Worker {
@@ -165,9 +163,8 @@ impl Service for SupervisorService {
             let mut state = ctx.lock().unwrap();
             let worker = state.find(&info.id);
             if let Some(worker) = worker {
-                worker.pid = Some(info.pid);
+                worker.connected = true;
                 response = Some(req.into());
-                //println!("Saving worker pid {:?}", response);
             } else {
                 let err =
                     json_rpc2::Error::boxed(Error::WorkerNotFound(info.id));
@@ -185,12 +182,8 @@ pub(crate) fn restart(worker: Worker) {
     spawn_worker(worker.cmd, worker.args, worker.socket_path)
 }
 
-fn spawn_worker(
-    cmd: String,
-    args: Vec<String>,
-    socket_path: PathBuf,
-) {
-    // Generate an id for each worker
+fn spawn_worker(cmd: String, args: Vec<String>, socket_path: PathBuf) {
+    // Generate a unique id for each worker
     let mut rng = rand::thread_rng();
     let mut hasher = DefaultHasher::new();
     hasher.write_usize(rng.gen());
@@ -201,7 +194,7 @@ fn spawn_worker(
     let worker_args = args.clone();
     let worker_id = id.clone();
 
-    let handle = thread::spawn(move || {
+    thread::spawn(move || {
         let mut child = Command::new(worker_cmd)
             .args(worker_args)
             .stdin(Stdio::piped())
@@ -223,6 +216,20 @@ fn spawn_worker(
         drop(child_stdin);
 
         let pid = child.id();
+        {
+            let worker = Worker {
+                cmd,
+                args,
+                id,
+                socket_path,
+                pid,
+                reap: false,
+                connected: false,
+            };
+            let mut state = supervisor_state().lock().unwrap();
+            state.workers.push(worker);
+        }
+
         let _ = child.wait_with_output()?;
 
         warn!("Worker process died: {}", pid);
@@ -241,18 +248,6 @@ fn spawn_worker(
 
         Ok::<(), io::Error>(())
     });
-
-    let worker = Worker {
-        cmd,
-        args,
-        handle,
-        id,
-        socket_path,
-        pid: None,
-        reap: false,
-    };
-    let mut state = supervisor_state().lock().unwrap();
-    state.workers.push(worker);
 }
 
 async fn listen<P: AsRef<Path>>(socket: P, tx: Sender<()>) -> Result<()> {
@@ -302,7 +297,7 @@ async fn listen<P: AsRef<Path>>(socket: P, tx: Sender<()>) -> Result<()> {
                                 // Currently not handling RPC replies so just log them
                                 if let Some(err) = reply.error() {
                                     error!("{:?}", err);
-                                } else{
+                                } else {
                                     debug!("{:?}", reply);
                                 }
                             }
@@ -312,7 +307,7 @@ async fn listen<P: AsRef<Path>>(socket: P, tx: Sender<()>) -> Result<()> {
                 });
             }
             Err(e) => {
-                warn!("Worker socket failed to accept {}", e);
+                warn!("Supervisor failed to accept worker socket {}", e);
             }
         }
     }
