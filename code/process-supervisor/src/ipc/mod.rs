@@ -1,3 +1,4 @@
+use std::path::PathBuf;
 use json_rpc2::{Request, Response};
 use serde::{Deserialize, Serialize};
 
@@ -47,7 +48,7 @@ pub enum Message {
 /// Message sent over stdin when launching a worker.
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Launch {
-    pub socket_path: String,
+    pub socket_path: PathBuf,
     pub id: usize,
 }
 

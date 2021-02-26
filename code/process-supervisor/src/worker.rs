@@ -1,6 +1,6 @@
 mod ipc;
 
-use log::info;
+//use log::info;
 
 #[tokio::main]
 async fn main() -> ipc::Result<()> {
@@ -11,7 +11,7 @@ async fn main() -> ipc::Result<()> {
 
     let mut info = ipc::worker::read_stdin_connect()?;
     if let Some(connect) = info.take() {
-        info!("Worker stdin {:?}", connect);
+        //info!("Worker stdin {:?}", connect);
         ipc::worker::start(connect).await?;
     }
     Ok(())

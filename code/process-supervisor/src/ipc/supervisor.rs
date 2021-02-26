@@ -1,12 +1,12 @@
 use std::io::{self, Write};
-use std::path::Path;
+use std::path::{Path, PathBuf};
 use std::process::{Command, Stdio};
 use std::sync::{Arc, Mutex};
 use std::thread::{self, JoinHandle};
 
 use tokio::io::AsyncWriteExt;
 use tokio::net::UnixListener;
-use tokio::sync::oneshot::Sender;
+use tokio::sync::oneshot::{self, Sender};
 use tokio_util::codec::{FramedRead, LinesCodec};
 
 use futures::StreamExt;
@@ -20,7 +20,7 @@ use log::{debug, error, info, warn};
 use once_cell::sync::OnceCell;
 use serde::{Deserialize, Serialize};
 
-use super::{Connected, Error, Message, Result, CONNECTED};
+use super::{Connected, Error, Message, Launch, Result, CONNECTED};
 
 fn supervisor_state() -> &'static Arc<Mutex<SupervisorState>> {
     static INSTANCE: OnceCell<Arc<Mutex<SupervisorState>>> = OnceCell::new();
@@ -39,6 +39,65 @@ fn supervisor_service(
             Box::new(SupervisorService {});
         service
     })
+}
+
+#[derive(Debug)]
+pub struct SupervisorBuilder {
+    socket: PathBuf,
+    commands: Vec<(String, Vec<String>)>,
+}
+
+impl SupervisorBuilder {
+    pub fn new(socket: PathBuf) -> Self {
+        Self {
+            socket,
+            commands: Vec::new()
+        }
+    }
+
+    pub fn add_worker(mut self, cmd: String, args: Vec<String>) -> Self {
+        self.commands.push((cmd, args));
+        self
+    }
+
+    pub fn build(self) -> Supervisor {
+        Supervisor {
+            socket: self.socket,
+            commands: self.commands
+        }
+    }
+}
+
+#[derive(Debug)]
+pub struct Supervisor {
+    socket: PathBuf,
+    commands: Vec<(String, Vec<String>)>,
+}
+
+impl Supervisor {
+    pub async fn run(&self) -> Result<()> {
+        let socket_path = self.socket.clone();
+        let (tx, rx) = oneshot::channel::<()>();
+
+        tokio::spawn(async move {
+            start(&socket_path, tx)
+                .await
+                .expect("Unable to start ipc server");
+        });
+
+        let _ = rx.await?;
+        info!("Supervisor is listening {}", self.socket.display());
+
+        for (i, (cmd, args)) in self.commands.iter().enumerate() {
+            spawn_worker(
+                i,
+                cmd.to_string(),
+                args.clone(),
+                self.socket.clone());
+        }
+
+        Ok(())
+    }
 }
 
 pub struct SupervisorState {
@@ -68,11 +127,11 @@ impl SupervisorState {
 
 #[derive(Debug)]
 pub struct Worker {
-    cmd: &'static str,
-    args: Vec<&'static str>,
+    cmd: String,
+    args: Vec<String>,
     handle: JoinHandle<std::io::Result<()>>,
     id: usize,
-    socket_path: String,
+    socket_path: PathBuf,
     pid: Option<u32>,
     /// If we are shutting down this worker explicitly
     /// this flag will be set to prevent the worker from
@@ -87,12 +146,6 @@ impl PartialEq for Worker {
 }
 
 impl Eq for Worker {}
-
-#[derive(Serialize, Deserialize)]
-pub struct Launch {
-    pub socket_path: String,
-    pub id: usize,
-}
 
 pub struct SupervisorService;
 
@@ -133,14 +186,15 @@ pub(crate) fn restart(worker: Worker) {
 
 pub(crate) fn spawn_worker(
     id: usize,
-    cmd: &'static str,
-    args: Vec<&'static str>,
-    socket_path: String,
+    cmd: String,
+    args: Vec<String>,
+    socket_path: PathBuf,
 ) {
     let launch_socket_path = socket_path.clone();
+    let worker_cmd = cmd.clone();
     let worker_args = args.clone();
     let handle = thread::spawn(move || {
-        let mut child = Command::new(cmd)
+        let mut child = Command::new(worker_cmd)
             .args(worker_args)
             .stdin(Stdio::piped())
             .spawn()?;
