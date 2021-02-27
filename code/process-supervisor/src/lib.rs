@@ -10,7 +10,7 @@
 //! they die without being shutdown by the supervisor.
 //!
 //! ```
-//! use psup::{Result, supervisor::SupervisorBuilder};
+//! use psup::{Result, SupervisorBuilder};
 //!
 //! #[tokio::main]
 //! async fn main() -> Result<()> {
@@ -39,11 +39,9 @@
 //! #[tokio::main]
 //! async fn main() -> Result<()> {
 //!     // Read supervisor information from stdin
-//!     let mut info = worker::read()?;
-//!     if let Some(connect) = info.take() {
-//!         // Set up the IPC channel with the supervisor
-//!         worker::connect(connect).await?;
-//!     }
+//!     // and set up the IPC channel with the supervisor
+//!     let worker = Worker::new();
+//!     worker.run().await?;
 //!     Ok(())
 //! }
 //! ```
@@ -85,10 +83,16 @@ pub enum Error {
 pub type Result<T> = std::result::Result<T, Error>;
 
 #[cfg(feature = "worker")]
-pub mod worker;
+mod worker;
+
+#[cfg(feature = "worker")]
+pub use worker::Worker;
 
 #[cfg(feature = "supervisor")]
-pub mod supervisor;
+mod supervisor;
+
+#[cfg(feature = "supervisor")]
+pub use supervisor::{Supervisor, SupervisorBuilder};
 
 pub(crate) const CONNECTED: &str = "connected";
 
@@ -107,7 +111,7 @@ pub enum Message {
 
 /// Message sent over stdin when launching a worker.
 #[derive(Debug, Serialize, Deserialize)]
-pub struct WorkerInfo {
+pub(crate) struct WorkerInfo {
     /// Socket path.
     pub socket_path: PathBuf,
     /// Worker identifier.
@@ -117,7 +121,7 @@ pub struct WorkerInfo {
 /// Message sent to the supervisor when a worker
 /// is spawned and has connected to the IPC socket.
 #[derive(Debug, Serialize, Deserialize)]
-pub struct Connected {
+pub(crate) struct Connected {
     /// Worker identifier.
     pub id: String,
 }

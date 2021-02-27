@@ -1,4 +1,4 @@
-use psup::{Result, supervisor::SupervisorBuilder};
+use psup::{Result, SupervisorBuilder};
 
 #[tokio::main]
 async fn main() -> Result<()> {

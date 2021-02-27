@@ -1,4 +1,4 @@
-use psup::{Result, worker};
+use psup::{Result, Worker};
 
 #[tokio::main]
 async fn main() -> Result<()> {
@@ -7,9 +7,7 @@ async fn main() -> Result<()> {
     }
     pretty_env_logger::init();
 
-    let mut info = worker::read()?;
-    if let Some(connect) = info.take() {
-        worker::connect(connect).await?;
-    }
+    let worker = Worker::new();
+    worker.run().await?;
     Ok(())
 }
