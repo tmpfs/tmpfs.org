@@ -199,24 +199,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "ipc-test"
-version = "0.1.0"
-dependencies = [
- "async-trait",
- "futures",
- "json-rpc2",
- "log",
- "once_cell",
- "pretty_env_logger",
- "rand",
- "serde",
- "serde_json",
- "thiserror",
- "tokio",
- "tokio-util",
-]
-
-[[package]]
 name = "itoa"
 version = "0.4.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -225,6 +207,8 @@ checksum = "dd25036021b0de88a0aff6b850051563c6516d0bf53f8638938edbb9de732736"
 [[package]]
 name = "json-rpc2"
 version = "0.9.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d353b7e46b03a71f646bd4f8ad59e8a445f81b0a57ad77675d451e9afb8d8c27"
 dependencies = [
  "async-trait",
  "rand",
@@ -383,6 +367,24 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1e0704ee1a7e00d7bb417d0770ea303c1bccbabf0ef1667dae92b5967f5f8a71"
 dependencies = [
  "unicode-xid",
+]
+
+[[package]]
+name = "psup"
+version = "0.1.0"
+dependencies = [
+ "async-trait",
+ "futures",
+ "json-rpc2",
+ "log",
+ "once_cell",
+ "pretty_env_logger",
+ "rand",
+ "serde",
+ "serde_json",
+ "thiserror",
+ "tokio",
+ "tokio-util",
 ]
 
 [[package]]
