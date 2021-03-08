@@ -228,6 +228,8 @@ When a transition yields the next state we call `advance()` on the state machine
 
 If any of the transitions return an `Error` then iteration is immediately halted and the error is propagated to the caller.
 
+If you spot a mistake or want to suggest an improvement [[contact|get in touch]] and let me know.
+
 {{import "footer"}}
 
 [Rust]: https://www.rust-lang.org/
