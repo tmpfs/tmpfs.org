@@ -234,7 +234,7 @@ If you spot a mistake or want to suggest an improvement [[contact|get in touch]]
 
 [Rust]: https://www.rust-lang.org/
 [state machine]:https://en.wikipedia.org/wiki/Finite-state_machine
-[source code]: https://github.com/tmpfs/async-fsm-model
-[main.rs]: https://github.com/tmpfs/async-fsm-model/blob/main/src/main.rs
+[source code]: https://github.com/tmpfs/tmpfs.org/tree/main/code/async-fsm-model
+[main.rs]: https://github.com/tmpfs/tmpfs.org/tree/main/code/async-fsm-model/src/main.rs
 [article]: https://hoverbear.org/blog/rust-state-machine-pattern/
 [async-trait]: https://docs.rs/async-trait/0.1.42/async_trait/

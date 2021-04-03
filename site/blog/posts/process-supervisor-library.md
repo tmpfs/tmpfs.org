@@ -31,6 +31,8 @@ The design supports *daemon* operation so workers that died would be restarted b
 
 Our program was already making use of [JSON-RPC][] in various places so it made sense to use it for the IPC communication too. We added a helper library [psup-json-rpc][] which meant each side of the channel could easily map JSON packets to method calls.
 
+The [source code][] is dual-licensed under [MIT][] and [Apache-2][] so feel free to use it in your projects and I will post again when we add Windows support!
+
 If you spot a mistake or want to suggest an improvement [[contact|get in touch]] and let me know.
 
 {{import "footer"}}
@@ -46,3 +48,5 @@ If you spot a mistake or want to suggest an improvement [[contact|get in touch]]
 [UnixStream]: https://docs.rs/tokio/1.4.0/tokio/net/struct.UnixStream.html
 [JSON-RPC]: https://www.jsonrpc.org/
 [rbenv]: https://github.com/rbenv/rbenv
+[MIT]: https://mit-license.org/
+[Apache-2]: https://www.apache.org/licenses/LICENSE-2.0.html
