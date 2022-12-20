@@ -17,11 +17,13 @@ The crash manifested as a freeze of input when the keyboard and trackpad would s
 
 * Exhibit A - [Purchase Receipt (pdf)](https://s3.ap-southeast-1.amazonaws.com/files.tmpfs.org/microsoft-quest/Laptops-receipt-challenger.pdf)
 
-I installed all Windows (including firmware) updates hoping to resolve the issue but it still manifested after all availabel updates were installed.
+I installed all Windows (including firmware) updates hoping to resolve the issue but it still manifested after all available updates were installed.
 
 I spent several hours debugging the problem to try to find out what was causing the error, I am not a Windows user or programmer but eventually I found the `eventvwr` program which let me see some information about the crash logs.
 
 It had lots of entries for unexpected restarts for the crashes and some logs for a WHEA error. Looking online it appears this is to do with a hardware problem so I decided to create a service order to get the machine fixed or replaced.
+
+![Screeshot of the WHEA error](https://s3.ap-southeast-1.amazonaws.com/files.tmpfs.org/microsoft-quest/whea-error.png)
 
 Both laptops were registed with Microsoft and I went through the process as far as I could go to create a service order. Unfortunately, the service order process is broken, it finishes by indicating one should run the Surface diagnostics program and running the Surface diagnostics program at the end says to start a service order. So we have an infinite loop.
 
@@ -39,20 +41,22 @@ On the last screen after clicking the *Done* button the pop-up window disappears
 
 I tried this several times (at least five times) but always with the same result. Some online research indicated I should use Microsoft Edge with an InPrivate windows, I tried that too but it was always the same result.
 
-Callin the Microsoft support line and selecting the appropriate options yielded a message saying:
+Calling the Microsoft support line and selecting the appropriate options yielded a message saying:
 
-> We are experiening technical difficulties
+> We are experiencing technical difficulties
 
 And then promptly hung up on me; so it seems attempting to get support by telephone is not possible either.
 
 I mistakenly thought that I would be able to get the machine serviced in Indonesia so I flew to Jakarta to go to the Microsoft office and request some help. However, they told me that it is not sold and cannot be serviced in Indonesia and that I would have to go to Singapore.
 
-At this point I called the support line again and selected a *Sales* option as I rightly suspected that the sales line would not be experiencing technical difficulties. I spoke to an operator their who gave me their email address and I sent screenshots, after several emails back and forth they directed me to the support line which does not work.
+At this point I called the support line again and selected a *Sales* option as I rightly suspected that the sales line would not be experiencing technical difficulties. I spoke to an operator there who gave me their email address and I sent screenshots, after several emails back and forth they directed me to the support line which does not work.
 
 So, hopefully, you see how it is essentially impossible to create a service order for a Microsoft Surface machine.
 
 Whilst researching I noticed that there are no walk-in service centres in Singapore; only in the US, China and India; so quite possibly I could fly to Singapore and again be met with a lack of support.
 
 At this point I don't see any other option then to apply to the Singapore [small claims tribunal](https://www.judiciary.gov.sg/civil/small-claims).
+
+On the 20/12/2022 I contacted Challenger customer support to let them know about the problem and linked to this blog post, I will update with any response I receive from them.
 
 {{import "footer"}}
