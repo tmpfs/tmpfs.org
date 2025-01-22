@@ -13,6 +13,4 @@ Qualified as a sound engineer, divemaster and skydiver I tend nowadays to spend 
 
 A lifelong autodidact I enjoy traveling, exploring, kayaking, literature, philosophy, theology, etymology, nature, permaculture and many other activities.
 
-Every once in a while I will add a recipe to the [[kitchen]] or post an article to the [[blog]].
-
-Find out more about [[work|my work]], check out my [source code on github](https://github.com/tmpfs "Source Code") or [[contact|get in touch]].
+Find out more about [[work|my work]] or check out my [source code on github](https://github.com/tmpfs "Source Code").
